@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { saveFluencyRead, type FluencyText } from "@/lib/fluency";
+import { StepComplete } from "@/components/StepComplete";
 
 type Phase = "ready" | "reading" | "done";
 
@@ -36,7 +37,8 @@ export function FluencySession({ text }: { text: FluencyText | null }) {
   if (phase === "done" && wpm !== null) {
     const improved = text.bestWpm !== null && wpm > text.bestWpm;
     return (
-      <EmptyState
+      <StepComplete
+        step="fluency"
         message={`Скорость: ${wpm} слов в минуту.${
           text.bestWpm === null
             ? ""

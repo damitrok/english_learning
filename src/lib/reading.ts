@@ -1,6 +1,7 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import { recordStep } from "@/lib/day-server";
 import type { CefrLevel } from "@/lib/supabase/types";
 
 export interface ReadingQuestion {
@@ -100,4 +101,5 @@ export async function markTextRead(
     correct_answers: correctAnswers,
   });
   if (error) throw error;
+  await recordStep("reading", secondsSpent);
 }

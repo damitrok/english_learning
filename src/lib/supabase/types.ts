@@ -281,8 +281,10 @@ export type Database = {
       }
       sessions: {
         Row: {
+          completed_steps: string[]
           created_at: string
           fluency_minutes: number
+          grammar_minutes: number
           id: string
           listening_minutes: number
           reading_minutes: number
@@ -291,8 +293,10 @@ export type Database = {
           vocab_minutes: number
         }
         Insert: {
+          completed_steps?: string[]
           created_at?: string
           fluency_minutes?: number
+          grammar_minutes?: number
           id?: string
           listening_minutes?: number
           reading_minutes?: number
@@ -301,8 +305,10 @@ export type Database = {
           vocab_minutes?: number
         }
         Update: {
+          completed_steps?: string[]
           created_at?: string
           fluency_minutes?: number
+          grammar_minutes?: number
           id?: string
           listening_minutes?: number
           reading_minutes?: number
@@ -433,7 +439,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      record_step: {
+        Args: { p_date: string; p_minutes: number; p_step: string }
+        Returns: undefined
+      }
     }
     Enums: {
       cefr_level: "A1" | "A2" | "B1" | "B2" | "C1"

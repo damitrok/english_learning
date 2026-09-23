@@ -1,6 +1,8 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import { getTimeZone, recordStep } from "@/lib/day-server";
+import { localDate } from "@/lib/dates";
 
 export interface FluencyText {
   id: string;
@@ -36,10 +38,11 @@ export async function getFluencyText(): Promise<FluencyText | null> {
     .order("created_at", { ascending: false });
   if (!reads) return null;
 
-  const startOfToday = new Date();
-  startOfToday.setHours(0, 0, 0, 0);
+  // "Before today" in the learner's own timezone, not the server's.
+  const tz = await getTimeZone();
+  const today = localDate(tz);
   const readings = reads.filter((r) => r.mode === "reading");
-  const earlier = readings.find((r) => new Date(r.created_at) < startOfToday);
+  const earlier = readings.find((r) => localDate(tz, new Date(r.created_at)) < today);
   const pick = earlier ?? readings[0];
   if (!pick) return null;
 
@@ -89,5 +92,6 @@ export async function saveFluencyRead(textId: string, secondsSpent: number): Pro
     words_per_minute: wpm,
   });
   if (error) throw error;
+  await recordStep("fluency", seconds);
   return wpm;
 }

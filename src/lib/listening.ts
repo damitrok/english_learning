@@ -1,6 +1,7 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import { recordStep } from "@/lib/day-server";
 import type { CefrLevel } from "@/lib/supabase/types";
 
 export interface DialogueLine {
@@ -104,4 +105,5 @@ export async function saveListening(
     seconds_spent: Math.max(0, Math.round(secondsSpent)),
   });
   if (error) throw error;
+  await recordStep("listening", secondsSpent);
 }
