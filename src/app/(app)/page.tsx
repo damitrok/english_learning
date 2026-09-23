@@ -5,14 +5,17 @@ const STEPS = [
     step: 1,
     strand: "Осознанное изучение",
     minutes: 10,
-    description: "SRS-карточки: слова на повтор по алгоритму + несколько новых.",
+    description:
+      "SRS-карточки: слова на повтор по алгоритму + несколько новых. 2-3 раза в неделю — блок грамматики.",
     href: "/session/vocab",
+    secondary: { href: "/session/grammar", label: "Грамматика" },
   },
   {
     step: 2,
     strand: "Понятный ввод — чтение",
     minutes: 10,
     description: "Короткий текст под текущий уровень, читается ради смысла.",
+    href: "/session/reading",
   },
   {
     step: 3,
