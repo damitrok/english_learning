@@ -46,8 +46,9 @@ flowchart LR
 | `src/lib/vocab.ts`, `grammar.ts`, `reading.ts` | Server actions per step: pick today's material, record results. Grammar answers are checked server-side |
 | `src/lib/highlight.ts` | Pure splitter that finds studied headwords (+ simple inflections) in a text |
 | `src/docs/` | The two textbook PDFs (grammar: Murphy, *Essential Grammar in Use*; words: Nation, *4000 Essential English Words 1*) — personal copies, git-ignored (copyrighted, never commit them) |
-| `supabase/content/` | Hand-written content as JS modules (`grammar-topics.mjs`, `grammar-exercises.mjs`, `texts.mjs`) + `build-seed.mjs`, which validates them and generates `supabase/seed_phase2.sql` |
+| `supabase/content/` | Hand-written content as JS modules (`grammar-topics.mjs`, `grammar-exercises.mjs`, `texts.mjs`, `words.mjs`) + `build-seed.mjs` / `build-words.mjs`, which validate them and generate `supabase/seed_phase2.sql` / `seed_words.sql` |
 | `supabase/migrations/0001_init.sql` | Full schema: `words`, `texts`, `grammar_exercises`, `listening_items`, `cards`, `sessions`, `progress` + RLS policies |
+| `supabase/migrations/0006_…`–`0007_…` | `words.sort_order` (learning order of new words) + `words.source` |
 | `supabase/migrations/0003_…`–`0005_…` | Фаза 2: `grammar_topics` (one row per textbook unit), exercises linked to topics, `grammar_attempts`, `text_reads`, text questions |
 | `docs/DESIGN.md` | Visual style reference (Raycast-style dark theme) |
 
@@ -66,7 +67,7 @@ flowchart LR
 ## Status vs. the plan's phases
 
 - ✅ **Фаза 0** — project skeleton, Supabase schema + auth, base layout/nav, empty dashboard.
-- ✅ **Фаза 1** — ~90-word seed vocabulary, SM-2 review screen, Web Speech TTS.
+- ✅ **Фаза 1** — vocabulary (825 words: starter set + all 600 words of the vocabulary textbook interleaved with 150 IT terms), SM-2 review screen, Web Speech TTS.
 - ✅ **Фаза 2** — reading screen (12 texts A1-A2) and grammar lessons: all 115 textbook units in `grammar_topics`, summaries + 98 exercises for units 1-12. More units = more entries in `supabase/content/grammar-exercises.mjs`.
 - ⬜ **Фаза 3-4** — listening/shadowing, fluency step, PWA/offline, streaks — not started.
 

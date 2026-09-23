@@ -61,3 +61,8 @@ node supabase/content/build-seed.mjs   # validates content, writes supabase/seed
 
 then run `supabase/seed_phase2.sql` in the SQL Editor (or via the Supabase MCP). It upserts, so
 re-running it is safe and keeps existing attempts/reads.
+
+Vocabulary works the same way: `supabase/content/words.mjs` holds the 30 units of the vocabulary
+textbook (own translations/examples) with 5 IT terms after each unit; `node
+supabase/content/build-words.mjs` checks that every book word is covered and writes
+`supabase/seed_words.sql`. New words enter the SRS queue in `words.sort_order`.
