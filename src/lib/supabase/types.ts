@@ -27,6 +27,7 @@ export interface Database {
           cefr_level: CefrLevel;
         };
         Update: Partial<Database["public"]["Tables"]["words"]["Row"]>;
+        Relationships: [];
       };
       texts: {
         Row: {
@@ -44,6 +45,7 @@ export interface Database {
           cefr_level: CefrLevel;
         };
         Update: Partial<Database["public"]["Tables"]["texts"]["Row"]>;
+        Relationships: [];
       };
       grammar_exercises: {
         Row: {
@@ -64,6 +66,7 @@ export interface Database {
           correct_answer: string;
         };
         Update: Partial<Database["public"]["Tables"]["grammar_exercises"]["Row"]>;
+        Relationships: [];
       };
       listening_items: {
         Row: {
@@ -83,6 +86,7 @@ export interface Database {
           cefr_level: CefrLevel;
         };
         Update: Partial<Database["public"]["Tables"]["listening_items"]["Row"]>;
+        Relationships: [];
       };
       cards: {
         Row: {
@@ -102,6 +106,15 @@ export interface Database {
           word_id: string;
         };
         Update: Partial<Database["public"]["Tables"]["cards"]["Row"]>;
+        Relationships: [
+          {
+            foreignKeyName: "cards_word_id_fkey";
+            columns: ["word_id"];
+            isOneToOne: false;
+            referencedRelation: "words";
+            referencedColumns: ["id"];
+          },
+        ];
       };
       sessions: {
         Row: {
@@ -118,6 +131,7 @@ export interface Database {
           user_id: string;
         };
         Update: Partial<Database["public"]["Tables"]["sessions"]["Row"]>;
+        Relationships: [];
       };
       progress: {
         Row: {
@@ -132,7 +146,12 @@ export interface Database {
           user_id: string;
         };
         Update: Partial<Database["public"]["Tables"]["progress"]["Row"]>;
+        Relationships: [];
       };
     };
+    Views: Record<string, never>;
+    Functions: Record<string, never>;
+    Enums: Record<string, never>;
+    CompositeTypes: Record<string, never>;
   };
 }
