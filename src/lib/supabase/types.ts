@@ -347,6 +347,8 @@ export type Database = {
           headword: string
           id: string
           ipa: string | null
+          sort_order: number
+          source: string | null
           tag: Database["public"]["Enums"]["word_tag"]
           translation: string
         }
@@ -357,6 +359,8 @@ export type Database = {
           headword: string
           id?: string
           ipa?: string | null
+          sort_order?: number
+          source?: string | null
           tag: Database["public"]["Enums"]["word_tag"]
           translation: string
         }
@@ -367,6 +371,8 @@ export type Database = {
           headword?: string
           id?: string
           ipa?: string | null
+          sort_order?: number
+          source?: string | null
           tag?: Database["public"]["Enums"]["word_tag"]
           translation?: string
         }
