@@ -34,6 +34,15 @@ Design reference: [`docs/DESIGN.md`](docs/DESIGN.md) (dark, Raycast-style tokens
    the *same browser* that requested it. Request the link and open the email in one regular browser
    window, not across two different browsers or automation tools.
 
+## Auth email
+
+Supabase's built-in mailer only delivers to project team members, so production uses a custom
+SMTP (Brevo) set in Dashboard → Authentication → Emails → SMTP Settings. The email template lives
+in `supabase/templates/magic-link.html` — paste it into both the "Magic Link" and "Confirm signup"
+templates (subject «Вход в English for IT»). It carries the link and the one-time code
+(`{{ .Token }}`), which the login screen accepts too — needed inside the installed iOS app, where
+the link opens in Safari and can't finish the PKCE flow.
+
 ## Auth redirect URLs
 
 Supabase Auth's allowed redirect URLs must include, for every place this app is reachable from:
