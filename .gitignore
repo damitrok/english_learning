@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local MCP tool config (per-machine, ties to a personal Supabase project)
+.mcp.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

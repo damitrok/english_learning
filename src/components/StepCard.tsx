@@ -1,11 +1,14 @@
+import Link from "next/link";
+
 interface StepCardProps {
   step: number;
   strand: string;
   minutes: number;
   description: string;
+  href?: string;
 }
 
-export function StepCard({ step, strand, minutes, description }: StepCardProps) {
+export function StepCard({ step, strand, minutes, description, href }: StepCardProps) {
   return (
     <div className="flex flex-col gap-4 rounded-cards border border-border-hairline bg-ink p-6 shadow-key">
       <div className="flex items-center justify-between">
@@ -20,13 +23,22 @@ export function StepCard({ step, strand, minutes, description }: StepCardProps) 
         <h3 className="text-subheading font-medium text-pure-white">{strand}</h3>
         <p className="mt-1 text-body text-ash">{description}</p>
       </div>
-      <button
-        disabled
-        title="Появится в следующих фазах разработки"
-        className="mt-auto self-start rounded-buttons bg-mist px-3 py-2 text-body font-medium text-iron opacity-40"
-      >
-        Начать
-      </button>
+      {href ? (
+        <Link
+          href={href}
+          className="mt-auto self-start rounded-buttons bg-mist px-3 py-2 text-body font-medium text-iron hover:opacity-90"
+        >
+          Начать
+        </Link>
+      ) : (
+        <button
+          disabled
+          title="Появится в следующих фазах разработки"
+          className="mt-auto self-start rounded-buttons bg-mist px-3 py-2 text-body font-medium text-iron opacity-40"
+        >
+          Начать
+        </button>
+      )}
     </div>
   );
 }

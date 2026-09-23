@@ -6,6 +6,7 @@ const STEPS = [
     strand: "Осознанное изучение",
     minutes: 10,
     description: "SRS-карточки: слова на повтор по алгоритму + несколько новых.",
+    href: "/session/vocab",
   },
   {
     step: 2,
