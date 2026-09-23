@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# English for IT
 
-## Getting Started
+Personal web app for daily technical-English practice, built around Paul Nation's
+"Four Strands" method. Full plan, decisions and rationale live in the project doc:
+https://claude.ai/artifact/2giVckYHw8DefDkW7KQTsE
 
-First, run the development server:
+Design reference: [`docs/DESIGN.md`](docs/DESIGN.md) (dark, Raycast-style tokens — already wired into `src/app/globals.css`).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js 16 (App Router, TypeScript), Tailwind CSS v4
+- Supabase (Postgres + Auth) for storage and cross-device sync
+- Magic-link sign-in (no password)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Create a free project at [supabase.com](https://supabase.com).
+2. Copy `.env.example` to `.env.local` and fill in the two values from
+   Project Settings → API (`Project URL`, `anon public` key).
+3. Apply the schema: open the Supabase SQL Editor and run
+   [`supabase/migrations/0001_init.sql`](supabase/migrations/0001_init.sql)
+   (or `npx supabase db push` if you use the Supabase CLI and have linked the project).
+4. In Supabase Auth settings, add `http://localhost:3000/auth/callback` (and later your
+   production URL) to the allowed redirect URLs.
+5. `npm install && npm run dev`, open http://localhost:3000.
 
-## Learn More
+## Status
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Фаза 0 (foundation) from the plan is done: project skeleton, auth, DB schema, the
+"Сегодня" and dashboard screens (static, not yet wired to data). Next up: Фаза 1
+(vocabulary + SRS) — see the plan doc for the full roadmap and materials checklist.
