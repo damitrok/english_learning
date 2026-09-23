@@ -47,6 +47,7 @@ export async function getTodayText(): Promise<ReadingText | null> {
       .from("text_reads")
       .select("text_id, created_at")
       .eq("user_id", user.id)
+      .eq("mode", "reading")
       .order("created_at", { ascending: true }),
     supabase
       .from("cards")
