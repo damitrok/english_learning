@@ -376,3 +376,93 @@ update texts set word_ids = coalesce((
   select array_agg(w.id) from words w
   where texts.body ~* ('\m' || regexp_replace(w.headword, '([.^$*+?()\[\]{}|\\])', '\\\1', 'g') || '(s|es|ed|d|ing)?\M')
 ), '{}');
+
+-- Listening: own TTS dialogues (exact transcripts) + verified external videos.
+insert into listening_items (title, kind, cefr_level, position, lines, transcript, source_url, start_seconds, end_seconds) values
+  ('Good Morning, Team', 'tts', 'A1', 1, '[{"speaker":"Anna","text":"Good morning, everyone. Let''s start the standup."},{"speaker":"Tom","text":"Hi! Yesterday I fixed the login bug."},{"speaker":"Tom","text":"Today I''m writing tests for it."},{"speaker":"Anna","text":"Great. Do you have any problems?"},{"speaker":"Tom","text":"No, everything is fine."},{"speaker":"Anna","text":"Thanks, Tom. Maria, what about you?"},{"speaker":"Maria","text":"I''m working on the new search page. I need help with the API."},{"speaker":"Anna","text":"OK, let''s talk after the meeting."}]'::jsonb, 'Anna: Good morning, everyone. Let''s start the standup.
+Tom: Hi! Yesterday I fixed the login bug.
+Tom: Today I''m writing tests for it.
+Anna: Great. Do you have any problems?
+Tom: No, everything is fine.
+Anna: Thanks, Tom. Maria, what about you?
+Maria: I''m working on the new search page. I need help with the API.
+Anna: OK, let''s talk after the meeting.', null, 0, null),
+  ('A New Colleague', 'tts', 'A1', 2, '[{"speaker":"Sam","text":"Hi, I''m Sam. I''m the new developer."},{"speaker":"Lena","text":"Nice to meet you, Sam. I''m Lena. I''m a tester."},{"speaker":"Sam","text":"Nice to meet you too. Which team are you in?"},{"speaker":"Lena","text":"I''m in the mobile team. We make the Android app."},{"speaker":"Sam","text":"Cool! I work on the backend."},{"speaker":"Lena","text":"Great. Do you want a coffee?"},{"speaker":"Sam","text":"Yes, please. Where is the kitchen?"},{"speaker":"Lena","text":"It''s next to the meeting room. Come with me."}]'::jsonb, 'Sam: Hi, I''m Sam. I''m the new developer.
+Lena: Nice to meet you, Sam. I''m Lena. I''m a tester.
+Sam: Nice to meet you too. Which team are you in?
+Lena: I''m in the mobile team. We make the Android app.
+Sam: Cool! I work on the backend.
+Lena: Great. Do you want a coffee?
+Sam: Yes, please. Where is the kitchen?
+Lena: It''s next to the meeting room. Come with me.', null, 0, null),
+  ('A Slow Laptop', 'tts', 'A1', 3, '[{"speaker":"Kate","text":"Hi, Mike. Can you help me? My laptop is very slow."},{"speaker":"Mike","text":"Sure. What programs are open?"},{"speaker":"Kate","text":"Only the browser and the code editor."},{"speaker":"Mike","text":"How many tabs do you have in the browser?"},{"speaker":"Kate","text":"Hmm, about fifty."},{"speaker":"Mike","text":"That''s the problem! Close some tabs."},{"speaker":"Kate","text":"Oh, you''re right. Now it''s much faster. Thanks!"}]'::jsonb, 'Kate: Hi, Mike. Can you help me? My laptop is very slow.
+Mike: Sure. What programs are open?
+Kate: Only the browser and the code editor.
+Mike: How many tabs do you have in the browser?
+Kate: Hmm, about fifty.
+Mike: That''s the problem! Close some tabs.
+Kate: Oh, you''re right. Now it''s much faster. Thanks!', null, 0, null),
+  ('Working from Home', 'tts', 'A1', 4, '[{"speaker":"Dan","text":"Hi, Emma! Are you in the office today?"},{"speaker":"Emma","text":"No, I''m working from home."},{"speaker":"Dan","text":"Lucky you! Is it quiet at home?"},{"speaker":"Emma","text":"Yes, very quiet. But I miss my colleagues."},{"speaker":"Dan","text":"Do you want to join our call at eleven?"},{"speaker":"Emma","text":"Sure. Send me the link, please."},{"speaker":"Dan","text":"OK, I''m sending it now."}]'::jsonb, 'Dan: Hi, Emma! Are you in the office today?
+Emma: No, I''m working from home.
+Dan: Lucky you! Is it quiet at home?
+Emma: Yes, very quiet. But I miss my colleagues.
+Dan: Do you want to join our call at eleven?
+Emma: Sure. Send me the link, please.
+Dan: OK, I''m sending it now.', null, 0, null),
+  ('Code Review', 'tts', 'A2', 5, '[{"speaker":"Alex","text":"Hi, Nina. Did you look at my pull request?"},{"speaker":"Nina","text":"Yes, I did. The code is good, but I have two comments."},{"speaker":"Alex","text":"Sure. What are they?"},{"speaker":"Nina","text":"First, the function is too long. Can you split it into two?"},{"speaker":"Alex","text":"OK. And the second one?"},{"speaker":"Nina","text":"There are no tests for the new feature."},{"speaker":"Alex","text":"You''re right. I''ll add them today."},{"speaker":"Nina","text":"Great. Then I''ll approve it."}]'::jsonb, 'Alex: Hi, Nina. Did you look at my pull request?
+Nina: Yes, I did. The code is good, but I have two comments.
+Alex: Sure. What are they?
+Nina: First, the function is too long. Can you split it into two?
+Alex: OK. And the second one?
+Nina: There are no tests for the new feature.
+Alex: You''re right. I''ll add them today.
+Nina: Great. Then I''ll approve it.', null, 0, null),
+  ('Planning the Sprint', 'tts', 'A2', 6, '[{"speaker":"Olga","text":"OK, team, let''s plan the next sprint. We have ten tasks in the backlog."},{"speaker":"Ivan","text":"The payment bug is the most important. Users can''t pay by card."},{"speaker":"Olga","text":"I agree. Ivan, can you take it?"},{"speaker":"Ivan","text":"Yes. I think it''ll take two days."},{"speaker":"Sara","text":"I can work on the new profile page."},{"speaker":"Olga","text":"Good. Is the design ready?"},{"speaker":"Sara","text":"Not yet. The designer will send it on Monday."},{"speaker":"Olga","text":"Fine. Let''s start with the bug and the tests."}]'::jsonb, 'Olga: OK, team, let''s plan the next sprint. We have ten tasks in the backlog.
+Ivan: The payment bug is the most important. Users can''t pay by card.
+Olga: I agree. Ivan, can you take it?
+Ivan: Yes. I think it''ll take two days.
+Sara: I can work on the new profile page.
+Olga: Good. Is the design ready?
+Sara: Not yet. The designer will send it on Monday.
+Olga: Fine. Let''s start with the bug and the tests.', null, 0, null),
+  ('A Call with a Client', 'tts', 'A2', 7, '[{"speaker":"Peter","text":"Hello, this is Peter from Green Shop. Our website isn''t working."},{"speaker":"Julia","text":"Hello, Peter. I''m sorry to hear that. What do you see on the screen?"},{"speaker":"Peter","text":"When I click Buy, I see an error message."},{"speaker":"Julia","text":"Can you send me a screenshot, please?"},{"speaker":"Peter","text":"Yes, I''m sending it now."},{"speaker":"Julia","text":"Thank you. I can see the problem. We''ll fix it in an hour."},{"speaker":"Peter","text":"Great. Please call me when it''s ready."},{"speaker":"Julia","text":"Of course. I''ll call you as soon as it works."}]'::jsonb, 'Peter: Hello, this is Peter from Green Shop. Our website isn''t working.
+Julia: Hello, Peter. I''m sorry to hear that. What do you see on the screen?
+Peter: When I click Buy, I see an error message.
+Julia: Can you send me a screenshot, please?
+Peter: Yes, I''m sending it now.
+Julia: Thank you. I can see the problem. We''ll fix it in an hour.
+Peter: Great. Please call me when it''s ready.
+Julia: Of course. I''ll call you as soon as it works.', null, 0, null),
+  ('The Server Is Down', 'tts', 'A2', 8, '[{"speaker":"Max","text":"Is the website down? I can''t open it."},{"speaker":"Olga","text":"Yes. We got an alert five minutes ago."},{"speaker":"Max","text":"What happened?"},{"speaker":"Olga","text":"The database stopped responding. I''m restarting it now."},{"speaker":"Max","text":"Can I help?"},{"speaker":"Olga","text":"Yes, please check the logs and tell me if you see any errors."},{"speaker":"Max","text":"OK. I see a lot of timeout errors."},{"speaker":"Olga","text":"Thanks. The database is running again. Let''s watch it for ten minutes."}]'::jsonb, 'Max: Is the website down? I can''t open it.
+Olga: Yes. We got an alert five minutes ago.
+Max: What happened?
+Olga: The database stopped responding. I''m restarting it now.
+Max: Can I help?
+Olga: Yes, please check the logs and tell me if you see any errors.
+Max: OK. I see a lot of timeout errors.
+Olga: Thanks. The database is running again. Let''s watch it for ten minutes.', null, 0, null),
+  ('Asking for Help', 'tts', 'A2', 9, '[{"speaker":"Chris","text":"Sorry to bother you, Anna. Do you have a minute?"},{"speaker":"Anna","text":"Sure, what''s up?"},{"speaker":"Chris","text":"I don''t understand this error. The tests pass on my laptop, but they fail on the server."},{"speaker":"Anna","text":"Did you check the versions? Maybe the server uses an old version of Node."},{"speaker":"Chris","text":"Hmm, I didn''t check that. How can I see it?"},{"speaker":"Anna","text":"Look at the pipeline log. The version is in the first lines."},{"speaker":"Chris","text":"You''re right! It''s version eighteen, and I use twenty. Thank you!"}]'::jsonb, 'Chris: Sorry to bother you, Anna. Do you have a minute?
+Anna: Sure, what''s up?
+Chris: I don''t understand this error. The tests pass on my laptop, but they fail on the server.
+Anna: Did you check the versions? Maybe the server uses an old version of Node.
+Chris: Hmm, I didn''t check that. How can I see it?
+Anna: Look at the pipeline log. The version is in the first lines.
+Chris: You''re right! It''s version eighteen, and I use twenty. Thank you!', null, 0, null),
+  ('End of the Week', 'tts', 'A2', 10, '[{"speaker":"Paul","text":"The week is almost over. How was it for you?"},{"speaker":"Mia","text":"It was busy. We released the new version on Wednesday."},{"speaker":"Paul","text":"Did everything go well?"},{"speaker":"Mia","text":"Mostly. We found a small bug after the release, but we fixed it quickly."},{"speaker":"Paul","text":"Nice. Any plans for the weekend?"},{"speaker":"Mia","text":"I want to relax and read a book. And you?"},{"speaker":"Paul","text":"I''m going to the mountains with my family."},{"speaker":"Mia","text":"Sounds great. Have a nice weekend!"},{"speaker":"Paul","text":"You too!"}]'::jsonb, 'Paul: The week is almost over. How was it for you?
+Mia: It was busy. We released the new version on Wednesday.
+Paul: Did everything go well?
+Mia: Mostly. We found a small bug after the release, but we fixed it quickly.
+Paul: Nice. Any plans for the weekend?
+Mia: I want to relax and read a book. And you?
+Paul: I''m going to the mountains with my family.
+Mia: Sounds great. Have a nice weekend!
+Paul: You too!', null, 0, null),
+  ('Git Explained in 100 Seconds', 'youtube', 'B2', 100, '[]'::jsonb, null, 'https://www.youtube.com/watch?v=hwP7WQkmECE', 0, null),
+  ('SQL Explained in 100 Seconds', 'youtube', 'B2', 101, '[]'::jsonb, null, 'https://www.youtube.com/watch?v=zsjvFFKOm3c', 0, null),
+  ('Docker in 100 Seconds', 'youtube', 'B2', 102, '[]'::jsonb, null, 'https://www.youtube.com/watch?v=Gjnup-PuquQ', 0, null),
+  ('JavaScript in 100 Seconds', 'youtube', 'B2', 103, '[]'::jsonb, null, 'https://www.youtube.com/watch?v=DHjqpvDnNGE', 0, null),
+  ('TypeScript in 100 Seconds', 'youtube', 'B2', 104, '[]'::jsonb, null, 'https://www.youtube.com/watch?v=zQnBQ4tB3ZA', 0, null),
+  ('Python in 100 Seconds', 'youtube', 'B2', 105, '[]'::jsonb, null, 'https://www.youtube.com/watch?v=x7X9w_GIm1s', 0, null),
+  ('React in 100 Seconds', 'youtube', 'B2', 106, '[]'::jsonb, null, 'https://www.youtube.com/watch?v=Tn6-PIqc4UM', 0, null)
+on conflict (title) do update set kind = excluded.kind, cefr_level = excluded.cefr_level, position = excluded.position,
+  lines = excluded.lines, transcript = excluded.transcript, source_url = excluded.source_url;

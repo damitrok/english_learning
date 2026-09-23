@@ -21,13 +21,15 @@ const STEPS = [
     step: 3,
     strand: "Вывод + аудирование",
     minutes: 10,
-    description: "Короткий отрывок подкаста, повтор вслух за диктором.",
+    description: "Короткий диалог: сначала слушаешь, потом повторяешь вслух за диктором (shadowing).",
+    href: "/session/listening",
   },
   {
     step: 4,
     strand: "Беглость",
     minutes: 5,
     description: "Быстрое повторное чтение вчерашнего текста без словаря.",
+    href: "/session/fluency",
   },
 ] as const;
 
