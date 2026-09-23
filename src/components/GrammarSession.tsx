@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   submitGrammarAnswer,
   type GrammarAnswerResult,
   type GrammarLesson,
 } from "@/lib/grammar";
+import { markStepDone } from "@/lib/steps";
+import { StepComplete } from "@/components/StepComplete";
 
 export function GrammarSession({ lesson }: { lesson: GrammarLesson | null }) {
   const [started, setStarted] = useState(false);
@@ -17,6 +19,22 @@ export function GrammarSession({ lesson }: { lesson: GrammarLesson | null }) {
   const [correctCount, setCorrectCount] = useState(0);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const startedAt = useRef<number | null>(null);
+  const stepMarked = useRef(false);
+  const lessonDone = !!lesson && index >= lesson.exercises.length;
+
+  useEffect(() => {
+    startedAt.current = performance.now();
+  }, []);
+
+  useEffect(() => {
+    if (!lessonDone || stepMarked.current) return;
+    stepMarked.current = true;
+    const seconds = (performance.now() - (startedAt.current ?? performance.now())) / 1000;
+    markStepDone("grammar", seconds).catch(() => {
+      stepMarked.current = false;
+    });
+  }, [lessonDone]);
 
   if (!lesson) {
     return (
@@ -85,7 +103,8 @@ export function GrammarSession({ lesson }: { lesson: GrammarLesson | null }) {
   if (done) {
     const allRight = correctCount === exercises.length;
     return (
-      <EmptyState
+      <StepComplete
+        step="grammar"
         message={
           allRight
             ? `Отлично — все ${exercises.length} верно! Тема «${lesson.title}» освоена.`

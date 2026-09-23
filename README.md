@@ -44,12 +44,12 @@ Set these in the Supabase Dashboard → Authentication → URL Configuration (no
 
 ## Status
 
-Фазы 0-3 from the plan are done: auth, DB schema, the "Сегодня" screen with all four steps wired —
-SM-2 vocabulary (825 words: starter set + the whole vocabulary textbook interleaved with IT terms)
-plus grammar lessons (`/session/vocab`, `/session/grammar`), reading (`/session/reading`),
-listening/shadowing (`/session/listening`) and fluency (`/session/fluency`). Speech recognition
-for shadowing works in Chrome/Edge/Safari; elsewhere the step falls back to self-check. Next up:
-Фаза 4 (PWA/offline, streaks, real dashboard).
+The MVP (Фазы 0-4 of the plan) is done: all four daily steps on «Сегодня» with done marks and
+«Дальше →» between them — SM-2 vocabulary (825 words) plus grammar lessons, reading, listening/
+shadowing, fluency — streaks per local day (weekends without a session don't break them), a
+progress dashboard, and PWA install + offline support. Install on a phone via "Add to Home Screen"
+(Safari) or the install prompt (Chrome). Speech recognition for shadowing needs Chrome/Edge/Safari.
+Optional Фаза 5 ideas are in the plan doc.
 
 ## Content
 

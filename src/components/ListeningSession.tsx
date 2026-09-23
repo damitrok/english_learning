@@ -11,6 +11,7 @@ import {
   speakAsync,
   stopSpeaking,
 } from "@/lib/speech";
+import { StepComplete } from "@/components/StepComplete";
 
 type Phase = "listen" | "shadow" | "done";
 
@@ -153,7 +154,8 @@ export function ListeningSession({ today }: { today: ListeningToday }) {
       : null;
     return (
       <div className="mx-auto flex w-full max-w-2xl flex-col gap-8 py-8">
-        <EmptyState
+        <StepComplete
+          step="listening"
           message={
             avg === null
               ? "Готово! Диалог пройден."

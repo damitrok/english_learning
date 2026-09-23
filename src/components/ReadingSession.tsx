@@ -5,6 +5,7 @@ import Link from "next/link";
 import { markTextRead, type ReadingText } from "@/lib/reading";
 import { splitByHeadwords } from "@/lib/highlight";
 import { speak } from "@/lib/speech";
+import { StepComplete } from "@/components/StepComplete";
 
 type Phase = "reading" | "questions" | "done";
 
@@ -57,7 +58,8 @@ export function ReadingSession({ text }: { text: ReadingText | null }) {
 
   if (phase === "done") {
     return (
-      <EmptyState
+      <StepComplete
+        step="reading"
         message={`Готово! Верных ответов: ${correctCount} из ${text.questions.length}.`}
       />
     );
