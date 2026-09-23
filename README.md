@@ -44,7 +44,20 @@ Set these in the Supabase Dashboard → Authentication → URL Configuration (no
 
 ## Status
 
-Фаза 0 and Фаза 1 from the plan are done: project skeleton, auth, DB schema (now with proper
-Postgres enums), the "Сегодня"/dashboard screens, a ~90-word seeded vocabulary, and a working
-SM-2 review screen at `/session/vocab` with Web Speech TTS. Deployed to Vercel. Next up: Фаза 2
-(reading texts + grammar) — see the plan doc for the full roadmap and materials checklist.
+Фазы 0-2 from the plan are done: auth, DB schema, the "Сегодня"/dashboard screens, a ~90-word
+seeded vocabulary with an SM-2 review screen (`/session/vocab`), a reading screen with 12 A1-A2
+texts (`/session/reading`) and grammar lessons following the grammar textbook's unit order
+(`/session/grammar`, exercises for units 1-12 so far). Next up: Фаза 3 (listening/shadowing +
+fluency) — see the plan doc for the full roadmap.
+
+## Content
+
+Grammar exercises and reading texts are written by hand in `supabase/content/*.mjs` (own wording —
+only unit titles/order come from the textbook). After editing, regenerate and apply the seed:
+
+```bash
+node supabase/content/build-seed.mjs   # validates content, writes supabase/seed_phase2.sql
+```
+
+then run `supabase/seed_phase2.sql` in the SQL Editor (or via the Supabase MCP). It upserts, so
+re-running it is safe and keeps existing attempts/reads.

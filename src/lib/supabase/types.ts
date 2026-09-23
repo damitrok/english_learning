@@ -66,36 +66,112 @@ export type Database = {
           },
         ]
       }
+      grammar_attempts: {
+        Row: {
+          answer: string
+          created_at: string
+          exercise_id: string
+          id: string
+          is_correct: boolean
+          user_id: string
+        }
+        Insert: {
+          answer: string
+          created_at?: string
+          exercise_id: string
+          id?: string
+          is_correct: boolean
+          user_id: string
+        }
+        Update: {
+          answer?: string
+          created_at?: string
+          exercise_id?: string
+          id?: string
+          is_correct?: boolean
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "grammar_attempts_exercise_id_fkey"
+            columns: ["exercise_id"]
+            isOneToOne: false
+            referencedRelation: "grammar_exercises"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       grammar_exercises: {
         Row: {
+          accepted_answers: string[]
           correct_answer: string
           created_at: string
           exercise_type: Database["public"]["Enums"]["exercise_type"]
+          explanation: string | null
           id: string
           options: string[] | null
+          position: number
           prompt: string
-          topic: string
-          topic_order: number
+          topic_id: string
         }
         Insert: {
+          accepted_answers?: string[]
           correct_answer: string
           created_at?: string
           exercise_type: Database["public"]["Enums"]["exercise_type"]
+          explanation?: string | null
           id?: string
           options?: string[] | null
+          position?: number
           prompt: string
-          topic: string
-          topic_order: number
+          topic_id: string
         }
         Update: {
+          accepted_answers?: string[]
           correct_answer?: string
           created_at?: string
           exercise_type?: Database["public"]["Enums"]["exercise_type"]
+          explanation?: string | null
           id?: string
           options?: string[] | null
+          position?: number
           prompt?: string
-          topic?: string
-          topic_order?: number
+          topic_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "grammar_exercises_topic_id_fkey"
+            columns: ["topic_id"]
+            isOneToOne: false
+            referencedRelation: "grammar_topics"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      grammar_topics: {
+        Row: {
+          created_at: string
+          id: string
+          section: string
+          summary: string | null
+          title: string
+          unit: number
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          section: string
+          summary?: string | null
+          title: string
+          unit: number
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          section?: string
+          summary?: string | null
+          title?: string
+          unit?: number
         }
         Relationships: []
       }
@@ -192,12 +268,49 @@ export type Database = {
         }
         Relationships: []
       }
+      text_reads: {
+        Row: {
+          correct_answers: number
+          created_at: string
+          id: string
+          seconds_spent: number
+          text_id: string
+          user_id: string
+        }
+        Insert: {
+          correct_answers?: number
+          created_at?: string
+          id?: string
+          seconds_spent?: number
+          text_id: string
+          user_id: string
+        }
+        Update: {
+          correct_answers?: number
+          created_at?: string
+          id?: string
+          seconds_spent?: number
+          text_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "text_reads_text_id_fkey"
+            columns: ["text_id"]
+            isOneToOne: false
+            referencedRelation: "texts"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       texts: {
         Row: {
           body: string
           cefr_level: Database["public"]["Enums"]["cefr_level"]
           created_at: string
           id: string
+          position: number
+          questions: Json
           source_url: string | null
           title: string
           word_ids: string[]
@@ -207,6 +320,8 @@ export type Database = {
           cefr_level: Database["public"]["Enums"]["cefr_level"]
           created_at?: string
           id?: string
+          position?: number
+          questions?: Json
           source_url?: string | null
           title: string
           word_ids?: string[]
@@ -216,6 +331,8 @@ export type Database = {
           cefr_level?: Database["public"]["Enums"]["cefr_level"]
           created_at?: string
           id?: string
+          position?: number
+          questions?: Json
           source_url?: string | null
           title?: string
           word_ids?: string[]
@@ -406,3 +523,4 @@ export const Constants = {
 export type CefrLevel = Database["public"]["Enums"]["cefr_level"]
 export type WordTag = Database["public"]["Enums"]["word_tag"]
 export type SrsResult = Database["public"]["Enums"]["srs_result"]
+export type ExerciseType = Database["public"]["Enums"]["exercise_type"]
