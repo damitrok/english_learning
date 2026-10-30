@@ -34,6 +34,15 @@ Design reference: [`docs/DESIGN.md`](docs/DESIGN.md) (dark, Raycast-style tokens
    the *same browser* that requested it. Request the link and open the email in one regular browser
    window, not across two different browsers or automation tools.
 
+## Auth email
+
+Supabase's built-in mailer only delivers to project team members, so production uses a custom
+SMTP (Brevo) set in Dashboard → Authentication → Emails → SMTP Settings. The email template lives
+in `supabase/templates/magic-link.html` — paste it into both the "Magic Link" and "Confirm signup"
+templates (subject «Вход в English for IT»). It carries the link and the one-time code
+(`{{ .Token }}`), which the login screen accepts too — needed inside the installed iOS app, where
+the link opens in Safari and can't finish the PKCE flow.
+
 ## Auth redirect URLs
 
 Supabase Auth's allowed redirect URLs must include, for every place this app is reachable from:
@@ -44,7 +53,26 @@ Set these in the Supabase Dashboard → Authentication → URL Configuration (no
 
 ## Status
 
-Фаза 0 and Фаза 1 from the plan are done: project skeleton, auth, DB schema (now with proper
-Postgres enums), the "Сегодня"/dashboard screens, a ~90-word seeded vocabulary, and a working
-SM-2 review screen at `/session/vocab` with Web Speech TTS. Deployed to Vercel. Next up: Фаза 2
-(reading texts + grammar) — see the plan doc for the full roadmap and materials checklist.
+The MVP (Фазы 0-4 of the plan) is done: all four daily steps on «Сегодня» with done marks and
+«Дальше →» between them — SM-2 vocabulary (825 words) plus grammar lessons, reading, listening/
+shadowing, fluency — streaks per local day (weekends without a session don't break them), a
+progress dashboard, and PWA install + offline support. Install on a phone via "Add to Home Screen"
+(Safari) or the install prompt (Chrome). Speech recognition for shadowing needs Chrome/Edge/Safari.
+Optional Фаза 5 ideas are in the plan doc.
+
+## Content
+
+Grammar exercises and reading texts are written by hand in `supabase/content/*.mjs` (own wording —
+only unit titles/order come from the textbook). After editing, regenerate and apply the seed:
+
+```bash
+node supabase/content/build-seed.mjs   # validates content, writes supabase/seed_phase2.sql
+```
+
+then run `supabase/seed_phase2.sql` in the SQL Editor (or via the Supabase MCP). It upserts, so
+re-running it is safe and keeps existing attempts/reads.
+
+Vocabulary works the same way: `supabase/content/words.mjs` holds the 30 units of the vocabulary
+textbook (own translations/examples) with 5 IT terms after each unit; `node
+supabase/content/build-words.mjs` checks that every book word is covered and writes
+`supabase/seed_words.sql`. New words enter the SRS queue in `words.sort_order`.
