@@ -34,8 +34,11 @@ export async function getTodayVocabQueue(): Promise<VocabQueueItem[]> {
       .eq("user_id", user.id),
     supabase
       .from("words")
-      .select("id, headword, translation, ipa, example_sentence, cefr_level")
-      .order("cefr_level", { ascending: true }),
+      .select("id, headword, translation, ipa, example_sentence")
+      // Learning order: starter words, then textbook units interleaved with IT terms.
+      .order("sort_order")
+      .order("cefr_level")
+      .order("headword"),
   ]);
 
   const wordsById = new Map((allWords ?? []).map((w) => [w.id, w]));

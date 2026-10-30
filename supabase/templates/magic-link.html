@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light only" />
+    <title>Вход в English for IT</title>
+  </head>
+  <body style="margin:0;padding:0;background:#f2f2f3;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f2f2f3;">
+      <tr>
+        <td align="center" style="padding:32px 16px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:480px;background:#ffffff;border-radius:16px;border:1px solid #e3e3e5;">
+            <tr>
+              <td style="background:#07080a;border-radius:16px 16px 0 0;padding:20px 28px;">
+                <span style="display:inline-block;width:8px;height:8px;border-radius:4px;background:#ff6363;vertical-align:middle;"></span>
+                <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;font-size:15px;font-weight:600;color:#ffffff;vertical-align:middle;padding-left:8px;">English for IT</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:32px 28px 8px 28px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;">
+                <h1 style="margin:0 0 12px 0;font-size:22px;line-height:1.3;font-weight:600;color:#111214;">Вход в приложение</h1>
+                <p style="margin:0 0 24px 0;font-size:15px;line-height:1.5;color:#454647;">
+                  Нажми кнопку, чтобы войти. Ссылка одноразовая и скоро перестанет работать.
+                </p>
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td style="border-radius:10px;background:#111214;">
+                      <a href="{{ .ConfirmationURL }}" style="display:inline-block;padding:14px 28px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;font-size:15px;font-weight:600;color:#ffffff;text-decoration:none;border-radius:10px;">Войти</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:24px 28px 8px 28px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;">
+                <p style="margin:0 0 8px 0;font-size:14px;line-height:1.5;color:#6a6b6c;">
+                  Входишь в установленном приложении на телефоне? Введи этот код на экране входа:
+                </p>
+                <div style="display:inline-block;padding:12px 20px;background:#f2f2f3;border-radius:10px;font-family:'SFMono-Regular',Menlo,Consolas,monospace;font-size:26px;font-weight:600;letter-spacing:6px;color:#111214;">{{ .Token }}</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:24px 28px 28px 28px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;">
+                <p style="margin:0;font-size:12px;line-height:1.5;color:#9c9c9d;">
+                  Если ты не запрашивал вход — просто проигнорируй это письмо, без ссылки или кода никто не войдёт.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
