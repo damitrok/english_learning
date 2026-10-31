@@ -44,7 +44,7 @@ flowchart LR
 | `src/app/(app)/session/build/` | Lesson «Собери предложение»: arrange shuffled English words for a Russian sentence (`BuildSession`) |
 | `src/app/(app)/session/translate/` | Lesson «Перевод»: type the English translation of a Russian phrase (`TranslateSession`) |
 | `src/app/(app)/session/review/` | Lesson «Повтор ошибок»: grammar exercises whose latest attempt was wrong; empty → auto-completed (`GrammarSession` with `step="review"`) |
-| `src/content/phrases.ts` | Hand-written RU→EN phrase corpus (48 build + 48 translate, A1→B1, proofread). Batches are chosen by path cycle (`?n=` in the lesson link) |
+| `src/content/phrases.ts` + `phrases/part-1…8.ts` | Hand-written RU→EN phrase corpus: 690 build + 690 translate (6 per path section ↔ grammar unit, A1→B1, difficulty rises with position; proofread). Batches are chosen by path cycle (`?n=` in the lesson link). `phrases.test.ts` / `texts.test.ts` enforce the difficulty ladder |
 | `src/components/` | Shared UI (`NavBar`, `LessonPath`, `StepComplete`) and the per-lesson session components |
 | `src/lib/supabase/` | Supabase client factories + session-refresh logic used by `proxy.ts` |
 | `src/lib/supabase/types.ts` | DB types generated from the live project + convenience aliases at the bottom (regenerate after schema changes) |
@@ -58,7 +58,7 @@ flowchart LR
 | `src/lib/*.test.ts` | Vitest unit tests for the pure modules (`dates`, `path`, `srs`, `highlight`, `plural`); config in `vitest.config.ts`; run `npm test` before deploys |
 | `src/lib/speech.ts` | Web Speech TTS wrapper (`speak`) for vocabulary pronunciation |
 | `src/docs/` | The two textbook PDFs (grammar: Murphy, *Essential Grammar in Use*; words: Nation, *4000 Essential English Words 1*) — personal copies, git-ignored (copyrighted, never commit them) |
-| `supabase/content/` | Hand-written content as JS modules (`grammar-topics.mjs`, `grammar-exercises.mjs`, `texts.mjs`, `words.mjs`) + `build-seed.mjs` / `build-words.mjs`, which validate them and generate `supabase/seed_phase2.sql` / `seed_words.sql` |
+| `supabase/content/` | Hand-written content as JS modules (`grammar-topics.mjs`, `grammar-exercises.mjs`, `texts.mjs` + `texts-part-1…8.mjs` (115 reading texts, text N ↔ grammar unit N), `words.mjs`) + `build-seed.mjs` / `build-words.mjs`, which validate them and generate `supabase/seed_phase2.sql` / `seed_words.sql` |
 | `supabase/migrations/0001_init.sql` | Full schema: `words`, `texts`, `grammar_exercises`, `cards`, `sessions` + RLS policies |
 | `supabase/migrations/20261031004150_lessons_streak.sql` | `sessions.lessons_completed`; `record_step` counts every finished lesson (streak day = 3+, path position = total); drops listening tables/enum/column, fluency columns, `completed_steps` and the unused `progress` table; `fluency_minutes` → `practice_minutes` |
 | `supabase/migrations/20260923202717_daily_steps.sql` | Фаза 4: `sessions.completed_steps` + `grammar_minutes`, `record_step(date, step, minutes)` |

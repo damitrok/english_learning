@@ -4,7 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 import { reviewCard, type SrsCardState } from "@/lib/srs";
 import type { SrsResult } from "@/lib/supabase/types";
 
-const NEW_WORDS_PER_DAY = 5;
+const NEW_WORDS_PER_DAY = 7;
 
 export interface VocabQueueItem {
   cardId: string | null;
