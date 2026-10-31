@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "English for IT",
     short_name: "English IT",
-    description: "Ежедневная практика технического английского: слова, чтение, аудирование, беглость.",
+    description: "Ежедневная практика технического английского: слова, грамматика, чтение, переводы.",
     start_url: "/",
     display: "standalone",
     background_color: "#040506",
