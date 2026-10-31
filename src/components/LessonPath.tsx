@@ -96,7 +96,7 @@ function Node({ lesson }: { lesson: PathLesson }) {
         <span
           aria-hidden
           className={`pointer-events-none absolute top-1/2 w-[92px] -translate-y-1/2 text-[12px] leading-tight ${
-            offset > 0 ? "right-full mr-3 text-right" : "left-full ml-3"
+            offset > 0 ? `right-full text-right ${current ? "mr-5" : "mr-3"}` : `left-full ${current ? "ml-5" : "ml-3"}`
           } ${current ? "font-medium text-pure-white" : "text-smoke"}`}
         >
           {LESSON_LABELS[lesson.type]}
