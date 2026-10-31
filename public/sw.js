@@ -4,7 +4,7 @@
 //   screen visited online (today's cards, today's text) opens offline too.
 // - Everything else (RSC fetches, Server Actions) goes straight to the network;
 //   Next's experimental.useOffline retries those when the connection returns.
-const VERSION = "v1";
+const VERSION = "v2";
 const STATIC_CACHE = `static-${VERSION}`;
 const PAGE_CACHE = `pages-${VERSION}`;
 const OFFLINE_URL = "/offline.html";

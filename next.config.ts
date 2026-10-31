@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  env: {
+    // Compared with /api/version at runtime to detect a newer deployment.
+    NEXT_PUBLIC_BUILD_ID: process.env.VERCEL_GIT_COMMIT_SHA ?? "dev",
+  },
   experimental: {
     // Failed navigations / Server Actions wait for the network and retry
     // instead of throwing (vocab reviews made offline are sent later).
