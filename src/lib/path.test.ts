@@ -3,8 +3,8 @@ import { buildPath, lessonCycle, PATTERN, UNIT_SIZE } from "@/lib/path";
 import { LESSON_TYPES } from "@/lib/dates";
 
 describe("path constants", () => {
-  it("PATTERN uses every lesson type exactly once; a unit is one pass", () => {
-    expect([...PATTERN].sort()).toEqual([...LESSON_TYPES].sort());
+  it("PATTERN uses every lesson type except words (they live in their own tab) exactly once; a unit is one pass", () => {
+    expect([...PATTERN].sort()).toEqual(LESSON_TYPES.filter((t) => t !== "vocab").sort());
     expect(UNIT_SIZE).toBe(PATTERN.length);
   });
 

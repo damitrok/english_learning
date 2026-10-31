@@ -178,6 +178,7 @@ export type Database = {
       sessions: {
         Row: {
           lessons_completed: number
+          word_sessions: number
           created_at: string
           practice_minutes: number
           grammar_minutes: number
@@ -189,6 +190,7 @@ export type Database = {
         }
         Insert: {
           lessons_completed?: number
+          word_sessions?: number
           created_at?: string
           practice_minutes?: number
           grammar_minutes?: number
@@ -200,6 +202,7 @@ export type Database = {
         }
         Update: {
           lessons_completed?: number
+          word_sessions?: number
           created_at?: string
           practice_minutes?: number
           grammar_minutes?: number

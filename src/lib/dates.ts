@@ -4,10 +4,9 @@
 export const TZ_COOKIE = "tz";
 export const DEFAULT_TZ = "UTC";
 
-/** Kinds of lesson on the path; each one is a session screen under /session/<name>. */
+/** Kinds of lesson; each one is a session screen under /session/<name>. "vocab" is a words-tab session (not on the path). */
 export const LESSON_TYPES = [
   "vocab",
-  "context",
   "grammar",
   "build",
   "reading",

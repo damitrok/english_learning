@@ -7,6 +7,8 @@ import { addDays, computeStreaks, isDayComplete, localDate } from "@/lib/dates";
 export interface DayActivity {
   date: string;
   lessons: number;
+  /** Words-tab sessions among `lessons`; they count for the streak but not for the path. */
+  wordSessions: number;
   minutes: { vocab: number; grammar: number; reading: number; practice: number };
 }
 
@@ -20,7 +22,7 @@ async function loadDays() {
   const { data } = await supabase
     .from("sessions")
     .select(
-      "session_date, lessons_completed, vocab_minutes, grammar_minutes, reading_minutes, practice_minutes"
+      "session_date, lessons_completed, word_sessions, vocab_minutes, grammar_minutes, reading_minutes, practice_minutes"
     )
     .eq("user_id", user.id)
     .order("session_date");
@@ -28,6 +30,7 @@ async function loadDays() {
   const days: DayActivity[] = (data ?? []).map((s) => ({
     date: s.session_date,
     lessons: s.lessons_completed,
+    wordSessions: s.word_sessions,
     minutes: {
       vocab: s.vocab_minutes,
       grammar: s.grammar_minutes,
@@ -39,7 +42,7 @@ async function loadDays() {
 }
 
 export interface PathOverview {
-  /** Lifetime number of finished lessons — the learner's position on the path. */
+  /** Lifetime number of finished path lessons — the learner's position on the path (words sessions excluded). */
   lessonsCompleted: number;
   lessonsToday: number;
   streak: number;
@@ -55,7 +58,7 @@ export async function getPathOverview(): Promise<PathOverview> {
     today
   );
   return {
-    lessonsCompleted: days.reduce((sum, d) => sum + d.lessons, 0),
+    lessonsCompleted: days.reduce((sum, d) => sum + d.lessons - d.wordSessions, 0),
     lessonsToday,
     streak: streaks.current,
     dayComplete: isDayComplete(lessonsToday),
