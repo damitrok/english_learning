@@ -7,7 +7,7 @@ import { useOffline } from "next/offline";
 export default function Loading() {
   const isOffline = useOffline();
   return (
-    <p className="py-16 text-center text-body text-ash">
+    <p className="py-[4rem] text-center text-body text-ash">
       {isOffline ? "Нет сети — экран загрузится, когда связь вернётся…" : "Загрузка…"}
     </p>
   );

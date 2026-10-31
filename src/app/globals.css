@@ -104,13 +104,39 @@
   --foreground: var(--color-pure-white);
 }
 
+/* The app is a fixed full-screen shell: the page itself never scrolls or bounces; only the
+   scroll areas inside it (`scroll-area`) do. dvh = the visible viewport (excludes mobile browser bars). */
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
+  height: 100dvh;
+  overflow: hidden;
+  overscroll-behavior: none;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
-  /* Installed PWA draws under the iPhone notch / home indicator (viewport-fit=cover). */
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
-    env(safe-area-inset-left);
+  -webkit-tap-highlight-color: transparent;
+  /* Installed PWA draws under the iPhone notch (viewport-fit=cover). The bottom inset is handled
+     by the bars that touch the bottom edge (`pb-safe`). */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+/* An inner vertical scroller: no scrollbar on touch screens, no scroll chaining to the page. */
+@utility scroll-area {
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  @media (pointer: coarse) {
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 /* Chunky "pressable" buttons (Duolingo-style 3D edge) */

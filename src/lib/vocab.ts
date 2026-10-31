@@ -1,6 +1,7 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import { getAuthUser } from "@/lib/supabase/user";
 import { reviewCard, type SrsCardState } from "@/lib/srs";
 import type { SrsResult } from "@/lib/supabase/types";
 
@@ -22,9 +23,7 @@ export interface VocabQueueItem {
  */
 export async function getTodayVocabQueue(): Promise<VocabQueueItem[]> {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getAuthUser(supabase);
   if (!user) return [];
 
   const [{ data: userCards }, { data: allWords }] = await Promise.all([
@@ -89,9 +88,7 @@ export async function submitVocabReview(
   result: SrsResult
 ): Promise<void> {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getAuthUser(supabase);
   if (!user) throw new Error("Not authenticated");
 
   const next = reviewCard(srsState, result);

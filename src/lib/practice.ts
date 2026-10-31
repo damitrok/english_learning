@@ -1,6 +1,7 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import { getAuthUser } from "@/lib/supabase/user";
 import { blankWord } from "@/lib/word-context";
 import type { GrammarLesson } from "@/lib/grammar";
 
@@ -23,9 +24,7 @@ const MIN_STUDIED = 4;
  */
 export async function getContextLesson(cycle: number): Promise<ContextItem[]> {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getAuthUser(supabase);
   if (!user) return [];
 
   const [{ data: cards }, { data: words }] = await Promise.all([
@@ -62,9 +61,7 @@ const REVIEW_ITEMS = 6;
  */
 export async function getReviewLesson(): Promise<GrammarLesson | null> {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getAuthUser(supabase);
   if (!user) return null;
 
   const { data: attempts } = await supabase
