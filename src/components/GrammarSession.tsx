@@ -144,7 +144,7 @@ export function GrammarSession({
         <p className="text-subheading leading-relaxed text-pure-white">
           {before}
           <span
-            className={`inline-block min-w-16 border-b-2 px-1 text-center ${
+            className={`inline-block min-w-[4rem] border-b-2 px-1 text-center ${
               !result
                 ? "border-ash text-ash"
                 : result.correct

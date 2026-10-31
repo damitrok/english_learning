@@ -3,7 +3,10 @@ import type { Metadata, Viewport } from "next";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/geist-mono";
 import "./globals.css";
+import { headers } from "next/headers";
 import { ServiceWorker } from "@/components/ServiceWorker";
+import { InstallGate } from "@/components/InstallGate";
+import { parseUserAgent } from "@/lib/device";
 
 export const metadata: Metadata = {
   title: "English for IT",
@@ -16,15 +19,13 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const initialPhone = parseUserAgent((await headers()).get("user-agent")).isPhone;
   return (
-    <html
-      lang="ru"
-      className="h-full antialiased"
-    >
-      <body className="min-h-full flex flex-col bg-void-black text-pure-white">
+    <html lang="ru" className="antialiased">
+      <body className="bg-void-black text-pure-white">
         <ServiceWorker />
-        {children}
+        <InstallGate initialPhone={initialPhone}>{children}</InstallGate>
       </body>
     </html>
   );

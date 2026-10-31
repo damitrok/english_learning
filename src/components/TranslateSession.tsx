@@ -61,7 +61,7 @@ export function TranslateSession({ items }: { items: Phrase[] }) {
           {index + 1} / {items.length} · переведи на английский
         </p>
       </div>
-      <div className="rounded-cards border border-border-hairline bg-ink p-5 shadow-key sm:p-8">
+      <div className="rounded-cards border border-border-hairline bg-ink p-5 shadow-key sm:p-[2rem]">
         <p className="text-subheading leading-relaxed text-pure-white">{item.ru}</p>
       </div>
       <form

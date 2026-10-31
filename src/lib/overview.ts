@@ -1,5 +1,6 @@
 // Read-side data for «Сегодня» and the dashboard. Plain server module.
 import { createClient } from "@/lib/supabase/server";
+import { getAuthUser } from "@/lib/supabase/user";
 import { getTimeZone } from "@/lib/day-server";
 import { addDays, computeStreaks, isDayComplete, localDate } from "@/lib/dates";
 
@@ -11,9 +12,7 @@ export interface DayActivity {
 
 async function loadDays() {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getAuthUser(supabase);
   const tz = await getTimeZone();
   const today = localDate(tz);
   if (!user) return { supabase, user: null, tz, today, days: [] as DayActivity[] };
