@@ -1,75 +1,38 @@
-import { StepCard } from "@/components/StepCard";
-import { getTodayOverview } from "@/lib/overview";
+import { LessonPath } from "@/components/LessonPath";
+import { LESSONS_PER_DAY } from "@/lib/dates";
+import { getPathOverview } from "@/lib/overview";
 import { plural } from "@/lib/plural";
 
-const STEPS = [
-  {
-    step: 1,
-    key: "vocab",
-    strand: "Осознанное изучение",
-    minutes: 10,
-    description:
-      "SRS-карточки: слова на повтор по алгоритму + несколько новых. 2-3 раза в неделю — блок грамматики.",
-    href: "/session/vocab",
-    secondary: { href: "/session/grammar", label: "Грамматика" },
-  },
-  {
-    step: 2,
-    key: "reading",
-    strand: "Понятный ввод — чтение",
-    minutes: 10,
-    description: "Короткий текст под текущий уровень, читается ради смысла.",
-    href: "/session/reading",
-  },
-  {
-    step: 3,
-    key: "listening",
-    strand: "Вывод + аудирование",
-    minutes: 10,
-    description: "Короткий диалог: сначала слушаешь, потом повторяешь вслух за диктором (shadowing).",
-    href: "/session/listening",
-  },
-  {
-    step: 4,
-    key: "fluency",
-    strand: "Беглость",
-    minutes: 5,
-    description: "Быстрое повторное чтение вчерашнего текста без словаря.",
-    href: "/session/fluency",
-  },
-] as const;
-
-export default async function TodayPage() {
-  const { stepsDone, dayComplete, streak } = await getTodayOverview();
-  const doneCount = STEPS.filter((s) => stepsDone.includes(s.key)).length;
-  const nextStep = STEPS.find((s) => !stepsDone.includes(s.key));
+export default async function PathPage() {
+  const { lessonsCompleted, lessonsToday, streak, dayComplete } = await getPathOverview();
+  const progress = Math.min(lessonsToday, LESSONS_PER_DAY);
 
   return (
-    <div className="flex flex-col gap-8 py-4">
-      <div>
-        <p className="text-eyebrow font-medium uppercase text-ash">Сегодня</p>
-        <h1 className="mt-2 text-heading font-normal text-pure-white">
-          {streak} {plural(streak, ["день", "дня", "дней"])} подряд
-        </h1>
-        <p className="mt-2 text-body text-ash">
+    <div className="mx-auto flex w-full max-w-md flex-col gap-6 py-2 sm:gap-8 sm:py-4">
+      <div className="rounded-cards border border-border-hairline bg-ink p-4 shadow-key sm:p-5">
+        <div className="flex items-baseline justify-between gap-4">
+          <h1 className="text-heading-sm font-medium text-pure-white">
+            {streak} {plural(streak, ["день", "дня", "дней"])} подряд
+          </h1>
+          <span className="font-mono text-body text-ash">
+            {progress}/{LESSONS_PER_DAY}
+          </span>
+        </div>
+        <div className="mt-3 flex gap-2" aria-hidden>
+          {Array.from({ length: LESSONS_PER_DAY }, (_, i) => (
+            <span
+              key={i}
+              className={`h-3 flex-1 rounded-full ${i < progress ? "bg-coral-pulse" : "bg-graphite"}`}
+            />
+          ))}
+        </div>
+        <p className="mt-3 text-body text-ash">
           {dayComplete
-            ? "День засчитан — все 4 шага пройдены. Отличная работа!"
-            : `Пройдено шагов: ${doneCount} из 4. Пройди все, чтобы засчитать день (≈ 35 минут). Выходные без занятий серию не прерывают.`}
+            ? "День засчитан! Можно продолжать — уроков в день сколько угодно."
+            : `Пройди ещё ${LESSONS_PER_DAY - progress} ${plural(LESSONS_PER_DAY - progress, ["урок", "урока", "уроков"])}, чтобы засчитать день.`}
         </p>
-        {stepsDone.includes("grammar") && (
-          <p className="mt-1 text-body text-success-green">✓ Грамматика сегодня тоже есть</p>
-        )}
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-        {STEPS.map(({ key, ...s }) => (
-          <StepCard
-            key={s.step}
-            {...s}
-            done={stepsDone.includes(key)}
-            highlighted={nextStep?.key === key}
-          />
-        ))}
-      </div>
+      <LessonPath completed={lessonsCompleted} />
     </div>
   );
 }

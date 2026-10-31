@@ -1,17 +1,17 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import Link from "next/link";
 import { markTextRead, type ReadingText } from "@/lib/reading";
 import { splitByHeadwords } from "@/lib/highlight";
 import { speak } from "@/lib/speech";
 import { StepComplete } from "@/components/StepComplete";
+import { SessionEmpty, SessionFrame } from "@/components/SessionFrame";
 
 type Phase = "reading" | "questions" | "done";
 
 export function ReadingSession({ text }: { text: ReadingText | null }) {
   const [phase, setPhase] = useState<Phase>("reading");
-  const [openWord, setOpenWord] = useState<string | null>(null);
+  const [openWord, setOpenWord] = useState<{ id: string; headword: string } | null>(null);
   const [answers, setAnswers] = useState<(boolean | null)[]>(
     () => text?.questions.map(() => null) ?? []
   );
@@ -35,7 +35,7 @@ export function ReadingSession({ text }: { text: ReadingText | null }) {
   );
 
   if (!text) {
-    return <EmptyState message="Текстов пока нет — добавь их в базу (supabase/content/texts.mjs)." />;
+    return <SessionEmpty message="Текстов пока нет — добавь их в базу (supabase/content/texts.mjs)." />;
   }
 
   const allAnswered = answers.every((a) => a !== null);
@@ -65,8 +65,22 @@ export function ReadingSession({ text }: { text: ReadingText | null }) {
     );
   }
 
+  const answeredCount = answers.filter((a) => a !== null).length;
+  const progress =
+    phase === "reading" ? 0.1 : 0.1 + (0.9 * answeredCount) / Math.max(1, text.questions.length);
+  const footer =
+    phase === "reading" ? (
+      <button onClick={() => setPhase("questions")} className="btn-primary">
+        Прочитал
+      </button>
+    ) : allAnswered ? (
+      <button onClick={finish} disabled={saving} className="btn-primary">
+        Завершить
+      </button>
+    ) : undefined;
+
   return (
-    <div className="mx-auto flex w-full max-w-2xl flex-col gap-6 py-8">
+    <SessionFrame progress={progress} width="max-w-2xl" footer={footer}>
       <div className="flex items-center justify-between gap-4">
         <p className="text-body text-ash">
           Текст {text.position} / {text.total}
@@ -77,12 +91,12 @@ export function ReadingSession({ text }: { text: ReadingText | null }) {
         </span>
       </div>
 
-      <article className="flex flex-col gap-4 rounded-cards border border-border-hairline bg-ink p-6 shadow-key sm:p-10">
-        <div className="flex items-start justify-between gap-4">
-          <h1 className="text-heading font-normal text-pure-white">{text.title}</h1>
+      <article className="flex flex-col gap-4 rounded-cards border border-border-hairline bg-ink p-5 shadow-key sm:p-10">
+        <div className="flex items-start justify-between gap-3">
+          <h1 className="min-w-0 break-words text-heading-sm font-normal sm:text-heading text-pure-white">{text.title}</h1>
           <button
             onClick={() => speak(text.body)}
-            className="shrink-0 rounded-buttons border border-border-hairline px-3 py-2 text-body text-mist hover:bg-white/5"
+            className="btn-secondary min-h-12 shrink-0 px-4"
           >
             🔊 Слушать
           </button>
@@ -92,20 +106,17 @@ export function ReadingSession({ text }: { text: ReadingText | null }) {
             {segments.map((seg, si) => {
               if (seg.kind === "text") return <span key={si}>{seg.value}</span>;
               const id = `${pi}:${si}`;
-              const isOpen = openWord === id;
+              const isOpen = openWord?.id === id;
               return (
                 <span key={si} className="relative">
                   <button
-                    onClick={() => setOpenWord(isOpen ? null : id)}
-                    className="rounded-sm text-electric-sky underline decoration-dotted underline-offset-4"
+                    onClick={() =>
+                      setOpenWord(isOpen ? null : { id, headword: seg.headword })
+                    }
+                    className="rounded-sm py-2 text-electric-sky underline decoration-dotted underline-offset-4"
                   >
                     {seg.value}
                   </button>
-                  {isOpen && (
-                    <span className="absolute left-0 top-full z-10 mt-1 whitespace-nowrap rounded-buttons border border-border-hairline bg-obsidian px-2 py-1 text-body text-pure-white shadow-key">
-                      {translations.get(seg.headword)}
-                    </span>
-                  )}
                 </span>
               );
             })}
@@ -114,18 +125,21 @@ export function ReadingSession({ text }: { text: ReadingText | null }) {
       </article>
 
       {phase === "reading" && (
-        <div className="flex flex-col gap-2">
-          <p className="text-body text-ash">
-            Читай ради смысла, не переводи каждое слово. Синим выделены слова из твоих
-            карточек — нажми, если забыл перевод.
-          </p>
-          <button
-            onClick={() => setPhase("questions")}
-            className="self-start rounded-buttons bg-mist px-4 py-2 text-body font-medium text-iron"
-          >
-            Прочитал
-          </button>
-        </div>
+        <p className="text-body text-ash">
+          Читай ради смысла, не переводи каждое слово. Синим выделены слова из твоих
+          карточек — нажми, если забыл перевод.
+        </p>
+      )}
+
+      {openWord && (
+        <button
+          role="status"
+          onClick={() => setOpenWord(null)}
+          className="fixed inset-x-4 bottom-[calc(env(safe-area-inset-bottom)+6rem)] z-30 mx-auto max-w-md rounded-cards border border-border-hairline bg-obsidian px-4 py-3 text-left text-body-lg text-pure-white shadow-lift"
+        >
+          <span className="text-electric-sky">{openWord.headword}</span> —{" "}
+          {translations.get(openWord.headword)}
+        </button>
       )}
 
       {phase === "questions" && (
@@ -140,17 +154,17 @@ export function ReadingSession({ text }: { text: ReadingText | null }) {
                 className="flex flex-col gap-3 rounded-cards border border-border-hairline bg-ink p-4"
               >
                 <p className="text-body-lg text-pure-white">{q.statement}</p>
-                <div className="flex gap-3">
+                <div className="grid grid-cols-2 gap-3">
                   {[true, false].map((value) => {
                     const chosen = given === value;
                     const isRight = value === q.answer;
                     const tone = !answered
-                      ? "border-border-hairline text-pure-white hover:bg-white/5"
+                      ? "text-pure-white"
                       : isRight
                         ? "border-success-green text-success-green"
                         : chosen
                           ? "border-coral-pulse text-coral-pulse"
-                          : "border-border-hairline text-smoke";
+                          : "text-smoke";
                     return (
                       <button
                         key={String(value)}
@@ -158,7 +172,7 @@ export function ReadingSession({ text }: { text: ReadingText | null }) {
                         onClick={() =>
                           setAnswers((prev) => prev.map((a, j) => (j === i ? value : a)))
                         }
-                        className={`rounded-buttons border px-4 py-2 text-body font-medium ${tone}`}
+                        className={`btn-secondary ${tone}`}
                       >
                         {value ? "Верно" : "Неверно"}
                       </button>
@@ -168,32 +182,9 @@ export function ReadingSession({ text }: { text: ReadingText | null }) {
               </div>
             );
           })}
-          {allAnswered && (
-            <button
-              onClick={finish}
-              disabled={saving}
-              className="self-start rounded-buttons bg-mist px-4 py-2 text-body font-medium text-iron disabled:opacity-40"
-            >
-              Завершить
-            </button>
-          )}
           {saveError && <p className="text-body text-coral-pulse">{saveError}</p>}
         </div>
       )}
-    </div>
-  );
-}
-
-function EmptyState({ message }: { message: string }) {
-  return (
-    <div className="mx-auto flex w-full max-w-md flex-col items-center gap-4 py-16 text-center">
-      <p className="text-body-lg text-pure-white">{message}</p>
-      <Link
-        href="/"
-        className="rounded-buttons bg-mist px-4 py-2 text-body font-medium text-iron"
-      >
-        Вернуться к «Сегодня»
-      </Link>
-    </div>
+    </SessionFrame>
   );
 }

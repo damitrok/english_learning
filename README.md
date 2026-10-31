@@ -53,11 +53,11 @@ Set these in the Supabase Dashboard → Authentication → URL Configuration (no
 
 ## Status
 
-The MVP (Фазы 0-4 of the plan) is done: all four daily steps on «Сегодня» with done marks and
-«Дальше →» between them — SM-2 vocabulary (825 words) plus grammar lessons, reading, listening/
-shadowing, fluency — streaks per local day (weekends without a session don't break them), a
-progress dashboard, and PWA install + offline support. Install on a phone via "Add to Home Screen"
-(Safari) or the install prompt (Chrome). Speech recognition for shadowing needs Chrome/Edge/Safari.
+The MVP is done. Learning is a Duolingo-style lesson path on the home screen: every node is a
+lesson (vocabulary SM-2, words in context, grammar, build-a-sentence, reading, RU→EN translation, mistakes review — repeating), finishing 3 lessons in a local day
+counts the day toward the streak, and there is no daily cap. The speaking/listening section was
+removed. Plus a progress dashboard and PWA install + offline support. Install on a phone via "Add to
+Home Screen" (Safari) or the install prompt (Chrome).
 Optional Фаза 5 ideas are in the plan doc.
 
 ## Content
@@ -76,3 +76,33 @@ Vocabulary works the same way: `supabase/content/words.mjs` holds the 30 units o
 textbook (own translations/examples) with 5 IT terms after each unit; `node
 supabase/content/build-words.mjs` checks that every book word is covered and writes
 `supabase/seed_words.sql`. New words enter the SRS queue in `words.sort_order`.
+
+## Tests
+
+```bash
+npm test             # one-off run (Vitest, node environment, ~1 s)
+npm run test:watch   # re-run on change while developing
+```
+
+Unit tests live next to the code as `src/lib/*.test.ts` and cover the pure logic: local-day math and
+streaks (`dates.ts`), the lesson path (`path.ts`), SM-2 spaced repetition (`srs.ts`), headword
+highlighting (`highlight.ts`) and Russian plurals (`plural.ts`). Supabase, server actions and UI are
+not covered. Run `npm test` before every deploy (and in CI, if added) along with `npm run lint` and
+`npm run build`.
+
+## Database deploys (via git)
+
+New `supabase/migrations/*.sql` files and changed seeds (`seed*.sql`) are applied to Supabase by the
+**Database** GitHub Action when they land on `main` (`scripts/db-apply.sh`; applied names/hashes are
+tracked in `app_migrations` / `app_seeds`). One-time setup:
+
+1. GitHub → Settings → Secrets and variables → Actions → new secret `SUPABASE_DB_URL` (Supabase →
+   Project Settings → Database → Connection string, session pooler, with the DB password).
+2. Nothing else: the first run on `main` sees an existing schema with no tracking and just records
+   migrations 0001–0010 as applied (the `Database` workflow can also be run by hand once it is on
+   `main`; its `baseline` option does the same explicitly). After that every merge to `main` applies
+   what's new.
+
+The **CI** workflow (lint, typecheck, tests, build) runs on every pull request. Run the same by hand
+with `npm test`. Run `scripts/db-apply.sh` locally with `SUPABASE_DB_URL` set if you need to apply
+changes without a merge.

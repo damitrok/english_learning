@@ -4,8 +4,20 @@
 export const TZ_COOKIE = "tz";
 export const DEFAULT_TZ = "UTC";
 
-export const CORE_STEPS = ["vocab", "reading", "listening", "fluency"] as const;
-export type StepName = (typeof CORE_STEPS)[number] | "grammar";
+/** Kinds of lesson on the path; each one is a session screen under /session/<name>. */
+export const LESSON_TYPES = [
+  "vocab",
+  "context",
+  "grammar",
+  "build",
+  "reading",
+  "translate",
+  "review",
+] as const;
+export type StepName = (typeof LESSON_TYPES)[number];
+
+/** A day counts toward the streak once this many lessons are finished (no upper limit). */
+export const LESSONS_PER_DAY = 3;
 
 export function isValidTimeZone(tz: string | undefined): tz is string {
   if (!tz) return false;
@@ -34,20 +46,13 @@ export function addDays(day: string, delta: number): string {
   return d.toISOString().slice(0, 10);
 }
 
-function isWeekend(day: string): boolean {
-  const dow = new Date(`${day}T00:00:00Z`).getUTCDay();
-  return dow === 0 || dow === 6;
-}
-
-export function isDayComplete(steps: readonly string[]): boolean {
-  return CORE_STEPS.every((s) => steps.includes(s));
+export function isDayComplete(lessonsCompleted: number): boolean {
+  return lessonsCompleted >= LESSONS_PER_DAY;
 }
 
 /**
- * Streaks over completed days (all four core steps). The plan is 5 days a week,
- * so a weekend day without a session doesn't break a streak — it just doesn't
- * add to it. A weekday without a completed session does. Today not being done
- * yet doesn't break the current streak either.
+ * Streaks over completed days. A missed day breaks the streak; today not being
+ * done yet doesn't break the current streak (there is still time).
  */
 export function computeStreaks(
   completedDays: Iterable<string>,
@@ -56,35 +61,17 @@ export function computeStreaks(
   const done = new Set(completedDays);
 
   let current = 0;
-  let day = done.has(today) ? today : addDays(today, -1);
-  // Walk back while days are completed or skippable weekends.
-  for (let guard = 0; guard < 3650; guard++) {
-    if (done.has(day)) current++;
-    else if (!isWeekend(day)) break;
-    day = addDays(day, -1);
+  for (let day = done.has(today) ? today : addDays(today, -1); done.has(day); day = addDays(day, -1)) {
+    current++;
   }
 
   let longest = 0;
-  const sorted = [...done].sort();
-  if (sorted.length > 0) {
-    let run = 0;
-    let prev: string | null = null;
-    for (const d of sorted) {
-      if (prev === null) run = 1;
-      else {
-        // Continue the run if every day strictly between prev and d is a weekend.
-        let gapOk = true;
-        for (let x = addDays(prev, 1); x < d; x = addDays(x, 1)) {
-          if (!isWeekend(x)) {
-            gapOk = false;
-            break;
-          }
-        }
-        run = gapOk ? run + 1 : 1;
-      }
-      longest = Math.max(longest, run);
-      prev = d;
-    }
+  let run = 0;
+  let prev: string | null = null;
+  for (const d of [...done].sort()) {
+    run = prev !== null && addDays(prev, 1) === d ? run + 1 : 1;
+    longest = Math.max(longest, run);
+    prev = d;
   }
   return { current, longest: Math.max(longest, current) };
 }
