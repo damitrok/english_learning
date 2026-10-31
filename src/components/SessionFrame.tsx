@@ -9,12 +9,15 @@ export function SessionFrame({
   progress,
   footer,
   width = "max-w-xl",
+  backHref = "/path",
   children,
 }: {
   /** 0..1 */
   progress: number;
   footer?: React.ReactNode;
   width?: string;
+  /** Where × and the empty-state button lead: the tab the lesson was started from. */
+  backHref?: string;
   children: React.ReactNode;
 }) {
   const pct = Math.round(Math.min(1, Math.max(0, progress)) * 100);
@@ -22,7 +25,7 @@ export function SessionFrame({
     <div className={`mx-auto flex w-full flex-col ${width}`}>
       <div className="sticky top-0 z-10 -mx-4 flex items-center gap-2 bg-void-black/90 px-2 backdrop-blur-xl">
         <Link
-          href="/"
+          href={backHref}
           aria-label="Закрыть урок и вернуться к пути"
           className="flex h-tap w-tap shrink-0 items-center justify-center rounded-full text-ash active:bg-white/10"
         >
@@ -57,14 +60,15 @@ export function SessionFrame({
 }
 
 /** Nothing-to-do screen with a way back to the path. */
-export function SessionEmpty({ message }: { message: string }) {
+export function SessionEmpty({ message, backHref = "/path" }: { message: string; backHref?: string }) {
   return (
     <SessionFrame
       progress={0}
       width="max-w-md"
+      backHref={backHref}
       footer={
-        <Link href="/" className="btn-primary">
-          Вернуться к пути
+        <Link href={backHref} className="btn-primary">
+          {backHref === "/" ? "К словам" : "Вернуться к пути"}
         </Link>
       }
     >
