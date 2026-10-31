@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "English for IT",
-  description: "Ежедневная практика технического английского: слова, чтение, аудирование, беглость.",
+  description: "Ежедневная практика технического английского: слова, грамматика, чтение, переводы.",
   appleWebApp: { capable: true, title: "English IT", statusBarStyle: "black-translucent" },
 };
 

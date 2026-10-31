@@ -7,12 +7,13 @@ import { markStepDone } from "@/lib/steps";
 import { speak } from "@/lib/speech";
 import type { SrsResult } from "@/lib/supabase/types";
 import { StepComplete } from "@/components/StepComplete";
+import { SessionFrame } from "@/components/SessionFrame";
 
-const RATING_BUTTONS: { result: SrsResult; label: string }[] = [
-  { result: "forgot", label: "Забыл" },
-  { result: "hard", label: "Трудно" },
-  { result: "normal", label: "Нормально" },
-  { result: "easy", label: "Легко" },
+const RATING_BUTTONS: { result: SrsResult; label: string; tone: string }[] = [
+  { result: "forgot", label: "Забыл", tone: "text-coral-pulse" },
+  { result: "hard", label: "Трудно", tone: "text-pure-white" },
+  { result: "normal", label: "Нормально", tone: "text-pure-white" },
+  { result: "easy", label: "Легко", tone: "text-success-green" },
 ];
 
 export function VocabSession({ queue }: { queue: VocabQueueItem[] }) {
@@ -86,54 +87,47 @@ export function VocabSession({ queue }: { queue: VocabQueueItem[] }) {
     );
   }
 
+  const footer = revealed ? (
+    <div className="grid grid-cols-2 gap-3">
+      {RATING_BUTTONS.map((btn) => (
+        <button key={btn.result} onClick={() => rate(btn.result)} className={`btn-secondary ${btn.tone}`}>
+          {btn.label}
+        </button>
+      ))}
+    </div>
+  ) : (
+    <button onClick={() => setRevealed(true)} className="btn-primary">
+      Показать перевод
+    </button>
+  );
+
   return (
-    <div className="mx-auto flex w-full max-w-md flex-col gap-6 py-8">
+    <SessionFrame progress={index / queue.length} width="max-w-md" footer={footer}>
       <p className="text-body text-ash">
         {index + 1} / {queue.length}
       </p>
-      <div className="flex flex-col items-center gap-4 rounded-cards border border-border-hairline bg-ink p-8 text-center shadow-key sm:p-10">
-        <h2 className="text-heading font-normal text-pure-white">{current.headword}</h2>
+      <div className="flex flex-col items-center gap-4 rounded-cards border border-border-hairline bg-ink p-6 text-center shadow-key sm:p-10">
+        <h2 className="break-words text-heading font-normal text-pure-white">{current.headword}</h2>
         {current.ipa && <p className="font-mono text-body text-ash">{current.ipa}</p>}
         <button
           onClick={() => speak(current.headword)}
-          className="rounded-buttons border border-border-hairline px-4 py-3 text-body text-mist hover:bg-white/5"
+          className="btn-secondary min-h-12 px-5"
         >
           🔊 Произнести
         </button>
 
-        {revealed ? (
+        {revealed && (
           <div className="mt-2 flex flex-col gap-2">
             <p className="text-subheading font-medium text-pure-white">{current.translation}</p>
             {current.exampleSentence && (
               <p className="text-body text-ash">{current.exampleSentence}</p>
             )}
           </div>
-        ) : (
-          <button
-            onClick={() => setRevealed(true)}
-            className="mt-2 rounded-buttons bg-mist px-4 py-3 text-body font-medium text-iron"
-          >
-            Показать перевод
-          </button>
         )}
       </div>
 
-      {revealed && (
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-          {RATING_BUTTONS.map((btn) => (
-            <button
-              key={btn.result}
-              onClick={() => rate(btn.result)}
-              className="rounded-buttons border border-border-hairline px-3 py-3 text-body font-medium text-pure-white hover:bg-white/5"
-            >
-              {btn.label}
-            </button>
-          ))}
-        </div>
-      )}
-
       {saveStatus}
       {failedNote}
-    </div>
+    </SessionFrame>
   );
 }

@@ -5,8 +5,8 @@ import { addDays, computeStreaks, isDayComplete, localDate } from "@/lib/dates";
 
 export interface DayActivity {
   date: string;
-  steps: string[];
-  minutes: { vocab: number; grammar: number; reading: number; listening: number; fluency: number };
+  lessons: number;
+  minutes: { vocab: number; grammar: number; reading: number; practice: number };
 }
 
 async function loadDays() {
@@ -21,63 +21,65 @@ async function loadDays() {
   const { data } = await supabase
     .from("sessions")
     .select(
-      "session_date, completed_steps, vocab_minutes, grammar_minutes, reading_minutes, listening_minutes, fluency_minutes"
+      "session_date, lessons_completed, vocab_minutes, grammar_minutes, reading_minutes, practice_minutes"
     )
     .eq("user_id", user.id)
     .order("session_date");
 
   const days: DayActivity[] = (data ?? []).map((s) => ({
     date: s.session_date,
-    steps: s.completed_steps,
+    lessons: s.lessons_completed,
     minutes: {
       vocab: s.vocab_minutes,
       grammar: s.grammar_minutes,
       reading: s.reading_minutes,
-      listening: s.listening_minutes,
-      fluency: s.fluency_minutes,
+      practice: s.practice_minutes,
     },
   }));
   return { supabase, user, tz, today, days };
 }
 
-export interface TodayOverview {
-  stepsDone: string[];
-  dayComplete: boolean;
+export interface PathOverview {
+  /** Lifetime number of finished lessons — the learner's position on the path. */
+  lessonsCompleted: number;
+  lessonsToday: number;
   streak: number;
+  /** Today already has enough lessons to count toward the streak. */
+  dayComplete: boolean;
 }
 
-export async function getTodayOverview(): Promise<TodayOverview> {
+export async function getPathOverview(): Promise<PathOverview> {
   const { today, days } = await loadDays();
-  const todayRow = days.find((d) => d.date === today);
+  const lessonsToday = days.find((d) => d.date === today)?.lessons ?? 0;
   const streaks = computeStreaks(
-    days.filter((d) => isDayComplete(d.steps)).map((d) => d.date),
+    days.filter((d) => isDayComplete(d.lessons)).map((d) => d.date),
     today
   );
   return {
-    stepsDone: todayRow?.steps ?? [],
-    dayComplete: isDayComplete(todayRow?.steps ?? []),
+    lessonsCompleted: days.reduce((sum, d) => sum + d.lessons, 0),
+    lessonsToday,
     streak: streaks.current,
+    dayComplete: isDayComplete(lessonsToday),
   };
 }
 
 export interface DashboardData {
   streak: { current: number; longest: number };
   daysCompleted: number;
-  /** Last 12 weeks, oldest first, Monday-aligned; `steps` = core steps done that day. */
-  calendar: { date: string; steps: number; future: boolean }[];
+  /** Last 12 weeks, oldest first, Monday-aligned; `lessons` = lessons finished that day. */
+  calendar: { date: string; lessons: number; future: boolean }[];
   minutesLast7: DayActivity["minutes"];
   minutesLast30: DayActivity["minutes"];
   words: { total: number; started: number; learned: number; due: number };
   grammar: { mastered: number; total: number; recentAccuracy: number | null };
-  reading: { textsRead: number; textsTotal: number; fluency: { date: string; wpm: number }[] };
-  listening: { done: number; total: number; avgAccuracy: number | null };
+  reading: { textsRead: number; textsTotal: number };
 }
 
 /** A card counts as learned once its review interval reaches three weeks. */
 const LEARNED_INTERVAL_DAYS = 21;
 
 export async function getDashboard(): Promise<DashboardData | null> {
-  const { supabase, user, tz, today, days } = await loadDays();
+  const { supabase, user, today, days } = await loadDays();
   if (!user) return null;
 
   const [
@@ -87,8 +89,6 @@ export async function getDashboard(): Promise<DashboardData | null> {
     { data: attempts },
     { data: texts },
     { data: reads },
-    { data: dialogues },
-    { data: logs },
   ] = await Promise.all([
     supabase.from("words").select("id", { count: "exact", head: true }),
     supabase.from("cards").select("interval_days, due_at").eq("user_id", user.id),
@@ -101,11 +101,8 @@ export async function getDashboard(): Promise<DashboardData | null> {
     supabase.from("texts").select("id"),
     supabase
       .from("text_reads")
-      .select("text_id, mode, words_per_minute, created_at")
-      .eq("user_id", user.id)
-      .order("created_at"),
-    supabase.from("listening_items").select("id").eq("kind", "tts"),
-    supabase.from("listening_logs").select("item_id, accuracy").eq("user_id", user.id),
+      .select("text_id")
+      .eq("user_id", user.id),
   ]);
 
   // Calendar: 12 weeks ending with the current week (Mon..Sun).
@@ -114,12 +111,11 @@ export async function getDashboard(): Promise<DashboardData | null> {
   const start = addDays(today, -dow - 7 * 11);
   const calendar = Array.from({ length: 84 }, (_, i) => {
     const date = addDays(start, i);
-    const steps = byDate.get(date)?.steps.filter((s) => s !== "grammar").length ?? 0;
-    return { date, steps, future: date > today };
+    return { date, lessons: byDate.get(date)?.lessons ?? 0, future: date > today };
   });
 
   const sumMinutes = (from: string) => {
-    const acc = { vocab: 0, grammar: 0, reading: 0, listening: 0, fluency: 0 };
+    const acc = { vocab: 0, grammar: 0, reading: 0, practice: 0 };
     for (const d of days) {
       if (d.date < from || d.date > today) continue;
       for (const k of Object.keys(acc) as (keyof typeof acc)[]) acc[k] += d.minutes[k];
@@ -135,11 +131,9 @@ export async function getDashboard(): Promise<DashboardData | null> {
   const mastered = [...exByTopic.values()].filter((ids) => ids.every((id) => latest.get(id) === true)).length;
   const recent = (attempts ?? []).slice(-30);
 
-  const measured = (logs ?? []).filter((l) => l.accuracy !== null).map((l) => l.accuracy!);
-
   return {
-    streak: computeStreaks(days.filter((d) => isDayComplete(d.steps)).map((d) => d.date), today),
-    daysCompleted: days.filter((d) => isDayComplete(d.steps)).length,
+    streak: computeStreaks(days.filter((d) => isDayComplete(d.lessons)).map((d) => d.date), today),
+    daysCompleted: days.filter((d) => isDayComplete(d.lessons)).length,
     calendar,
     minutesLast7: sumMinutes(addDays(today, -6)),
     minutesLast30: sumMinutes(addDays(today, -29)),
@@ -157,19 +151,8 @@ export async function getDashboard(): Promise<DashboardData | null> {
         : null,
     },
     reading: {
-      textsRead: new Set((reads ?? []).filter((r) => r.mode === "reading").map((r) => r.text_id)).size,
+      textsRead: new Set((reads ?? []).map((r) => r.text_id)).size,
       textsTotal: texts?.length ?? 0,
-      fluency: (reads ?? [])
-        .filter((r) => r.mode === "fluency" && r.words_per_minute)
-        .slice(-12)
-        .map((r) => ({ date: localDate(tz, new Date(r.created_at)), wpm: r.words_per_minute! })),
-    },
-    listening: {
-      done: new Set((logs ?? []).map((l) => l.item_id)).size,
-      total: dialogues?.length ?? 0,
-      avgAccuracy: measured.length
-        ? Math.round(measured.reduce((a, b) => a + b, 0) / measured.length)
-        : null,
     },
   };
 }
