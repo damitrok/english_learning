@@ -25,8 +25,8 @@ function TabIcon({ href }: { href: string }) {
   if (href === "/")
     return (
       <svg {...common}>
-        <rect x="3" y="5" width="18" height="14" rx="3" />
-        <path d="M7.5 15l2.2-6 2.2 6M8.2 13.2h3M15.5 9v6" />
+        <path d="M12 6.5C10.5 5 8 4.5 4 4.5v13c4 0 6.5.5 8 2 1.5-1.5 4-2 8-2v-13c-4 0-6.5.5-8 2z" />
+        <path d="M12 6.5v13" />
       </svg>
     );
   if (href === "/path")

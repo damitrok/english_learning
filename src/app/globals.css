@@ -105,14 +105,17 @@
 }
 
 /* The app is a fixed full-screen shell: the page itself never scrolls or bounces; only the
-   scroll areas inside it (`scroll-area`) do. dvh = the visible viewport (excludes mobile browser bars). */
+   scroll areas inside it (`scroll-area`) do. The body is pinned to the whole window with
+   `position: fixed; inset: 0` rather than a height unit: in an installed iPhone app 100vh/100dvh
+   came out shorter than the screen and left a dead strip under the tab bar. */
 html {
   height: 100%;
   overflow: hidden;
 }
 
 body {
-  height: 100dvh;
+  position: fixed;
+  inset: 0;
   overflow: hidden;
   overscroll-behavior: none;
   background: var(--background);
