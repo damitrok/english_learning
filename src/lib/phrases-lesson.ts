@@ -1,6 +1,6 @@
 // Pure helpers for the build-a-sentence and translate lessons.
 import type { Phrase } from "@/content/phrases";
-import { normalizeAnswer } from "@/lib/text-normalize";
+import { normalizePhrase } from "@/lib/text-normalize";
 
 export const PHRASES_PER_LESSON = 6;
 
@@ -41,6 +41,6 @@ export function tokenize(sentence: string): string[] {
 
 /** True when `given` matches the canonical English or any of its listed variants. */
 export function isCorrectPhrase(given: string, phrase: Pick<Phrase, "en" | "alt">): boolean {
-  const g = normalizeAnswer(given);
-  return [phrase.en, ...(phrase.alt ?? [])].some((v) => normalizeAnswer(v) === g);
+  const g = normalizePhrase(given);
+  return [phrase.en, ...(phrase.alt ?? [])].some((v) => normalizePhrase(v) === g);
 }

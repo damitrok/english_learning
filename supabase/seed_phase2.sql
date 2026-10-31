@@ -1913,7 +1913,810 @@ We updated the library and tested the login page on five different phones. Every
 Please let me know if you have any questions.
 
 Best regards,
-Alex', 'A2', 12, '[{"statement":"Some users couldn''t log in from their phones.","answer":true},{"statement":"The new version is already in production.","answer":false}]'::jsonb)
+Alex', 'A2', 12, '[{"statement":"Some users couldn''t log in from their phones.","answer":true},{"statement":"The new version is already in production.","answer":false}]'::jsonb),
+  ('When the Lights Went Out', 'Yesterday there was a big storm in our town. At eight o''clock in the evening, the lights went out in every house on our street.
+
+What was everybody doing at that moment? I was cooking dinner. My husband was watching a film, and our son was doing his homework on the computer. Our neighbour Olga was taking a shower!
+
+For the next hour, we sat in the kitchen with candles and talked. It was actually a nice evening.', 'A1', 13, '[{"statement":"The writer''s son was watching a film.","answer":false},{"statement":"The power went off at eight in the evening.","answer":true},{"statement":"The family had a terrible evening because of the storm.","answer":false}]'::jsonb),
+  ('A Call During Lunch', 'On Tuesday, I was having lunch in a café when my phone rang. It was Dan, our team lead. "The website isn''t working," he said.
+
+I ran back to the office. When I arrived, two developers were looking at the logs, and Dan was talking to the client.
+
+While we were checking the server, I noticed something strange. Somebody was running a very big report on the database. We stopped the report, and the website started working again.', 'A1', 14, '[{"statement":"The writer was at the office when Dan called.","answer":false},{"statement":"A big report on the database caused the problem.","answer":true},{"statement":"After the team stopped the report, the website worked again.","answer":true}]'::jsonb),
+  ('Where Are My Keys?', 'Oh no! I''ve lost my keys. I''ve looked in my bag and in the pockets of my jeans. I''ve checked the kitchen and the bathroom too, but I can''t find them anywhere.
+
+My flatmate has come home, and now she''s helping me. She has looked under the sofa and behind the door. Nothing.
+
+Wait! She has found them. They were in my jacket all the time! It has a lot of pockets, and I forgot about that one.', 'A1', 15, '[{"statement":"The writer has already checked the bag.","answer":true},{"statement":"The keys were under the sofa.","answer":false},{"statement":"The flatmate found the keys.","answer":true}]'::jsonb),
+  ('Ready for the Release?', 'Hi Kate,
+
+Here is a quick update on Friday''s release. We''ve already fixed the two bugs from the last test, and Tom has just finished the new search page. The designers have checked it, and they like it.
+
+But we haven''t updated the documentation yet, and the testers haven''t checked the payment page yet. I''ve already asked Anna to help them.
+
+I can send you another update tomorrow.
+
+Best,
+Mark', 'A1', 16, '[{"statement":"The team has already updated the documentation.","answer":false},{"statement":"Tom has completed the new search page.","answer":true},{"statement":"The testers have finished their work on the payment page.","answer":false}]'::jsonb),
+  ('Have You Ever…?', 'Last week I had a job interview. The interviewer asked me a lot of "Have you ever…?" questions.
+
+"Have you ever worked with large databases?" Yes, I have. "Have you ever led a team?" No, I haven''t, but I''ve helped new developers many times. "Have you ever made a big mistake in production?"
+
+I told the truth. Once I deleted some important data. We got it back from a backup, but I''ve never forgotten that day. The interviewer smiled. "Good answer," she said.', 'A1', 17, '[{"statement":"The writer has never been a team leader.","answer":true},{"statement":"The deleted data was lost forever.","answer":false},{"statement":"The interviewer didn''t like the answer about the mistake.","answer":false}]'::jsonb),
+  ('My Neighbour Peter', 'Last weekend I met my neighbour, Peter. He''s eighty years old and very friendly.
+
+"How long have you lived in this house?" I asked. "For fifty years," he said. "My wife and I have been married for fifty-five years."
+
+Peter has a small dog and a big garden with apple trees. "How long have you had the dog?" I asked. "Only two years. He''s young, but he''s my best friend."
+
+I''ve lived here for three months, and I already feel at home.', 'A1', 18, '[{"statement":"Peter''s dog is very old.","answer":false},{"statement":"Peter has lived in his house for half a century.","answer":true},{"statement":"The writer already feels at home in the new place.","answer":true}]'::jsonb),
+  ('Six Months of English', 'I got my first job in IT three years ago. I was a tester then. A year ago, I moved to the development team, and I''ve been a developer since then.
+
+I started learning English in May, so I''ve studied it for six months now. I have a lesson every Tuesday.
+
+My English isn''t perfect, but things are easier now. Two weeks ago, I spoke to a client in English for the first time. I was nervous, but it went well.', 'A1', 19, '[{"statement":"The writer started in IT as a developer.","answer":false},{"statement":"The writer has worked in IT for three years.","answer":true},{"statement":"The first call with a client in English went badly.","answer":false}]'::jsonb),
+  ('What''s New This Month', 'Our app has changed a lot this month. Here is what we''ve done.
+
+We''ve added a dark theme. Many users asked for it last year, and now it''s finally here. We''ve also made the app faster: the main page now opens in one second.
+
+There was a problem with notifications in the last version. Some users didn''t get any messages for two days. We found the reason on Monday and fixed it the same day.
+
+Have you tried the new version yet? Tell us what you think!', 'A1', 20, '[{"statement":"The main page opens more slowly now.","answer":false},{"statement":"Users wanted a dark theme before this month.","answer":true},{"statement":"The notification problem was fixed on the day the team found it.","answer":true}]'::jsonb),
+  ('From Bean to Cup', 'Coffee is drunk all over the world, but where does it come from? It is grown in hot countries, such as Brazil and Ethiopia.
+
+The coffee fruit is often picked by hand, and the beans are dried in the sun. Then they are sent to other countries by ship. The beans are usually roasted in the country where they are sold, because fresh coffee tastes better.
+
+Finally, the beans are ground, and the coffee is made — in your kitchen or in a café. More than two billion cups are drunk every day.', 'A1', 21, '[{"statement":"Coffee is grown in cold countries.","answer":false},{"statement":"The beans are dried in the sun.","answer":true},{"statement":"Fresh coffee usually tastes better.","answer":true}]'::jsonb),
+  ('Our Office Is Changing', 'Hi everyone,
+
+As you know, our office is being renovated this month. Here is a short update.
+
+The kitchen has already been finished, and a new coffee machine has been installed. The meeting rooms on the first floor are being painted this week, so please book a room on the second floor for your meetings.
+
+New chairs have been ordered, but they haven''t been delivered yet. Until then, the old chairs are being used. Sorry about the noise — the work is being done as quickly as possible.
+
+Thanks,
+Lena', 'A1', 22, '[{"statement":"The kitchen is still being renovated.","answer":false},{"statement":"Some meeting rooms can''t be used this week.","answer":true},{"statement":"The new chairs have already arrived.","answer":false}]'::jsonb),
+  ('A Rainy Saturday', 'It was raining on Saturday morning, and my daughter was bored. "What do you want to do?" I asked.
+
+"I don''t know. Is the museum open today?" she said.
+
+"Yes, it is, but we were there last month. Have you finished your book?"
+
+"No, I haven''t. It''s boring." Then she had an idea. "Do we have any flour and eggs? Can we make a cake?"
+
+We didn''t have any eggs, so I went to the shop and bought some. We baked the cake together, and it was delicious.', 'A1', 23, '[{"statement":"It was sunny on Saturday morning.","answer":false},{"statement":"The writer bought eggs for the cake.","answer":true},{"statement":"The daughter is enjoying her book.","answer":false}]'::jsonb),
+  ('A Weekend in the Mountains', 'Last summer, my friend Sam and I went to the mountains for a weekend. We took the train on Friday and slept in a small hotel.
+
+On Saturday, we got up early and walked for six hours. We saw a lake, climbed a hill and ate our sandwiches at the top. The view was amazing.
+
+On the way down, it began to rain. We didn''t have umbrellas, so we got very wet. But we found a little café, drank hot tea and laughed about it.
+
+I''ve been to many places, but that weekend is still my favourite.', 'A1', 24, '[{"statement":"The weather was good all day on Saturday.","answer":false},{"statement":"The friends travelled to the mountains by train.","answer":true},{"statement":"They had umbrellas with them.","answer":false}]'::jsonb),
+  ('Plans for Next Week', 'Hi Tom,
+
+Next week is very busy for our team, so here is the plan.
+
+On Monday, we''re meeting the new client at ten o''clock. Anna is showing them the demo, and I''m answering their questions about the timeline. On Tuesday, two new developers are starting, and Max is helping them with their laptops and accounts.
+
+I''m not working on Wednesday, because my sister is getting married. What are you doing on Thursday? Are you coming to the office? We''re having a small party for Max''s birthday after work.
+
+Best,
+Kate', 'A2', 25, '[{"statement":"The new developers are starting on Monday.","answer":false},{"statement":"Kate is taking Wednesday off.","answer":true},{"statement":"The party on Thursday is in the morning.","answer":false},{"statement":"Anna is giving the demo at the client meeting.","answer":true}]'::jsonb),
+  ('My Running Plan', 'Next month I''m going to run my first 10 km race. I''m not a very sporty person, so I''m going to start slowly. My friend Kate runs every weekend, and she''s going to help me.
+
+Here is my plan. I''m going to run three times a week, before work. I''m not going to run on Mondays, because Monday is my busiest day. I''m also going to eat better and go to bed earlier.
+
+Am I going to win? Of course not! But I''m going to finish the race. Kate says I''m going to love it.', 'A2', 26, '[{"statement":"The writer is going to run on Mondays.","answer":false},{"statement":"Kate is going to help the writer get ready.","answer":true},{"statement":"The writer hopes to win the race.","answer":false},{"statement":"The writer plans to run before work.","answer":true}]'::jsonb),
+  ('A Late Call', 'It is ten o''clock at night, and Sam''s phone rings. It is Anna, his team lead. "The payment service is down," she says. "Customers can''t pay."
+
+"OK, I''ll look at it now," Sam answers. He opens his laptop and checks the logs. The problem is simple: the disk on the server is full.
+
+"Shall I call Tom? He knows the server well," Anna asks.
+
+"No, it''s OK. I''ll delete the old log files first. I think that will help."
+
+Twenty minutes later, the service is working again. "Thank you, Sam," says Anna. "Now go to bed. I''ll write the report tomorrow morning."', 'A2', 27, '[{"statement":"Sam decides to call Tom for help.","answer":false},{"statement":"Anna phones Sam late in the evening.","answer":true},{"statement":"The server stopped working because its disk was full.","answer":true},{"statement":"Sam is going to write the report.","answer":false}]'::jsonb),
+  ('Weekend Weather', 'Here is the weather for the weekend. On Saturday morning, it will be cold and grey, and it will probably rain in the city centre. Take an umbrella if you go out! The rain won''t last long, though. In the afternoon, the sun will come out, and it will be warmer — about fifteen degrees.
+
+Sunday will be a beautiful day: sunny and warm, with no wind. It will be perfect for a walk in the park or a picnic by the river.
+
+But don''t put your umbrella away. Next week will be wet again, and we''ll see more rain from Monday to Thursday.', 'A2', 28, '[{"statement":"Sunday will be a good day for a picnic.","answer":true},{"statement":"It will rain all day on Saturday.","answer":false},{"statement":"Saturday afternoon will be warmer than the morning.","answer":true},{"statement":"Next week will be dry.","answer":false}]'::jsonb),
+  ('Ready by Friday?', 'Our release is on Friday, but we might not be ready. There are still four bugs in the app, and one of them is serious. Lena thinks it might take two days to fix.
+
+Yesterday our manager asked me, "Will you finish on time?" I said I wasn''t sure. We might finish on Thursday, but we might need one more week. I don''t know yet.
+
+The client might not be happy about a delay. But a bad release might be even worse. Tomorrow we''re going to talk to the client and explain the problem. They might agree to wait — I hope so.', 'A2', 29, '[{"statement":"One of the bugs is serious.","answer":true},{"statement":"The writer is sure the team will finish on Thursday.","answer":false},{"statement":"The team isn''t going to tell the client about the problem.","answer":false},{"statement":"The writer thinks a bad release could be worse than a delay.","answer":true}]'::jsonb),
+  ('Grandma''s First Smartphone', 'When my grandmother was young, she couldn''t use a computer — nobody had one at home. Last year she got her first smartphone. At first, she couldn''t do anything with it. She couldn''t even answer a call!
+
+I visited her every Sunday and showed her the basics. "Can you write a message for me?" she asked once. "No, Grandma, but I can show you how," I said.
+
+Now she can do almost everything. She can send photos, make video calls and read the news. Last week she sent me a funny video, and I couldn''t stop laughing. She still can''t type very fast, but she''s learning.', 'A2', 30, '[{"statement":"The grandmother could answer calls from the first day.","answer":false},{"statement":"The writer helped her on Sundays.","answer":true},{"statement":"She types very quickly now.","answer":false},{"statement":"Now she is able to make video calls.","answer":true}]'::jsonb),
+  ('Welcome to the Team', 'Welcome to the team! Here are a few rules for your first weeks with us.
+
+You must lock your laptop when you leave your desk. You mustn''t share your password with anybody, not even with your team lead. If you get a strange email with a link, you mustn''t click it. You must tell the security team at once.
+
+Some things are not so strict. You don''t need to come to the office every day — two days a week is enough. You don''t need to understand our whole system; nobody does! And please don''t be afraid to ask questions. That''s how we all learned.', 'A2', 31, '[{"statement":"New team members must come to the office every day.","answer":false},{"statement":"You can''t even tell your team lead your password.","answer":true},{"statement":"You should report strange emails to the security team.","answer":true},{"statement":"New people must understand the whole system quickly.","answer":false}]'::jsonb),
+  ('Tired All the Time', 'Dear Dr Green, I''m always tired. I work at a computer all day, and in the evening I''m too tired to do anything. What should I do? — Paul
+
+Dear Paul, you aren''t the only one! Here is my advice. First, you should go to bed earlier: seven or eight hours of sleep is best. You shouldn''t look at your phone in bed.
+
+Second, you should take short breaks at work. Stand up, walk a little and look out of the window. And you shouldn''t drink coffee after four o''clock.
+
+I also think you should see your doctor and have a blood test. It''s probably nothing serious, but it''s better to check.', 'A2', 32, '[{"statement":"The doctor says coffee in the evening is a good idea.","answer":false},{"statement":"Paul spends his working day at a computer.","answer":true},{"statement":"The doctor thinks Paul''s problem is probably serious.","answer":false},{"statement":"Paul should take short breaks during the day.","answer":true}]'::jsonb),
+  ('Working for a Bank', 'I work as a developer for a big bank. It''s a good job, but it has a lot of rules. Every change has to go through two code reviews. Before each release, we have to write a report for the security team.
+
+I don''t have to wear a suit, but I have to come to the office four days a week. Last year we had to change our passwords every month. Now we only have to change them once a year, which is much better.
+
+Do I have to work at weekends? Almost never. My friend at a startup often has to work on Saturdays, so I''m happy where I am.', 'A2', 33, '[{"statement":"At the bank, one code review is enough for a change.","answer":false},{"statement":"The writer doesn''t need to wear a suit.","answer":true},{"statement":"The writer''s friend often works on Saturdays.","answer":true},{"statement":"Now they change their passwords every month.","answer":false}]'::jsonb),
+  ('Dinner for Two', 'Last Friday, Olga and her husband went to a small Italian restaurant. The waiter came to their table. "Good evening. Would you like something to drink?"
+
+"I''d like a glass of red wine, please," said Olga. "And I''d like some water," said her husband.
+
+Ten minutes later, the waiter came back. "Are you ready to order?"
+
+"Yes. I''d like the mushroom soup and then the fish," Olga said. "And I''d like the pasta with chicken," said her husband.
+
+"Would you like some bread with that?" "Yes, please."
+
+After dinner, the waiter asked, "Would you like to see the dessert menu?" But they were full, so they just asked for the bill.', 'A2', 34, '[{"statement":"Olga''s husband ordered the fish.","answer":false},{"statement":"Olga asked for a glass of red wine.","answer":true},{"statement":"The couple didn''t want any bread.","answer":false},{"statement":"They didn''t have dessert because they were full.","answer":true}]'::jsonb),
+  ('Setting Up Your Laptop', 'Hi Mark, welcome! Here is how to set up your laptop before our meeting.
+
+First, turn on the laptop and connect to the office Wi-Fi. Don''t use the guest network — it''s too slow. Then open the terminal and install the tools from the list in our wiki. Don''t change any settings yet.
+
+Next, download the project code and run the tests. Don''t worry if one or two tests fail; that''s normal on a new machine. Just write down the errors.
+
+When you finish, send me a message. Let''s meet at eleven in room 4 and look at the errors together. And let''s have lunch after that!
+
+Irina', 'A2', 35, '[{"statement":"Irina wants Mark to change the settings at once.","answer":false},{"statement":"It''s OK if a few tests fail.","answer":true},{"statement":"Mark should use the guest network.","answer":false},{"statement":"Irina suggests having lunch together after the meeting.","answer":true}]'::jsonb),
+  ('The Town by the Sea', 'I grew up in a small town by the sea. When I was a child, it used to be very quiet. There didn''t use to be any big shops — only a market in the main square. People used to know each other, and everybody used to say hello in the street.
+
+My father used to work at the port, and on Sundays I used to go fishing with him.
+
+Now the town is very different. There is a big shopping centre and a new hotel, and in summer the streets are full of tourists. I don''t live there any more, but I still visit my parents. Sometimes I miss the old, quiet town.', 'A2', 36, '[{"statement":"In the past, the town had a big shopping centre.","answer":false},{"statement":"As a child, the writer often went fishing on Sundays.","answer":true},{"statement":"Today, a lot of tourists come to the town in summer.","answer":true},{"statement":"The writer still lives in the town.","answer":false}]'::jsonb),
+  ('The New Office', 'Last month our company moved to a new office, and I really like it. There are three floors. On the ground floor, there is a big kitchen with a coffee machine and a long table. There is always fresh fruit there, and there are biscuits too.
+
+Our team sits on the first floor. There are twelve desks, and there is a big screen on the wall for meetings. There isn''t a printer on our floor, but nobody prints anything anyway.
+
+On the second floor, there are two quiet rooms. Is there a gym? No, there isn''t, but there is a place for bikes near the door. Are there any problems? Only one: there aren''t enough meeting rooms.', 'A2', 37, '[{"statement":"There is a printer on the writer''s floor.","answer":false},{"statement":"The new office has three floors.","answer":true},{"statement":"The office has a gym.","answer":false},{"statement":"The team needs more meeting rooms.","answer":true}]'::jsonb),
+  ('Storm Hits the City', 'There was a strong storm in the city last night. This morning there were fallen trees on many roads, and in some parts of the city there was no electricity for six hours. Luckily, nobody was hurt.
+
+This is not the first storm this month. There have been three storms since the start of October, and there has been a lot of damage to roofs and cars.
+
+There will be some problems with trains today, so please check the timetable before you leave home. There won''t be any classes at the city''s schools today or tomorrow.
+
+The weather is calmer now, but there will be more wind and rain at the weekend.', 'A2', 38, '[{"statement":"Some parts of the city had no electricity for six hours.","answer":true},{"statement":"This was the only storm this month.","answer":false},{"statement":"There will be classes at the city''s schools tomorrow.","answer":false},{"statement":"More bad weather is expected at the weekend.","answer":true}]'::jsonb),
+  ('A Windy Day by the Sea', 'It was Saturday, and it was sunny in the morning, so Anna and her brother Tom decided to go to the sea. It is about forty kilometres from their town. It usually takes an hour by car, but that day it took almost two because of the traffic.
+
+When they arrived, it was cold and very windy. "It''s hard to believe that it was warm at breakfast," Tom said. They walked along the beach for a while. It was nice to watch the waves, but after half an hour it started to rain.
+
+They found a small café near the beach. It was warm and quiet inside, and the fish soup was excellent. "The weather doesn''t matter," Anna said. "It was a good day."', 'A2', 39, '[{"statement":"The sea is very close to Anna and Tom''s town.","answer":false},{"statement":"The trip took longer than usual because of the traffic.","answer":true},{"statement":"It was warm and sunny when they arrived at the beach.","answer":false},{"statement":"Anna liked the day, although the weather was bad.","answer":true}]'::jsonb),
+  ('Not a Morning Person', 'Kate and Leo work in the same team, but they are very different. Kate is a morning person. Leo isn''t. Kate starts work at seven, and Leo doesn''t start before ten.
+
+Kate likes meetings, but Leo doesn''t. Leo can work for hours without a break, but Kate can''t. She needs a short walk every hour.
+
+When the team lead asked, "Who wants to give the demo on Friday?", Kate said, "I do!" Leo didn''t say anything. But when the system went down on Sunday night, Leo was online in five minutes. Kate wasn''t. She was asleep.
+
+"Are you angry with me?" she asked on Monday. "No, I''m not," Leo laughed. "We''re a good team. You do the talking, and I do the night shifts."', 'A2', 40, '[{"statement":"Leo can''t work for long without a break.","answer":false},{"statement":"Kate offered to give the demo.","answer":true},{"statement":"Leo was angry with Kate on Monday.","answer":false},{"statement":"Leo starts work later than Kate.","answer":true}]'::jsonb),
+  ('An Old Friend at the Station', 'Last week I met my old school friend Sam at the station. It was our first meeting in ten years, so we went for a coffee.
+
+"I live in Berlin now," Sam said. "Do you? How long have you lived there?" I asked. "Five years. I''m a chef in a restaurant." "Are you? But you hated cooking at school!" "I know. People change. And I''ve got two children now." "Have you? That''s wonderful!"
+
+Then it was my turn. "I play the guitar in a band," I said. "Do you? I play too. We should play together some time."
+
+Sam''s train left at six, so we didn''t have much time. But we exchanged numbers, and he''s coming to visit me in May.', 'A2', 41, '[{"statement":"Sam didn''t like cooking when he was at school.","answer":true},{"statement":"The writer and Sam see each other often.","answer":false},{"statement":"Sam is going to visit the writer.","answer":true},{"statement":"Sam doesn''t have any children.","answer":false}]'::jsonb),
+  ('Neither Do I', 'Ella met Mark through a friend, and they went to a small Italian restaurant for their first date.
+
+"I love pasta," said Mark. "So do I," said Ella. "I don''t eat meat," she added. "Neither do I," he answered. They were both surprised.
+
+It continued all evening. Mark didn''t like football, and neither did Ella. Ella was learning Spanish, and so was Mark. "I''ve never been to Spain," she said. "Neither have I!" Mark could play the piano, and so could Ella.
+
+Then the waiter brought the dessert menu. "I''m going to have the chocolate cake," said Ella. "I''m not," said Mark. "I hate chocolate." Ella looked at him for a long moment, and then she laughed. "Good. Finally something different. I was starting to worry."', 'A2', 42, '[{"statement":"Ella has been to Spain.","answer":false},{"statement":"Neither Mark nor Ella eats meat.","answer":true},{"statement":"Ella was happy to find something different about Mark.","answer":true},{"statement":"Mark wanted the chocolate cake too.","answer":false}]'::jsonb),
+  ('What Didn''t Work', 'On Tuesday our new release didn''t go well. The app didn''t crash, but users couldn''t log in for about forty minutes. Here is what happened.
+
+The change wasn''t big, just a few lines in the login service. Two people reviewed it, but nobody tested it with real accounts. Our tests didn''t catch the problem, because they don''t use real data. We haven''t got an alert for failed logins, so we didn''t notice anything for twenty minutes. A customer told us first.
+
+We aren''t going to blame anyone. That isn''t how we work. But we are going to make some changes. We''ll add the alert this week, and nobody will release a login change without testing it with a real account first.', 'A2', 43, '[{"statement":"The team learned about the problem from a customer.","answer":true},{"statement":"The app stopped working completely and crashed.","answer":false},{"statement":"The team wants to find the person who made the mistake and blame them.","answer":false},{"statement":"The tests didn''t use real data.","answer":true}]'::jsonb),
+  ('The Online Interview', 'Lena had her first job interview in English last week. She applied for a junior developer job. The interview was online, and it was an hour long.
+
+First, the manager asked some easy questions. "Are you working at the moment? Have you used Python before? Do you like working in a team?" Lena answered them without problems.
+
+Then the questions got harder. "Can you explain this code? Why did you choose this solution? Is there a faster way?" Lena was nervous, but she thought about each question carefully.
+
+At the end, the manager said, "Do you have any questions for us?" Lena did. "Is the job remote? Will I have a mentor? When will I hear from you?" The manager smiled. The answers were: no, yes, and on Friday.', 'A2', 44, '[{"statement":"The interview was at the company''s office.","answer":false},{"statement":"The second part of the interview was more difficult for Lena.","answer":true},{"statement":"Lena didn''t have any questions for the manager.","answer":false},{"statement":"The job isn''t remote.","answer":true}]'::jsonb),
+  ('Who Ate My Lunch?', 'There are two fridges in our office kitchen: one for personal food and one for food for everybody. On Monday Daniel was in a hurry, and he put his lunch, a big box of his mother''s pasta, in the wrong one.
+
+At one o''clock he opened the fridge. The box was there, but it was empty. "Who ate my lunch?" he asked the room. Nobody answered. "Who did you see in the kitchen?" he asked Rita. "I saw Paul and Mark," she said.
+
+Daniel went to Paul. "Did you eat my pasta?" "No! Who told you that?" Paul asked. "I only made tea." Mark only made tea too.
+
+Then a message came in the team chat from Olga, the team lead: "Who brought the pasta? It was delicious. Thanks for sharing!" Now Daniel writes his name on everything.', 'A2', 45, '[{"statement":"Rita saw two people in the kitchen.","answer":true},{"statement":"Paul ate Daniel''s pasta.","answer":false},{"statement":"Daniel put his box in the right fridge.","answer":false},{"statement":"Olga thought the pasta was for everybody.","answer":true}]'::jsonb),
+  ('What Is the City Like?', 'Two months ago Jonas moved from a small village to a big city. Now everybody at home asks him questions.
+
+"What is the city like?" his grandmother asks on the phone every Sunday. "It''s big and noisy," he says, "but it''s never boring."
+
+"What''s your flat like?" asks his sister. It''s small, and the kitchen window looks out on a park. "Who do you live with?" she wants to know. He shares the flat with a student called Pedro. "What does he study?" Medicine. "And what is he like?" Friendly, but he talks too much in the morning.
+
+His best friend asks: "Who do you go out with? What do you do at weekends?" Jonas doesn''t have an answer. "What are you waiting for?" his friend says. "Join a club!" Last week Jonas did. It''s a hiking club.', 'A2', 46, '[{"statement":"Jonas''s flatmate studies medicine.","answer":true},{"statement":"Jonas lives alone.","answer":false},{"statement":"Jonas joined a club recently.","answer":true},{"statement":"Jonas thinks the city is boring.","answer":false}]'::jsonb),
+  ('Which Bike?', 'Ana wants a bike for getting to work. She''s tired of the crowded bus. On Saturday she went to a bike shop.
+
+"What kind of bike are you looking for?" the shop assistant asked. "Something simple," Ana said. "How much is that blue one?" "Four hundred euros." That was too expensive.
+
+Then he showed her two other bikes. "Which one is lighter?" she asked. "The green one. But the black one is stronger." "And which is more comfortable?" He smiled. "Try them and see."
+
+Ana rode both bikes around the car park. The black one was heavier, but it felt safer. "How long is the guarantee?" she asked. "Two years." "Then I''ll take the black one." She paid two hundred and eighty euros and rode it home. It took twenty minutes, which is faster than the bus.', 'A2', 47, '[{"statement":"Ana bought the blue bike.","answer":false},{"statement":"The green bike is lighter than the black one.","answer":true},{"statement":"Ana tried the bikes before she chose one.","answer":true},{"statement":"The ride home took longer than the bus.","answer":false}]'::jsonb),
+  ('How Long Will It Take?', '"How long will it take?" Every developer hears this question. Last month our manager, Irina, asked me about a new search feature. "Two days," I said. It took two weeks.
+
+What went wrong? I only thought about writing the code. How long does it take to write tests? About as long as the code. How long does a code review take? In our team, often a day or two. And how long does it take to fix the bugs that the testers find? Nobody knows.
+
+Now I estimate differently. I break the task into small parts and ask, "How long will this part take?" for each one. Then I add them up and add a little extra. Last week it took me an hour just to make the plan, but my estimate was right: four days.', 'A2', 48, '[{"statement":"The search feature took much longer than the writer said.","answer":true},{"statement":"At first, the writer remembered to include time for tests.","answer":false},{"statement":"In the writer''s team, a code review can take a day or more.","answer":true},{"statement":"The writer''s latest estimate was wrong again.","answer":false}]'::jsonb),
+  ('Lost at the Station', 'Last summer Olga travelled to the coast by train. At the huge station in the capital, she got lost almost immediately.
+
+She stopped a man in a uniform. "Excuse me, do you know where platform twelve is?" But he didn''t understand English. Then she asked a woman with a suitcase. "Sorry, I don''t know where it is. I''m not from here either."
+
+At the information desk, Olga asked, "Could you tell me what time the train to the coast leaves?" "At a quarter past ten."
+
+Now she had another problem. Two trains were waiting at platform twelve, and she didn''t know which one was hers. "Do you know if this train goes to the coast?" she asked a young man. "I hope so," he laughed. "I''m going there too." They sat together and talked all the way.', 'A2', 49, '[{"statement":"The man in the uniform helped Olga find the platform.","answer":false},{"statement":"The woman with the suitcase didn''t know the station well.","answer":true},{"statement":"Olga found out the time of her train at the information desk.","answer":true},{"statement":"Olga didn''t talk to anyone on the train.","answer":false}]'::jsonb),
+  ('What the Reviewer Said', 'Last week I sent my first big pull request to Martin, our most experienced developer.
+
+The next morning I saw twenty comments from him. I was upset at first, so I told my mentor, Sara, about it. She asked me what kind of comments they were.
+
+Martin said that my code was clean and easy to read. He told me that two functions were too long and that I should split them. He also said that I didn''t need a new library for dates, because we already had one.
+
+Sara laughed. She said that twenty comments was normal for a first pull request. She told me that Martin left even more comments on her first one. I fixed everything in a day, and then Martin approved my code. He said that it was ready, and he added two words: "Good work."', 'A2', 50, '[{"statement":"The writer felt good about the comments at first.","answer":false},{"statement":"Martin thought the code was easy to read.","answer":true},{"statement":"The team didn''t have a library for dates.","answer":false},{"statement":"Martin approved the code after the writer made the changes.","answer":true}]'::jsonb),
+  ('Learning to Cook', 'A year ago I couldn''t cook at all. I didn''t even know how to boil an egg properly. I ate in cafés or ordered food every evening.
+
+Then my flatmate moved out, and I had to do something. I bought a simple cookbook and started with soup. My first soup wasn''t very good, but I ate it anyway. I cooked almost every evening that winter, and slowly it got better.
+
+Now I can make about thirty dishes, and I''ve learned to bake bread too. Last weekend I invited six friends and cooked a three-course dinner for them. They didn''t believe that I did it all myself.
+
+What''s next? I''m going to take a class in Thai cooking. I''ll probably make a lot of mistakes, but that''s part of learning. My advice? Don''t wait. Buy some vegetables and start with soup.', 'A2', 51, '[{"statement":"A year ago the writer cooked dinner every evening.","answer":false},{"statement":"The writer''s friends found it hard to believe that the writer cooked the dinner without help.","answer":true},{"statement":"The writer''s first soup was perfect.","answer":false},{"statement":"The writer wants to learn a new kind of cooking.","answer":true}]'::jsonb),
+  ('Climbing on Thursdays', 'Last year I spent too much time at my computer. I wanted to do something different after work, but I didn''t know what. I don''t enjoy running, and I hate swimming in cold water.
+
+One evening my friend Nina invited me to a climbing gym. I agreed to go with her, but I was nervous.
+
+At first I couldn''t climb more than two metres. My arms hurt, and I wanted to give up. Nina said that everybody finds it hard at the start.
+
+Now I go there every Thursday. I really enjoy solving each wall like a small puzzle, and I''ve stopped thinking about work in the evenings. I''m learning to use my legs more than my arms.
+
+Next year I hope to climb outside on real rocks. And I don''t mind falling any more — the rope always catches me.', 'A2', 52, '[{"statement":"The writer now goes climbing once a week.","answer":true},{"statement":"At first the writer found climbing easy.","answer":false},{"statement":"The writer first went to the climbing gym with Nina.","answer":true},{"statement":"The writer is still afraid of falling.","answer":false}]'::jsonb),
+  ('Too Many Requests', 'On Monday my team lead, Paula, asked me to fix a bug on the payment page. An hour later the product manager wrote to me. He wanted me to finish a new report for the client by Wednesday. Then the designer asked me to check her new screens.
+
+I tried to do everything at once, and by Tuesday nothing was finished. I felt terrible. My friend Dan, also a team lead, told me to stop and talk to Paula.
+
+The next day I showed Paula my list. She didn''t want me to work all night. She told me to fix the bug first, and she asked the product manager to wait until Friday for the report. She also told the designer to send her screens to another developer.
+
+Now I don''t say yes to every request straight away. I want people to know my plans first.', 'A2', 53, '[{"statement":"Paula wanted the writer to work late and finish everything.","answer":false},{"statement":"The writer tried to do all the tasks at the same time.","answer":true},{"statement":"The writer had to check the designer''s screens in the end.","answer":false},{"statement":"The report for the client was moved to Friday.","answer":true}]'::jsonb),
+  ('A Morning of Errands', 'On Saturday I got up early because I had a lot of small jobs to do. First, I went to the bank to pay a bill. The queue inside was very long, so I used the machine outside.
+
+Then I went to the post office to send a birthday present to my cousin in Canada. After that, I walked to the market to buy vegetables for the week.
+
+Later I met my neighbour Olga in the street. She was going to the park to walk her dog, so I went with her to have a short rest. We sat on a bench and talked for half an hour.
+
+When I got home, I opened the fridge to put the vegetables inside, and I saw that we had no milk. I completely forgot to buy it! So I went out again to buy some at the shop on the corner.', 'A2', 54, '[{"statement":"The writer sent a present to a family member.","answer":true},{"statement":"The writer paid the bill inside the bank.","answer":false},{"statement":"The writer remembered to buy everything on the first trip.","answer":false},{"statement":"Olga and the writer went to the park together.","answer":true}]'::jsonb),
+  ('A Week by the Lake', 'Every summer my family goes on holiday to a small village by a lake. We don''t go abroad — it''s only three hours by car, and the children love it.
+
+In the mornings we usually go swimming before breakfast, when the water is still calm. My husband often goes fishing with our son, but they almost never catch anything. My daughter and I prefer to go for a long walk in the forest.
+
+Twice a week we go to the market in the next town. We go shopping there for fresh bread, cheese and fruit. On the last day we always go on a boat trip around the lake.
+
+This year it rained for three days, so we couldn''t go out much. We went to the cinema once and played cards at home. But it was still a lovely holiday, and we''re already planning to go back next summer.', 'A2', 55, '[{"statement":"The family buys food at a market in another town.","answer":true},{"statement":"The family travels to another country every summer.","answer":false},{"statement":"The rain didn''t spoil the holiday.","answer":true},{"statement":"The father and son usually catch a lot of fish.","answer":false}]'::jsonb),
+  ('The Day the Site Went Down', 'I got to the office at nine and made a coffee. Five minutes later I got a message from a customer: our website wasn''t working. I checked it, and she was right. Soon I was getting more messages, and the situation got worse every minute.
+
+My colleague Omar got in at half past nine. Together we looked at the logs and found the problem: the server didn''t have any free disk space. Some old log files were huge. Omar deleted them, and slowly the site got back to normal.
+
+By lunch everything was fine, but I was getting tired, and I had a headache. My manager told me to get some rest, so I left at four.
+
+I got home, got into bed and slept for two hours. The next morning I got an email from our boss. He thanked Omar and me, and he promised to get a better monitoring tool.', 'A2', 56, '[{"statement":"The site stopped working because of a bug in new code.","answer":false},{"statement":"The first message about the problem came from a customer.","answer":true},{"statement":"The boss thanked Omar and the writer the next day.","answer":true},{"statement":"The writer stayed at work late that day.","answer":false}]'::jsonb),
+  ('Learning From Mistakes', 'In my first year as a developer, I made a lot of mistakes. Once I made a change on the main branch, and the whole team couldn''t work for an hour. I felt awful, but my team lead didn''t get angry. Instead, she asked me to do some research and make a short list of team rules.
+
+Now we have a few simple rules. Nobody makes changes without a code review. We do reviews every afternoon, and each review must be done in one day. Before big decisions, we make a plan together.
+
+I still make mistakes, of course. Everybody does. But now I do my best to learn from them. When I make a mistake, I write it down and think about what I can do differently next time.
+
+Last month a new developer joined us and made exactly the same mistake. I made him a cup of tea and told him my story.', 'A2', 57, '[{"statement":"The writer helped to create rules for the team.","answer":true},{"statement":"The team lead got angry with the writer.","answer":false},{"statement":"The writer told the new developer about a similar mistake.","answer":true},{"statement":"Developers on the team can now change code without a review.","answer":false}]'::jsonb),
+  ('Lunch With My Sister', 'On Sundays I usually have a long, slow morning. I have breakfast at ten, have a shower and read the news. But last Sunday was different: my sister Anna invited me for lunch.
+
+Anna and her husband have a small house outside the city. They have two cats and a big garden. In spring they also had a baby, a little boy called Max, so the house is never quiet now.
+
+We had lunch in the garden because the weather was warm. Anna made soup and a cake. After lunch, her husband had a rest, and Anna and I had a long chat about our parents. Then I had a look at the baby''s room — it''s yellow and full of toys.
+
+I had a great time. I don''t have any children yet, but I thought about it a lot on the way home. Maybe one day I''ll have a noisy house too.', 'A2', 58, '[{"statement":"Anna lives in a flat in the city centre.","answer":false},{"statement":"They ate lunch outside.","answer":true},{"statement":"The writer already has two children.","answer":false},{"statement":"Anna and her husband have a young son.","answer":true}]'::jsonb),
+  ('The New Guy', 'Last week a new developer joined our team. His name is Liam, and he comes from Ireland. On his first day I met him at the door and showed him the office. He asked me lots of questions, and I tried to answer them all.
+
+Our team has a tradition: on Fridays we all have lunch together. I invited Liam, and he came with us. The others liked him immediately. They asked him about Ireland, and he told them funny stories about his hometown.
+
+Liam is very good at testing. On Monday the testers asked him to help them with a difficult problem, and he found the answer in an hour. They were really happy with him.
+
+Now he sits next to me, and we often work together. Sometimes he helps me, and sometimes I help him. I think he likes it here. Yesterday he told us that he enjoys working with us.', 'A2', 59, '[{"statement":"The testers were not pleased with Liam''s help.","answer":false},{"statement":"Liam started working on the team last week.","answer":true},{"statement":"Nobody invited Liam to the Friday lunch.","answer":false},{"statement":"Liam and the writer help each other.","answer":true}]'::jsonb),
+  ('An Old Family Photo', 'On my desk there is an old family photo. It was taken twenty years ago at my grandparents'' house. The house isn''t there any more, but I still remember its big green door.
+
+In the middle are my grandparents. My grandfather is wearing his favourite brown hat, and my grandmother is holding their dog, Rex.
+
+On the left are my parents. My mother has long hair in the photo — now her hair is short and grey. My father is laughing, and his glasses are on top of his head. On the right are my uncle and aunt with their son, Tom, my favourite cousin.
+
+I''m the small girl at the front with a red ball. My brother is next to me. His face is dirty because he didn''t want to wash it that morning.
+
+Our family is bigger now, and we live in different cities. But every time I look at this photo, I feel at home.', 'A2', 60, '[{"statement":"The writer''s mother looks different now.","answer":true},{"statement":"The writer''s grandmother is holding a cat in the photo.","answer":false},{"statement":"The whole family still lives in one city.","answer":false},{"statement":"The writer is the girl with the red ball.","answer":true}]'::jsonb),
+  ('Whose Charger Is This?', 'Every Friday our office manager, Rita, checks the meeting rooms, and every Friday she finds things that people have left behind. This week she put them all on the kitchen table and sent us a message: "Whose things are these? Please take yours home!"
+
+There were three phone chargers, an umbrella, two mugs and a blue scarf. I recognised one of the chargers at once — it was mine. I lost it on Tuesday. The umbrella was Mark''s — he forgot it after the rain on Monday.
+
+Nobody knew whose scarf it was. Rita asked Elena, "Is it yours?" But Elena said, "No, it isn''t mine. Mine is green." Later Jonas came in and said, "Oh, that''s my wife''s! She visited the office on Wednesday."
+
+The mugs were a problem. They both had cats on them, and two people said, "That one''s mine!" In the end, Rita wrote names on them. Now everybody can see whose mug is whose.', 'A2', 61, '[{"statement":"Elena''s scarf is blue.","answer":false},{"statement":"One of the chargers belonged to the writer.","answer":true},{"statement":"Nobody wanted the two mugs.","answer":false},{"statement":"The scarf belonged to Jonas''s wife.","answer":true}]'::jsonb),
+  ('Sharing a Flat', 'When I moved to the city, I rented a flat with my friend Kira. It was cheaper for both of us. My room is small and hers is bigger, so she pays a little more. That seems fair to me.
+
+At first we had problems. Kira used my plates, and I used her shampoo. Once she ate my cheese and said, "Sorry, I thought it was mine!" I wasn''t angry with her, but we decided to make some rules.
+
+Now each of us has a shelf in the fridge: the top one is mine and the bottom one is hers. The pots and pans are ours, so we both use them. We clean together on Sundays. She does the bathroom, and I do the kitchen.
+
+Kira is a great flatmate. She often makes dinner for me when I work late, and I help her with her English homework. Last month her parents visited and brought us a big cake. It was delicious.', 'A2', 62, '[{"statement":"The writer and Kira each have their own shelf in the fridge.","answer":true},{"statement":"Kira''s room is smaller than the writer''s.","answer":false},{"statement":"Kira sometimes cooks for the writer.","answer":true},{"statement":"The writer got very angry about the cheese.","answer":false}]'::jsonb),
+  ('Teaching Myself English', 'I never studied English at school — I learned German there. So when I started working in IT, I had to teach myself. I bought a grammar book and worked through it by myself, one unit a day.
+
+At first I was angry with myself all the time. I couldn''t understand films, and I was afraid to speak. In meetings I often asked myself, "What did he just say?" My colleagues were kind, but I wanted to understand them myself, without help.
+
+Then a friend gave me some advice: "Don''t push yourself too hard. Enjoy yourself!" So I started watching my favourite series in English and reading blogs about programming. Slowly it became easier.
+
+Now I can talk to clients and write documentation myself. Last month two new colleagues asked me how to learn English, and I told them to be patient and to believe in themselves. They''re studying by themselves now, and sometimes we practise together. So remember: you can do it yourself too.', 'A2', 63, '[{"statement":"The writer worked through a grammar book without a teacher.","answer":true},{"statement":"The writer studied English at school.","answer":false},{"statement":"The writer gave some advice to two new colleagues.","answer":true},{"statement":"A friend told the writer to study harder and stop having fun.","answer":false}]'::jsonb),
+  ('My Brother''s Wedding', 'Last Saturday was my brother''s wedding. His name is Pavel, and his wife''s name is Sofia. The wedding was at Sofia''s parents'' house in the country. They have a beautiful garden, perfect for a party.
+
+I came early to help: my job was to look after the children. My cousin''s twins, Lena and Mia, are five, and they were very excited. At one point they disappeared, and I found them in the kitchen next to the cook''s big chocolate cake! Luckily, they only ate a little piece.
+
+The bride''s dress was simple and white. She wore her grandmother''s old ring because it was very special to her.
+
+In the evening Pavel''s friends from work sang a funny song about him. Everybody laughed, even Sofia''s quiet father. The party ended after midnight.
+
+A week later I looked at the photographer''s pictures. I was in almost every one of them, always with two little girls next to me.', 'A2', 64, '[{"statement":"The writer''s job at the wedding was to take photos.","answer":false},{"statement":"The wedding took place at the bride''s parents'' house.","answer":true},{"statement":"Sofia wore a ring that was her grandmother''s.","answer":true},{"statement":"The twins ate the whole cake.","answer":false}]'::jsonb),
+  ('The Interview', 'Last Tuesday Olga had an interview for a job at a small company. It was an important day for her, so she got up an hour earlier than usual. She also took an umbrella because it looked like rain.
+
+The interview was in an old building near the river. A manager and an engineer from the team met her at the door. The manager was a friendly woman with a quiet voice. The engineer was quite young, and he asked a lot of technical questions.
+
+First, they asked Olga to describe a difficult project. She told them about an app for a university. She built it with two friends last year. Then they gave her a short task: she had to find a bug in a small program. She found it in ten minutes.
+
+At the end, the manager said, "We''ll send you an email on Friday." Olga is a little nervous now, but she thinks it was a good interview.', 'A2', 65, '[{"statement":"Olga got up later than usual on the day of the interview.","answer":false},{"statement":"In the task, Olga had to find a mistake in some code.","answer":true},{"statement":"Olga feels a bit nervous after the interview.","answer":true},{"statement":"The company will phone Olga with an answer on Monday.","answer":false}]'::jsonb),
+  ('Farm Day with the Kids', 'Last Saturday Tom and Anna took their children to a farm outside the city. They didn''t take the car. Instead, they went by train and then by bus. The trains were full of families, and the buses were late, but the children didn''t mind.
+
+The farm was bigger than they expected. There were sheep, cows, two horses and a lot of chickens. A farmer showed the children how to feed the sheep. Their little son, Max, was a bit afraid of the animals at first, but after ten minutes he was laughing.
+
+For lunch, they had sandwiches and tomatoes from the farm''s garden. Max dropped his sandwich in the mud, and his new trousers got dirty too. Luckily, Anna had some wet wipes in her bag, so it wasn''t a disaster.
+
+In the evening, all four of them were tired. Their feet hurt, and the children fell asleep on the bus home. The next morning Max asked, "Can we go again next month?"', 'A2', 66, '[{"statement":"Max loved the animals from the very first minute.","answer":false},{"statement":"The family travelled to the farm by public transport.","answer":true},{"statement":"Max''s trousers stayed clean all day.","answer":false},{"statement":"Max wants to visit the farm again.","answer":true}]'::jsonb),
+  ('Moving Day at Work', 'Hi everyone,
+
+As you know, we are moving to the new office on Monday. Here is some important information about the move.
+
+The new furniture arrived yesterday. Each person will have a desk, a chair and a small cupboard. Please don''t bring any old furniture from home, because we have enough. The old computers are going to stay here, but you should take your own keyboard and mouse.
+
+There is a kitchen on the second floor. It has a fridge, a coffee machine and a water cooler, so you won''t need to buy bottles of water any more. Please bring a cup for yourself, because we don''t have enough cups for all of us yet.
+
+And one piece of advice: come by bus or train on Monday. There isn''t much parking near the building, and the traffic is usually terrible in the morning.
+
+If you have any questions, send me a message.
+
+Thanks,
+Kate', 'A2', 67, '[{"statement":"People don''t need to bring furniture from home.","answer":true},{"statement":"Everybody should leave their keyboard in the old office.","answer":false},{"statement":"Kate suggests driving to the new office on Monday.","answer":false},{"statement":"There will be drinking water in the new kitchen.","answer":true}]'::jsonb),
+  ('Grandma''s Birthday Cake', 'Last weekend my grandmother turned eighty, and the whole family came to her flat for a party. My sister and I decided to make the cake ourselves. We bought some flour, some butter, a dozen eggs and a big bar of chocolate.
+
+The cake took three hours. While it was in the oven, we made some sandwiches and a bowl of salad. My uncle brought some cheese from the market and a few bottles of juice for the children.
+
+At five o''clock we put the cake on the table, and everyone sang "Happy Birthday". Grandma cut it into twenty pieces. My cousin asked for a second piece, and my uncle had two pieces with a cup of tea. The children didn''t want any salad, but they ate a lot of cake.
+
+There was still some cake left at the end of the evening, so Grandma gave us a piece each to take home. She said it was the best birthday cake in eighty years.', 'A2', 68, '[{"statement":"The family bought the cake in a shop.","answer":false},{"statement":"Making the cake took several hours.","answer":true},{"statement":"The grandmother liked the cake very much.","answer":true},{"statement":"There was no cake left after the party.","answer":false}]'::jsonb),
+  ('A Strange Alert', 'Yesterday afternoon I was in a café when I got an alert on my phone. A server in our data centre was almost out of disk space. I had a laptop with me, so I opened it and checked the logs.
+
+The logs showed a strange process. The process started every five minutes and created a new file each time. The files weren''t very big, but there were thousands of them. I called a colleague, Sam, and asked him about it.
+
+Sam remembered a script from last year. The script was part of an old test, and the team forgot to turn it off after the test. We stopped the script, deleted the files and restarted the server. After that, there was plenty of free space again.
+
+Before I left the café, I wrote a short report for the team. I also added a task to the board: "Check all old scripts." When I finally closed the laptop, my coffee was cold.', 'A2', 69, '[{"statement":"The problem was caused by a new feature.","answer":false},{"statement":"The writer wasn''t at home when the alert came.","answer":true},{"statement":"The writer solved the problem completely alone.","answer":false},{"statement":"The old script was still running because people forgot about it.","answer":true}]'::jsonb),
+  ('A Week by the Sea', 'Last summer we spent a week by the sea in a small town in the south of the country. Every morning we woke up early and went to the beach before the sun got too hot.
+
+The town was quiet, and the people were very friendly. We stayed in the same little hotel as last year. The owner remembered us and gave us the best room, on the second floor, with a view of the sea.
+
+The only problem was the internet. It worked only in the morning, so I couldn''t check my work email. At first I was annoyed, but by the end of the week I didn''t care at all. I read three books instead, and in the evenings we listened to the radio on the balcony.
+
+On the last day we climbed to the top of the hill behind the town. The sky was clear, and we could see the whole coast. My photos don''t show how beautiful it really was.', 'A2', 70, '[{"statement":"This time the writer stayed in a different hotel.","answer":false},{"statement":"The internet connection was a problem.","answer":true},{"statement":"On the last day the sky was cloudy.","answer":false},{"statement":"By the end of the week, work email no longer bothered the writer.","answer":true}]'::jsonb),
+  ('Two Different Timetables', 'Mark is a developer, and his wife, Lena, is a nurse. Their timetables are so different that they sometimes see each other only at breakfast.
+
+Mark usually works at home. He gets up at eight, takes their daughter to school and starts work at nine. Twice a week he goes to the office for meetings. He finishes at six, and in the evening he likes to go to the cinema.
+
+Lena works in a big hospital near the station. When she is on the night shift, she goes to work at eight in the evening and comes home at eight in the morning. Then she has breakfast with Mark and goes to bed while he starts his first meeting.
+
+Last month Lena was ill and spent a week in bed, and for the first time in years they were both at home all day. "It was strange," Mark said, "but it was really nice to have lunch together." Now they are trying to keep one free day a week for the whole family.', 'B1', 71, '[{"statement":"Lena works only during the day.","answer":false},{"statement":"Mark works from home on most days.","answer":true},{"statement":"While Lena was ill, Mark was at the office every day.","answer":false},{"statement":"Mark enjoyed having lunch with Lena.","answer":true}]'::jsonb),
+  ('Learning Without Exams', 'I have been learning English for two years, and people often ask me for advice. My answer is simple: don''t make it boring.
+
+I love music, so I listen to songs in English every day and read the words while I listen. I like films too, and I watch them with English subtitles. At first I understood very little, but now I can follow most of the story.
+
+I hate exams, and I don''t like grammar books much either. They are useful, of course, but they make me sleepy after twenty minutes. Instead, I write short messages to friends in English and ask them to correct my mistakes.
+
+The language is also important for my career. Many companies expect developers to read documentation and talk to clients in English. Last month I had a call with a client from Canada, and for the first time I wasn''t nervous at all.
+
+So my advice is this: people learn better when they are happy. Enjoy the process, and the results will come.', 'B1', 72, '[{"statement":"The writer enjoys taking exams.","answer":false},{"statement":"The writer watches films with English subtitles.","answer":true},{"statement":"The writer studies mainly with grammar books.","answer":false},{"statement":"The writer felt calm during a recent call with a client.","answer":true}]'::jsonb),
+  ('Three Weeks in Europe', 'Next summer my brother and I are going to travel around Europe for three weeks. We are starting in Amsterdam, the capital of the Netherlands, because a friend of ours lives there and can show us the city. We want to see the canals and visit the Rijksmuseum.
+
+After that, we are taking the train to Germany. We''d like to spend two days in Cologne and take a boat trip on the Rhine. Then we are going south to Switzerland. My brother loves mountains, so we are going to walk in the Alps for a few days. We have already booked two nights at the Park Hotel, a small place near Lake Geneva.
+
+The last part of the trip is Italy. We will fly home from Rome, but before that we want to swim in the Mediterranean and see the Colosseum.
+
+My mother is worried that three weeks is too long, but we think it isn''t long enough! Our only problem is money, so we are going to sleep in cheap hostels and cook our own food.', 'B1', 73, '[{"statement":"Their mother thinks the trip is too short.","answer":false},{"statement":"They plan to visit four countries.","answer":true},{"statement":"They are going to fly from Amsterdam to Germany.","answer":false},{"statement":"They want to spend as little as possible on food and accommodation.","answer":true}]'::jsonb),
+  ('A Tour of the Office', 'On Monday morning Paul met Nina, the new designer, at the door and offered to show her around. "This is the main room," he said. "These desks are for the developers, and those desks by the window belong to the design team. That one in the corner, next to the window, is yours."
+
+Nina put her bag on the desk and looked around. "And what''s that room over there?" she asked.
+
+"That''s the quiet room," Paul answered. "You can''t make phone calls in there, but it''s perfect when you need to concentrate."
+
+Next he took her to the kitchen. "These cups are for everyone, but those on the top shelf belong to the boss, so please don''t use them. This machine makes good coffee, but that old one has been broken since March."
+
+Finally, Paul gave her a laptop and a card for the building. "That''s all for now," he said. "Is this your first job in IT?"
+
+"No," Nina laughed, "but this is my first job with a desk by the window."', 'B1', 74, '[{"statement":"Phone calls are allowed in the quiet room.","answer":false},{"statement":"Nina''s desk is in the design team''s part of the room.","answer":true},{"statement":"Both coffee machines in the kitchen work.","answer":false},{"statement":"This isn''t Nina''s first job in IT.","answer":true}]'::jsonb),
+  ('The Green Running Shoes', 'Last Saturday I needed new running shoes because my old ones had a big hole in them. I went to a sports shop in the city centre, and a young assistant came to help me.
+
+"Do you want light ones or ones with more support?" she asked. I told her that I usually run on hard roads, so she brought me three pairs: a black pair, a blue pair and a bright green one.
+
+The black ones were comfortable but too expensive. The blue ones looked nice, but they were a little small, and the shop didn''t have a bigger size. The green ones were cheap and fitted perfectly, but the colour was terrible.
+
+I walked around the shop in each pair for a few minutes. In the end I chose the green ones. "Which ones did you buy?" my wife asked when I got home. When I showed her, she laughed for a whole minute.
+
+I wear them every morning now. They are the most comfortable ones I have ever had, and people can see me from very far away.', 'B1', 75, '[{"statement":"The writer bought the black shoes.","answer":false},{"statement":"The writer''s old shoes were damaged.","answer":true},{"statement":"The writer is happy with the green shoes.","answer":true},{"statement":"The writer''s wife liked the colour immediately.","answer":false}]'::jsonb),
+  ('Before the Release', 'It was Thursday evening, and the release was planned for Friday morning. Irina, the team lead, wanted to check everything one more time before she went home.
+
+"Are there any open bugs?" she asked.
+
+"There are some small ones," said Dan, "but there aren''t any serious problems. I can fix some of them tonight, if you want."
+
+Irina shook her head. "No, go home. We don''t need any heroes. The small bugs can wait until next week."
+
+Then she looked at the tests. Some of them were slow, but all of them passed. She asked the designer if there were any last changes to the interface. "I have some ideas," he said, "but they aren''t urgent."
+
+The last question was for the support team: did they have any notes for the users? "Yes," they said, "we wrote some last week. They''re in the shared folder."
+
+At seven o''clock Irina finally closed her laptop. She felt calm. On Friday morning the release went well, and there weren''t any complaints from users all day.', 'B1', 76, '[{"statement":"Irina told Dan not to stay late.","answer":true},{"statement":"Dan said there were several serious bugs.","answer":false},{"statement":"Some of the tests failed.","answer":false},{"statement":"The release didn''t cause problems for users.","answer":true}]'::jsonb),
+  ('Camping in the Rain', 'Last month my friends and I went camping in the mountains for the weekend. We wanted a real adventure: no hotels, no work and no plans.
+
+On the first evening we wanted to cook dinner, but most of the wood near the lake was wet. None of our matches worked because they were wet too. Luckily, Lisa had a lighter, so we found a few dry sticks, made a small fire and cooked some pasta.
+
+The next morning it started to rain. We tried to check the weather on Lisa''s phone, but there was no signal in the mountains. Our tent was old, and the rain came in through a hole in the roof. By lunchtime none of us had any dry socks.
+
+We decided to walk to the village. The only café there had no menu, just soup and bread, but it was the best meal of the trip.
+
+We didn''t see any wild animals or take many photos. Still, we laughed more than on any holiday before. Next year, though, we are going to take a new tent.', 'B1', 77, '[{"statement":"The friends checked the weather forecast on the phone without any difficulty.","answer":false},{"statement":"The friends had problems making a fire.","answer":true},{"statement":"The writer wants to use the same tent next year.","answer":false},{"statement":"The friends enjoyed the simple meal in the village.","answer":true}]'::jsonb),
+  ('The Silent Weekend', 'Last Saturday, Olga was on call for her team. It was a quiet morning, and she didn''t expect anything unusual. At eleven o''clock, her phone suddenly rang with an alert: the payment service was down.
+
+Olga opened her laptop and checked the logs, but she couldn''t find anything useful there. Nothing looked wrong. She called the backend developer, but nobody answered. Then she wrote in the team chat. Again, no-one replied. It was the weekend, and everybody was busy with their own plans.
+
+For an hour, Olga tried everything she knew. She restarted the service twice, but nothing changed. She didn''t want to disturb anybody else, but finally she called her manager, Tom. He answered immediately.
+
+Together they found the problem. Somebody changed a setting on Friday evening and didn''t tell anyone about it. It was a small mistake, but it stopped all the payments.
+
+On Monday, the team had a long conversation. Now nobody can change settings without a review, and nothing goes to production on Friday evenings.', 'B1', 78, '[{"statement":"Olga quickly found the cause of the problem in the logs.","answer":false},{"statement":"At first, her colleagues did not reply to her messages.","answer":true},{"statement":"Tom did not pick up the phone.","answer":false},{"statement":"The team made new rules after the incident.","answer":true}]'::jsonb),
+  ('Somewhere to Sleep', 'Last summer, Daniel and his sister Anna travelled around the south of the country by car. They didn''t book anything before the trip. "We''ll find somewhere to stay every night," Daniel said. "It''s easy."
+
+For the first week, he was right. They always found somewhere nice: a small hotel, a farm, once even a room above a café. But on the eighth day, they arrived in a little town late in the evening, and there was a festival there. Every hotel was full. They asked everywhere, but there was nowhere to sleep.
+
+Anna was tired and a bit angry. "Do you know anybody here?" she asked. Of course, Daniel didn''t know anyone. They went to a restaurant because they wanted something to eat, at least.
+
+The waiter heard their conversation. "My aunt has a spare room," he said. "It''s nothing special, but it''s clean." Half an hour later, they were in a quiet house with a garden, and the aunt was making them tea.
+
+Now Anna books something before every trip. Daniel still says it''s more fun without a plan.', 'B1', 79, '[{"statement":"Daniel and Anna arranged all their hotels before the trip.","answer":false},{"statement":"During the first week, finding a place to stay was not a problem.","answer":true},{"statement":"The waiter''s aunt let them stay in her house.","answer":true},{"statement":"After the trip, both of them prefer to travel without a plan.","answer":false}]'::jsonb),
+  ('A Week in Support', 'In our company, every developer spends one week a year in the support team. All of us hated the idea at first. "I''m a programmer, not a support agent," everybody said. But after my week there, I changed my mind.
+
+Every morning, the support team reads all the new messages from customers. Every message gets an answer on the same day, even when the answer is only "We''re looking at it." They work hard all day, and they don''t have much time for lunch.
+
+During my week, I answered about forty messages. All of them were different. Some customers couldn''t log in, some found real bugs, and one man wanted a new feature "for all his friends". Every day I learned something new about our product and about our users.
+
+But the really useful thing was simple: I saw the problems that happen all the time. Back in my own team, I fixed three of them in a week. Now I think every developer should try this at least once.', 'B1', 80, '[{"statement":"Customers usually get a reply on the day they write.","answer":true},{"statement":"At first, the developers were happy about the support week.","answer":false},{"statement":"After the support week, the writer fixed some common problems.","answer":true},{"statement":"All the messages the writer answered were about the same problem.","answer":false}]'::jsonb),
+  ('A Street Without Cars', 'Last month, our city closed the main street to cars for one Sunday. Before the day, the local newspaper asked people what they thought. Most of them liked the idea, some of them didn''t care, and a few were against it, mostly shop owners.
+
+On the day itself, the weather was perfect. All of the cafés put tables outside, and most of the shops stayed open. Children rode bikes in the middle of the road, and some of the older people brought chairs and sat in the sun. None of the shop owners closed early, because they were too busy.
+
+In the evening, the newspaper asked the same questions again. This time, almost all of the people said yes. Some of them asked for a car-free Sunday every month. None of the shop owners were against it any more. "I sold more coffee today than in any normal week," one of them said.
+
+The city hasn''t decided anything yet, but most people think the street will be free of cars again next summer.', 'B1', 81, '[{"statement":"Most shops did not close on the car-free Sunday.","answer":true},{"statement":"Before the event, every person in the city supported the idea.","answer":false},{"statement":"One shop owner complained about selling less than usual that day.","answer":false},{"statement":"The city has not made a final decision yet.","answer":true}]'::jsonb),
+  ('Two Job Offers', 'Last year, Irina got two job offers in the same week. Both companies wanted a frontend developer, and both offered almost the same salary. She had to choose one of them by Friday.
+
+The first company was large and well known. The second was a small start-up with twelve people. Neither of them was perfect. At the big company, the work was stable, but the project was old and boring. At the start-up, the project was exciting, but nobody knew anything about the future of the company.
+
+Irina asked her friends for advice. Two of them answered quickly, but neither of them helped much. "Either choice is fine," said one. "You can''t lose," said the other. Her mother had a clear opinion: "Take the big one, of course."
+
+In the end, Irina called both teams again and asked to talk to a developer, not a manager. Both conversations were friendly, but at the start-up she laughed a lot and asked a hundred questions. That told her everything.
+
+She accepted the second offer. Six months later, she doesn''t regret it, and the start-up is growing.', 'B1', 82, '[{"statement":"Irina''s friends did not really help her decide.","answer":true},{"statement":"The two companies offered very different salaries.","answer":false},{"statement":"Her mother advised her to choose the start-up.","answer":false},{"statement":"Irina is happy with her decision.","answer":true}]'::jsonb),
+  ('Cooking for Twelve', 'Last Saturday was my grandmother''s eightieth birthday, and I offered to cook dinner for the whole family. There were twelve of us. I don''t cook much, so it was a brave idea.
+
+I chose a simple menu: soup, roast chicken with vegetables, and a chocolate cake. On Friday, I went to the market. How many potatoes do you need for twelve people? How much chicken? I had no idea, so I bought a lot of everything.
+
+On Saturday morning, I started early. There were too many things to do and not much space in my small kitchen. The soup took a lot of time, and I didn''t have many big pots, so I borrowed two from my neighbour. The cake was the hardest part. I made a lot of mistakes, but in the end it looked fine.
+
+The dinner was a great success. Everybody ate a lot, and my grandmother asked for more soup. But there was so much food left that each guest took a box home.
+
+Next time, I''ll buy less. Not much less, though. My family really likes to eat.', 'B1', 83, '[{"statement":"The writer did not know how much food to buy.","answer":true},{"statement":"The writer often cooks for big groups.","answer":false},{"statement":"After dinner, there was still a lot of food.","answer":true},{"statement":"The writer''s kitchen had plenty of space.","answer":false}]'::jsonb),
+  ('A Few Spare Days', 'Our team had a big release planned for the end of the month. Three weeks before it, everything looked fine. We had a few small bugs, but very little real work was left. Or so we thought.
+
+Then the client sent a new list of changes. There weren''t many of them, only a few, but one was serious: a completely new payment page. We had very little time, and few people on the team knew the payment system well. In fact, only Kate knew it, and she was on holiday for a week.
+
+Our manager asked us for an estimate. Few of us wanted to give a number, because we had very little information. Finally, we said, "Ten days, maybe more." The client wasn''t happy, but they accepted it.
+
+We worked hard. Kate came back and helped a lot. We had little sleep in the last few days, but we finished the page two days before the release.
+
+What did we learn? Ask the client about changes early, and always leave a little extra time in every estimate. A few spare days can save a project.', 'B1', 84, '[{"statement":"The client asked for a lot of changes, and all of them were small.","answer":false},{"statement":"Three weeks before the release, the team thought most of the work was done.","answer":true},{"statement":"The team finished the payment page before the release date.","answer":true},{"statement":"Several people on the team knew the payment system well.","answer":false}]'::jsonb),
+  ('A Flat With a View', 'After two years in a dark little flat near the station, Sam decided to move. He wanted something bright and quiet, with a small balcony. His budget wasn''t big, so it wasn''t easy.
+
+The first flat he saw looked wonderful in the photos. In real life, it was cold and damp, and the walls were thin. He could hear the neighbours'' TV from every room. The second flat was clean and modern, but the kitchen was tiny and the rent was too high.
+
+The third flat was on the top floor of an old building without a lift. Sam was tired and a little angry after five floors of stairs. But when he opened the door, he forgot about the stairs. The rooms were large and sunny, the wooden floors were warm, and from the balcony he could see the whole city and the river.
+
+The owner was a friendly old lady with a sharp voice and kind eyes. "The heating is slow," she said honestly. "But the view is free."
+
+Sam signed the contract the same evening. He is still happy there, and the stairs are now his daily workout.', 'B1', 85, '[{"statement":"In the first flat, the noise from the neighbours was a problem.","answer":true},{"statement":"Sam''s old flat was bright and sunny.","answer":false},{"statement":"The third flat had a lift.","answer":false},{"statement":"The owner told Sam about a problem with the flat.","answer":true}]'::jsonb),
+  ('Slowly but Carefully', 'When Leo joined the team as a junior developer, he worked very quickly. He finished his tasks fast and proudly sent them for review. Unfortunately, his code often came back with a lot of comments.
+
+His mentor, Nadia, was a calm, patient woman. She always explained things clearly and never spoke angrily. One day she said, "Leo, you type fast, but you read badly. Before you send your code, read it slowly, line by line, like a reviewer."
+
+At first, Leo found it hard. Reading his own code carefully felt boring and took a lot of time. But he tried. He also started to write tests regularly, not only when somebody asked him.
+
+The results came surprisingly quickly. After a month, his pull requests had far fewer comments, and reviewers approved them easily. Nadia smiled happily when she saw his latest change: one small comment, and only about a name.
+
+Now Leo gives the same advice to new people on the team. "Working fast is easy," he says. "Working well is the real skill. Go slowly at first, and speed comes naturally."', 'B1', 86, '[{"statement":"Nadia often got angry with Leo.","answer":false},{"statement":"At the beginning, Leo''s code needed a lot of corrections.","answer":true},{"statement":"At first, Leo found it easy and fun to check his own code.","answer":false},{"statement":"After a month, reviewers had fewer problems with Leo''s code.","answer":true}]'::jsonb),
+  ('Life in a Small Town', 'Three years ago, Marta and her husband left the capital and moved to a small town by the sea. Their friends thought it was a crazy idea. Now Marta writes a blog about the change, and her answer is clear: life is slower, but it is better.
+
+Some things are easier now. Their new house is bigger, but the rent is lower. Fresh fish and vegetables from the market are cheaper too, and they taste better. The air is cleaner, and the nights are quieter. Marta sleeps longer and feels healthier.
+
+Of course, some things are harder. The shops close earlier, and there are fewer restaurants. The hospital is forty minutes away by car. In winter, the town is emptier and the evenings feel longer. Also, the internet is slower, and that is a real problem, because Marta works remotely as a designer.
+
+"People often ask me if I''m happier here," she writes. "The answer is yes, but not every day. I miss my old friends and the theatre. But I''m calmer, and our life is simpler. For us, that matters more."', 'B1', 87, '[{"statement":"Food from the local market is cheaper and tastier.","answer":true},{"statement":"Marta''s friends supported the move from the start.","answer":false},{"statement":"A slow internet connection is not important for Marta''s job.","answer":false},{"statement":"Marta admits she misses some things about her old life.","answer":true}]'::jsonb),
+  ('Server Room or Cloud?', 'For ten years, our company kept all its services on one old server in a small room next to the kitchen. Last year, the management asked our team a simple question: should we move everything to the cloud?
+
+We made a comparison. The cloud was more flexible than our server, and it was much easier to grow there. With the cloud, we could add new machines in minutes, not weeks. It was also safer than our little room, because the data was in three places, not one.
+
+But the cloud was more expensive than we expected. Our old server cost us almost nothing every month, except electricity. The monthly cloud bill was bigger than the salary of a junior developer. The cloud was also more complicated than our simple setup, and some of us needed training.
+
+In the end, we chose a mix. Important customer data moved to the cloud, because it was more reliable there. Old internal tools stayed on the server, because they were cheaper to run in our own room.
+
+Six months later, everyone agrees: our system is better than before, although our bills are higher.', 'B1', 88, '[{"statement":"The cloud turned out to cost more than the team thought.","answer":true},{"statement":"The team thought the cloud was less flexible than the old server.","answer":false},{"statement":"The team moved all its services to the cloud.","answer":false},{"statement":"The company''s system works better now than before.","answer":true}]'::jsonb),
+  ('Swimming Instead of Running', 'Last spring, Pavel decided to get fit. He was forty-two, he worked at a desk all day, and he wasn''t as strong as he was at twenty. His doctor said, "Start running. Twenty minutes, three times a week."
+
+Running wasn''t as easy as Pavel thought. After a week, his knees hurt, and he didn''t enjoy it at all. His friend Lena is a swimming coach, and she suggested the pool. "Swimming isn''t as hard on your knees as running," she said. "And it''s not as boring."
+
+Pavel tried it. At first, he wasn''t as fast as the other people in the pool, and he felt a bit silly. But he went every Tuesday and Friday, and slowly he got better. Swimming wasn''t as exciting as football, his old hobby, but it was calm and pleasant, and his knees stopped hurting.
+
+Six months later, Pavel feels much healthier. He isn''t as heavy as before, and he sleeps better. He still isn''t as fast as Lena, of course, but he doesn''t care.
+
+"Forget about the hardest sport," he says now. "Find something fun and do it regularly. That''s the whole secret."', 'B1', 89, '[{"statement":"Pavel''s doctor advised him to start swimming.","answer":false},{"statement":"Running caused problems with Pavel''s knees.","answer":true},{"statement":"Pavel now feels better than he did before.","answer":true},{"statement":"From the start, Pavel was one of the fastest swimmers in the pool.","answer":false}]'::jsonb),
+  ('Our Team Awards', 'Every December, our team has a small party with its own awards. Nobody wins money, but everybody wants to win. This year, I prepared the list, so here are the results.
+
+The award for the strangest bug went to Mike. In March, our app showed the wrong date, but only on Tuesdays, and only for users in one country. It was the most confusing problem of the year, and it took him four days to find the cause.
+
+The best code reviewer was Sofia, again. Her comments are the clearest and the most helpful on the team, and she is never rude. The fastest learner was Ivan, our newest developer. He joined in June with almost no experience, and now he leads small tasks on his own.
+
+The funniest moment came in October. Our manager shared her screen during a client call and showed everyone her shopping list instead of the project plan.
+
+The most important award, "Hero of the Year", went to the whole support team. They answered thousands of messages during the worst outage in the company''s history, and they stayed calm the entire time.
+
+Next year, I hope for fewer heroes and more boring days.', 'B1', 90, '[{"statement":"Mike needed several days to solve the date problem.","answer":true},{"statement":"The winners of the awards get money.","answer":false},{"statement":"The support team stayed calm during a serious outage.","answer":true},{"statement":"Ivan had a lot of experience when he joined the team.","answer":false}]'::jsonb),
+  ('Not Enough Time to Test', 'Last month our team had a big problem: we didn''t have enough time. The client wanted a new payment page by Friday, and our manager agreed without asking us first. Four days is not enough for a feature like that, especially when only two developers are free.
+
+We worked late every evening, and by Thursday the code was ready. But was it good enough? Nobody was sure. Lena, our tester, said that she needed at least two more days, because one day wasn''t enough to check every type of card and every browser.
+
+The manager decided to release it anyway. On Saturday morning, some customers couldn''t pay. The page worked well on a fast connection, but on slow phones it wasn''t quick enough, and the request simply stopped after ten seconds.
+
+We fixed the bug on Monday, and after that the manager changed the rules. Now every estimate includes time for testing, and when the team says there isn''t enough time, he talks to the client before he promises anything. It isn''t a perfect system, but it works well enough, and we are much less tired.', 'B1', 91, '[{"statement":"The developers agreed to the Friday deadline before the manager did.","answer":false},{"statement":"Lena thought that one day was too short for testing.","answer":true},{"statement":"The payment page had problems on slow phones.","answer":true},{"statement":"After the incident, estimates still didn''t include any time for testing.","answer":false}]'::jsonb),
+  ('Too Hot to Sleep', 'This summer my city had the hottest July in forty years, and honestly, I wasn''t ready for it. My flat is on the top floor, and it gets too hot by ten in the morning. I don''t have air conditioning, because I always thought it was too expensive for a climate like ours.
+
+The first week was the worst. At night it was too hot to sleep, so I lay on the floor next to an open window and listened to the traffic. In the morning I was too tired to work properly, and I made silly mistakes in simple emails.
+
+Then I changed a few things. I bought a small fan, which wasn''t too expensive. I started closing the curtains early in the morning, before the sun reached my side of the building. I also moved my desk to the kitchen, because it stays cooler there.
+
+Some people told me to go for a run in the evening, but for me it was too warm even at nine o''clock. Instead, I went swimming with friends in a lake outside the city. The water was a little too cold at first, but after a few minutes it felt wonderful.', 'B1', 92, '[{"statement":"The writer already had air conditioning before the summer.","answer":false},{"statement":"The writer''s flat gets hot early in the day.","answer":true},{"statement":"Running in the evening was a good solution for the writer.","answer":false},{"statement":"At first, the lake felt cold to the writer.","answer":true}]'::jsonb),
+  ('Greetings from the Language School', 'Hi Mum,
+
+I''m sorry I didn''t write last week. The course keeps me very busy, but I''m enjoying it a lot. We have classes every morning from nine until one, and in the afternoon I usually study in the library for two hours.
+
+My teacher, Carmen, speaks English very well, but in class she speaks only Spanish to us. At first I understood almost nothing, but now I can follow most of her explanations. Yesterday I asked a question in Spanish without any notes, and she said my pronunciation was getting better.
+
+I live with a family near the old market. They are very kind. Every evening we have dinner together at the big table in the kitchen, and they correct my mistakes patiently. Their son, Pablo, plays the guitar quite badly, but he plays it every night, so I hear a lot of songs!
+
+On Saturday I went to the beach with two students from my group. We walked along the coast for three hours and ate fresh fish in a small restaurant. I''ll send you some photos tomorrow.
+
+Love,
+Anna', 'B1', 93, '[{"statement":"Carmen speaks English to the students in class.","answer":false},{"statement":"Anna has her lessons in the morning.","answer":true},{"statement":"Pablo is a very good guitar player.","answer":false},{"statement":"Anna''s Spanish has improved since the start of the course.","answer":true}]'::jsonb),
+  ('My Remote Work Routine', 'I have worked from home for three years now, and people often ask me how I stay productive. The honest answer is routine. I don''t always follow it perfectly, but it usually works.
+
+I always start at the same time, at half past eight, even when nobody else is online yet. I never check social media before lunch, because one short look can easily become forty minutes. The first two hours are usually the quietest, so I use them for the most difficult tasks, like writing new code or reviewing a big pull request.
+
+Meetings are normally in the afternoon. Our team works in three time zones, so we hardly ever meet before eleven. I sometimes take calls from the sofa, but I am never in bed during a meeting. That is my rule.
+
+The hardest part is stopping. In the office, you can see that everyone has gone home. At home, there is always one more message. So at six I close the laptop, and I often go for a walk around the block to "leave the office". It sounds silly, but it really helps me switch off.
+
+Have you got a routine? I''d love to hear about it in the comments.', 'B1', 94, '[{"statement":"The writer often checks social media in the morning.","answer":false},{"statement":"The writer uses the first hours of the day for the hardest tasks.","answer":true},{"statement":"The team rarely has meetings early in the day.","answer":true},{"statement":"The writer usually keeps working late into the evening.","answer":false}]'::jsonb),
+  ('Are We Ready Yet?', 'It''s Thursday afternoon, and the release is planned for six o''clock. Our team lead, Omar, is walking around the office with his checklist and asking everyone the same question: "Are we ready yet?"
+
+Kate has already finished the database changes, and she has tested them twice. That''s good news. Then Omar comes to my desk. I still haven''t fixed one small bug in the settings screen. I''ve already found the reason, but I haven''t written the test yet, and our rule is simple: no test, no merge.
+
+"How long do you still need?" Omar asks. "Twenty minutes," I say. He looks at his watch and nods.
+
+The bigger problem is the translations. The German texts still haven''t arrived. The translator promised them for Monday, and it''s already Thursday. Omar has written to her twice, but she hasn''t answered yet.
+
+At half past five, my fix is in, and Kate has already prepared the release notes. We still don''t have the German texts, so Omar decides to release the update in English for German users and add the translations tomorrow. "It isn''t perfect," he says, "but it''s better than waiting another week."', 'B1', 95, '[{"statement":"The writer hasn''t found the cause of the bug yet.","answer":false},{"statement":"Kate''s part of the work is finished before the release.","answer":true},{"statement":"Omar decides not to wait for the translations.","answer":true},{"statement":"The translator sent the German texts on time.","answer":false}]'::jsonb),
+  ('The Borrowed Drill', 'Last weekend I wanted to put up some shelves in my new flat, but I didn''t have a drill. So I knocked on my neighbour''s door. Mr Petrov is a retired engineer, and he has a whole room full of tools.
+
+"Of course," he said. "Wait a minute." He came back with a heavy box and gave it to me. Then he showed me how to change the drill bits. "Bring it back on Sunday," he said. "I need it for my garden."
+
+The shelves took me all of Saturday. On Sunday my friend Dima came round and saw the drill. "Lend it to me for a day," he said. "I want to fix a cupboard." I didn''t want to say no, so I gave it to him and asked him to return it in the evening.
+
+Dima didn''t come back that evening. On Monday morning Mr Petrov knocked on my door and asked for his drill. I felt terrible. I called Dima, and he brought it to me an hour later, with apologies and a box of chocolates.
+
+I gave the drill back to Mr Petrov and offered him the chocolates too. He laughed and said, "Keep them. But next time, ask me before you lend my things to your friends."', 'B1', 96, '[{"statement":"Dima returned the drill on Sunday evening.","answer":false},{"statement":"The neighbour lent the writer his drill.","answer":true},{"statement":"Mr Petrov didn''t like that his tool went to someone else without his permission.","answer":true},{"statement":"Mr Petrov kept the chocolates.","answer":false}]'::jsonb),
+  ('Should Juniors Ask Questions?', 'When I started my first job as a developer, I was afraid to ask questions. I thought my colleagues were too busy, and I didn''t want them to think I was slow. So I spent hours looking for answers alone, and sometimes I found nothing at all.
+
+After a month, my team lead noticed this and invited me for a coffee. She said that a good question saves time for everyone, but a long silence can cost the team a whole day. That changed my mind.
+
+I have now worked in the industry for six years, and I often work with juniors myself. My advice is simple. Try to solve the problem alone for thirty minutes, because you learn a lot from trying. But if you are still stuck after that, ask someone. Explain what you have tried and what you expected, so the other person can help you quickly.
+
+Of course, some questions are better for the documentation or a search engine, and some are better for a person. You will learn the difference with time. Juniors who ask good questions usually grow faster, and seniors who answer them become better teachers. Everybody wins, or at least nobody loses.', 'B1', 97, '[{"statement":"At the start of the writer''s career, asking for help felt easy.","answer":false},{"statement":"The team lead believed that staying silent can waste more time than asking.","answer":true},{"statement":"The writer advises juniors to ask for help at once, before trying anything.","answer":false},{"statement":"According to the writer, both juniors and seniors gain from good questions.","answer":true}]'::jsonb),
+  ('A Long Day of Travel', 'When I travel, I usually plan everything carefully. But last spring, nothing went according to plan.
+
+When I arrived at the airport, I saw that my flight was delayed by three hours. I wasn''t too worried, because I had a book and some snacks. But when the new departure time came, the flight was cancelled completely. A tired woman at the airline desk gave me a ticket for the next morning and a voucher for a hotel.
+
+The hotel was forty minutes away by bus. When I finally got there, it was almost midnight, and the receptionist couldn''t find my booking. I showed him the voucher, and after twenty minutes he gave me the key to a small room on the fifth floor. When I opened the door, I saw that the window didn''t close, and it was raining outside.
+
+I slept for about four hours. When the alarm rang, I took the first bus back to the airport. This time the plane left on time, and I landed just in time for my sister''s birthday dinner.
+
+When I told the story at the table, everybody laughed. Now it''s a funny memory, but I still take a second book and an extra charger whenever I fly.', 'B1', 98, '[{"statement":"In the end, the writer''s flight left three hours late.","answer":false},{"statement":"The airline gave the writer a place to stay for the night.","answer":true},{"statement":"There was a problem with the window in the hotel room.","answer":true},{"statement":"The writer arrived too late for the birthday dinner.","answer":false}]'::jsonb),
+  ('If the Build Fails', 'Welcome to the team! This short guide explains what to do when something goes wrong in your first weeks. Read it now and keep it open, because you will need it.
+
+If the build fails on your computer, don''t panic. First, pull the latest changes from the main branch. If the problem is still there, delete the folder with old dependencies and install them again. This fixes most problems. If it doesn''t, write in the team chat, and someone will help you.
+
+If you find a bug in production, never fix it directly on the server. Create a ticket, add the steps to reproduce it and tell the person on duty. If the bug affects payments or customer data, call them instead of writing, because it is urgent.
+
+If you are not sure about a task, ask your mentor. Nobody will think you are stupid. If you wait until the end of the week, you will lose time, and the problem will probably get bigger.
+
+Finally, if you break something (and you will, because everyone does), tell us immediately. We won''t be angry. We will only be angry if you hide it. Mistakes are normal here; secrets are not.
+
+Good luck, and enjoy your first sprint!', 'B1', 99, '[{"statement":"New developers should fix production bugs directly on the server.","answer":false},{"statement":"According to the guide, reinstalling dependencies solves most build problems.","answer":true},{"statement":"For a bug with payments, the guide recommends a phone call rather than a message.","answer":true},{"statement":"The team will be angry with anyone who breaks something.","answer":false}]'::jsonb),
+  ('If I Lived by the Sea', 'I have lived in a big city all my life, and I like it. But sometimes, usually in grey November, I imagine a different life. What would happen if I lived by the sea?
+
+First of all, my mornings would be different. If I had a house near the beach, I would go swimming before breakfast instead of standing on a crowded train. I would probably be healthier, and maybe calmer too. My job is remote, so I could work from anywhere if I had a good internet connection.
+
+On the other hand, I know myself. If I lived in a small town, I would miss the theatres, the late-night cafés and my friends. In winter, seaside towns are often empty and quiet, and I''m not sure I would enjoy that for more than a month. If my friends wanted to visit me, they would need to travel for six hours.
+
+So would I really move? Probably not forever. But if I found a cheap flat for the summer, I would rent it without thinking twice. Maybe that is the answer: the city in winter and the sea in summer. If only my bank account agreed with me!', 'B1', 100, '[{"statement":"The writer''s job doesn''t allow working remotely.","answer":false},{"statement":"The writer has always lived in a city.","answer":true},{"statement":"The writer has decided to move to the sea for good.","answer":false},{"statement":"The writer thinks a seaside town might feel too quiet in winter.","answer":true}]'::jsonb),
+  ('The Interviewer Who Smiled', 'Last year I applied for a job at a company that makes software for hospitals. I had two interviews there, and they were completely different.
+
+The first interviewer was a man who didn''t smile once. He asked questions that had only one correct answer, and he wrote my answers in a notebook which he never showed me. After forty minutes I felt like a student who was failing an important exam.
+
+The second interview was with Sara, the team lead. She was a person who listened more than she talked. She showed me a real problem that her team had solved the month before and asked how I would approach it. When I didn''t know something, she didn''t stop me. Instead, she gave me a hint that helped me continue.
+
+I got the job, and now Sara is my manager. Later I asked her why her interview was so different. She said that she wasn''t looking for people who know everything. She wanted someone who could think aloud, ask questions and work well with others.
+
+Now I sometimes interview candidates myself, and I try to be the kind of interviewer who smiles. People who are relaxed show you much more of what they can really do.', 'B1', 101, '[{"statement":"Sara gave the writer a hint during the interview.","answer":true},{"statement":"The two interviews felt very similar to the writer.","answer":false},{"statement":"Sara looks for people who can think and work with others, not people who know everything.","answer":true},{"statement":"The first interviewer was friendly and relaxed.","answer":false}]'::jsonb),
+  ('The Hotel We Stayed At', 'Last October my husband and I spent a week in a small town in the mountains. Here are a few notes for anyone who is planning a similar trip.
+
+The hotel we stayed at was a family business in an old stone house. The room we got was simple but clean, and the view from the balcony was the best thing we saw all week. The owner, a man everyone in the town seems to know, cooked breakfast himself every morning. The bread he baked was still warm when it arrived at the table.
+
+The town itself is tiny. Most of the people we met were friendly, although few of them spoke English. The phrases we learned before the trip were very useful, especially "thank you" and "how much is it?".
+
+The best day was a hike to a lake the owner told us about. The path we took was steep in places, but the water was so clear that we could see the stones at the bottom. The restaurant we went to that evening served fish from that same lake.
+
+One warning: the bus you need to get there runs only twice a day, so check the timetable before you leave. Would we go back? Without a doubt.', 'B1', 102, '[{"statement":"The owner made breakfast for the guests himself.","answer":true},{"statement":"The hotel belongs to a big international chain.","answer":false},{"statement":"Buses to the town run every hour.","answer":false},{"statement":"Learning some local phrases before the trip turned out to be helpful.","answer":true}]'::jsonb),
+  ('The Family Calendar', 'In our family everybody is busy, so in January my wife and I bought a big paper calendar and hung it on the kitchen wall. It sounds old-fashioned, but it has changed our life.
+
+Every Sunday evening we sit down at seven o''clock and plan the week. The children''s activities go in green. On Mondays and Wednesdays our daughter has swimming at five, and on Tuesdays our son goes to a chess club at half past four. My wife works late on Thursdays, so I always cook dinner on that day.
+
+Bigger events go in red. My parents are coming at the end of March, and in April we''re going to the seaside for a week. In summer we usually spend two weeks at a lake, but this year we want to go in September instead, because it''s cheaper and less crowded then.
+
+The calendar has also solved an old problem: birthdays. My mother-in-law''s birthday is on the 2nd of May, and I have forgotten it twice. Last year I remembered it at midnight, which was not a good moment to call! This year it''s on the wall in big red letters.
+
+At the weekend the children stand in front of the calendar and count the days until the holidays.', 'B1', 103, '[{"statement":"The family plans the week with a phone app.","answer":false},{"statement":"The writer cooks dinner on Thursdays.","answer":true},{"statement":"This year the family wants to go to the lake in summer, as usual.","answer":false},{"statement":"The writer has forgotten a family birthday before.","answer":true}]'::jsonb),
+  ('The Weekend Migration', 'Last month our team moved the main database to a new server. We planned the work carefully, because the online shop had to be closed while we did it. We chose the quietest time of the week: the website was offline from ten o''clock on Saturday evening until six o''clock on Sunday morning.
+
+I have worked at the company for three years, but this was my first migration. Our team lead, Olga, has been with the company since 2015, so she knows the old system better than anyone else.
+
+From ten until midnight, everything went well. We copied the data, checked it and started the new server. Then, at about one o''clock, we found a problem: some old orders were missing. We searched for the reason for nearly two hours. In the end, Olga noticed that one old table used a different date format, so those orders were never copied.
+
+By four o''clock the data was correct, and we tested the shop until half past five. When the website opened again at six, we were exhausted but happy. I slept from seven in the morning until three in the afternoon. On Monday, our manager thanked everyone, and since then the new server has worked without a single problem.', 'B1', 104, '[{"statement":"Olga joined the company quite recently.","answer":false},{"statement":"The website was closed during the night.","answer":true},{"statement":"It took the team almost two hours to find the reason for the missing orders.","answer":true},{"statement":"The website opened again later than planned.","answer":false}]'::jsonb),
+  ('A Long Night Flight', 'My brother lives on the other side of the world, so last winter I took a night flight to visit him. Before the trip, a friend gave me some advice: "Don''t drink coffee before you get on the plane, and try to sleep during the flight."
+
+I followed the first part of her advice. At the airport, while I was waiting for boarding, I drank only water and read a book. After we took off, the crew served dinner. It was better than I expected, and I ate everything.
+
+Sleeping during the flight was much more difficult. The man who was sitting next to me snored loudly, and a baby behind us cried for an hour. While everyone else was sleeping, I watched two films and a documentary about whales. At about four o''clock in the morning, I finally fell asleep, but after forty minutes the lights came on for breakfast.
+
+When we landed, my brother was waiting for me outside the airport. During the drive to his flat, I could hardly keep my eyes open. I went to bed after lunch and woke up at ten in the evening, completely confused about the time. Next time, I will take earplugs with me, and I will try to sleep before I get too tired.', 'B1', 105, '[{"statement":"The writer didn''t enjoy the dinner on the plane.","answer":false},{"statement":"The writer''s friend advised against drinking coffee before the flight.","answer":true},{"statement":"The writer slept for most of the flight.","answer":false},{"statement":"Next time, the writer wants to bring something to block out noise.","answer":true}]'::jsonb),
+  ('Welcome to the Office', 'Hi Daniel,
+
+Welcome to the team! We are all looking forward to meeting you on Monday. Here is some information that will help you on your first day.
+
+Our office is on the third floor of a grey building in Park Street. When you arrive, show your passport at the reception desk, and they will give you a card for the doors. There is a lift at the end of the hall, but most people use the stairs.
+
+Your desk is in the big room on the left, by the window. Your new laptop is already on it, and you will find a notebook and some pens in the top drawer. The developers sit at the long tables in the middle of the room, and the designers work in the small room at the back.
+
+The kitchen is on the same floor. There is free coffee in the cupboard, and there is usually some fruit on the table. Please write your name on your food if you leave it in the fridge, because things sometimes disappear!
+
+At ten o''clock we have our standup in the meeting room next to the kitchen. After that, I will sit with you and help you set up your accounts. If you get lost, just ask anyone — people here are very friendly.
+
+See you on Monday!
+Kate', 'B1', 106, '[{"statement":"Daniel''s laptop will be waiting for him on his desk.","answer":true},{"statement":"The office is on the ground floor.","answer":false},{"statement":"The designers and the developers work in the same room.","answer":false},{"statement":"Kate will help Daniel after the morning meeting.","answer":true}]'::jsonb),
+  ('Grandma''s Eightieth Birthday', 'Last Saturday was my grandmother''s eightieth birthday, and the whole family planned to meet at her house for lunch at one o''clock. It sounded simple, but nothing went as planned.
+
+My cousin Anna was supposed to come by train, but she missed it. In the end, she spent two hours at the station and then sat on a slow bus for another three hours. My uncle couldn''t come at all, because he was in hospital after a small operation on his knee.
+
+My brother is at university in another city, and when the lunch started, he was still on a plane, coming back from a student conference. He called us from the airport and said that he would be late. Meanwhile, my parents and I sat in our car in a traffic jam for forty minutes.
+
+So at one o''clock, only my grandmother and her neighbour were at the table. When we finally arrived, Grandma was sitting in the garden, completely calm. "I''m eighty," she said. "I know that families are never on time."
+
+We had lunch at four, and Anna arrived just in time for the cake. In the evening, we called my uncle, who was still in bed at the hospital, and we all sang "Happy Birthday" to Grandma on the phone. It was a strange day, but everyone agreed that it was one of our best family parties.', 'B1', 107, '[{"statement":"Anna travelled by train, as she had planned.","answer":false},{"statement":"The writer''s uncle missed the birthday lunch.","answer":true},{"statement":"Grandma was angry because everyone was late.","answer":false},{"statement":"The family ate much later than planned.","answer":true}]'::jsonb),
+  ('Which Place Is Home?', 'Six months ago, I moved from a small town to the capital for a new job. People often ask me what the hardest part has been. Honestly, it isn''t the work. It''s getting from one place to another.
+
+In my town, I walked to work in ten minutes. Now I go to the office by metro, and it takes about fifty minutes each way. I usually get to work at nine, but if there is a problem on the line, I arrive at the office late and stressed. At first I was angry about it, but now I use the time to read and to practise Spanish on my phone.
+
+On Fridays I often go to my parents'' house for the weekend. The train arrives in my town at about eight, and my dad meets me at the station. It''s strange: when I''m there, I say that I''m going home, and when I''m in the capital, I say exactly the same thing. I''m not sure which place is my real home now.
+
+Last week I went to a concert in the city centre and got home after midnight. The streets were still full of people, and I felt safe and happy. That was the moment when I realised that I was starting to love this city. Next month I''m going to Italy with two new friends from work, and I''m sure we''ll argue about the best way to get to the airport.', 'B1', 108, '[{"statement":"The writer''s journey to work is longer now than it used to be.","answer":true},{"statement":"According to the writer, the new job is the hardest part of moving.","answer":false},{"statement":"The writer felt nervous in the city centre late at night.","answer":false},{"statement":"The writer''s father meets the train on Fridays.","answer":true}]'::jsonb),
+  ('The Missing Keys', 'On Tuesday morning I was ready to leave for work, but I couldn''t find my keys. I always put them in a small bowl on the shelf next to the front door, but the bowl was empty.
+
+First, I looked in my coat pockets and in my bag. Nothing. Then I searched the living room. I looked under the sofa, between the cushions and behind the TV. I found a pen, two coins and a sock that I lost a year ago, but no keys.
+
+My flatmate, Leo, was in the kitchen, eating his breakfast. "Did you check the bathroom?" he asked. I did: the keys weren''t on the shelf above the sink or on the floor below it. I was getting worried, because I had a meeting at nine and the bus stop is ten minutes'' walk from our building.
+
+Then I remembered something. The evening before, I came home late with a heavy bag of shopping, and I put everything away in a hurry. I opened the fridge, and there they were: on the top shelf, behind the milk, next to a piece of cheese.
+
+Leo laughed so hard that he almost fell off his chair. I ran to the bus stop opposite the bakery and caught the bus just in time. Now there is a big hook by the front door, and my keys go there the moment I come in.', 'B1', 109, '[{"statement":"Leo found the keys under the sofa.","answer":false},{"statement":"The writer usually keeps the keys near the front door.","answer":true},{"statement":"The keys were in the fridge.","answer":true},{"statement":"The writer missed the bus that morning.","answer":false}]'::jsonb),
+  ('A Walk in the Hills', 'Last Sunday my friend Ivan and I decided to spend the day outside the city. We took an early train and got off at a small village at the bottom of the hills.
+
+The path started next to the church. We walked along a river for about an hour, and then we crossed over an old stone bridge. After that, the path went up a steep hill through a dark forest. It was hard work, and we stopped twice to drink some water and catch our breath.
+
+At the top, the view was amazing. We could see the whole valley, the river and the roofs of the village far below us. We sat on a rock, ate our sandwiches and watched some birds flying round in circles above the trees.
+
+On the way down, we chose a different path. It went across a field full of cows, past an old farm and into another forest. Ivan was sure that he knew the way, but after forty minutes we came out of the trees onto a road that neither of us recognised. In the end, we asked a farmer for directions, and he kindly drove us back to the station in his car.
+
+We missed one train, but we caught the next one and got home before dark: tired, muddy and very happy. I''m already looking forward to our next walk, but this time I''ll bring a map.', 'B1', 110, '[{"statement":"The friends crossed the river by bridge.","answer":true},{"statement":"The path to the top was flat and easy.","answer":false},{"statement":"Ivan knew the way back perfectly.","answer":false},{"statement":"A farmer helped them get back to the station.","answer":true}]'::jsonb),
+  ('My First Conference Talk', 'Last month I gave my first talk at a developer conference. The idea came from my manager. She said that I knew a lot about testing and should share it with other people. I agreed, although I was nervous about speaking in front of hundreds of strangers.
+
+The conference was in another city, so I went there by train. I finished my slides on the way, with my laptop on my knees and a cup of coffee in my hand. My talk was about how our team writes tests for old code that nobody really understands any more.
+
+At the conference, I met lots of interesting people. In the coffee break, a woman with short grey hair told me about a project she worked on twenty years ago, when the internet was much slower. I also met the author of a book about software testing that I read when I was a student. I couldn''t believe I was talking to him!
+
+My talk was on the second day, at half past eleven. At first my voice was shaking, but after a few minutes I relaxed. People laughed at my jokes and asked lots of questions at the end. One man even said that it was the best talk of the conference, although I think he was just being kind.
+
+All the talks were filmed, so you can watch mine online. I haven''t watched it yet, though. I really don''t like hearing my own voice on video.', 'B1', 111, '[{"statement":"The writer travelled to the conference by plane.","answer":false},{"statement":"The talk was about testing old code.","answer":true},{"statement":"Nobody asked any questions after the talk.","answer":false},{"statement":"The writer felt nervous at the beginning of the talk.","answer":true}]'::jsonb),
+  ('Afraid of Speaking', 'For years I was good at reading English, but I was afraid of speaking it. I could read technical documentation without using a dictionary, and I was quite good at writing emails. But in meetings with our colleagues from abroad, I usually stayed silent instead of saying what I thought.
+
+The problem wasn''t my vocabulary. I was afraid of making mistakes and worried about sounding stupid. Before saying anything, I built the whole sentence in my head, checked the grammar twice and then decided that it was too late to say it anyway.
+
+Last year I got tired of feeling like this. I was interested in a new role in an international team, and I knew I couldn''t get it without speaking up. So I started taking online lessons with a teacher twice a week. She was very patient, and she was always interested in hearing about my life, not just my work.
+
+After a few months, something changed. I stopped thinking about every article and every tense, and I focused on explaining my ideas clearly. I still make mistakes, of course, but I''m no longer embarrassed by them. Nobody in my team cares about a missing "the"; they care about whether my idea is good.
+
+Last month I got the new role, and yesterday I ran a meeting in English for the first time. I''m really proud of that, and I''m thinking of starting a second foreign language next year.', 'B1', 112, '[{"statement":"Before the lessons, the writer found it hard to write emails in English.","answer":false},{"statement":"The writer''s main problem was a fear of mistakes, not a lack of words.","answer":true},{"statement":"The writer has recently led a meeting in English.","answer":true},{"statement":"These days, the writer worries about every article and tense.","answer":false}]'::jsonb),
+  ('Listen to Your Users', 'When I started working as a developer, I thought that good software depended on clean code and fast servers. After eight years, I think it depends mostly on one thing: whether the team listens to its users.
+
+A few years ago, we worked on an app for booking doctors'' appointments. We spent weeks talking about new features in our meetings, but nobody talked to the people who actually used the app. When our manager finally asked for feedback, the results surprised us. Users didn''t care about our beautiful animations. They were looking for one simple thing: a button to cancel an appointment, which was hidden deep in the settings.
+
+Since then, I have changed the way I work. Every month I spend an afternoon with our support team. I listen to their calls, and I look at the messages that users write to us. Usually they are right, and they are just waiting for someone to fix a problem that they have reported many times.
+
+Of course, you can''t do everything users ask for. Some ideas belong in a different product, and some would make the app more complicated for everyone else. You need to think about what people really need, not only about what they say.
+
+Still, my advice to any new developer is simple: before you write a single line of code, find out what happens to real users when they open your app. It will save you weeks of work.', 'B1', 113, '[{"statement":"Most users wanted better animations in the app.","answer":false},{"statement":"The writer now believes that listening to users matters more than fast servers.","answer":true},{"statement":"The writer thinks developers should build everything that users request.","answer":false},{"statement":"In the booking app, the cancel button was hard to find.","answer":true}]'::jsonb),
+  ('A Monday to Forget', 'My alarm didn''t go off on Monday morning. When I finally woke up, it was already eight o''clock, and my interview for a new job was at nine. I jumped out of bed, got dressed in two minutes and ran out of the flat without breakfast.
+
+The bus was just leaving when I got to the stop. I shouted and waved, and luckily the driver stopped and let me get on. I sat down, took a deep breath and checked the address on my phone. Then, two stops later, the bus broke down, and everyone had to get off and wait for the next one in the rain.
+
+I decided not to wait. I started walking fast, and then running. As I ran round a corner, I fell over a dog''s lead and dropped my phone into a puddle. The dog''s owner helped me up and apologised again and again, while the dog ran away happily with my scarf.
+
+I arrived at the office at five past nine, wet and out of breath. I wanted to give up and go home, but the receptionist smiled and told me to sit down for a minute. She went away and came back with a cup of tea for me, and later the interviewer and I laughed about my terrible morning.
+
+The interview went well, maybe because I was too tired to be nervous. They called me on Wednesday and offered me the job. I still don''t know what happened to my scarf.', 'B1', 114, '[{"statement":"The writer had no time for breakfast that morning.","answer":true},{"statement":"The bus took the writer all the way to the office.","answer":false},{"statement":"The writer didn''t get the job.","answer":false},{"statement":"The writer arrived a little late for the interview.","answer":true}]'::jsonb),
+  ('Clearing Out the Flat', 'Last weekend my partner and I decided to clear out our flat. After five years there, every cupboard was full of things we never used.
+
+We started in the bedroom on Saturday morning. I took all my clothes out of the wardrobe and put them on the bed. Then I tried them on. If something didn''t fit, or if I couldn''t remember the last time I wore it, I put it in a bag for the charity shop. I also found a jacket that I borrowed from my brother ages ago, so I put it by the door to give it back to him.
+
+The kitchen was harder. My partner wanted to throw away all the old cups, but I wanted to keep a few because they were presents. In the end, we kept three and gave the rest away to a neighbour who has just moved in.
+
+The worst part was a box of papers under the bed: old bills, instructions for machines that we don''t own any more and letters from the bank. We went through them one by one. We put the important documents away in a folder and took the rest down to the recycling bins.
+
+By Sunday evening, there were ten full bags by the door. On Monday I borrowed my dad''s car and took them to the charity shop. When I came home and looked round the flat, it felt bigger and lighter. Now we have a rule: if we buy something new, something old has to go.', 'B1', 115, '[{"statement":"The writer kept all of the old cups.","answer":false},{"statement":"The writer found something that belongs to a family member.","answer":true},{"statement":"Sorting the papers was the easiest part of the job.","answer":false},{"statement":"After the clear-out, the flat seemed more spacious.","answer":true}]'::jsonb)
 on conflict (title) do update set body = excluded.body, cefr_level = excluded.cefr_level, position = excluded.position, questions = excluded.questions;
 
 -- Link each text to the dictionary words it contains (headword + simple inflections).
