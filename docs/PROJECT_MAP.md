@@ -31,16 +31,16 @@ flowchart LR
 | `src/app/globals.css` | Design tokens from `docs/DESIGN.md`, wired into Tailwind v4 `@theme` |
 | `src/app/(auth)/login/` | Sign-in screen, no nav (route group has its own layout) |
 | `src/app/(app)/` | Everything behind auth, wrapped by `NavBar` in `(app)/layout.tsx` |
-| `src/app/(app)/page.tsx` | Lesson path (route `/`): streak card (lessons today / 3) + `LessonPath` |
+| `src/app/(app)/page.tsx` | «Слова» tab (route `/`, the first tab): today's due/new counts, progress to ~3000 words (B1), how it works, start button |
+| `src/app/(app)/path/page.tsx` | Lesson path (route `/path`): zigzag `LessonPath` + streak widget |
 | `src/app/(app)/dashboard/page.tsx` | Progress dashboard: streak, words learned, grammar, 12-week activity calendar, minutes per strand (route `/dashboard`) |
 | `src/app/manifest.ts`, `src/app/apple-icon.png`, `public/icon-*.png` | PWA manifest + icons |
 | `public/sw.js`, `public/offline.html` | Service worker: cache-first build assets, network-first pages with last-good-copy fallback, offline page. Registered by `components/ServiceWorker.tsx` (production only) |
 | `src/components/AuthForm.tsx` | Sign-in / sign-up / code / reset forms (client, calls `src/lib/auth.ts` actions) |
 | `src/lib/auth.ts`, `auth-validation.ts` | Auth server actions; pure validators and Russian error messages |
-| `src/app/(app)/session/vocab/` | Lesson «Слова»: SM-2 card review (`VocabSession`) |
+| `src/app/(app)/session/vocab/` | Words session (`WordsSession`): new words are introduced, then every word is *typed* from memory (RU→EN, or the missing word of an example sentence for older cards); mistakes return at the end; only the first attempt is graded for SM-2. Counts as a lesson for the streak, not for the path |
 | `src/app/(app)/session/grammar/` | Lesson «Грамматика»: grammar lesson — rule summary + exercises for the current unit (`GrammarSession`) |
 | `src/app/(app)/session/reading/` | Lesson «Чтение»: today's text with studied words highlighted + true/false check (`ReadingSession`) |
-| `src/app/(app)/session/context/` | Lesson «Слова в контексте»: type the blanked word of an example sentence, Russian meaning as hint (`ContextSession`) |
 | `src/app/(app)/session/build/` | Lesson «Собери предложение»: arrange shuffled English words for a Russian sentence (`BuildSession`) |
 | `src/app/(app)/session/translate/` | Lesson «Перевод»: type the English translation of a Russian phrase (`TranslateSession`) |
 | `src/app/(app)/session/review/` | Lesson «Повтор ошибок»: grammar exercises whose latest attempt was wrong; empty → auto-completed (`GrammarSession` with `step="review"`) |
@@ -48,17 +48,18 @@ flowchart LR
 | `src/components/` | Shared UI (`NavBar`, `LessonPath`, `StepComplete`) and the per-lesson session components |
 | `src/lib/supabase/` | Supabase client factories + session-refresh logic used by `proxy.ts` |
 | `src/lib/supabase/types.ts` | DB types generated from the live project + convenience aliases at the bottom (regenerate after schema changes) |
+| `src/lib/word-queue.ts`, `word-check.ts` | Pure words-tab logic: session queue (due first, caps: 20 reviews / 8 new per session / 24 new per day), stats toward the ~3000-word B1 target; typed-answer check (typo tolerance) and grading → SM-2 rating |
 | `src/lib/srs.ts` | Pure SM-2 spaced-repetition function (`reviewCard`) — no I/O, unit-testable |
-| `src/lib/vocab.ts`, `grammar.ts`, `reading.ts`, `practice.ts` (context + review lessons) | Server actions per lesson type: pick the next material, record results. Grammar answers are checked server-side |
+| `src/lib/words.ts` (words tab: session queue, overview, review saving), `grammar.ts`, `reading.ts`, `practice.ts` (review lesson) | Server actions per lesson type: pick the next material, record results. Grammar answers are checked server-side |
 | `src/lib/highlight.ts` | Pure splitter that finds studied headwords (+ simple inflections) in a text |
 | `src/lib/dates.ts` | Local-day math + streaks (3+ lessons in a local day = streak day; a missed day breaks it) — pure |
-| `src/lib/path.ts` | Pure lesson-path model: lesson `i` has type `PATTERN[i % 4]` (vocab, context, grammar, build, reading, translate, review); position = lifetime finished lessons; one section = one pass of 7 |
+| `src/lib/path.ts` | Pure lesson-path model: lesson `i` has type `PATTERN[i % 5]` (grammar, build, reading, translate, review — words are not on the path); position = lifetime finished lessons; one section = one pass of 7 |
 | `src/lib/day-server.ts` | Learner's timezone (from the `tz` cookie set by `TimezoneCookie`), today's local date, `recordStep` → `record_step()` RPC |
 | `src/lib/overview.ts` | Read models for the path (lessons total/today, streak) and the dashboard |
 | `src/lib/*.test.ts` | Vitest unit tests for the pure modules (`dates`, `path`, `srs`, `highlight`, `plural`); config in `vitest.config.ts`; run `npm test` before deploys |
 | `src/lib/speech.ts` | Web Speech TTS wrapper (`speak`) for vocabulary pronunciation |
 | `src/docs/` | The two textbook PDFs (grammar: Murphy, *Essential Grammar in Use*; words: Nation, *4000 Essential English Words 1*) — personal copies, git-ignored (copyrighted, never commit them) |
-| `supabase/content/` | Hand-written content as JS modules (`grammar-topics.mjs`, `grammar-exercises.mjs`, `texts.mjs` + `texts-part-1…8.mjs` (115 reading texts, text N ↔ grammar unit N), `words.mjs`) + `build-seed.mjs` / `build-words.mjs`, which validate them and generate `supabase/seed_phase2.sql` / `seed_words.sql` |
+| `supabase/content/` | Hand-written content as JS modules (`grammar-topics.mjs`, `grammar-exercises.mjs`, `texts.mjs` + `texts-part-1…8.mjs` (115 reading texts, text N ↔ grammar unit N), `words.mjs` + `words-part-1…8.mjs` (the B1 extension: 8 frequency bands × 275 words, ~3000 words in total; `words-candidates.mjs` is the ordered headword list they were written from)) + `build-seed.mjs` / `build-words.mjs`, which validate them and generate `supabase/seed_phase2.sql` / `seed_words.sql` |
 | `supabase/migrations/0001_init.sql` | Full schema: `words`, `texts`, `grammar_exercises`, `cards`, `sessions` + RLS policies |
 | `supabase/migrations/20261031004150_lessons_streak.sql` | `sessions.lessons_completed`; `record_step` counts every finished lesson (streak day = 3+, path position = total); drops listening tables/enum/column, fluency columns, `completed_steps` and the unused `progress` table; `fluency_minutes` → `practice_minutes` |
 | `supabase/migrations/20260923202717_daily_steps.sql` | Фаза 4: `sessions.completed_steps` + `grammar_minutes`, `record_step(date, step, minutes)` |
@@ -71,11 +72,12 @@ flowchart LR
 | Route | Auth | Screen |
 | --- | --- | --- |
 | `/login` | public | Sign in / register / reset password |
-| `/` | required | Lesson path — streak, lessons today, zigzag path with the current lesson highlighted |
-| `/session/vocab` | required | SRS card review |
+| `/` | required | Words tab |
+| `/path` | required | Lesson path — zigzag path with the current lesson highlighted |
+| `/session/vocab` | required | Words session (`?more=1` lifts the daily cap of new words once) |
 | `/session/grammar` | required | Current grammar unit: first unit with exercises not yet mastered (latest attempt at every exercise correct); a retry serves only the mistakes |
 | `/session/reading` | required | First unread text in catalog order (then the least recently read one) |
-| `/session/context`, `/build`, `/translate` | required | Practice lessons; `?n=<cycle>` selects the batch |
+| `/session/build`, `/translate` | required | Practice lessons; `?n=<cycle>` selects the batch |
 | `/session/review` | required | Grammar mistakes (latest attempt wrong), up to 6 |
 | `/dashboard` | required | Progress stats |
 

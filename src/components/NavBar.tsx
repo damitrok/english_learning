@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 import { SignOutButton } from "@/components/SignOutButton";
 
 const LINKS = [
-  { href: "/", label: "Путь" },
+  { href: "/", label: "Слова" },
+  { href: "/path", label: "Путь" },
   { href: "/dashboard", label: "Прогресс" },
 ];
 
@@ -22,6 +23,13 @@ function TabIcon({ href }: { href: string }) {
     "aria-hidden": true,
   } as const;
   if (href === "/")
+    return (
+      <svg {...common}>
+        <rect x="3" y="5" width="18" height="14" rx="3" />
+        <path d="M7.5 15l2.2-6 2.2 6M8.2 13.2h3M15.5 9v6" />
+      </svg>
+    );
+  if (href === "/path")
     return (
       <svg {...common}>
         <circle cx="6" cy="18" r="2.5" />
