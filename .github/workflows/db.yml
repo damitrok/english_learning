@@ -1,0 +1,26 @@
+name: Database
+
+# Applies new migrations and changed seeds to Supabase when they land on main.
+# Needs the repository secret SUPABASE_DB_URL (session-pooler connection string).
+on:
+  push:
+    branches: [main]
+    paths: ["supabase/**", "scripts/db-apply.sh"]
+  workflow_dispatch:
+    inputs:
+      baseline:
+        description: "Only mark the current migrations as applied (first run, DB already up to date)"
+        type: boolean
+        default: false
+
+concurrency: database
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply
+        env:
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: scripts/db-apply.sh ${{ inputs.baseline && '--baseline' || '' }}
