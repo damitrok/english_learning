@@ -98,8 +98,10 @@ tracked in `app_migrations` / `app_seeds`). One-time setup:
 
 1. GitHub → Settings → Secrets and variables → Actions → new secret `SUPABASE_DB_URL` (Supabase →
    Project Settings → Database → Connection string, session pooler, with the DB password).
-2. Actions → **Database** → Run workflow with `baseline` ticked (the DB already has migrations
-   0001–0010; this only records them). After that every merge to `main` applies what's new.
+2. Nothing else: the first run on `main` sees an existing schema with no tracking and just records
+   migrations 0001–0010 as applied (the `Database` workflow can also be run by hand once it is on
+   `main`; its `baseline` option does the same explicitly). After that every merge to `main` applies
+   what's new.
 
 The **CI** workflow (lint, typecheck, tests, build) runs on every pull request. Run the same by hand
 with `npm test`. Run `scripts/db-apply.sh` locally with `SUPABASE_DB_URL` set if you need to apply

@@ -31,7 +31,16 @@ create table if not exists public.app_seeds (
 alter table public.app_migrations enable row level security;
 alter table public.app_seeds enable row level security;"
 
-if [[ "${1:-}" == "--baseline" ]]; then
+# First run against a database that was set up by hand: the schema is already
+# there but nothing is tracked yet, so record the existing migrations instead of
+# re-running them.
+mode="${1:-}"
+if [[ -z "$mode" && "$(run -tA -c "select (select count(*) from public.app_migrations) = 0 and to_regclass('public.sessions') is not null")" == "t" ]]; then
+  echo "untracked database with an existing schema: baselining"
+  mode="--baseline"
+fi
+
+if [[ "$mode" == "--baseline" ]]; then
   for f in migrations/*.sql; do
     run -c "insert into public.app_migrations (name) values ('$(basename "$f")') on conflict do nothing;"
     echo "baseline: $(basename "$f")"
