@@ -151,7 +151,7 @@ export function AuthForm() {
     signin: "Вход",
     signup: "Регистрация",
     "confirm-signup": "Подтверди email",
-    forgot: "Пароль",
+    forgot: "Задать пароль",
     "confirm-recovery": "Введи код",
     "new-password": "Новый пароль",
   };
@@ -217,6 +217,12 @@ export function AuthForm() {
           />
         )}
 
+        {mode === "forgot" && (
+          <p className="text-body text-ash">
+            Введи email — пришлём код, по нему ты зададишь новый пароль. Так же задают первый пароль, если раньше
+            входил по ссылке.
+          </p>
+        )}
         {(mode === "confirm-signup" || mode === "confirm-recovery") && (
           <p className="text-body text-ash">
             Мы отправили код на <span className="text-pure-white">{email}</span>. Введи его здесь.
