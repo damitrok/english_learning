@@ -44,7 +44,7 @@ export function NavBar() {
   return (
     <>
       {/* >= sm: glass top bar */}
-      <header className="sticky top-4 z-10 mx-auto hidden w-full max-w-[1200px] px-4 sm:block">
+      <header className="order-first mx-auto hidden w-full max-w-[1200px] shrink-0 px-4 py-4 sm:block">
         <div className="flex items-center justify-between rounded-buttons border border-border-hairline bg-ink/70 px-4 py-2 backdrop-blur-2xl">
           <span className="flex items-center gap-2 text-body font-medium text-pure-white">
             <span className="h-2 w-2 rounded-full bg-coral-pulse" aria-hidden />
@@ -69,10 +69,10 @@ export function NavBar() {
         </div>
       </header>
 
-      {/* < sm: fixed bottom tab bar */}
+      {/* < sm: bottom tab bar (part of the flex column, not floating over the content) */}
       <nav
         aria-label="Основная навигация"
-        className="pb-safe fixed inset-x-0 bottom-0 z-20 border-t border-border-hairline bg-ink/90 backdrop-blur-2xl sm:hidden"
+        className="pb-safe order-last shrink-0 border-t border-border-hairline bg-ink sm:hidden"
       >
         <ul className="mx-auto flex h-tabbar max-w-md">
           {LINKS.map((link) => {

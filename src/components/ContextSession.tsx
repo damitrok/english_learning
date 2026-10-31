@@ -72,7 +72,7 @@ export function ContextSession({ items }: { items: ContextItem[] }) {
           {index + 1} / {items.length} · впиши пропущенное слово
         </p>
       </div>
-      <div className="rounded-cards border border-border-hairline bg-ink p-5 shadow-key sm:p-8">
+      <div className="rounded-cards border border-border-hairline bg-ink p-5 shadow-key sm:p-[2rem]">
         <p className="text-subheading leading-relaxed text-pure-white">
           {item.before}
           <span className={`inline-block min-w-20 border-b-2 px-1 text-center ${tone}`}>

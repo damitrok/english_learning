@@ -18,10 +18,9 @@ flowchart LR
   `middleware.ts`): refreshes the Supabase session and redirects signed-out
   users to `/login`. Route matching is in `PUBLIC_PATHS` inside
   `src/lib/supabase/middleware.ts`.
-- **Auth**: magic-link only (`supabase.auth.signInWithOtp`), no passwords.
-  `src/app/auth/callback/route.ts` exchanges the emailed code for a session.
+- **Auth**: email + password; sign-up/reset confirmed by an emailed code. All auth runs in server actions (`src/lib/auth.ts`) so cookies are set by `Set-Cookie`; the proxy refreshes the session (`getClaims()`).
 - **Data**: all reads/writes go through the Supabase clients in
-  `src/lib/supabase/` — `client.ts` (browser), `server.ts` (Server Components /
+  `src/lib/supabase/` — `server.ts` (Server Components /
   Route Handlers). Never call Postgres directly from a component.
 
 ## Directory map
@@ -36,7 +35,8 @@ flowchart LR
 | `src/app/(app)/dashboard/page.tsx` | Progress dashboard: streak, words learned, grammar, 12-week activity calendar, minutes per strand (route `/dashboard`) |
 | `src/app/manifest.ts`, `src/app/apple-icon.png`, `public/icon-*.png` | PWA manifest + icons |
 | `public/sw.js`, `public/offline.html` | Service worker: cache-first build assets, network-first pages with last-good-copy fallback, offline page. Registered by `components/ServiceWorker.tsx` (production only) |
-| `src/app/auth/callback/route.ts` | Magic-link callback, not behind the `(app)`/`(auth)` groups |
+| `src/components/AuthForm.tsx` | Sign-in / sign-up / code / reset forms (client, calls `src/lib/auth.ts` actions) |
+| `src/lib/auth.ts`, `auth-validation.ts` | Auth server actions; pure validators and Russian error messages |
 | `src/app/(app)/session/vocab/` | Lesson «Слова»: SM-2 card review (`VocabSession`) |
 | `src/app/(app)/session/grammar/` | Lesson «Грамматика»: grammar lesson — rule summary + exercises for the current unit (`GrammarSession`) |
 | `src/app/(app)/session/reading/` | Lesson «Чтение»: today's text with studied words highlighted + true/false check (`ReadingSession`) |
@@ -70,8 +70,7 @@ flowchart LR
 
 | Route | Auth | Screen |
 | --- | --- | --- |
-| `/login` | public | Magic-link sign-in |
-| `/auth/callback` | public | Exchanges the email code for a session, redirects to `/` |
+| `/login` | public | Sign in / register / reset password |
 | `/` | required | Lesson path — streak, lessons today, zigzag path with the current lesson highlighted |
 | `/session/vocab` | required | SRS card review |
 | `/session/grammar` | required | Current grammar unit: first unit with exercises not yet mastered (latest attempt at every exercise correct); a retry serves only the mistakes |

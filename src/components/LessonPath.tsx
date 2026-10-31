@@ -114,7 +114,7 @@ export function LessonPath({ completed }: { completed: number }) {
   const sections = [...units].reverse();
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10" style={{ overflowX: "clip" }}>
       <ScrollToCurrent />
       {sections.map((unit) => {
         // First lesson at the bottom of its section.
@@ -138,7 +138,7 @@ export function LessonPath({ completed }: { completed: number }) {
                 />
               </div>
             </div>
-            <ol className="mt-8 flex flex-col">
+            <ol className="mt-[2rem] flex flex-col">
               {lessons.flatMap((lesson, i) => [
                 i > 0 ? <Trail key={`t${lesson.index}`} from={lessons[i - 1]} to={lesson} /> : null,
                 <Node key={lesson.index} lesson={lesson} />,

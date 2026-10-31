@@ -10,7 +10,7 @@ Design reference: [`docs/DESIGN.md`](docs/DESIGN.md) (dark, Raycast-style tokens
 
 - Next.js 16 (App Router, TypeScript), Tailwind CSS v4
 - Supabase (Postgres + Auth) for storage and cross-device sync — project ref `betitjcrobqmuumlsjrv`
-- Magic-link sign-in (no password)
+- Email + password sign-in; registration and password reset confirmed with a one-time code sent by email (no links)
 
 ## Live
 
@@ -30,26 +30,27 @@ Design reference: [`docs/DESIGN.md`](docs/DESIGN.md) (dark, Raycast-style tokens
    via the Supabase MCP connector. Re-run them (SQL Editor, or MCP `apply_migration`/`execute_sql`)
    only if you reset the database.
 3. `npm install && npm run dev`, open http://localhost:3000.
-4. **Magic-link testing gotcha**: the sign-in flow uses PKCE, so the confirmation link only works in
-   the *same browser* that requested it. Request the link and open the email in one regular browser
-   window, not across two different browsers or automation tools.
 
-## Auth email
+## Auth
 
-Supabase's built-in mailer only delivers to project team members, so production uses a custom
-SMTP (Brevo) set in Dashboard → Authentication → Emails → SMTP Settings. The email template lives
-in `supabase/templates/magic-link.html` — paste it into both the "Magic Link" and "Confirm signup"
-templates (subject «Вход в English for IT»). It carries the link and the one-time code
-(`{{ .Token }}`), which the login screen accepts too — needed inside the installed iOS app, where
-the link opens in Safari and can't finish the PKCE flow.
+Sign-in, sign-up and password reset all run in server actions (`src/lib/auth.ts`), so the session
+cookies come from `Set-Cookie` headers and are refreshed only by the proxy (`src/proxy.ts`) — there is
+no auth client in the browser. Flows: register (email + password → emailed 6-digit code → in), sign in
+(email + password), reset or first-time password for an old passwordless account («Забыл пароль» →
+code → new password).
 
-## Auth redirect URLs
+Supabase's built-in mailer only delivers to project team members, so production uses a custom SMTP
+(Brevo): Dashboard → Authentication → Emails → SMTP Settings. Email templates (code only, no links)
+live in `supabase/templates/`: paste `confirm-signup.html` into **Confirm signup** (subject
+«Подтверди email — English for IT») and `recovery.html` into **Reset password** (subject «Сброс пароля —
+English for IT»).
 
-Supabase Auth's allowed redirect URLs must include, for every place this app is reachable from:
-- `http://localhost:3000/auth/callback` (local dev)
-- `https://englishlearning-liart.vercel.app/auth/callback` (production)
-
-Set these in the Supabase Dashboard → Authentication → URL Configuration (not available via MCP).
+Dashboard settings to check (Authentication):
+- Providers → Email: **Confirm email** on; minimum password length 8.
+- Sessions: **Refresh token reuse interval** 60 s (default 10 s); no inactivity timeout / time-box.
+- Project Settings → Auth (JWT): **JWT expiry** 604800 (7 days). The app refreshes the session only
+  when the access token expires; a long expiry means far fewer refreshes, and every lost refresh
+  response on a flaky mobile connection is what used to log people out.
 
 ## Status
 

@@ -1,6 +1,7 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import { getAuthUser } from "@/lib/supabase/user";
 import { normalizeAnswer } from "@/lib/text-normalize";
 import type { ExerciseType } from "@/lib/supabase/types";
 
@@ -38,9 +39,7 @@ export interface GrammarAnswerResult {
  */
 export async function getGrammarLesson(): Promise<GrammarLesson | null> {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getAuthUser(supabase);
   if (!user) return null;
 
   const [{ data: topics }, { data: exercises }, { data: attempts }] = await Promise.all([
@@ -102,9 +101,7 @@ export async function submitGrammarAnswer(
   answer: string
 ): Promise<GrammarAnswerResult> {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getAuthUser(supabase);
   if (!user) throw new Error("Not authenticated");
 
   const { data: exercise, error: readError } = await supabase

@@ -23,7 +23,7 @@ export function StepComplete({
     >
       <div className="flex flex-col items-center gap-4 py-12 text-center">
         <span
-          className="flex h-24 w-24 items-center justify-center rounded-full bg-success-green text-[44px] font-medium text-void-black shadow-[0_6px_0_0_#2f8a62] motion-safe:animate-pop"
+          className="flex h-[6rem] w-[6rem] items-center justify-center rounded-full bg-success-green text-[44px] font-medium text-void-black shadow-[0_6px_0_0_#2f8a62] motion-safe:animate-pop"
           aria-hidden
         >
           ✓
