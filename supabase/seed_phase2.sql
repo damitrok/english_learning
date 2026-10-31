@@ -14,109 +14,109 @@ insert into grammar_topics (unit, section, title, summary) values
   (10, 'Past', 'was/were', 'Прошедшее время глагола to be: I/he/she/it was; we/you/they were. Отрицание: wasn''t, weren''t. Вопрос: Was she…? Were you…? Короткие ответы: Yes, I was. / No, they weren''t.'),
   (11, 'Past', 'worked/got/went etc. (past simple)', 'Past simple — законченное действие в прошлом: I worked yesterday. Правильные глаголы получают -ed: work → worked, live → lived, stop → stopped, study → studied. Неправильные надо запомнить: go → went, get → got, have → had, see → saw, make → made, find → found, send → sent, write → wrote. Форма одна для всех лиц: I/he/they worked.'),
   (12, 'Past', 'I didn''t … Did you …? (past simple negative and questions)', 'Отрицание в past simple: didn''t + глагол в начальной форме, для всех лиц: I didn''t go (не didn''t went). Вопрос: Did + подлежащее + глагол: Did you see it? What did she say? Короткие ответы: Yes, I did. / No, they didn''t.'),
-  (13, 'Past', 'I was doing (past continuous)', null),
-  (14, 'Past', 'I was doing (past continuous) and I did (past simple)', null),
-  (15, 'Present perfect', 'I have done (present perfect 1)', null),
-  (16, 'Present perfect', 'I''ve just … I''ve already … I haven''t … yet (present perfect 2)', null),
-  (17, 'Present perfect', 'Have you ever …? (present perfect 3)', null),
-  (18, 'Present perfect', 'How long have you …? (present perfect 4)', null),
-  (19, 'Present perfect', 'for, since, ago', null),
-  (20, 'Present perfect', 'I have done (present perfect) and I did (past)', null),
-  (21, 'Passive', 'is done, was done (passive 1)', null),
-  (22, 'Passive', 'is being done, has been done (passive 2)', null),
-  (23, 'Verb forms', 'be/have/do in present and past tenses', null),
-  (24, 'Verb forms', 'Regular and irregular verbs', null),
-  (25, 'Future', 'What are you doing tomorrow?', null),
-  (26, 'Future', 'I''m going to …', null),
-  (27, 'Future', 'will/shall 1', null),
-  (28, 'Future', 'will/shall 2', null),
-  (29, 'Modals, imperative etc.', 'might', null),
-  (30, 'Modals, imperative etc.', 'can and could', null),
-  (31, 'Modals, imperative etc.', 'must, mustn''t, don''t need to', null),
-  (32, 'Modals, imperative etc.', 'should', null),
-  (33, 'Modals, imperative etc.', 'I have to …', null),
-  (34, 'Modals, imperative etc.', 'Would you like …? I''d like …', null),
-  (35, 'Modals, imperative etc.', 'Do this! Don''t do that! Let''s do this!', null),
-  (36, 'Modals, imperative etc.', 'I used to …', null),
-  (37, 'There and it', 'there is, there are', null),
-  (38, 'There and it', 'there was/were, there has/have been, there will be', null),
-  (39, 'There and it', 'It …', null),
-  (40, 'Auxiliary verbs', 'I am, I don''t etc.', null),
-  (41, 'Auxiliary verbs', 'Have you? Are you? Don''t you? etc.', null),
-  (42, 'Auxiliary verbs', 'too/either, so am I / neither do I etc.', null),
-  (43, 'Auxiliary verbs', 'isn''t, haven''t, don''t etc. (negatives)', null),
-  (44, 'Questions', 'is it …? have you …? do they …? etc. (questions 1)', null),
-  (45, 'Questions', 'Who saw you? Who did you see? (questions 2)', null),
-  (46, 'Questions', 'Who is she talking to? What is it like? (questions 3)', null),
-  (47, 'Questions', 'What …? Which …? How …? (questions 4)', null),
-  (48, 'Questions', 'How long does it take …?', null),
-  (49, 'Questions', 'Do you know where …? I don''t know what … etc.', null),
-  (50, 'Reported speech', 'She said that … He told me that …', null),
-  (51, '-ing and to …', 'work/working, go/going, do/doing', null),
-  (52, '-ing and to …', 'to … (I want to do) and -ing (I enjoy doing)', null),
-  (53, '-ing and to …', 'I want you to … I told you to …', null),
-  (54, '-ing and to …', 'I went to the shop to …', null),
-  (55, 'Go, get, do, make and have', 'go to …, go on …, go for …, go -ing', null),
-  (56, 'Go, get, do, make and have', 'get', null),
-  (57, 'Go, get, do, make and have', 'do and make', null),
-  (58, 'Go, get, do, make and have', 'have', null),
-  (59, 'Pronouns and possessives', 'I/me, he/him, they/them etc.', null),
-  (60, 'Pronouns and possessives', 'my/his/their etc.', null),
-  (61, 'Pronouns and possessives', 'Whose is this? It''s mine/yours/hers etc.', null),
-  (62, 'Pronouns and possessives', 'I/me/my/mine', null),
-  (63, 'Pronouns and possessives', 'myself/yourself/themselves etc.', null),
-  (64, 'Pronouns and possessives', '-''s (Kate''s camera / my brother''s car etc.)', null),
-  (65, 'A and the', 'a/an …', null),
-  (66, 'A and the', 'train(s), bus(es) (singular and plural)', null),
-  (67, 'A and the', 'a bottle / some water (countable/uncountable 1)', null),
-  (68, 'A and the', 'a cake / some cake / some cakes (countable/uncountable 2)', null),
-  (69, 'A and the', 'a/an and the', null),
-  (70, 'A and the', 'the …', null),
-  (71, 'A and the', 'go to work, go home, go to the cinema', null),
-  (72, 'A and the', 'I like music, I hate exams', null),
-  (73, 'A and the', 'the … (names of places)', null),
-  (74, 'Determiners and pronouns', 'this/that/these/those', null),
-  (75, 'Determiners and pronouns', 'one/ones', null),
-  (76, 'Determiners and pronouns', 'some and any', null),
-  (77, 'Determiners and pronouns', 'not + any, no, none', null),
-  (78, 'Determiners and pronouns', 'not + anybody/anyone/anything, nobody/no-one/nothing', null),
-  (79, 'Determiners and pronouns', 'somebody/anything/nowhere etc.', null),
-  (80, 'Determiners and pronouns', 'every and all', null),
-  (81, 'Determiners and pronouns', 'all, most, some, any, no/none', null),
-  (82, 'Determiners and pronouns', 'both, either, neither', null),
-  (83, 'Determiners and pronouns', 'a lot, much, many', null),
-  (84, 'Determiners and pronouns', '(a) little, (a) few', null),
-  (85, 'Adjectives and adverbs', 'old/nice/interesting etc. (adjectives)', null),
-  (86, 'Adjectives and adverbs', 'quickly/badly/suddenly etc. (adverbs)', null),
-  (87, 'Adjectives and adverbs', 'old/older, expensive/more expensive', null),
-  (88, 'Adjectives and adverbs', 'older than …, more expensive than …', null),
-  (89, 'Adjectives and adverbs', 'not as … as', null),
-  (90, 'Adjectives and adverbs', 'the oldest, the most expensive', null),
-  (91, 'Adjectives and adverbs', 'enough', null),
-  (92, 'Adjectives and adverbs', 'too', null),
-  (93, 'Word order', 'He speaks English very well. (word order 1)', null),
-  (94, 'Word order', 'always/usually/often etc. (word order 2)', null),
-  (95, 'Word order', 'still, yet, already', null),
-  (96, 'Word order', 'Give me that book! Give it to me!', null),
-  (97, 'Conjunctions and clauses', 'and, but, or, so, because', null),
-  (98, 'Conjunctions and clauses', 'When …', null),
-  (99, 'Conjunctions and clauses', 'If we go … If you see … etc.', null),
-  (100, 'Conjunctions and clauses', 'If I had … If we went … etc.', null),
-  (101, 'Conjunctions and clauses', 'a person who … a thing that/which … (relative clauses 1)', null),
-  (102, 'Conjunctions and clauses', 'the people we met, the hotel you stayed at (relative clauses 2)', null),
-  (103, 'Prepositions', 'at 8 o''clock, on Monday, in April', null),
-  (104, 'Prepositions', 'from … to, until, since, for', null),
-  (105, 'Prepositions', 'before, after, during, while', null),
-  (106, 'Prepositions', 'in, at, on (places 1)', null),
-  (107, 'Prepositions', 'in, at, on (places 2)', null),
-  (108, 'Prepositions', 'to, in, at (places 3)', null),
-  (109, 'Prepositions', 'under, behind, opposite etc.', null),
-  (110, 'Prepositions', 'up, over, through etc.', null),
-  (111, 'Prepositions', 'on, at, by, with, about', null),
-  (112, 'Prepositions', 'afraid of …, good at … etc.; of/at/for etc. (prepositions) + -ing', null),
-  (113, 'Prepositions', 'listen to …, look at … etc. (verb + preposition)', null),
-  (114, 'Phrasal verbs', 'go in, fall off, run away etc. (phrasal verbs 1)', null),
-  (115, 'Phrasal verbs', 'put on your shoes, put your shoes on (phrasal verbs 2)', null)
+  (13, 'Past', 'I was doing (past continuous)', 'Past continuous = was/were + глагол с -ing: I/he/she/it was working; we/you/they were working. Так описывают действие, которое было в процессе в определённый момент прошлого: At ten I was writing tests. Отрицание: wasn''t/weren''t + -ing. Вопрос: Was she working? What were you doing? Частая ошибка — пропустить -ing: I was work (нужно I was working).'),
+  (14, 'Past', 'I was doing (past continuous) and I did (past simple)', 'Past continuous (was/were + -ing) — длительный фон, который шёл в момент события; past simple — само короткое событие, которое его прервало: I was fixing a bug when the power went off. While обычно стоит перед длительным действием: While I was having lunch, the deploy failed. Цепочка последовательных действий — только past simple: I saw the error and called my team lead.'),
+  (15, 'Present perfect', 'I have done (present perfect 1)', 'Present perfect = have/has + третья форма глагола (past participle): I have finished, she has lost. Сокращения: I''ve, she''s, haven''t, hasn''t. Так говорят о прошлом действии, результат которого важен сейчас: I''ve lost my keys (и сейчас их нет). He has gone to Berlin — уехал и сейчас там; he has been to Berlin — был и вернулся.'),
+  (16, 'Present perfect', 'I''ve just … I''ve already … I haven''t … yet (present perfect 2)', 'С present perfect часто используют just (только что), already (уже) и yet (уже/ещё — в вопросах и отрицаниях). Just и already обычно стоят между have и глаголом: I''ve just finished, she''s already left. Yet ставят в конце вопроса или отрицания: Have you finished yet? I haven''t finished yet. Already в отрицании обычно не используют: не I haven''t already…, а I haven''t … yet.'),
+  (17, 'Present perfect', 'Have you ever …? (present perfect 3)', 'Have you ever…? — спрашиваем об опыте за всю жизнь, без указания времени. Never = «никогда» и уже содержит отрицание: I''ve never been to Japan (не I haven''t never). Been to = «побывал и вернулся»: She has been to China twice. Сколько раз: How many times have you…? После превосходной степени — ever: the best film I''ve ever seen.'),
+  (18, 'Present perfect', 'How long have you …? (present perfect 4)', 'О том, что началось в прошлом и продолжается сейчас, говорим в present perfect: How long have you worked here? I''ve known him for ten years. Для действий в процессе — have/has been + -ing: It has been raining for two hours. Русское «я знаю его десять лет» — не I know him for ten years, а I''ve known him for ten years.'),
+  (19, 'Present perfect', 'for, since, ago', 'For + отрезок времени (for two hours, for a week, for ages); since + точка начала (since Monday, since 2019, since I left school). Since обычно идёт с present perfect; for — с любым временем (I''ve worked here for a year; I lived there for two years). Ago = «назад», ставится после отрезка и идёт с past simple: I joined the team three months ago. Нельзя: since two hours, for 2019.'),
+  (20, 'Present perfect', 'I have done (present perfect) and I did (past)', 'Present perfect связывает прошлое с настоящим и не называет законченный момент в прошлом: I''ve lost my phone, I''ve never used Rust, I''ve lived here since 2018. Если указано законченное время (yesterday, last week, in 2022, two years ago) или спрашиваем When…?, нужен past simple: I fixed it yesterday. When did you start? Нельзя: I have fixed it yesterday.'),
+  (21, 'Passive', 'is done, was done (passive 1)', 'Пассив (страдательный залог) = be + третья форма глагола. Present simple passive: am/is/are + V3 (The office is cleaned every day). Past simple passive: was/were + V3 (The app was created in 2020). Исполнителя вводят через by (не from): It was reviewed by two people. «Я родился» — I was born (не I born).'),
+  (22, 'Passive', 'is being done, has been done (passive 2)', 'Пассив в процессе: am/is/are being + V3 — с вещью что-то делают прямо сейчас: The server is being repaired. Пассив в present perfect: has/have been + V3 — действие сделано, важен результат: The bug has been fixed. Сравни: The team is testing the app (команда тестирует) — The app is being tested (приложение тестируют).'),
+  (23, 'Verb forms', 'be/have/do in present and past tenses', 'Be, have и do работают как вспомогательные глаголы. Do/does/did — вопросы и отрицания в present и past simple: Do you like…? It didn''t work. Be — continuous (am/is/are/was/were + -ing) и пассив (is made, was made). Have — present perfect (have/has + V3). Частая ошибка — смешать их: не Do you working?, а Are you working?'),
+  (24, 'Verb forms', 'Regular and irregular verbs', 'У правильных глаголов past simple и третья форма одинаковы и оканчиваются на -ed: work → worked → worked; plan → planned (согласная удваивается), study → studied. У неправильных формы нужно запомнить: write — wrote — written, see — saw — seen, forget — forgot — forgotten, give — gave — given. У некоторых все три формы совпадают: cost, put, cut, read (но read во 2-й и 3-й форме читается [red]).'),
+  (25, 'Future', 'What are you doing tomorrow?', 'О заранее договорённых планах на будущее говорим в present continuous: I''m meeting the client on Friday. What are you doing tomorrow? Будущее время (will) здесь обычно не нужно. Present simple — для расписаний и программ: The train leaves at 7:45. The conference starts on 5 May. Личные планы в present simple обычно не ставят: не I meet the client tomorrow.'),
+  (26, 'Future', 'I''m going to …', 'Am/is/are + going to + глагол — план или намерение, решение о котором принято заранее: I''m going to update the docs tomorrow. Также going to используют, когда что-то вот-вот случится, судя по тому, что видно сейчас: Look at those clouds — it''s going to rain. Вопрос: Are you going to…? Отрицание: I''m not going to… Was/were going to — «собирался, но не сделал». Не пропускай am/is/are: I''m going to (не I going to).'),
+  (27, 'Future', 'will/shall 1', 'Will + глагол без to — о будущем, когда предсказываем или сообщаем факт: The update will take an hour. Краткие формы: I''ll, she''ll, it''ll; отрицание: won''t = will not. Часто с I think / I don''t think / probably: I don''t think he''ll come. Если уже договорились или решили заранее, обычно используют present continuous или going to, а не will. Shall можно сказать вместо will после I и we, но это звучит официально.'),
+  (28, 'Future', 'will/shall 2', 'I''ll (I will) — решение, принятое прямо в момент речи, а также предложение помочь или обещание: The phone is ringing — I''ll answer it. I''ll send you the link. Если решили заранее — going to: I''m going to call him tomorrow. Shall I…? / Shall we…? — предложить что-то сделать: Shall I open the window? Shall we start? Ошибка русскоязычных: «Do I open the window?» в значении «Мне открыть окно?» — нужно Shall I…?'),
+  (29, 'Modals, imperative etc.', 'might', 'Might + глагол без to — «возможно, может быть»; так говорят, когда не уверены: I might work from home tomorrow. It might rain. Отрицание: might not: The fix might not work. После might глагол без -s и без to: She might come (не might comes, не might to come). В вопросах might почти не используют — спрашивают Are you going to…? или Do you think…?'),
+  (30, 'Modals, imperative etc.', 'can and could', 'Can + глагол — «могу, умею»: I can read Python. Отрицание: can''t (cannot); не говорят don''t can. Could — прошедшее от can: At five I could already read; couldn''t — «не смог»: I couldn''t open the file. Can you…? / Could you…? — просьба (could вежливее); Can I…? / Could I…? — спросить разрешения. После can/could глагол без to и без -s: She can speak (не can speaks, не can to speak).'),
+  (31, 'Modals, imperative etc.', 'must, mustn''t, don''t need to', 'Must + глагол — «обязательно нужно, должен»: You must wear a badge. Прошедшего времени у must нет — вместо него had to: I had to stay late yesterday. Mustn''t — «нельзя, запрещено»: You mustn''t share your password. Don''t need to (needn''t) — «не нужно, можно не делать»: You don''t need to come. Главная ловушка: mustn''t — это запрет, а не «не обязан».'),
+  (32, 'Modals, imperative etc.', 'should', 'Should + глагол без to — совет, «следует, стоит»: You should take a break. Отрицание: shouldn''t — «не стоит»: You shouldn''t push directly to main. Вопрос: Should I…? What should we do? Часто с I think / I don''t think: I don''t think you should go (естественнее, чем I think you shouldn''t go). Should слабее, чем must: это совет, а не обязанность.'),
+  (33, 'Modals, imperative etc.', 'I have to …', 'Have to + глагол — «приходится, нужно» (из-за правил или обстоятельств): I have to wear a badge; he/she/it has to. Прошедшее — had to. Вопрос: Do you have to…? Does she have to…? Did you have to…? Отрицание don''t/doesn''t have to значит «не обязательно», а не «нельзя»: You don''t have to come. Ошибки: he have to, doesn''t has to.'),
+  (34, 'Modals, imperative etc.', 'Would you like …? I''d like …', 'Would you like…? — вежливо предложить: Would you like some tea? Would you like to join us? I''d like (= I would like) — вежливое «я хотел бы»: I''d like a coffee, please. I''d like to ask a question. Не путай: Do you like…? — «нравится ли тебе вообще?», а Would you like…? — «хочешь (сейчас)?». После would like — существительное или to + глагол: I''d like to go (не I''d like go).'),
+  (35, 'Modals, imperative etc.', 'Do this! Don''t do that! Let''s do this!', 'Повелительное наклонение — глагол в начальной форме без подлежащего: Open the file. Wait a minute. Отрицание — Don''t + глагол: Don''t touch the server! Don''t be late. Let''s + глагол — предложить сделать что-то вместе: Let''s start. Отрицание: Let''s not + глагол: Let''s not wait. Нельзя: «Don''t to…», «Not touch!», «Let''s to go».'),
+  (36, 'Modals, imperative etc.', 'I used to …', 'Used to + глагол — то, что раньше было регулярно или долго, а теперь нет: I used to work in a bank (сейчас уже нет). Отрицание: didn''t use to (без -d): I didn''t use to like coffee. Вопрос: Did you use to…? Для настоящего времени used to нет: о привычках сейчас говорим в present simple (I usually work from home), а не «I use to».'),
+  (37, 'There and it', 'there is, there are', 'There is / there are — «есть, имеется, находится»; так сообщаем, что что-то существует или где-то находится: There is a bug in this function. There are three servers in the cluster. Вопрос: Is there…? Are there…? Отрицание: there isn''t / there aren''t (часто с any). Сокращение there''s — только для is. Ошибка русскоязычных: «In the room is a table» или «It is a problem here» — правильно There is a table in the room.'),
+  (38, 'There and it', 'there was/were, there has/have been, there will be', 'There was / there were — прошедшее: There was a problem yesterday. There were five people at the meeting. There has been / there have been — present perfect: There have been three releases this month. There will be — будущее: There will be a meeting tomorrow. Не говори «It was a lot of people» в значении «было много людей» — правильно There were a lot of people.'),
+  (39, 'There and it', 'It …', 'В английском предложении (кроме повелительного) обязательно есть подлежащее, поэтому о времени, дате, погоде и расстоянии говорим с it: It''s ten o''clock. It''s raining. It''s two kilometres to the office. Конструкция It''s + прилагательное + to + глагол: It''s easy to make a mistake. Частая ошибка — пропустить it: «Is cold» вместо It''s cold, «How far is from…» вместо How far is it from…'),
+  (40, 'Auxiliary verbs', 'I am, I don''t etc.', 'Чтобы не повторять глагол, оставляем только вспомогательный: I''m not tired, but she is. I don''t like it, but he does. She can swim, but I can''t. Форма зависит от времени и лица: is/are, was/were, do/does/did, have/has, can, will. Ошибка: «I don''t like it, but he likes» — правильно but he does.'),
+  (41, 'Auxiliary verbs', 'Have you? Are you? Don''t you? etc.', 'Короткий вопрос-реакция (Are you? Do you? Did she?) показывает интерес или удивление — как русское «Да? Правда?». Берём вспомогательный глагол из фразы собеседника: I''m tired. — Are you? I''ve finished. — Have you? Если в утверждении нет вспомогательного, используем do/does/did: I work at home. — Do you? После отрицания вопрос тоже отрицательный: It isn''t working. — Isn''t it?'),
+  (42, 'Auxiliary verbs', 'too/either, so am I / neither do I etc.', '«Я тоже» в утверждении: I am too / So am I, I do too / So do I. «Я тоже не» после отрицания: I''m not either / Neither am I, I don''t either / Neither do I. После so и neither порядок обратный: So am I (не So I am), Neither do I. Too — только в утвердительных фразах, either — в отрицательных: I don''t like it either (не too).'),
+  (43, 'Auxiliary verbs', 'isn''t, haven''t, don''t etc. (negatives)', 'Отрицание строим через вспомогательный глагол + not: isn''t, aren''t, wasn''t, don''t, doesn''t, didn''t, haven''t, can''t, won''t (= will not). Нельзя просто поставить not перед глаголом: I don''t understand (не I not understand). Запрет — Don''t + глагол: Don''t touch it! После didn''t/doesn''t глагол в начальной форме.'),
+  (44, 'Questions', 'is it …? have you …? do they …? etc. (questions 1)', 'В вопросе вспомогательный глагол стоит перед подлежащим: Is she…? Have you…? Can you…? Если вспомогательного нет, добавляем do/does/did: Do you work…? Where does she live? What did you say? Вопросительное слово — в самом начале. Отрицательный вопрос: Why didn''t you come? Ошибка: «Where you work?» — нужно Where do you work?'),
+  (45, 'Questions', 'Who saw you? Who did you see? (questions 2)', 'Если who/what — подлежащее (кто сделал?), do/does/did не нужен, порядок как в утверждении: Who broke the build? What happened? Если who/what — дополнение (кого? что?), нужен вспомогательный глагол: Who did you call? What did she say? Типичная ошибка — лишний did в обычном вопросе: «Who did break…?», «What did happen?»'),
+  (46, 'Questions', 'Who is she talking to? What is it like? (questions 3)', 'Предлог в вопросе обычно ставится в конец: Who are you talking to? Where are you from? What is it about? What are you looking at? What is it like? = «Какой он? Каково это?». Ошибка: «How is the weather like?» — правильно What is the weather like? или How is the weather?'),
+  (47, 'Questions', 'What …? Which …? How …? (questions 4)', 'What — «что/какой» в общем, когда выбор не ограничен: What time is it? What does it mean? Which — когда выбираем из небольшого известного набора: Which branch, this one or that one? Which of these…? (What of… нельзя). How + прилагательное или наречие: How old, How long, How far, How often, How much. Ошибка: «How is your name?» — правильно What is your name?'),
+  (48, 'Questions', 'How long does it take …?', 'Сколько времени занимает действие: It takes (me/you/us) + время + to + глагол: It takes me ten minutes to walk to work. Вопрос: How long does it take (you) to…? В прошедшем: It took… / How long did it take…? Русское «мне нужно два часа, чтобы…» по-английски естественнее передать так: It takes me two hours to…'),
+  (49, 'Questions', 'Do you know where …? I don''t know what … etc.', 'Во вложенном вопросе (Do you know…? I don''t know… Can you tell me…?) порядок слов как в утверждении и без do/does/did: Do you know where the office is? (не where is the office). I don''t know what this means. Если вопросительного слова нет, используем if или whether: I don''t know if he''s coming.'),
+  (50, 'Reported speech', 'She said that … He told me that …', 'Косвенная речь: He said (that) he was tired. Время обычно сдвигается в прошлое: am/is → was, are → were, do/does → did, can → could, will → would, have → had. Say и tell: said (that)… или said to me, но told me / told us (с человеком, без to). Ошибки: «He said me», «He told that…», «tell to me».'),
+  (51, '-ing and to …', 'work/working, go/going, do/doing', 'После will, can, must, should, might, would и после do/does/did — глагол без to: I can help. Did you send it? После want, have (= «должен»), going, would like, used to — to + глагол: I want to go. I''m going to buy. После am/is/are и was/were — глагол с -ing: I''m working. What were you doing? Ошибка: «Did you sent?» — после did глагол в начальной форме.'),
+  (52, '-ing and to …', 'to … (I want to do) and -ing (I enjoy doing)', 'После одних глаголов идёт to + глагол: want, need, decide, hope, expect, plan, promise, offer, refuse, forget, learn, try (I want to go). После других — глагол с -ing: enjoy, mind, finish, stop, suggest (I enjoy reading, не enjoy to read). После like, love, hate, prefer, start, begin, continue можно и так, и так: It started raining = It started to rain. Would like / would love / would prefer — только с to: I''d like to stay.'),
+  (53, '-ing and to …', 'I want you to … I told you to …', 'Хочу, чтобы кто-то что-то сделал: want/would like + кто-то + to: I want you to help me (не I want that you help me). Так же с ask, tell, advise, expect, persuade, teach: She asked me to wait. Отрицание: told me not to call. После make и let — глагол без to: He made me laugh. They let me go. Let''s = давайте: Let''s start.'),
+  (54, '-ing and to …', 'I went to the shop to …', 'To + глагол объясняет цель — зачем: I went to the shop to buy milk. Нельзя for + глагол (не for buy). For + существительное: I went out for a coffee. Так же: money/time to do something. Wait for + кто-то/что-то; wait to + глагол; wait for something to happen: We''re waiting for the build to finish.'),
+  (55, 'Go, get, do, make and have', 'go to …, go on …, go for …, go -ing', 'Go to + место: go to work, go to the office. Go on + holiday / a trip / a tour: We''re going on holiday. Go for + a walk / a run / a swim / a drink / lunch: Let''s go for a walk. Go + -ing для занятий: go shopping, go swimming, go running (не go to shopping, не go for shopping).'),
+  (56, 'Go, get, do, make and have', 'get', 'Get — очень частый глагол с разными значениями. Get + существительное = получить, купить, принести: I got an email. Get + прилагательное = стать, становиться: get tired, get wet, get better. Устойчивые сочетания: get married (пожениться), get dressed (одеться), get lost (заблудиться). Get to + место = добраться: How do I get to the station? (но get home без to). Get in/into и out of — машина, такси; get on/off — автобус, поезд.'),
+  (57, 'Go, get, do, make and have', 'do and make', 'Do — про действия и работу вообще: do homework, do the shopping, do a job, do an exercise, do nothing; What do you do? = Кем ты работаешь? Make — про создание, результат: make a mistake, make a decision, make a plan, make a list, make coffee, make a noise, make a phone call. По-русски часто одно «делать», поэтому сочетания надо запоминать.'),
+  (58, 'Go, get, do, make and have', 'have', 'Have в значении «иметь» не ставят в continuous: I have (got) a laptop (не I''m having a laptop). Но have часто означает действие: have breakfast/lunch, have a shower, have a break, have a meeting, have a look, have a chat, have a good time. В этом значении have got нельзя, а continuous можно: I''m having lunch. Отрицание и вопрос — через do/did: I didn''t have breakfast.'),
+  (59, 'Pronouns and possessives', 'I/me, he/him, they/them etc.', 'Подлежащее: I, you, he, she, it, we, they. Дополнение (после глагола и предлога): me, you, him, her, it, us, them. Can you help me? This is for her. В паре с другим человеком форма та же: Tom and I are working (подлежащее), но It''s for you and me (после предлога).'),
+  (60, 'Pronouns and possessives', 'my/his/their etc.', 'Притяжательные слова перед существительным: my, your, his, her, its, our, their: my password, their house. Its (без апострофа) = «его/её» для предметов; it''s = it is. Their ≠ there ≠ they''re. «Свой» переводится в зависимости от того, чей он: I forgot my keys, she forgot her keys.'),
+  (61, 'Pronouns and possessives', 'Whose is this? It''s mine/yours/hers etc.', 'Без существительного после себя: mine, yours, his, hers, ours, theirs: This laptop is mine. Чей? — Whose: Whose bag is this? (не Who''s и не Who). A friend of mine = один из моих друзей. Не путай: my bag, но the bag is mine.'),
+  (62, 'Pronouns and possessives', 'I/me/my/mine', 'Повторение всех форм: I/me/my/mine, you/you/your/yours, he/him/his/his, she/her/her/hers, it/it/its, we/us/our/ours, they/them/their/theirs. I/he/we — подлежащее; me/him/us — после глагола и предлога; my/his/our — перед существительным; mine/his/ours — вместо существительного.'),
+  (63, 'Pronouns and possessives', 'myself/yourself/themselves etc.', 'Возвратные местоимения: myself, yourself, himself, herself, itself, ourselves, yourselves, themselves — когда действие направлено на себя: I cut myself. Enjoy yourself! By myself = один, сам. Each other — друг друга: They help each other (не themselves). Частая ошибка русскоговорящих: feel, relax, concentrate, meet обычно без -self: I feel tired (не I feel myself tired).'),
+  (64, 'Pronouns and possessives', '-''s (Kate''s camera / my brother''s car etc.)', 'Принадлежность людям — ''s: Anna''s laptop, my brother''s car. Множественное на -s — только апостроф: my parents'' house, the developers'' office. Неправильное множественное — ''s: the children''s room. Общая вещь двух людей: Kate and Tom''s car. Для предметов обычно of: the end of the film, the top of the page.'),
+  (65, 'A and the', 'a/an …', 'A/an ставим перед исчисляемым существительным в единственном числе, когда говорим об одном предмете или человеке в значении «какой-то, один из»: a laptop, an idea. Выбор зависит от первого звука следующего слова, а не от буквы: an hour, an easy task, но a university, a useful tool. Профессию тоже называем с a/an: She''s a developer (не She''s developer).'),
+  (66, 'A and the', 'train(s), bus(es) (singular and plural)', 'Множественное число обычно образуется с -s: bug → bugs. После s, sh, ch, x пишем -es (boxes, watches); согласная + y → -ies (company → companies). Неправильные формы надо запомнить: man → men, woman → women, child → children, person → people. Jeans, trousers, glasses, scissors всегда во множественном числе (These jeans are…), а people и police требуют глагола во множественном числе: The police are…'),
+  (67, 'A and the', 'a bottle / some water (countable/uncountable 1)', 'Исчисляемые существительные (a laptop, two laptops) имеют единственное и множественное число; в единственном числе им нужен a/an. Неисчисляемые (water, information, advice, help, news, furniture, luggage, traffic, music) не имеют множественного числа и не употребляются с a/an: some information, не an information. Глагол с ними — в единственном числе: The news is good.'),
+  (68, 'A and the', 'a cake / some cake / some cakes (countable/uncountable 2)', 'С неисчисляемыми существительными используем some или единицу измерения: some cake, a piece of cake, a glass of water, a cup of tea, a bar of chocolate, a piece of advice. Некоторые слова бывают и исчисляемыми, и неисчисляемыми: a cake (целый торт), но some cake (кусок или немного торта). С исчисляемыми во множественном числе тоже some: some sandwiches. Исчисляемое в единственном числе — с a/an: a good idea.'),
+  (69, 'A and the', 'a/an and the', 'A/an — когда предмет упоминается впервые или неважно, какой именно: I found a bug. The — когда понятно, о каком предмете речь: он уже упоминался или он единственный в этой ситуации: I fixed the bug. Can you close the door? Типичная ошибка — пропускать артикль, как в русском: перед исчисляемым существительным в единственном числе нужен a/an или the.'),
+  (70, 'A and the', 'the …', 'The ставим перед единственными в своём роде предметами (the sun, the sky), в выражениях the same, the end of…, с порядковыми числительными (the second floor) и в the radio, the cinema. Без артикля: watch TV, приёмы пищи (have breakfast, for lunch), next/last + время (next week, last Friday).'),
+  (71, 'A and the', 'go to work, go home, go to the cinema', 'Без артикля говорят: go to work / be at work, go to school, go to bed, go to university. Home — без to: go home, get home; «дома» — at home: stay at home, be at home. С the: go to the cinema, the theatre, the bank, the station, the airport, the doctor. Частая ошибка — go to home: правильно просто go home.'),
+  (72, 'A and the', 'I like music, I hate exams', 'Когда говорим о чём-то в целом, артикль не нужен: I like music. Cats are clever animals. Developers drink a lot of coffee. Так же без the — школьные предметы, языки, виды спорта: maths, English, football. Если речь о конкретном предмете или группе, нужен the: Turn down the music. The code you sent has a bug.'),
+  (73, 'A and the', 'the … (names of places)', 'Без the: континенты, большинство стран, города, улицы: in Poland, on Main Street. С the: страны со словами States, Kingdom, Republic и названия во множественном числе (the USA, the UK, the Czech Republic, the Netherlands), реки, моря, океаны (the Volga, the Atlantic), горные цепи (the Alps).'),
+  (74, 'Determiners and pronouns', 'this/that/these/those', 'This (ед. ч.) и these (мн. ч.) — то, что рядом: this laptop, these logs. That (ед. ч.) и those (мн. ч.) — то, что дальше или было раньше: that bug from last sprint, those shoes over there. Можно и без существительного: This is my colleague. That''s great! Не путай: these/those только с множественным числом.'),
+  (75, 'Determiners and pronouns', 'one/ones', 'One заменяет исчисляемое существительное в единственном числе, чтобы не повторять его: This mug is dirty — can I have a clean one? Ones — замена для множественного числа: I prefer the black ones. Если речь о любом предмете (неопределённом), говорим one, а не it: ''Do you need a pen?'' ''No, I have one.'''),
+  (76, 'Determiners and pronouns', 'some and any', 'Some — в утвердительных предложениях, а также в просьбах и когда что-то предлагаем (Can I have some water? Would you like some tea?). Any — в отрицаниях и обычно в вопросах: We don''t have any tests. Are there any questions? То же правило для something/anything, somebody/anybody: I want to eat something. I can''t hear anything.'),
+  (77, 'Determiners and pronouns', 'not + any, no, none', 'No = not any: There are no chairs = There aren''t any chairs. В английском одно отрицание: либо not … any, либо no, но не оба сразу (I don''t have no time — ошибка). None используется без существительного (или с of: none of them): ''How many bugs?'' ''None.'''),
+  (78, 'Determiners and pronouns', 'not + anybody/anyone/anything, nobody/no-one/nothing', 'В английском в одной простой фразе только одно отрицание. Либо not + anybody/anyone/anything: I don''t know anybody, либо nobody/no-one/nothing без not: I know nobody. Нельзя: I don''t know nobody (это частая ошибка из-за русского «не знаю никого»). В начале предложения и в коротком ответе — только nobody/nothing: Nobody came. — What did you do? — Nothing. После nobody/nothing глагол утвердительный и в единственном числе: Nobody knows.'),
+  (79, 'Determiners and pronouns', 'somebody/anything/nowhere etc.', 'Somebody/someone, something, somewhere — обычно в утвердительных предложениях: There''s something wrong. Anybody/anyone, anything, anywhere — в вопросах и отрицаниях: Is there anybody here? I didn''t go anywhere. Nobody/nothing/nowhere сами по себе отрицательные. Удобные конструкции: something to eat, somewhere quiet, anything else.'),
+  (80, 'Determiners and pronouns', 'every and all', 'Every + существительное в единственном числе: every day, every developer. Everybody/everyone и everything требуют глагол в единственном числе: Everybody is here. Everything works. All + множественное число или неисчисляемое: all the tests, all the data. «Всё» как отдельное слово — everything, а не all: Everything is ready. Различай: every day = каждый день, all day = весь день.'),
+  (81, 'Determiners and pronouns', 'all, most, some, any, no/none', 'All/most/some/any/no + существительное без артикля — о людях и вещах вообще: Most people work from home. Перед the/my/this/them нужен of: most of my colleagues, some of the servers, all of them (после all слово of можно опустить: all my friends). Не говори the most people или most of people. No + существительное: There are no bugs; none без существительного или с of: None of them worked. — How many? — None.'),
+  (82, 'Determiners and pronouns', 'both, either, neither', 'Both, either, neither — о двух предметах или людях. Both = оба: Both tests passed. Either = любой из двух (а в отрицании — ни один): Either day is fine; I don''t like either of them. Neither = ни один из двух, само по себе отрицательное: Neither answer is correct. После either/neither без of — существительное в единственном числе; с of — of + the/these/them. Пары: both … and, either … or, neither … nor.'),
+  (83, 'Determiners and pronouns', 'a lot, much, many', 'Much — с неисчисляемыми (much time, much money), many — с исчисляемыми во множественном числе (many tickets). Much и many чаще в вопросах и отрицаниях: How much…? We don''t have much time. В утверждениях естественнее a lot of / lots of: We had a lot of problems. Без существительного — просто a lot: I like it a lot. Too much / too many = слишком много.'),
+  (84, 'Determiners and pronouns', '(a) little, (a) few', 'A little + неисчисляемое, a few + исчисляемое во множественном числе: a little milk, a few minutes — «немного, несколько» (то есть достаточно). Без артикля little/few звучат негативно — «мало, почти нет»: He has few friends. We have very little time. Ошибка: a few time, a little minutes.'),
+  (85, 'Adjectives and adverbs', 'old/nice/interesting etc. (adjectives)', 'Прилагательное стоит перед существительным: a fast computer (не a computer fast). Во множественном числе прилагательное не меняется: good ideas (не goods). После be и глаголов-связок look, feel, sound, smell, taste, seem тоже прилагательное, а не наречие: You look tired. That sounds interesting. The soup smells good.'),
+  (86, 'Adjectives and adverbs', 'quickly/badly/suddenly etc. (adverbs)', 'Наречие описывает действие и обычно образуется с -ly: quick → quickly, careful → carefully, easy → easily (y → i). Прилагательное — перед существительным или после be: a careful driver; наречие — к глаголу: drive carefully. Исключения: good → well, а fast, hard, late не меняются (work hard, arrive late). Hardly = «едва», lately = «в последнее время» — это другие слова.'),
+  (87, 'Adjectives and adverbs', 'old/older, expensive/more expensive', 'Сравнительная степень. Короткие прилагательные: -er (fast → faster, big → bigger, easy → easier). Длинные — more: more expensive, more reliable. Неправильные: good → better, bad → worse, far → farther/further. Не смешивай способы и не путай их: нельзя more faster или expensiver.'),
+  (88, 'Adjectives and adverbs', 'older than …, more expensive than …', 'После сравнительной степени — than: older than me / than I am, works faster than me / than I do. Нельзя older as или older that. Усилить сравнение: much / a lot / far bigger; смягчить: a bit / a little longer. Very со сравнительной степенью не используется: much better (не very better). Противоположность more — less: less expensive.'),
+  (89, 'Adjectives and adverbs', 'not as … as', 'As … as — «такой же …, как»; not as … as — «не такой …, как»: The test server isn''t as fast as production. Можно и so в отрицании, но базовая форма — as. После as — me/him или he is: not as tall as he is. The same as — «такой же, как» (не the same like): The same size as ours. Less … than — «менее …, чем».'),
+  (90, 'Adjectives and adverbs', 'the oldest, the most expensive', 'Превосходная степень: the + -est для коротких (the longest, the hottest, the easiest) и the most для длинных (the most important). Неправильные: good → the best, bad → the worst. Место — с in: the biggest city in the world (не of the world). Часто с present perfect: the best film I''ve ever seen; one of the + мн. ч.: one of the most useful apps.'),
+  (91, 'Adjectives and adverbs', 'enough', 'Enough — «достаточно». Перед существительным: enough time, enough chairs. После прилагательного или наречия: big enough, fast enough (не enough big). Дальше можно добавить for + кто-то или to + глагол: old enough to drive, clear enough for beginners.'),
+  (92, 'Adjectives and adverbs', 'too', 'Too — «слишком», больше, чем нужно: too hot, too slowly. С существительными: too much (неисчисляемые — too much coffee), too many (исчисляемые — too many meetings). Дальше можно добавить for + кто-то или to + глагол: too hot to drink. Не путай too и very: very cold — просто очень холодно, too cold — настолько, что это проблема.'),
+  (93, 'Word order', 'He speaks English very well. (word order 1)', 'Порядок слов: глагол и его дополнение стоят рядом, наречие между ними не ставим: She speaks English very well (не speaks very well English), I liked it very much. Если есть и место, и время — сначала место, потом время: We''re going to Berlin next week.'),
+  (94, 'Word order', 'always/usually/often etc. (word order 2)', 'Always, usually, often, sometimes, never, also, both, all ставим перед смысловым глаголом: I always drink coffee. Но после am/is/are/was/were: She is never late. Если глагол из нескольких слов — после первого вспомогательного: I have never used it. Не говорим always I drink или I drink always.'),
+  (95, 'Word order', 'still, yet, already', 'Still — «всё ещё», действие продолжается: It''s still raining; в отрицании — перед don''t/haven''t и т. п.: I still don''t understand. Yet — «уже/ещё» в вопросах и отрицаниях, обычно в конце: Has it started yet? It hasn''t started yet. Already — «уже», раньше, чем ожидали, обычно перед смысловым глаголом: I''ve already sent it.'),
+  (96, 'Word order', 'Give me that book! Give it to me!', 'После give, send, show, lend, buy, tell возможны два порядка: give me the link или give the link to me. Если вещь выражена местоимением (it, them), обычно ставим её сразу после глагола: give it to me (а не give me it). С buy, make, get используем for: I bought it for you.'),
+  (97, 'Conjunctions and clauses', 'and, but, or, so, because', 'Союзы: and — «и», добавляет; but — «но», противопоставляет; or — «или», выбор; so — «поэтому», следствие; because — «потому что», причина. Сравни: I was tired, so I went to bed. = I went to bed because I was tired. Частая ошибка — спутать so и because.'),
+  (98, 'Conjunctions and clauses', 'When …', 'После when, before, after, while, until в значении будущего используем present simple, а не will: When I get home, I''ll call you (не When I will get). То же для until: Wait here until I come back. О прошлом — обычное прошедшее время: When I was a student, I worked in a café.'),
+  (99, 'Conjunctions and clauses', 'If we go … If you see … etc.', 'Реальное условие: if + present simple, а в главной части — will, повелительное наклонение и т. п.: If it rains tomorrow, we''ll work from home. If you see the bug, tell me. После if не ставим will. If — «если» (может случиться, а может и нет), when — «когда» (точно случится).'),
+  (100, 'Conjunctions and clauses', 'If I had … If we went … etc.', 'Нереальное или воображаемое условие о настоящем и будущем: if + past simple, в главной части would (could) + глагол: If I had more time, I would learn Japanese. Прошедшая форма здесь не про прошлое. С be часто were для всех лиц: If I were you… Would не ставим после if.'),
+  (101, 'Conjunctions and clauses', 'a person who … a thing that/which … (relative clauses 1)', 'Придаточное определительное уточняет, о ком или о чём речь. Для людей — who (или that), для вещей — which или that: a person who writes code, a script that deletes logs. Здесь who/which/that — подлежащее придаточного, поэтому he/it не добавляем: a colleague who speaks (не who he speaks).'),
+  (102, 'Conjunctions and clauses', 'the people we met, the hotel you stayed at (relative clauses 2)', 'Если who/that/which — дополнение (после него идёт своё подлежащее), его можно опустить: the people (who) we met, the file (that) you need. Предлог остаётся в конце: the hotel we stayed at, the bug you told me about. Лишнее it/them не добавляем. Для места — where: the place where we had lunch.'),
+  (103, 'Prepositions', 'at 8 o''clock, on Monday, in April', 'At — с точным временем и некоторыми выражениями: at 10 o''clock, at night, at the weekend (брит.). On — с днями и датами: on Monday, on 12 May, on Friday afternoon. In — с месяцами, годами, временами года и частями дня: in April, in 1990, in the morning. Перед next, last, this, every предлог не нужен: next Monday.'),
+  (104, 'Prepositions', 'from … to, until, since, for', 'from … to — от и до: from 9 to 6. until (till) — до какого-то момента: until Friday, until midnight. since — с какого-то момента в прошлом (обычно с present perfect): since 2021, since Monday. for — в течение отрезка времени: for two hours, for three years. Типичная ошибка: «since three years» — с длительностью нужен for.'),
+  (105, 'Prepositions', 'before, after, during, while', 'before (до), after (после), during (во время) и while (пока, в то время как). during ставим перед существительным: during the meeting; while — перед целым предложением: while I was working. before и after ставим и перед существительным (after the meeting), и перед предложением (after I left); если сразу после них идёт глагол, он с -ing: before leaving, after fixing. Нельзя: «during I was working».'),
+  (106, 'Prepositions', 'in, at, on (places 1)', 'in — внутри чего-то: in the room, in my bag, in the folder. at — в точке, у чего-то: at the door, at the bus stop, at the traffic lights. on — на поверхности: on the table, on the wall, on the floor.'),
+  (107, 'Prepositions', 'in, at, on (places 2)', 'Устойчивые сочетания: in bed, in hospital, in a photo, in a car/taxi; at home, at work, at school, at a party/conference, at the airport, at Anna''s (у Анны дома); on a bus/train/plane, on the second floor. Транспорт: in a car, но on a bus. Этаж всегда с on.'),
+  (108, 'Prepositions', 'to, in, at (places 3)', 'Движение — to: go to work, get to the office. Нахождение — in/at: be at work, be in Berlin. arrive in + город/страна (arrive in Paris), arrive at + место (arrive at the hotel). С home предлога нет: go home, get home, arrive home; но at home — дома.'),
+  (109, 'Prepositions', 'under, behind, opposite etc.', 'Предлоги места: next to / beside (рядом), between (между двумя), in front of (перед), behind (за, сзади), opposite (напротив), under (под), above (над, выше), below (ниже). После between называем оба объекта: between A and B.'),
+  (110, 'Prepositions', 'up, over, through etc.', 'Предлоги движения: up/down (вверх/вниз), into/out of (внутрь/наружу), through (сквозь), across (через, на другую сторону), along (вдоль), around (вокруг), over (над, через верх), past (мимо). «Из» в смысле «изнутри» — out of, а не from: take it out of the bag.'),
+  (111, 'Prepositions', 'on, at, by, with, about', 'on holiday, on TV, on the phone; at the age of 20; by car/bus/train (без артикля), но on foot и in my car. with — с кем-то/с помощью чего-то: with a knife; without — без: without saying. about — о чём-то: talk about, a film about.'),
+  (112, 'Prepositions', 'afraid of …, good at … etc.; of/at/for etc. (prepositions) + -ing', 'Прилагательные с предлогами: good at, interested in, afraid of, responsible for, different from, tired of, proud of. После предлога глагол всегда с -ing: good at finding, interested in learning, instead of writing, thank you for helping. Частая ошибка: «afraid from», «interested about».'),
+  (113, 'Prepositions', 'listen to …, look at … etc. (verb + preposition)', 'Глаголы с предлогами: listen to, look at, look for (искать), look after (присматривать), wait for, pay for, depend on, talk about. Без предлога: phone/call somebody, discuss something, answer somebody. Типичные ошибки русскоговорящих: «discuss about», «phone to you», «wait the bus».'),
+  (114, 'Phrasal verbs', 'go in, fall off, run away etc. (phrasal verbs 1)', 'Фразовые глаголы = глагол + частица (up, down, off, out, back…), часто без объекта: get up, sit down, go out, give up, break down, speak up, take off (о самолёте). Смысл часто не равен сумме частей: break down — сломаться, give up — сдаться.'),
+  (115, 'Phrasal verbs', 'put on your shoes, put your shoes on (phrasal verbs 2)', 'Фразовые глаголы с объектом: put on, take off, turn on/off, try on, throw away, give back, fill in, write down. Существительное может стоять до или после частицы: put on your jacket = put your jacket on. Местоимение — только между глаголом и частицей: put it on, turn it off (не «turn off it»).')
 on conflict (unit) do update set section = excluded.section, title = excluded.title, summary = excluded.summary;
 
 insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
@@ -301,6 +301,1551 @@ from (values
 join grammar_topics t on t.unit = 12
 on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
 
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'At 10 a.m. yesterday I ___ on the release notes.', array['was working', 'were working', 'am working']::text[], 'was working', array[]::text[], 'I → was + -ing: действие шло в тот момент.'),
+  (2, 'multiple_choice', 'What ___ you doing at eight last night?', array['were', 'was', 'did']::text[], 'were', array[]::text[], 'You → were: What were you doing?'),
+  (3, 'multiple_choice', 'This time yesterday the servers ___ an update.', array['were installing', 'was installing', 'are installing']::text[], 'were installing', array[]::text[], 'The servers = they → were + -ing.'),
+  (4, 'multiple_choice', '''Was it raining when you left?'' ''No, it ___.''', array['wasn''t', 'didn''t', 'weren''t']::text[], 'wasn''t', array[]::text[], 'Вопрос с was → короткий ответ No, it wasn''t.'),
+  (5, 'multiple_choice', '___ your colleagues working from home last week?', array['Were', 'Was', 'Did']::text[], 'Were', array[]::text[], 'Your colleagues = they → Were they working…?'),
+  (6, 'fill_blank', 'At nine o''clock I ___ TV — I was reading a book. (watch, отрицание)', null::text[], 'wasn''t watching', array['was not watching']::text[], 'Отрицание: wasn''t + -ing.'),
+  (7, 'fill_blank', 'At 3 a.m. the admins ___ the database from a backup. (restore, past continuous)', null::text[], 'were restoring', array[]::text[], 'The admins = they → were + -ing.'),
+  (8, 'fill_blank', 'She ___ a presentation at 2 p.m., so she didn''t answer the phone. (give, past continuous)', null::text[], 'was giving', array[]::text[], 'Действие в процессе в момент прошлого: was giving.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 13
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I was fixing a bug when the power ___ off.', array['went', 'was going', 'goes']::text[], 'went', array[]::text[], 'Короткое событие прервало процесс → past simple: went.'),
+  (2, 'multiple_choice', 'We ___ lunch when the server crashed.', array['were having', 'have', 'are having']::text[], 'were having', array[]::text[], 'Фон в момент события → past continuous: were having.'),
+  (3, 'multiple_choice', 'When I saw the error, I immediately ___ my team lead.', array['called', 'was calling', 'call']::text[], 'called', array[]::text[], 'Последовательные действия (увидел → позвонил) — past simple.'),
+  (4, 'multiple_choice', 'I didn''t hear the phone because I ___ headphones.', array['was wearing', 'were wearing', 'am wearing']::text[], 'was wearing', array[]::text[], 'I → was + -ing: действие в процессе.'),
+  (5, 'multiple_choice', 'It ___ when we left the office, so we took a taxi.', array['was raining', 'is raining', 'rains']::text[], 'was raining', array[]::text[], 'Фон в прошлом → past continuous: was raining.'),
+  (6, 'fill_blank', 'What ___ you doing when I called you? (be)', null::text[], 'were', array[]::text[], 'You → were + doing: что ты делал в тот момент?'),
+  (7, 'fill_blank', 'Anna ___ her phone while she was walking home. (lose)', null::text[], 'lost', array[]::text[], 'Короткое событие на фоне процесса → past simple: lose → lost.'),
+  (8, 'fill_blank', 'The deploy suddenly ___ while I was having lunch. (fail)', null::text[], 'failed', array[]::text[], 'Событие, случившееся во время процесса, → past simple: failed.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 14
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I ___ my keys. I can''t open the door.', array['have lost', 'has lost', 'am losing']::text[], 'have lost', array[]::text[], 'Результат сейчас (не могу открыть) → present perfect: I have lost.'),
+  (2, 'multiple_choice', 'She ___ the report. Here it is.', array['has finished', 'have finished', 'has finish']::text[], 'has finished', array[]::text[], 'She → has + третья форма: finished.'),
+  (3, 'multiple_choice', 'Have you ___ my charger?', array['seen', 'saw', 'see']::text[], 'seen', array[]::text[], 'После have — третья форма: see → seen.'),
+  (4, 'multiple_choice', 'He ___ to Berlin. He isn''t here now.', array['has gone', 'has been', 'have gone']::text[], 'has gone', array[]::text[], 'Has gone — уехал и сейчас там; has been — был и вернулся.'),
+  (5, 'multiple_choice', 'My laptop ___ working. I need a new one.', array['has stopped', 'have stopped', 'has stop']::text[], 'has stopped', array[]::text[], 'My laptop = it → has + stopped.'),
+  (6, 'fill_blank', 'Look! Someone ___ my coffee. (drink, present perfect)', null::text[], 'has drunk', array['''s drunk']::text[], 'Someone → has + третья форма: drink → drunk.'),
+  (7, 'fill_blank', 'Someone ___ the build. Can you check the logs? (break, present perfect)', null::text[], 'has broken', array['''s broken']::text[], 'Результат сейчас → has + третья форма: break → broken.'),
+  (8, 'fill_blank', 'I ___ my email today. (check, present perfect, отрицание)', null::text[], 'haven''t checked', array['have not checked', '''ve not checked']::text[], 'Отрицание: haven''t + третья форма.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 15
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '''Is the coffee hot?'' ''Yes, I''ve ___ made it.''', array['just', 'yet', 'ever']::text[], 'just', array[]::text[], 'Только что → just, между have и глаголом.'),
+  (2, 'multiple_choice', 'Have you fixed the bug ___?', array['yet', 'just', 'still']::text[], 'yet', array[]::text[], 'В вопросе «уже?» → yet в конце.'),
+  (3, 'multiple_choice', 'I haven''t read the docs ___.', array['yet', 'already', 'just']::text[], 'yet', array[]::text[], 'В отрицании → yet в конце (already в отрицании не ставят).'),
+  (4, 'multiple_choice', 'You don''t need to send the invite. I''ve ___ sent it.', array['already', 'yet', 'ever']::text[], 'already', array[]::text[], 'Уже (раньше, чем ожидали) → already между have и глаголом.'),
+  (5, 'multiple_choice', '___ you finished the report yet?', array['Have', 'Has', 'Are']::text[], 'Have', array[]::text[], 'You → Have you + третья форма?'),
+  (6, 'fill_blank', '''Is the release ready?'' ''No, we ___ it yet.'' (test, present perfect, отрицание)', null::text[], 'haven''t tested', array['have not tested', '''ve not tested']::text[], 'yet в отрицании → haven''t + третья форма.'),
+  (7, 'fill_blank', 'The meeting ___ just started. (have/has)', null::text[], 'has', array[]::text[], 'The meeting = it → has just started.'),
+  (8, 'fill_blank', 'I''ve ___ pushed the changes. (уже)', null::text[], 'already', array[]::text[], '«Уже» в утверждении → already.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 16
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Have you ___ used Docker?', array['ever', 'ago', 'yet']::text[], 'ever', array[]::text[], 'Вопрос об опыте: Have you ever…?'),
+  (2, 'multiple_choice', 'I''ve ___ been to Japan, but I''d like to go.', array['never', 'ever', 'yet']::text[], 'never', array[]::text[], '«Никогда» в утверждении → never.'),
+  (3, 'multiple_choice', '''Has she ever been to India?'' ''Yes, she ___.''', array['has', 'is', 'did']::text[], 'has', array[]::text[], 'Вопрос с has → Yes, she has.'),
+  (4, 'multiple_choice', 'My parents have ___ to China twice.', array['been', 'gone', 'went']::text[], 'been', array[]::text[], 'Побывали и вернулись → have been to.'),
+  (5, 'multiple_choice', 'It''s the worst code I''ve ___ seen.', array['ever', 'never', 'already']::text[], 'ever', array[]::text[], 'После превосходной степени → ever: the worst… I''ve ever seen.'),
+  (6, 'fill_blank', 'How many times ___ you been late this month? (have/has)', null::text[], 'have', array[]::text[], 'You → have.'),
+  (7, 'fill_blank', 'She ___ on a plane — she''s afraid of flying. (be, never)', null::text[], 'has never been', array['''s never been']::text[], 'Опыт за всю жизнь: has never + третья форма.'),
+  (8, 'fill_blank', 'I ___ this error before. What does it mean? (see, never)', null::text[], 'have never seen', array['''ve never seen']::text[], 'never ставится между have и третьей формой: have never seen.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 17
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I ___ here since 2021.', array['have worked', 'work', 'am working']::text[], 'have worked', array[]::text[], 'Началось в прошлом и продолжается → present perfect (не present simple).'),
+  (2, 'multiple_choice', 'How long ___ you known Anna?', array['have', 'do', 'are']::text[], 'have', array[]::text[], 'How long + present perfect: How long have you known…?'),
+  (3, 'multiple_choice', 'We''ve ___ this laptop for five years.', array['had', 'have', 'having']::text[], 'had', array[]::text[], 'have/has + третья форма: have → had.'),
+  (4, 'multiple_choice', 'How long have you been ___ for a new job?', array['looking', 'look', 'looked']::text[], 'looking', array[]::text[], 'have been + -ing: действие в процессе до сих пор.'),
+  (5, 'multiple_choice', '''How long ___ in this team?'' ''Since March.''', array['have you been', 'are you', 'were you']::text[], 'have you been', array[]::text[], 'С марта и до сих пор → How long have you been…?'),
+  (6, 'fill_blank', 'She ___ ill since Monday. (be)', null::text[], 'has been', array['''s been']::text[], 'С понедельника и до сих пор → has been.'),
+  (7, 'fill_blank', 'It ___ for two hours. (rain, have been + -ing)', null::text[], 'has been raining', array['''s been raining']::text[], 'Процесс до сих пор → has been + -ing.'),
+  (8, 'fill_blank', 'We''re old friends. I ___ him for ten years. (know)', null::text[], 'have known', array['''ve known']::text[], '«Знаю его десять лет» → I have known (не I know).')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 18
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I''ve lived here ___ 2019.', array['since', 'for', 'ago']::text[], 'since', array[]::text[], 'Точка начала (2019) → since.'),
+  (2, 'multiple_choice', 'We''ve been in this meeting ___ two hours.', array['for', 'since', 'ago']::text[], 'for', array[]::text[], 'Отрезок времени → for.'),
+  (3, 'multiple_choice', 'She joined the company three months ___.', array['ago', 'for', 'since']::text[], 'ago', array[]::text[], '«Назад» → ago после отрезка, с past simple.'),
+  (4, 'multiple_choice', 'The tests have been failing ___ Tuesday.', array['since', 'for', 'ago']::text[], 'since', array[]::text[], 'С какого момента (Tuesday) → since.'),
+  (5, 'multiple_choice', '''When did you buy this laptop?'' ''About a year ___.''', array['ago', 'before', 'since']::text[], 'ago', array[]::text[], '«Год назад» от сегодняшнего дня → a year ago.'),
+  (6, 'fill_blank', 'I started learning English two years ___. (назад)', null::text[], 'ago', array[]::text[], '«Назад» → ago.'),
+  (7, 'fill_blank', 'I haven''t seen him ___ ages. (for/since)', null::text[], 'for', array[]::text[], 'Отрезок (ages = очень долго) → for.'),
+  (8, 'fill_blank', 'They have worked together ___ they left university. (for/since)', null::text[], 'since', array[]::text[], 'Точка начала (с тех пор как…) → since.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 19
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I ___ the bug yesterday.', array['fixed', 'have fixed', 'has fixed']::text[], 'fixed', array[]::text[], 'yesterday — законченное время → past simple.'),
+  (2, 'multiple_choice', '___ you finish the task last night?', array['Did', 'Have', 'Were']::text[], 'Did', array[]::text[], 'last night → past simple: Did you finish…?'),
+  (3, 'multiple_choice', 'I ___ Paris three years ago.', array['visited', 'have visited', 'have been visiting']::text[], 'visited', array[]::text[], 'ago → past simple.'),
+  (4, 'multiple_choice', 'We ___ in Moscow since 2018.', array['have lived', 'lived', 'live']::text[], 'have lived', array[]::text[], 'since + до сих пор → present perfect.'),
+  (5, 'multiple_choice', 'When ___ the new version?', array['did they release', 'have they released', 'they released']::text[], 'did they release', array[]::text[], 'Вопрос When…? → past simple.'),
+  (6, 'fill_blank', 'I ___ to that conference in 2022. (go)', null::text[], 'went', array[]::text[], 'in 2022 — законченное время → past simple: went.'),
+  (7, 'fill_blank', '''Have you ever used Rust?'' ''Yes, I ___ it on a project last year.'' (use)', null::text[], 'used', array[]::text[], 'Указано время (last year) → past simple.'),
+  (8, 'fill_blank', 'They ___ the office since 8 a.m. (leave, отрицание)', null::text[], 'haven''t left', array['have not left', '''ve not left']::text[], 'since + до сих пор → present perfect: haven''t left.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 20
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'This office ___ every evening.', array['is cleaned', 'cleans', 'cleaned']::text[], 'is cleaned', array[]::text[], 'Офис убирают (не он убирает) → is + третья форма.'),
+  (2, 'multiple_choice', 'The app ___ in 2020.', array['was created', 'is created', 'created']::text[], 'was created', array[]::text[], 'Прошлое (2020) → was + третья форма.'),
+  (3, 'multiple_choice', 'These tools ___ by many companies.', array['are used', 'is used', 'use']::text[], 'are used', array[]::text[], 'These tools = they → are used.'),
+  (4, 'multiple_choice', 'When ___ this feature added?', array['was', 'did', 'has']::text[], 'was', array[]::text[], 'Пассив в прошедшем: When was it added?'),
+  (5, 'multiple_choice', 'The code was reviewed ___ two people.', array['by', 'from', 'of']::text[], 'by', array[]::text[], 'Исполнитель в пассиве → by (не from).'),
+  (6, 'fill_blank', 'The bug ___ by a junior developer last week. (find)', null::text[], 'was found', array[]::text[], 'Past simple passive: was + found.'),
+  (7, 'fill_blank', 'I ___ in a small town. (be born)', null::text[], 'was born', array[]::text[], '«Я родился» → I was born.'),
+  (8, 'fill_blank', 'English ___ all over the world. (speak)', null::text[], 'is spoken', array[]::text[], 'Present simple passive: is + spoken.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 21
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'The server ___ right now, so the site is down.', array['is being repaired', 'is repaired', 'is repairing']::text[], 'is being repaired', array[]::text[], 'С сервером что-то делают сейчас → is being + третья форма.'),
+  (2, 'multiple_choice', 'My laptop ___. I''ll get it back tomorrow.', array['is being fixed', 'is fixing', 'has fixed']::text[], 'is being fixed', array[]::text[], 'Ноутбук ремонтируют (в процессе) → is being fixed.'),
+  (3, 'multiple_choice', 'The bug ___. You can close the ticket.', array['has been fixed', 'has fixed', 'is fixing']::text[], 'has been fixed', array[]::text[], 'Сделано, важен результат → has been + третья форма.'),
+  (4, 'multiple_choice', 'Look! The room is ___ cleaned.', array['being', 'been', 'be']::text[], 'being', array[]::text[], 'Процесс сейчас → is being + третья форма.'),
+  (5, 'multiple_choice', 'A new office ___ near the station at the moment.', array['is being built', 'has been built', 'is building']::text[], 'is being built', array[]::text[], 'at the moment → is being built.'),
+  (6, 'fill_blank', 'Your order ___. It will arrive tomorrow. (send, present perfect)', null::text[], 'has been sent', array['''s been sent']::text[], 'Present perfect passive: has been + sent.'),
+  (7, 'fill_blank', 'The meeting ___. It''s now on Friday. (move, present perfect)', null::text[], 'has been moved', array['''s been moved']::text[], 'Present perfect passive: has been + moved.'),
+  (8, 'fill_blank', 'The tests ___ yet. (run, present perfect, отрицание)', null::text[], 'haven''t been run', array['have not been run', '''ve not been run']::text[], 'Отрицание: haven''t been + третья форма (run → run).')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 22
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '___ you like your new job?', array['Do', 'Are', 'Have']::text[], 'Do', array[]::text[], 'Present simple → вопрос с do.'),
+  (2, 'multiple_choice', '___ you working on the API now?', array['Are', 'Do', 'Have']::text[], 'Are', array[]::text[], '-ing (continuous) → вопрос с be: Are you working?'),
+  (3, 'multiple_choice', '___ she finished the report yet?', array['Has', 'Does', 'Is']::text[], 'Has', array[]::text[], 'Третья форма (present perfect) → вопрос с has.'),
+  (4, 'multiple_choice', 'Where ___ this laptop made?', array['was', 'did', 'has']::text[], 'was', array[]::text[], 'Пассив → вопрос с be: Where was it made?'),
+  (5, 'multiple_choice', 'I ___ understand the question.', array['don''t', 'am not', 'haven''t']::text[], 'don''t', array[]::text[], 'Present simple → отрицание с do: I don''t understand.'),
+  (6, 'fill_blank', 'What ___ you doing when the alarm went off? (be/have/do)', null::text[], 'were', array[]::text[], 'Past continuous → were + doing.'),
+  (7, 'fill_blank', 'The tests ___ pass yesterday. (be/have/do, отрицание)', null::text[], 'didn''t', array['did not']::text[], 'Past simple → отрицание didn''t + глагол.'),
+  (8, 'fill_blank', 'How long ___ you known Tom? (be/have/do)', null::text[], 'have', array[]::text[], 'Present perfect → have + known.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 23
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I ___ the documentation last night.', array['read', 'readed', 'reading']::text[], 'read', array[]::text[], 'read — неправильный глагол: read — read — read.'),
+  (2, 'multiple_choice', 'Have you ___ the new design?', array['seen', 'saw', 'seed']::text[], 'seen', array[]::text[], 'see — saw — seen; после have — третья форма.'),
+  (3, 'multiple_choice', 'Last year the course ___ 300 euros.', array['cost', 'costed', 'costs']::text[], 'cost', array[]::text[], 'cost — cost — cost: все формы совпадают.'),
+  (4, 'multiple_choice', 'We ___ a lot from that mistake.', array['learned', 'learnd', 'lerned']::text[], 'learned', array[]::text[], 'Правильный глагол: learn → learned (в британском английском также learnt).'),
+  (5, 'multiple_choice', 'They ___ the release last Monday.', array['planned', 'planed', 'plannd']::text[], 'planned', array[]::text[], 'plan → planned: согласная после краткой гласной удваивается.'),
+  (6, 'fill_blank', 'She ___ a great article about testing. (write, past simple)', null::text[], 'wrote', array[]::text[], 'write — wrote — written.'),
+  (7, 'fill_blank', 'I''ve ___ my password again. (forget)', null::text[], 'forgotten', array[]::text[], 'forget — forgot — forgotten; после have — третья форма.'),
+  (8, 'fill_blank', 'Who ___ you this laptop? (give, past simple)', null::text[], 'gave', array[]::text[], 'give — gave — given.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 24
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'What ___ tomorrow evening?', array['are you doing', 'do you do', 'you are doing']::text[], 'are you doing', array[]::text[], 'Планы на будущее → present continuous: What are you doing?'),
+  (2, 'multiple_choice', 'I ___ the client at 3 p.m. on Friday. It''s in my calendar.', array['am meeting', 'meets', 'meeting']::text[], 'am meeting', array[]::text[], 'Договорённость → present continuous: am meeting.'),
+  (3, 'multiple_choice', 'The train ___ at 7:45 tomorrow morning.', array['leaves', 'is leave', 'leave']::text[], 'leaves', array[]::text[], 'Расписание → present simple: leaves.'),
+  (4, 'multiple_choice', 'The conference ___ on 5 May and ends on 7 May.', array['starts', 'is start', 'start']::text[], 'starts', array[]::text[], 'Программа мероприятия → present simple: starts.'),
+  (5, 'multiple_choice', '''Are you working tomorrow?'' ''No, I ___ a day off.''', array['am taking', 'take', 'took']::text[], 'am taking', array[]::text[], 'Личный план → present continuous: I am taking.'),
+  (6, 'fill_blank', 'We ___ to Italy next week. We''ve already booked the tickets. (fly, present continuous)', null::text[], 'are flying', array['''re flying']::text[], 'Билеты куплены — договорённость → we are flying.'),
+  (7, 'fill_blank', 'Anna ___ to the party on Saturday — she''s working. (come, present continuous, отрицание)', null::text[], 'isn''t coming', array['is not coming', '''s not coming']::text[], 'Планы → present continuous: isn''t coming.'),
+  (8, 'fill_blank', 'What time ___ the film start tonight? (do/does)', null::text[], 'does', array[]::text[], 'Расписание → present simple: What time does it start?')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 25
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I ___ going to refactor this module tomorrow.', array['am', 'is', 'are']::text[], 'am', array[]::text[], 'I → am going to.'),
+  (2, 'multiple_choice', 'We''re going to ___ the new version on Friday.', array['release', 'releasing', 'released']::text[], 'release', array[]::text[], 'После going to — глагол в начальной форме.'),
+  (3, 'fill_blank', 'When ___ you going to finish the report? (be)', null::text[], 'are', array[]::text[], 'Вопрос: When are you going to…?'),
+  (4, 'multiple_choice', 'Look at those clouds! It ___ rain.', array['is going to', 'going to', 'goes to']::text[], 'is going to', array[]::text[], 'Прогноз по тому, что видно сейчас: it is going to; is не пропускаем.'),
+  (5, 'fill_blank', 'He ___ the old server — we still need it. (delete, going to, отрицание)', null::text[], 'isn''t going to delete', array['is not going to delete', '''s not going to delete']::text[], 'Отрицание: is not (isn''t) going to + глагол.'),
+  (6, 'multiple_choice', 'The tests are failing, so we ___ deploy today.', array['aren''t going to', 'don''t going to', 'not going to']::text[], 'aren''t going to', array[]::text[], 'Отрицание: are not (aren''t) going to, без do.'),
+  (7, 'fill_blank', 'They ___ a new developer next month. (hire, going to)', null::text[], 'are going to hire', array['''re going to hire']::text[], 'План на будущее: they are going to + глагол.'),
+  (8, 'multiple_choice', 'I ___ call you yesterday, but I forgot.', array['was going to', 'am going to', 'going to']::text[], 'was going to', array[]::text[], 'Собирался, но не сделал → was going to.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 26
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Don''t worry, the fix ___ only five minutes.', array['will take', 'will takes', 'will to take']::text[], 'will take', array[]::text[], 'will + глагол без to и без -s.'),
+  (2, 'multiple_choice', 'Tom is ill, so he ___ at work tomorrow.', array['won''t be', 'doesn''t be', 'isn''t be']::text[], 'won''t be', array[]::text[], 'Отрицание в будущем: won''t (will not) + глагол.'),
+  (3, 'fill_blank', 'The new version ___ ready next week. (be, will)', null::text[], 'will be', array['''ll be']::text[], 'Будущее: will + be.'),
+  (4, 'multiple_choice', '___ the meeting be online or in the office?', array['Will', 'Does', 'Shall']::text[], 'Will', array[]::text[], 'Вопрос о будущем: Will + подлежащее + глагол? Shall в вопросах — только с I/we.'),
+  (5, 'multiple_choice', 'I ___ he''ll finish the task today. It''s too big.', array['don''t think', 'think not', 'not think']::text[], 'don''t think', array[]::text[], 'Говорят I don''t think he''ll…, а не I think not / I not think.'),
+  (6, 'fill_blank', 'Don''t wait for me tomorrow — I ___ in the office. (be, will, отрицание)', null::text[], 'won''t be', array['will not be']::text[], 'Отрицание: won''t (will not) + be.'),
+  (7, 'multiple_choice', 'Do you think the client ___ like the new design?', array['will', 'is', 'does']::text[], 'will', array[]::text[], 'Do you think … will …? — вопрос-прогноз о будущем.'),
+  (8, 'fill_blank', 'I''m sure the users ___ the new feature. (love, will)', null::text[], 'will love', array['''ll love']::text[], 'Прогноз: will + глагол без to.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 27
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '''The coffee machine is broken.'' ''OK, I ___ the office manager.''', array['will tell', 'tell', 'am telling']::text[], 'will tell', array[]::text[], 'Решение в момент речи → will (I''ll).'),
+  (2, 'multiple_choice', '___ I help you with the slides?', array['Shall', 'Will', 'Do']::text[], 'Shall', array[]::text[], 'Предложить помощь: Shall I…?'),
+  (3, 'multiple_choice', 'It''s late. ___ we finish the review tomorrow?', array['Shall', 'Let', 'Are']::text[], 'Shall', array[]::text[], 'Предложить сделать вместе: Shall we…?'),
+  (4, 'fill_blank', '''I don''t understand this error.'' ''Don''t worry, I ___ you.'' (help, will)', null::text[], 'will help', array['''ll help']::text[], 'Предложение помощи в момент речи → I''ll (I will) help.'),
+  (5, 'multiple_choice', '''Did you call the client?'' ''Oh no, I forgot! ___ him now.''', array['I''ll call', 'I call', 'I called']::text[], 'I''ll call', array[]::text[], 'Решение прямо сейчас → I''ll + глагол.'),
+  (6, 'multiple_choice', '''Why are you buying train tickets?'' ''I ___ my sister this weekend.''', array['am going to visit', 'going to visit', 'visit']::text[], 'am going to visit', array[]::text[], 'Решили заранее (билеты уже покупают) → am going to; am не пропускаем, present simple здесь не подходит.'),
+  (7, 'fill_blank', 'It''s cold in here. ___ I close the window? (shall или will)', null::text[], 'shall', array[]::text[], 'Мне сделать…? → Shall I…?'),
+  (8, 'fill_blank', 'I promise I ___ late again. (be, will, отрицание)', null::text[], 'won''t be', array['will not be']::text[], 'Обещание → won''t (will not).')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 28
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Take an umbrella. It ___ rain later.', array['might', 'might to', 'mights']::text[], 'might', array[]::text[], 'Возможно → might + глагол без to.'),
+  (2, 'multiple_choice', 'She might ___ late today.', array['be', 'is', 'to be']::text[], 'be', array[]::text[], 'После might — глагол в начальной форме: might be.'),
+  (3, 'multiple_choice', 'I''m not sure, but the bug ___ in the payment module.', array['might be', 'might is', 'is might']::text[], 'might be', array[]::text[], 'Не уверены → might be.'),
+  (4, 'fill_blank', 'Don''t deploy on Friday — something ___ wrong. (go, might)', null::text[], 'might go', array[]::text[], 'Возможность → might + go.'),
+  (5, 'fill_blank', 'I ___ to the party; I''m very tired. (come, might, отрицание)', null::text[], 'might not come', array['mightn''t come']::text[], 'Возможно, нет → might not + глагол.'),
+  (6, 'multiple_choice', '''Are you going to the conference?'' ''I don''t know. I ___.''', array['might', 'might go to', 'might to']::text[], 'might', array[]::text[], 'В коротком ответе: I might (без глагола).'),
+  (7, 'multiple_choice', 'The client ___ the new design — we''ll see tomorrow.', array['might not like', 'might not likes', 'doesn''t might like']::text[], 'might not like', array[]::text[], 'Отрицание: might not + глагол без -s.'),
+  (8, 'fill_blank', 'We ___ a new tester next month, but it isn''t decided yet. (hire, might)', null::text[], 'might hire', array[]::text[], 'Ещё не решено → might + глагол.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 29
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'She ___ write code in three languages.', array['can', 'cans', 'can to']::text[], 'can', array[]::text[], 'can одинаково для всех лиц, без to.'),
+  (2, 'multiple_choice', 'Can you ___ my screen?', array['see', 'to see', 'seeing']::text[], 'see', array[]::text[], 'После can — глагол в начальной форме.'),
+  (3, 'fill_blank', 'I ___ log in yesterday — my password didn''t work. (can, прошедшее, отрицание)', null::text[], 'couldn''t', array['could not']::text[], 'Не смог в прошлом → couldn''t (could not).'),
+  (4, 'multiple_choice', '___ you send me the link, please?', array['Could', 'Do', 'Are']::text[], 'Could', array[]::text[], 'Вежливая просьба: Could you…?'),
+  (5, 'fill_blank', 'When he was five, he ___ already read. (can, прошедшее)', null::text[], 'could', array[]::text[], 'Умел в прошлом → could.'),
+  (6, 'multiple_choice', 'Sorry, I ___ hear you. Your microphone is off.', array['can''t', 'don''t can', 'not can']::text[], 'can''t', array[]::text[], 'Отрицание: can''t (cannot), без don''t.'),
+  (7, 'fill_blank', 'My grandmother is 80, but she ___ video calls without help. (make, can)', null::text[], 'can make', array[]::text[], 'Умеет → can + глагол без -s.'),
+  (8, 'multiple_choice', '___ I leave early today? I have a doctor''s appointment.', array['Can', 'Do', 'Am']::text[], 'Can', array[]::text[], 'Спросить разрешения: Can I…?')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 30
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'You ___ wear a badge in the office.', array['must', 'must to', 'musts']::text[], 'must', array[]::text[], 'must + глагол без to, одинаково для всех лиц.'),
+  (2, 'multiple_choice', 'You ___ tell anyone your password. It''s secret.', array['mustn''t', 'don''t need to', 'needn''t']::text[], 'mustn''t', array[]::text[], 'Запрет → mustn''t.'),
+  (3, 'multiple_choice', 'You ___ bring your laptop tomorrow. We''ll give you one.', array['don''t need to', 'mustn''t', 'must']::text[], 'don''t need to', array[]::text[], 'Не нужно, можно не делать → don''t need to.'),
+  (4, 'fill_blank', 'Yesterday I ___ stay at work until nine. (must, прошедшее)', null::text[], 'had to', array[]::text[], 'У must нет прошедшего времени → had to.'),
+  (5, 'multiple_choice', 'This is a very important meeting. I ___ be late.', array['mustn''t', 'don''t need to', 'must']::text[], 'mustn''t', array[]::text[], 'Опаздывать нельзя → mustn''t.'),
+  (6, 'fill_blank', 'You ___ tests for every new function. It''s a team rule. (write, must)', null::text[], 'must write', array[]::text[], 'Обязательно → must + глагол.'),
+  (7, 'fill_blank', 'We have plenty of time. We ___ hurry. (need, отрицание)', null::text[], 'don''t need to', array['do not need to', 'needn''t', 'need not']::text[], 'Нет необходимости → don''t need to (needn''t).'),
+  (8, 'multiple_choice', 'The servers are down. We ___ fix this now!', array['must', 'mustn''t', 'don''t need to']::text[], 'must', array[]::text[], 'Срочно и обязательно → must.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 31
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'You look tired. You ___ go to bed early.', array['should', 'should to', 'shoulds']::text[], 'should', array[]::text[], 'Совет: should + глагол без to.'),
+  (2, 'multiple_choice', 'You ___ push directly to main. Create a pull request.', array['shouldn''t', 'should', 'don''t should']::text[], 'shouldn''t', array[]::text[], 'Не стоит → shouldn''t, без don''t.'),
+  (3, 'multiple_choice', '___ I ask the team lead about this?', array['Should', 'Does', 'Am']::text[], 'Should', array[]::text[], 'Просим совета: Should I…?'),
+  (4, 'fill_blank', 'It''s a great book. You ___ it. (read, should)', null::text[], 'should read', array[]::text[], 'Совет → should + глагол.'),
+  (5, 'fill_blank', 'You ___ so much coffee — it''s bad for you. (drink, should, отрицание)', null::text[], 'shouldn''t drink', array['should not drink']::text[], 'Не стоит → shouldn''t + глагол.'),
+  (6, 'multiple_choice', 'I think we ___ more tests before the release.', array['should write', 'should writing', 'should to write']::text[], 'should write', array[]::text[], 'После should — глагол в начальной форме.'),
+  (7, 'multiple_choice', 'I ___ you should deploy on Friday evening.', array['don''t think', 'think not', 'not think']::text[], 'don''t think', array[]::text[], 'Совет «не стоит»: I don''t think you should…'),
+  (8, 'fill_blank', 'What time ___ we arrive at the office tomorrow? (should)', null::text[], 'should', array[]::text[], 'Вопрос-совет: What time should we…?')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 32
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'She ___ to work on Saturdays.', array['has', 'have', 'haves']::text[], 'has', array[]::text[], 'She → has to.'),
+  (2, 'multiple_choice', 'We ___ to update the docs before the release.', array['have', 'has', 'must']::text[], 'have', array[]::text[], 'We → have to; must без to.'),
+  (3, 'fill_blank', 'Last week I ___ work on Sunday. (have to, прошедшее)', null::text[], 'had to', array[]::text[], 'Прошедшее от have to → had to.'),
+  (4, 'multiple_choice', '___ you have to wear a suit at work?', array['Do', 'Have', 'Are']::text[], 'Do', array[]::text[], 'Вопрос: Do you have to…?'),
+  (5, 'multiple_choice', 'It''s Saturday. You ___ get up early.', array['don''t have to', 'mustn''t', 'doesn''t have to']::text[], 'don''t have to', array[]::text[], 'Не обязательно (но не запрещено) → don''t have to.'),
+  (6, 'fill_blank', 'He ___ come to the office; he can work from home. (have to, отрицание)', null::text[], 'doesn''t have to', array['does not have to']::text[], 'He → doesn''t have to (не doesn''t has to).'),
+  (7, 'multiple_choice', 'Why ___ he have to leave so early yesterday?', array['did', 'does', 'had']::text[], 'did', array[]::text[], 'Вопрос в прошлом: Why did he have to…?'),
+  (8, 'fill_blank', 'Our tester ___ check every release manually. (have to)', null::text[], 'has to', array[]::text[], 'Our tester = he/she → has to.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 33
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '___ you like some coffee?', array['Would', 'Do', 'Are']::text[], 'Would', array[]::text[], 'Вежливое предложение: Would you like…?'),
+  (2, 'multiple_choice', 'I''d like ___ a question.', array['to ask', 'ask', 'asking']::text[], 'to ask', array[]::text[], 'would like + to + глагол.'),
+  (3, 'multiple_choice', '''Would you like a cookie?'' ''___''', array['Yes, please.', 'Yes, I like.', 'Yes, I would like.']::text[], 'Yes, please.', array[]::text[], 'Принять предложение: Yes, please.'),
+  (4, 'multiple_choice', '___ you like your new job?', array['Do', 'Would', 'Are']::text[], 'Do', array[]::text[], 'Нравится ли вообще → Do you like…?'),
+  (5, 'fill_blank', 'I ___ to speak to the manager, please. (like, would)', null::text[], 'would like', array['''d like']::text[], 'Вежливая просьба → I''d (I would) like to…'),
+  (6, 'multiple_choice', 'What ___ for dinner?', array['would you like', 'you would like', 'do you would like']::text[], 'would you like', array[]::text[], 'В вопросе would перед подлежащим: What would you like?'),
+  (7, 'fill_blank', 'We''re starting the demo now. ___ you like to see it? (would/do)', null::text[], 'would', array[]::text[], 'Предложение сейчас → Would you like…?'),
+  (8, 'fill_blank', 'I ___ coffee in the morning — I usually drink tea. (like, отрицание)', null::text[], 'don''t like', array['do not like']::text[], 'Не нравится вообще → present simple: don''t like.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 34
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '___ the door, please. It''s cold.', array['Close', 'Closes', 'To close']::text[], 'Close', array[]::text[], 'Повелительное наклонение — начальная форма глагола.'),
+  (2, 'multiple_choice', '___ touch that cable!', array['Don''t', 'Not', 'No']::text[], 'Don''t', array[]::text[], 'Запрет: Don''t + глагол.'),
+  (3, 'multiple_choice', 'It''s late. ___ go home.', array['Let''s', 'Let', 'Let us to']::text[], 'Let''s', array[]::text[], 'Предложить вместе: Let''s + глагол без to.'),
+  (4, 'fill_blank', '___ late for the demo tomorrow! (be, отрицание)', null::text[], 'don''t be', array['do not be']::text[], 'Отрицательная просьба: Don''t be…'),
+  (5, 'multiple_choice', 'The release is ready. ___ deploy it!', array['Let''s', 'Let''s to', 'We let''s']::text[], 'Let''s', array[]::text[], 'Let''s + глагол без to.'),
+  (6, 'fill_blank', 'It''s raining. Let''s ___ out tonight. (go, отрицание)', null::text[], 'not go', array[]::text[], 'Отрицание с let''s: Let''s not + глагол.'),
+  (7, 'multiple_choice', 'Please ___ me the logs when you have a minute.', array['send', 'sends', 'to send']::text[], 'send', array[]::text[], 'Просьба: please + начальная форма глагола.'),
+  (8, 'fill_blank', '___ the old branch — we still need it! (delete, отрицание)', null::text[], 'don''t delete', array['do not delete']::text[], 'Запрет: Don''t + глагол.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 35
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I ___ work in a bank, but now I''m a developer.', array['used to', 'use to', 'was used to']::text[], 'used to', array[]::text[], 'Раньше было, теперь нет → used to + глагол.'),
+  (2, 'multiple_choice', 'She used to ___ in Moscow.', array['live', 'living', 'lived']::text[], 'live', array[]::text[], 'После used to — начальная форма глагола.'),
+  (3, 'multiple_choice', 'We ___ write everything in Java, but now we use Python.', array['used to', 'were used to', 'use to']::text[], 'used to', array[]::text[], 'Прошлая привычка → used to, без was/were.'),
+  (4, 'fill_blank', 'I ___ like coffee, but now I drink three cups a day. (use to, отрицание)', null::text[], 'didn''t use to', array['did not use to']::text[], 'Отрицание: didn''t use to (без -d).'),
+  (5, 'multiple_choice', '___ you use to play computer games?', array['Did', 'Do', 'Were']::text[], 'Did', array[]::text[], 'Вопрос: Did you use to…?'),
+  (6, 'fill_blank', 'This office ___ a factory many years ago. (be, used to)', null::text[], 'used to be', array[]::text[], 'Раньше было → used to be.'),
+  (7, 'multiple_choice', 'Now I ___ work from home on Fridays.', array['usually', 'used to', 'use to']::text[], 'usually', array[]::text[], 'Для настоящего used to нет — present simple с usually.'),
+  (8, 'fill_blank', 'Before we had automatic tests, our tester ___ every page by hand. (check, used to)', null::text[], 'used to check', array[]::text[], 'Прошлая регулярная работа → used to + глагол.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 36
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '___ a bug in this function.', array['There is', 'It is', 'There are']::text[], 'There is', array[]::text[], 'Сообщаем, что что-то есть → There is + единственное число.'),
+  (2, 'fill_blank', 'There ___ two new tickets in the backlog. (be)', null::text[], 'are', array[]::text[], 'Множественное число → there are.'),
+  (3, 'multiple_choice', '___ any meetings this afternoon?', array['Are there', 'There are', 'Is there']::text[], 'Are there', array[]::text[], 'Вопрос: Are there + множественное число?'),
+  (4, 'fill_blank', 'There ___ any tests for this module. (be, отрицание)', null::text[], 'aren''t', array['are not']::text[], 'Отрицание с множественным числом → there aren''t any.'),
+  (5, 'multiple_choice', '''Is there a café near the office?'' ''Yes, there ___.''', array['is', '''s', 'are']::text[], 'is', array[]::text[], 'В коротком ответе не сокращаем: Yes, there is.'),
+  (6, 'multiple_choice', '___ a lot of people in the office today.', array['There are', 'There is', 'It is']::text[], 'There are', array[]::text[], 'a lot of people — множественное число → There are.'),
+  (7, 'fill_blank', 'How many developers ___ in your team? (be, there)', null::text[], 'are there', array[]::text[], 'Вопрос: How many … are there?'),
+  (8, 'multiple_choice', 'This code is hard to read. ___ no comments in it.', array['There are', 'It is', 'There is']::text[], 'There are', array[]::text[], 'comments — множественное число → There are no…')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 37
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'There ___ a power cut in the office yesterday.', array['was', 'were', 'is']::text[], 'was', array[]::text[], 'Прошлое, единственное число → there was.'),
+  (2, 'multiple_choice', 'There ___ many people at the conference last year.', array['were', 'was', 'are']::text[], 'were', array[]::text[], 'Прошлое, множественное число → there were.'),
+  (3, 'fill_blank', '___ a meeting tomorrow at ten. (there + be, will)', null::text[], 'there will be', array['there''ll be']::text[], 'Будущее → there will be.'),
+  (4, 'multiple_choice', 'There ___ a lot of bugs since the last update.', array['have been', 'has been', 'were']::text[], 'have been', array[]::text[], 'since + множественное число → there have been.'),
+  (5, 'multiple_choice', '___ any problems with the deployment last night?', array['Were there', 'There were', 'Was there']::text[], 'Were there', array[]::text[], 'Вопрос в прошлом, множественное число: Were there…?'),
+  (6, 'fill_blank', 'There ___ any coffee left this morning, so I went to the café. (be, прошедшее, отрицание)', null::text[], 'wasn''t', array['was not']::text[], 'coffee — неисчисляемое → there wasn''t.'),
+  (7, 'multiple_choice', 'The office was empty. There ___ nobody there.', array['was', 'were', 'is']::text[], 'was', array[]::text[], 'nobody — единственное число, прошлое → there was.'),
+  (8, 'fill_blank', 'There ___ an accident on the main road, so traffic is slow. (be, present perfect)', null::text[], 'has been', array['''s been']::text[], 'Результат важен сейчас, единственное число → there has been.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 38
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '___ ten o''clock. The standup is starting.', array['It''s', 'Is', 'Now is']::text[], 'It''s', array[]::text[], 'Время: It''s ten o''clock — подлежащее it обязательно.'),
+  (2, 'multiple_choice', '___ very windy today, so I''m taking the bus.', array['It''s', 'Is', 'There is']::text[], 'It''s', array[]::text[], 'Погода: It''s windy — без it нельзя.'),
+  (3, 'multiple_choice', 'How far ___ from your flat to the office?', array['is it', 'it is', 'is']::text[], 'is it', array[]::text[], 'Расстояние: How far is it from… to…?'),
+  (4, 'fill_blank', 'Yesterday ___ very hot in the server room. (it + be, past)', null::text[], 'it was', array[]::text[], 'Погода/состояние в прошлом: it was.'),
+  (5, 'multiple_choice', '___ difficult to read code without comments.', array['It''s', 'Is', 'This']::text[], 'It''s', array[]::text[], 'It''s + прилагательное + to + глагол.'),
+  (6, 'fill_blank', 'What day is ___ today? (местоимение)', null::text[], 'it', array[]::text[], 'День и дата: What day is it?'),
+  (7, 'fill_blank', '___ late. Let''s finish the review tomorrow. (it + be)', null::text[], 'It''s', array['it is']::text[], 'Время суток: It''s late.'),
+  (8, 'multiple_choice', 'Hi, Dan! It''s nice ___ you again.', array['see', 'to see', 'that see']::text[], 'to see', array[]::text[], 'It''s nice + to + глагол.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 39
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I''m not tired, but Max ___.', array['is', 'does', 'are']::text[], 'is', array[]::text[], 'Не повторяем tired: Max is.'),
+  (2, 'multiple_choice', 'I don''t like long meetings, but my manager ___.', array['is', 'does', 'do']::text[], 'does', array[]::text[], 'Вместо likes — вспомогательный: he does.'),
+  (3, 'multiple_choice', 'She can write SQL, but I ___.', array['can''t', 'don''t', 'am not']::text[], 'can''t', array[]::text[], 'Повторяем модальный глагол: I can''t.'),
+  (4, 'fill_blank', 'I haven''t read the spec yet, but Olga ___. (have)', null::text[], 'has', array[]::text[], 'Present perfect: Olga has (read it).'),
+  (5, 'multiple_choice', 'We were in the office yesterday, but they ___.', array['didn''t', 'weren''t', 'wasn''t']::text[], 'weren''t', array[]::text[], 'were → they weren''t.'),
+  (6, 'fill_blank', 'He doesn''t use Linux, but I ___. (do)', null::text[], 'do', array[]::text[], 'Present simple, I → do.'),
+  (7, 'multiple_choice', '''Did you fix the bug?'' ''No, but Sam ___.''', array['did', 'fixed', 'was']::text[], 'did', array[]::text[], 'Past simple: вместо fixed it — Sam did.'),
+  (8, 'fill_blank', 'My sister will be at the party, but I ___. (will, отрицание)', null::text[], 'won''t', array['will not']::text[], 'will → won''t (will not).')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 40
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '''I''m on call this weekend.'' ''___ you? That''s bad luck.''', array['Are', 'Do', 'Have']::text[], 'Are', array[]::text[], 'Реакция на I''m: Are you?'),
+  (2, 'multiple_choice', '''I work from home on Fridays.'' ''___ you? I didn''t know that.''', array['Are', 'Do', 'Does']::text[], 'Do', array[]::text[], 'Present simple без вспомогательного → Do you?'),
+  (3, 'multiple_choice', '''Anna got a new job last week.'' ''___ she? Where?''', array['Has', 'Did', 'Was']::text[], 'Did', array[]::text[], 'Past simple (got) → Did she?'),
+  (4, 'multiple_choice', '''The server isn''t responding.'' ''___ it? Let me check.''', array['Isn''t', 'Doesn''t', 'Wasn''t']::text[], 'Isn''t', array[]::text[], 'После отрицания с isn''t → Isn''t it?'),
+  (5, 'fill_blank', '''I can''t open the file.'' ''___ you? Try another editor.'' (can, отрицание)', null::text[], 'Can''t', array[]::text[], 'После can''t → Can''t you?'),
+  (6, 'fill_blank', '''We were at the conference yesterday.'' ''___ you? How was it?'' (be)', null::text[], 'Were', array[]::text[], 'were → Were you?'),
+  (7, 'multiple_choice', '''I''ve already finished the task.'' ''___ you? That was quick.''', array['Did', 'Have', 'Are']::text[], 'Have', array[]::text[], 'Present perfect (I''ve) → Have you?'),
+  (8, 'fill_blank', '''Tom will be late today.'' ''___ he? Why?'' (will)', null::text[], 'Will', array[]::text[], 'will → Will he?')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 41
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '''I''m hungry.'' ''I am ___.''', array['too', 'either', 'so']::text[], 'too', array[]::text[], 'Утверждение → too.'),
+  (2, 'multiple_choice', '''I don''t like long meetings.'' ''I don''t ___.''', array['too', 'either', 'neither']::text[], 'either', array[]::text[], 'После отрицания «тоже» — either, не too.'),
+  (3, 'multiple_choice', '''I work from home.'' ''___ do I.''', array['So', 'Neither', 'Too']::text[], 'So', array[]::text[], 'Утверждение → So do I.'),
+  (4, 'multiple_choice', '''I can''t open the link.'' ''___ can I.''', array['So', 'Neither', 'Either']::text[], 'Neither', array[]::text[], 'После отрицания → Neither can I.'),
+  (5, 'multiple_choice', '''I''m not ready for the release.'' ''___.''', array['Neither am I', 'Neither I am', 'So am I']::text[], 'Neither am I', array[]::text[], 'После neither — обратный порядок: Neither am I.'),
+  (6, 'fill_blank', '''I haven''t seen the new design.'' ''Neither ___ I.'' (вспомогательный глагол)', null::text[], 'have', array[]::text[], 'haven''t → Neither have I.'),
+  (7, 'fill_blank', '''Tom didn''t come to the meeting.'' ''Anna didn''t come ___.'' (тоже)', null::text[], 'either', array[]::text[], 'В отрицании «тоже» — either.'),
+  (8, 'fill_blank', '''I was at the demo yesterday.'' ''So ___ I.'' (вспомогательный глагол)', null::text[], 'was', array[]::text[], 'I was → So was I.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 42
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'The build ___ broken. It''s fine.', array['isn''t', 'doesn''t', 'not']::text[], 'isn''t', array[]::text[], 'be + not: isn''t.'),
+  (2, 'multiple_choice', 'I ___ understand this error.', array['don''t', 'not', 'am not']::text[], 'don''t', array[]::text[], 'Present simple: don''t + глагол, просто not нельзя.'),
+  (3, 'multiple_choice', 'She ___ come to the standup yesterday.', array['didn''t', 'doesn''t', 'wasn''t']::text[], 'didn''t', array[]::text[], 'Прошлое: didn''t + глагол.'),
+  (4, 'multiple_choice', 'I ___ finished the report yet.', array['don''t', 'haven''t', 'didn''t']::text[], 'haven''t', array[]::text[], 'Present perfect: haven''t + finished.'),
+  (5, 'multiple_choice', '___ touch the production database!', array['Don''t', 'Not', 'No']::text[], 'Don''t', array[]::text[], 'Запрет: Don''t + глагол.'),
+  (6, 'fill_blank', 'We ___ release on Friday. It''s too risky. (will, отрицание)', null::text[], 'won''t', array['will not']::text[], 'will not = won''t.'),
+  (7, 'fill_blank', 'I ___ hear you. Your microphone is off. (can, отрицание)', null::text[], 'can''t', array['cannot', 'can not']::text[], 'can → can''t (cannot).'),
+  (8, 'fill_blank', 'The tests ___ on my machine yesterday. (run, отрицание, past simple)', null::text[], 'didn''t run', array['did not run']::text[], 'didn''t + начальная форма: didn''t run.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 43
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '___ you ready for the demo?', array['Are', 'Do', 'Have']::text[], 'Are', array[]::text[], 'С прилагательным ready — глагол be: Are you…?'),
+  (2, 'multiple_choice', '___ you finished the task?', array['Did', 'Have', 'Are']::text[], 'Have', array[]::text[], 'Present perfect: Have you finished?'),
+  (3, 'multiple_choice', 'Where ___ your sister work?', array['does', 'do', 'is']::text[], 'does', array[]::text[], 'Your sister = she → Where does… work?'),
+  (4, 'multiple_choice', 'When ___ the release? Last week?', array['was', 'did', 'has']::text[], 'was', array[]::text[], 'Прошлое с be: When was…?'),
+  (5, 'multiple_choice', 'Why ___ to the meeting?', array['didn''t you come', 'you didn''t come', 'didn''t you came']::text[], 'didn''t you come', array[]::text[], 'Отрицательный вопрос: Why didn''t you + глагол?'),
+  (6, 'fill_blank', 'How long ___ you been a developer? (have/has)', null::text[], 'have', array[]::text[], 'You → have: How long have you been…?'),
+  (7, 'fill_blank', 'Where ___ you yesterday? (be)', null::text[], 'were', array[]::text[], 'Прошлое, you → were.'),
+  (8, 'fill_blank', 'What ___ you say to the client? (do, past)', null::text[], 'did', array[]::text[], 'Past simple: What did you say?')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 44
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Who ___ this bug? Was it you?', array['found', 'find', 'did found']::text[], 'found', array[]::text[], 'Who — подлежащее: Who found…? без did.'),
+  (2, 'multiple_choice', 'Who ___ you call yesterday?', array['did', 'does', 'was']::text[], 'did', array[]::text[], 'Who — дополнение (кому?): Who did you call?'),
+  (3, 'multiple_choice', 'What ___ at the meeting?', array['happened', 'was happen', 'did it happen']::text[], 'happened', array[]::text[], 'What — подлежащее: What happened?'),
+  (4, 'multiple_choice', 'Who ___ the new laptop? Anyone?', array['wants', 'want', 'does wants']::text[], 'wants', array[]::text[], 'Who — подлежащее, глагол с -s: Who wants…?'),
+  (5, 'multiple_choice', 'What ___ you tell the client?', array['did', 'was', 'does']::text[], 'did', array[]::text[], 'What — дополнение: What did you tell…?'),
+  (6, 'fill_blank', 'Who ___ this code? It''s very clean. (write, past)', null::text[], 'wrote', array[]::text[], 'Who — подлежащее: Who wrote…?'),
+  (7, 'fill_blank', 'Who ___ Anna meet at the conference? (do, past)', null::text[], 'did', array[]::text[], 'Who — дополнение: Who did Anna meet?'),
+  (8, 'fill_blank', 'Which test ___ last night? (fail, past simple)', null::text[], 'failed', array[]::text[], 'Which test — подлежащее: Which test failed?')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 45
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Who are you waiting ___?', array['for', 'to', 'at']::text[], 'for', array[]::text[], 'wait for — предлог в конце: Who are you waiting for?'),
+  (2, 'multiple_choice', 'Where are you ___?', array['from', 'of', 'out']::text[], 'from', array[]::text[], 'be from: Where are you from?'),
+  (3, 'multiple_choice', 'What is this ticket ___?', array['about', 'of', 'at']::text[], 'about', array[]::text[], 'be about: What is it about?'),
+  (4, 'multiple_choice', '''What''s your new office ___?'' ''It''s big and quiet.''', array['like', 'look', 'likes']::text[], 'like', array[]::text[], 'Какой он? — What is it like?'),
+  (5, 'multiple_choice', '___ is the weather like in your city?', array['What', 'How', 'Which']::text[], 'What', array[]::text[], 'What is … like? (не How is … like).'),
+  (6, 'fill_blank', 'Who did you go to the conference ___? (с кем)', null::text[], 'with', array[]::text[], 'go with — предлог в конце.'),
+  (7, 'fill_blank', 'What are you talking ___? (о чём)', null::text[], 'about', array[]::text[], 'talk about — предлог в конце.'),
+  (8, 'fill_blank', 'What are you looking ___? (на что)', null::text[], 'at', array[]::text[], 'look at — предлог в конце.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 46
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '___ is your name?', array['What', 'How', 'Which']::text[], 'What', array[]::text[], '«Как тебя зовут?» — What is your name? (не How).'),
+  (2, 'multiple_choice', 'There are two branches. ___ one should I merge?', array['What', 'Which', 'How']::text[], 'Which', array[]::text[], 'Выбор из двух — Which.'),
+  (3, 'multiple_choice', '___ old is your laptop?', array['What', 'How', 'Which']::text[], 'How', array[]::text[], 'How + прилагательное: How old?'),
+  (4, 'multiple_choice', '___ often do you deploy?', array['How', 'What', 'Which']::text[], 'How', array[]::text[], 'Частота: How often?'),
+  (5, 'multiple_choice', '___ does ''deprecated'' mean?', array['What', 'Which', 'How']::text[], 'What', array[]::text[], 'Значение: What does it mean?'),
+  (6, 'fill_blank', '___ time does the standup start? (во сколько)', null::text[], 'What', array[]::text[], 'Время: What time…?'),
+  (7, 'fill_blank', '___ of these laptops is yours? (который из)', null::text[], 'Which', array[]::text[], 'Which of… (What of нельзя).'),
+  (8, 'fill_blank', '___ far is your office from the station? (насколько)', null::text[], 'How', array[]::text[], 'Расстояние: How far?')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 47
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'How long does it ___ to build the project?', array['take', 'takes', 'taking']::text[], 'take', array[]::text[], 'После does — начальная форма: does it take.'),
+  (2, 'multiple_choice', 'It ___ about ten minutes to run all the tests.', array['takes', 'take', 'need']::text[], 'takes', array[]::text[], 'It takes + время + to + глагол.'),
+  (3, 'multiple_choice', 'It took ___ two hours to find the bug.', array['me', 'my', 'I']::text[], 'me', array[]::text[], 'It took me… — объектное местоимение.'),
+  (4, 'multiple_choice', 'How long ___ it take you to get to work yesterday?', array['did', 'does', 'was']::text[], 'did', array[]::text[], 'Прошлое: How long did it take…?'),
+  (5, 'multiple_choice', 'It takes me twenty minutes ___ to the office.', array['to walk', 'walk', 'for walking']::text[], 'to walk', array[]::text[], 'It takes + время + to + глагол.'),
+  (6, 'fill_blank', 'It ___ us three weeks to finish the migration. (take, past)', null::text[], 'took', array[]::text[], 'take → took.'),
+  (7, 'fill_blank', 'How long ___ it take to fly from Moscow to Berlin? (do/does)', null::text[], 'does', array[]::text[], 'It → does: How long does it take?'),
+  (8, 'fill_blank', 'How long does it take ___ to get to work? (ты — объектное местоимение)', null::text[], 'you', array[]::text[], 'How long does it take you…?')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 48
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Do you know where ___?', array['the server room is', 'is the server room', 'the server room']::text[], 'the server room is', array[]::text[], 'Вложенный вопрос — прямой порядок: where it is.'),
+  (2, 'multiple_choice', 'I don''t know what ___.', array['this error means', 'does this error mean', 'means this error']::text[], 'this error means', array[]::text[], 'Без does и с прямым порядком: what it means.'),
+  (3, 'multiple_choice', 'Can you tell me what time ___?', array['the meeting starts', 'does the meeting start', 'starts the meeting']::text[], 'the meeting starts', array[]::text[], 'Вложенный вопрос: what time it starts.'),
+  (4, 'multiple_choice', 'I don''t know ___ the tests passed.', array['if', 'do', 'what']::text[], 'if', array[]::text[], 'Без вопросительного слова — if (ли).'),
+  (5, 'multiple_choice', 'Do you remember how ___ the bug last time?', array['we fixed', 'did we fix', 'fixed we']::text[], 'we fixed', array[]::text[], 'Без did и с прямым порядком: how we fixed.'),
+  (6, 'fill_blank', 'Do you know where Anna ___? (live, present simple)', null::text[], 'lives', array[]::text[], 'Прямой порядок, без does: where she lives.'),
+  (7, 'fill_blank', 'I have no idea how much this monitor ___. (cost, present simple)', null::text[], 'costs', array[]::text[], 'Без does: how much it costs.'),
+  (8, 'fill_blank', 'Do you know ___ Tom is coming to the party? (ли)', null::text[], 'if', array['whether']::text[], '«ли» во вложенном вопросе — if/whether.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 49
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'He ___ that he was tired.', array['said', 'told', 'say']::text[], 'said', array[]::text[], 'Без человека — said (that).'),
+  (2, 'multiple_choice', 'She ___ me that the build was broken.', array['said', 'told', 'say']::text[], 'told', array[]::text[], 'С человеком без to — told me.'),
+  (3, 'multiple_choice', 'What did she ___ you?', array['tell', 'say', 'said']::text[], 'tell', array[]::text[], 'tell + человек: tell you (не say you).'),
+  (4, 'multiple_choice', 'Max said ___ he would be late.', array['that', 'me', 'to']::text[], 'that', array[]::text[], 'said that… (не said me).'),
+  (5, 'multiple_choice', 'Tom said he ___ his old job, so he left.', array['didn''t like', 'doesn''t like', 'don''t like']::text[], 'didn''t like', array[]::text[], 'После said время сдвигается: don''t → didn''t.'),
+  (6, 'fill_blank', 'Anna ___ us that the release was on Monday. (tell, past)', null::text[], 'told', array[]::text[], 'tell → told + человек.'),
+  (7, 'fill_blank', '''I''m working from home.'' → He said that he ___ from home. (work, past continuous)', null::text[], 'was working', array[]::text[], 'am working → was working.'),
+  (8, 'fill_blank', '''I will send the report.'' → She said that she ___ send the report. (will → ?)', null::text[], 'would', array['''d']::text[], 'will → would.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 50
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I can ___ you after lunch.', array['call', 'to call', 'calling']::text[], 'call', array[]::text[], 'После can — глагол без to.'),
+  (2, 'multiple_choice', 'I want ___ this bug today.', array['fix', 'to fix', 'fixing']::text[], 'to fix', array[]::text[], 'want + to + глагол.'),
+  (3, 'multiple_choice', 'Please be quiet. I''m ___.', array['work', 'to work', 'working']::text[], 'working', array[]::text[], 'am/is/are + -ing.'),
+  (4, 'multiple_choice', 'You should ___ the logs first.', array['check', 'to check', 'checking']::text[], 'check', array[]::text[], 'После should — глагол без to.'),
+  (5, 'multiple_choice', 'We have ___ the server tonight.', array['restart', 'to restart', 'restarting']::text[], 'to restart', array[]::text[], 'have to + глагол — «нужно».'),
+  (6, 'fill_blank', 'Did you ___ the email to the client? (send)', null::text[], 'send', array[]::text[], 'После did — начальная форма (не sent).'),
+  (7, 'fill_blank', 'What were you ___ at ten last night? (do)', null::text[], 'doing', array[]::text[], 'was/were + -ing.'),
+  (8, 'fill_blank', 'I''m going ___ a new laptop next month. (buy)', null::text[], 'to buy', array[]::text[], 'going + to + глагол.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 51
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I enjoy ___ new programming languages.', array['learning', 'to learn', 'learn']::text[], 'learning', array[]::text[], 'После enjoy — глагол с -ing (не enjoy to learn).'),
+  (2, 'multiple_choice', 'The team decided ___ the release until Monday.', array['to postpone', 'postponing', 'postpone']::text[], 'to postpone', array[]::text[], 'После decide — to + глагол.'),
+  (3, 'multiple_choice', 'Have you finished ___ the report?', array['writing', 'to write', 'write']::text[], 'writing', array[]::text[], 'После finish — глагол с -ing.'),
+  (4, 'fill_blank', 'I hope ___ the bug before lunch. (fix)', null::text[], 'to fix', array[]::text[], 'После hope — to + глагол.'),
+  (5, 'multiple_choice', 'Would you like ___ a coffee with us?', array['to have', 'having', 'have']::text[], 'to have', array[]::text[], 'Would like — всегда с to.'),
+  (6, 'fill_blank', 'Do you mind ___ for a few minutes? The call is almost over. (wait)', null::text[], 'waiting', array[]::text[], 'После mind — глагол с -ing.'),
+  (7, 'fill_blank', 'It started ___ just as we left the office. (rain)', null::text[], 'raining', array['to rain']::text[], 'После start можно и -ing, и to: started raining = started to rain.'),
+  (8, 'multiple_choice', 'Anna suggested ___ the meeting to Friday.', array['moving', 'to move', 'move']::text[], 'moving', array[]::text[], 'После suggest — глагол с -ing (не suggest to move).')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 52
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I want you ___ this pull request today.', array['to review', 'review', 'reviewing']::text[], 'to review', array[]::text[], 'Want + кто-то + to + глагол.'),
+  (2, 'multiple_choice', 'My manager ___ to join the call.', array['wants me', 'wants that I', 'wants I']::text[], 'wants me', array[]::text[], 'Want + me + to…, а не want that I…'),
+  (3, 'multiple_choice', 'The teacher told us ___ late.', array['not to be', 'don''t be', 'not be']::text[], 'not to be', array[]::text[], 'Отрицание: told somebody not to + глагол.'),
+  (4, 'fill_blank', 'Can you ask Tom ___ me back after lunch? (call)', null::text[], 'to call', array[]::text[], 'Ask + кто-то + to + глагол.'),
+  (5, 'multiple_choice', 'The new requirements made me ___ the whole module.', array['rewrite', 'to rewrite', 'rewriting']::text[], 'rewrite', array[]::text[], 'После make + кто-то — глагол без to.'),
+  (6, 'fill_blank', 'My parents didn''t let me ___ their car. (drive)', null::text[], 'drive', array[]::text[], 'После let + кто-то — глагол без to.'),
+  (7, 'fill_blank', 'Would you like me ___ you the meeting notes? (send)', null::text[], 'to send', array[]::text[], 'Would like + кто-то + to + глагол.'),
+  (8, 'multiple_choice', 'Our team lead advised me ___ the logs first.', array['to check', 'check', 'checking']::text[], 'to check', array[]::text[], 'Advise + кто-то + to + глагол.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 53
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I went to the shop ___ some milk.', array['to buy', 'for buy', 'for buying']::text[], 'to buy', array[]::text[], 'Цель — to + глагол, не for + глагол.'),
+  (2, 'multiple_choice', 'She came to the office early ___ the server.', array['to restart', 'for restart', 'for to restart']::text[], 'to restart', array[]::text[], 'Зачем? — to + глагол.'),
+  (3, 'multiple_choice', 'I went to the kitchen ___ a coffee.', array['for', 'to', 'for to']::text[], 'for', array[]::text[], 'Перед существительным — for: for a coffee.'),
+  (4, 'fill_blank', 'I don''t have time ___ all the documentation. (read)', null::text[], 'to read', array[]::text[], 'Time + to + глагол.'),
+  (5, 'multiple_choice', 'We''re waiting ___ the build to finish.', array['for', 'to', 'about']::text[], 'for', array[]::text[], 'Wait for something to happen.'),
+  (6, 'multiple_choice', 'Hurry up! We''re waiting ___ the meeting.', array['to start', 'for start', 'start']::text[], 'to start', array[]::text[], 'Wait to + глагол.'),
+  (7, 'fill_blank', 'She called the support team ___ about the error. (ask)', null::text[], 'to ask', array[]::text[], 'Цель — to + глагол.'),
+  (8, 'fill_blank', 'I''m saving money ___ a new laptop. (to/for)', null::text[], 'for', array[]::text[], 'Перед существительным — for, а не to.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 54
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Let''s go ___ a walk after the meeting.', array['for', 'at', 'to']::text[], 'for', array[]::text[], 'Go for a walk / a run / a swim.'),
+  (2, 'multiple_choice', 'Next month we''re going ___ holiday.', array['on', 'for', 'to']::text[], 'on', array[]::text[], 'Go on holiday / a trip.'),
+  (3, 'multiple_choice', 'On Saturdays I usually go ___.', array['shopping', 'to shopping', 'for shopping']::text[], 'shopping', array[]::text[], 'Go + -ing без предлога: go shopping.'),
+  (4, 'fill_blank', 'Yesterday we ___ swimming in the lake. (go, past simple)', null::text[], 'went', array[]::text[], 'go → went; go swimming.'),
+  (5, 'multiple_choice', 'After the release, the whole team went ___ a drink.', array['for', 'on', 'to']::text[], 'for', array[]::text[], 'Go for a drink / for lunch.'),
+  (6, 'multiple_choice', 'I go ___ work by bus.', array['to', 'for', 'on']::text[], 'to', array[]::text[], 'Go to + место: go to work.'),
+  (7, 'fill_blank', 'My sister goes ___ every morning before work. (run)', null::text[], 'running', array[]::text[], 'Go + -ing для занятий: go running.'),
+  (8, 'fill_blank', 'Our team is going ___ a business trip next week. (on/for/to)', null::text[], 'on', array[]::text[], 'Go on a trip / a business trip.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 55
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I ___ a lot of emails every day.', array['get', 'become', 'take']::text[], 'get', array[]::text[], 'Get = получать.'),
+  (2, 'multiple_choice', 'It''s late, and I''m ___ tired. Let''s go home.', array['getting', 'making', 'doing']::text[], 'getting', array[]::text[], 'Get + прилагательное = становиться: get tired.'),
+  (3, 'multiple_choice', 'What time did you ___ to the office this morning?', array['get', 'arrive', 'reach']::text[], 'get', array[]::text[], 'Get to + место = добраться (arrive at, reach без to).'),
+  (4, 'fill_blank', 'My brother ___ married last year. (get, past simple)', null::text[], 'got', array[]::text[], 'Get married = пожениться; get → got.'),
+  (5, 'fill_blank', 'Take an umbrella or you''ll get ___. (мокрый)', null::text[], 'wet', array[]::text[], 'Get + прилагательное: get wet = промокнуть.'),
+  (6, 'multiple_choice', 'I got ___ the bus near the office.', array['off', 'out', 'down']::text[], 'off', array[]::text[], 'Из автобуса и поезда — get off.'),
+  (7, 'fill_blank', 'Wait for me, I''m ___ dressed. (get)', null::text[], 'getting', array[]::text[], 'Get dressed = одеться; I''m getting — present continuous.'),
+  (8, 'multiple_choice', 'She got ___ the car and drove to work.', array['into', 'on', 'off']::text[], 'into', array[]::text[], 'В машину — get in/into, из машины — get out of.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 56
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I ___ a mistake in the config file.', array['made', 'did', 'had']::text[], 'made', array[]::text[], 'Make a mistake.'),
+  (2, 'multiple_choice', 'I have to ___ my homework tonight.', array['do', 'make', 'have']::text[], 'do', array[]::text[], 'Do homework.'),
+  (3, 'multiple_choice', 'Please don''t ___ so much noise — I''m on a call.', array['make', 'do', 'have']::text[], 'make', array[]::text[], 'Make a noise.'),
+  (4, 'fill_blank', 'Who ___ this coffee? It''s great. (make, past simple)', null::text[], 'made', array[]::text[], 'Make coffee; make → made.'),
+  (5, 'multiple_choice', '''What do you ___?'' ''I''m a QA engineer.''', array['do', 'make', 'work']::text[], 'do', array[]::text[], 'What do you do? = Кем ты работаешь?'),
+  (6, 'multiple_choice', 'We need to ___ a decision before Friday.', array['make', 'do', 'get']::text[], 'make', array[]::text[], 'Make a decision.'),
+  (7, 'fill_blank', 'I ___ the shopping on Saturday. (do/make, past simple)', null::text[], 'did', array[]::text[], 'Do the shopping; do → did.'),
+  (8, 'fill_blank', 'Let''s ___ a list of tasks for the sprint. (do/make)', null::text[], 'make', array[]::text[], 'Make a list.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 57
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I usually ___ breakfast at eight.', array['have', 'do', 'make']::text[], 'have', array[]::text[], 'Have breakfast = завтракать.'),
+  (2, 'multiple_choice', 'Sorry, I can''t talk now — I ___ lunch.', array['am having', 'having', 'has']::text[], 'am having', array[]::text[], 'Have как действие (есть) можно в continuous: I''m having lunch.'),
+  (3, 'multiple_choice', '___ a good weekend!', array['Have', 'Take', 'Make']::text[], 'Have', array[]::text[], 'Have a good weekend / a good time.'),
+  (4, 'multiple_choice', 'She ___ a new laptop.', array['has got', 'is having', 'have got']::text[], 'has got', array[]::text[], 'Have = иметь — не в continuous; she → has got.'),
+  (5, 'multiple_choice', 'We''ve been coding for three hours. Let''s ___ a short break.', array['have', 'do', 'make']::text[], 'have', array[]::text[], 'Have a break.'),
+  (6, 'fill_blank', 'Did you ___ a good time at the party? (have)', null::text[], 'have', array[]::text[], 'После did — начальная форма: have.'),
+  (7, 'fill_blank', 'Yesterday I ___ a long chat with my team lead. (have, past simple)', null::text[], 'had', array[]::text[], 'Have a chat; have → had.'),
+  (8, 'fill_blank', 'I ___ breakfast this morning — there was no time. (have, отрицание, past simple)', null::text[], 'didn''t have', array['did not have']::text[], 'Отрицание: didn''t have (не hadn''t).')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 58
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Can you send ___ the link?', array['me', 'I', 'my']::text[], 'me', array[]::text[], 'После глагола — объектная форма: me.'),
+  (2, 'multiple_choice', '___ is my colleague, Anna.', array['She', 'Her', 'Hers']::text[], 'She', array[]::text[], 'Подлежащее — she.'),
+  (3, 'multiple_choice', 'I don''t know these people. Do you know ___?', array['them', 'they', 'their']::text[], 'them', array[]::text[], 'После глагола — them.'),
+  (4, 'multiple_choice', 'Tom and ___ are working on the same task.', array['I', 'me', 'my']::text[], 'I', array[]::text[], 'Подлежащее: Tom and I.'),
+  (5, 'fill_blank', 'Where''s the new tester? I need to talk to ___. (он)', null::text[], 'him', array[]::text[], 'После предлога — him.'),
+  (6, 'multiple_choice', 'This message is for you and ___.', array['me', 'I', 'my']::text[], 'me', array[]::text[], 'После предлога — объектная форма: for you and me.'),
+  (7, 'fill_blank', 'We''re stuck. Can you help ___? (мы)', null::text[], 'us', array[]::text[], 'После глагола — us.'),
+  (8, 'fill_blank', 'The servers are slow. Did you restart ___? (они)', null::text[], 'them', array[]::text[], 'После глагола — them.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 59
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I forgot ___ password again.', array['my', 'me', 'mine']::text[], 'my', array[]::text[], 'Перед существительным — my.'),
+  (2, 'multiple_choice', 'Anna is upset. ___ laptop is broken.', array['Her', 'She', 'Hers']::text[], 'Her', array[]::text[], 'Перед существительным — her.'),
+  (3, 'multiple_choice', 'The app is slow, but ___ design is nice.', array['its', 'it''s', 'it']::text[], 'its', array[]::text[], 'Its = его (для предмета); it''s = it is.'),
+  (4, 'multiple_choice', 'My parents live in a small town. ___ house is near the river.', array['Their', 'There', 'They''re']::text[], 'Their', array[]::text[], 'Their = их; there = там; they''re = they are.'),
+  (5, 'fill_blank', 'We love ___ new office. (наш)', null::text[], 'our', array[]::text[], 'We → our.'),
+  (6, 'multiple_choice', 'Tom is annoyed because ___ phone isn''t working.', array['his', 'he''s', 'him']::text[], 'his', array[]::text[], 'Перед существительным — his.'),
+  (7, 'fill_blank', 'The company changed ___ logo last year. (it)', null::text[], 'its', array[]::text[], 'It → its, без апострофа.'),
+  (8, 'fill_blank', 'Have you finished ___ tasks for today? (you)', null::text[], 'your', array[]::text[], 'You → your.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 60
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'This isn''t my mug. ___ is blue.', array['Mine', 'My', 'Me']::text[], 'Mine', array[]::text[], 'Без существительного после — mine.'),
+  (2, 'multiple_choice', '''Whose laptop is this?'' ''It''s ___.''', array['hers', 'her', 'she']::text[], 'hers', array[]::text[], 'Без существительного — hers.'),
+  (3, 'multiple_choice', '___ charger is this?', array['Whose', 'Who''s', 'Who']::text[], 'Whose', array[]::text[], 'Чей? — whose; who''s = who is.'),
+  (4, 'fill_blank', 'These aren''t our keys. ___ are in the drawer. (наши)', null::text[], 'Ours', array[]::text[], 'Вместо существительного — ours.'),
+  (5, 'multiple_choice', 'Is this code yours or ___?', array['theirs', 'their', 'them']::text[], 'theirs', array[]::text[], 'Без существительного — theirs.'),
+  (6, 'multiple_choice', 'Anna is a friend of ___.', array['mine', 'me', 'my']::text[], 'mine', array[]::text[], 'A friend of mine = один из моих друзей.'),
+  (7, 'fill_blank', 'My solution is faster than ___. (твоё)', null::text[], 'yours', array[]::text[], 'Вместо существительного — yours.'),
+  (8, 'fill_blank', '''Is this Tom''s bag?'' ''Yes, it''s ___.'' (его)', null::text[], 'his', array[]::text[], 'His — и перед существительным, и без него.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 61
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I gave ___ my phone number.', array['her', 'she', 'hers']::text[], 'her', array[]::text[], 'После глагола — her.'),
+  (2, 'multiple_choice', 'This is my desk, and that one is ___.', array['yours', 'your', 'you']::text[], 'yours', array[]::text[], 'Без существительного — yours.'),
+  (3, 'multiple_choice', 'We met ___ new manager yesterday.', array['our', 'us', 'ours']::text[], 'our', array[]::text[], 'Перед существительным — our.'),
+  (4, 'multiple_choice', 'They invited ___ to their party.', array['us', 'we', 'our']::text[], 'us', array[]::text[], 'После глагола — us.'),
+  (5, 'fill_blank', 'Tom fixed my bug, and I fixed ___. (его)', null::text[], 'his', array[]::text[], 'Вместо существительного — his.'),
+  (6, 'multiple_choice', 'Is this pen ___? I found it on your desk.', array['yours', 'your', 'you''re']::text[], 'yours', array[]::text[], 'Без существительного — yours.'),
+  (7, 'fill_blank', 'She forgot her umbrella, so I gave her ___. (моё)', null::text[], 'mine', array[]::text[], 'Вместо существительного — mine.'),
+  (8, 'fill_blank', 'I know Anna, but I don''t know ___ brother. (её)', null::text[], 'her', array[]::text[], 'Перед существительным — her.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 62
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I cut ___ while I was cooking.', array['myself', 'me', 'my']::text[], 'myself', array[]::text[], 'Действие на себя — myself.'),
+  (2, 'multiple_choice', 'She lives by ___.', array['herself', 'her', 'she']::text[], 'herself', array[]::text[], 'By herself = одна.'),
+  (3, 'multiple_choice', 'Did you enjoy ___ at the party?', array['yourself', 'you', 'yours']::text[], 'yourself', array[]::text[], 'Enjoy yourself = хорошо провести время.'),
+  (4, 'multiple_choice', 'I ___ much better today.', array['feel', 'feel myself', 'am feeling myself']::text[], 'feel', array[]::text[], 'Feel без -self: I feel better (не I feel myself).'),
+  (5, 'fill_blank', 'We fixed the server ___ — nobody helped us. (сами)', null::text[], 'ourselves', array[]::text[], 'We → ourselves.'),
+  (6, 'multiple_choice', 'Tom and I sit next to ___ in the office.', array['each other', 'ourselves', 'us']::text[], 'each other', array[]::text[], 'Друг друга — each other.'),
+  (7, 'fill_blank', 'He taught ___ to code. (сам себя)', null::text[], 'himself', array[]::text[], 'He → himself.'),
+  (8, 'fill_blank', 'Please come in and make ___ at home. (you, ед. ч.)', null::text[], 'yourself', array[]::text[], 'Make yourself at home; you (ед. ч.) → yourself.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 63
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'This is ___ laptop.', array['Anna''s', 'Annas', 'Annas''']::text[], 'Anna''s', array[]::text[], 'Принадлежность человеку — ''s.'),
+  (2, 'multiple_choice', 'The ___ toys are everywhere.', array['children''s', 'childrens''', 'childrens']::text[], 'children''s', array[]::text[], 'Неправильное множественное (children) — ''s.'),
+  (3, 'multiple_choice', 'Write your name at the ___.', array['top of the page', 'page''s top', 'page top']::text[], 'top of the page', array[]::text[], 'Для предметов обычно of: the top of the page.'),
+  (4, 'fill_blank', 'This is my ___ desk. (brother)', null::text[], 'brother''s', array[]::text[], 'Принадлежность человеку — ''s: brother''s.'),
+  (5, 'multiple_choice', 'This is the ___ meeting room. All five managers use it.', array['managers''', 'manager''s', 'managers''s']::text[], 'managers''', array[]::text[], 'Множественное на -s — только апостроф: managers''.'),
+  (6, 'multiple_choice', 'Have you seen ___ new car?', array['Kate and Tom''s', 'Kate''s and Tom''s', 'Kate and Tom']::text[], 'Kate and Tom''s', array[]::text[], 'Общая вещь двух людей — ''s только у второго.'),
+  (7, 'fill_blank', 'Where is ___ phone? I can''t find it. (Mike)', null::text[], 'Mike''s', array[]::text[], 'Принадлежность человеку — ''s.'),
+  (8, 'fill_blank', 'This is my ___ project. (team lead)', null::text[], 'team lead''s', array[]::text[], '''s ставим в конце: team lead''s.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 64
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I work as ___ engineer.', array['a', 'an', '—']::text[], 'an', array[]::text[], 'Перед гласным звуком — an: an engineer.'),
+  (2, 'multiple_choice', 'Wait ___ minute, please.', array['a', 'an', '—']::text[], 'a', array[]::text[], 'Перед согласным звуком — a: a minute.'),
+  (3, 'multiple_choice', 'He''s ___ developer in a small startup.', array['a', 'an', '—']::text[], 'a', array[]::text[], 'Профессию называем с a/an: he''s a developer, а не he''s developer.'),
+  (4, 'multiple_choice', 'The meeting usually takes ___ hour.', array['a', 'an', '—']::text[], 'an', array[]::text[], 'В hour буква h не читается, слово начинается с гласного звука → an hour.'),
+  (5, 'multiple_choice', 'We''re looking for ___ UX designer.', array['a', 'an', '—']::text[], 'a', array[]::text[], 'UX читается [ju:-eks], первый звук [j] — согласный → a.'),
+  (6, 'fill_blank', 'It''s ___ easy task. (a или an)', null::text[], 'an', array[]::text[], 'Важен первый звук следующего слова: easy → an easy task.'),
+  (7, 'fill_blank', 'Can you send me ___ example? (a или an)', null::text[], 'an', array[]::text[], 'example начинается с гласного звука → an example.'),
+  (8, 'fill_blank', 'It''s ___ useful tool for testing. (a или an)', null::text[], 'a', array[]::text[], 'useful начинается со звука [j] → a useful tool.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 65
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'We have three ___ in the office.', array['printer', 'printers', 'printeres']::text[], 'printers', array[]::text[], 'Больше одного — множественное число с -s: printers.'),
+  (2, 'multiple_choice', 'I fixed two ___ today.', array['bug', 'bugs', 'bugies']::text[], 'bugs', array[]::text[], 'Обычное множественное число: bug → bugs.'),
+  (3, 'multiple_choice', 'There are ten ___ in our team.', array['person', 'people', 'peoples']::text[], 'people', array[]::text[], 'Множественное число от person — people.'),
+  (4, 'multiple_choice', 'These jeans ___ too big for me.', array['is', 'are', 'am']::text[], 'are', array[]::text[], 'Jeans, trousers, glasses — всегда множественное число → are.'),
+  (5, 'multiple_choice', 'The police ___ looking for the driver.', array['is', 'are', 'am']::text[], 'are', array[]::text[], 'Police всегда употребляется с глаголом во множественном числе: the police are.'),
+  (6, 'fill_blank', 'Put the old cables in those ___. (box, множественное число)', null::text[], 'boxes', array[]::text[], 'После x добавляем -es: boxes.'),
+  (7, 'fill_blank', 'Two ___ signed the contract this week. (company, множественное число)', null::text[], 'companies', array[]::text[], 'Согласная + y → -ies: companies.'),
+  (8, 'fill_blank', 'Two ___ and a woman were waiting at the bus stop. (man, множественное число)', null::text[], 'men', array[]::text[], 'Неправильное множественное число: man → men.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 66
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I need ___ information about the project.', array['an', 'some', 'a']::text[], 'some', array[]::text[], 'Information неисчисляемое: some information, не an information.'),
+  (2, 'multiple_choice', 'Your ___ was really helpful. Thank you!', array['advice', 'advices', 'an advice']::text[], 'advice', array[]::text[], 'Advice неисчисляемое: без a/an и без -s.'),
+  (3, 'multiple_choice', 'The ___ in this office is very old.', array['furniture', 'furnitures', 'a furniture']::text[], 'furniture', array[]::text[], 'Furniture неисчисляемое: без a/an и без -s.'),
+  (4, 'multiple_choice', 'I bought ___ new laptop yesterday.', array['a', 'some', '—']::text[], 'a', array[]::text[], 'Laptop исчисляемое; в единственном числе ему нужен a.'),
+  (5, 'multiple_choice', 'There ___ a lot of traffic this morning.', array['was', 'were', 'are']::text[], 'was', array[]::text[], 'Traffic неисчисляемое → глагол в единственном числе: was.'),
+  (6, 'fill_blank', 'The news ___ good today. (be, present simple)', null::text[], 'is', array[]::text[], 'News неисчисляемое, хотя оканчивается на -s → is.'),
+  (7, 'fill_blank', 'Your luggage ___ very heavy! (look, present simple)', null::text[], 'looks', array[]::text[], 'Luggage неисчисляемое → глагол как с it: looks.'),
+  (8, 'fill_blank', 'I need ___ help with this bug. (some или a)', null::text[], 'some', array[]::text[], 'Help неисчисляемое: some help, не a help.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 67
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Can I have a ___ of water?', array['glass', 'piece', 'bar']::text[], 'glass', array[]::text[], 'Жидкость считаем ёмкостями: a glass of water.'),
+  (2, 'multiple_choice', 'Would you like a ___ of cake?', array['piece', 'glass', 'bottle']::text[], 'piece', array[]::text[], 'Целое делим на части: a piece of cake.'),
+  (3, 'multiple_choice', 'I''ve got ___ good idea for the demo.', array['a', 'some', '—']::text[], 'a', array[]::text[], 'Idea исчисляемое, в единственном числе → a good idea.'),
+  (4, 'multiple_choice', 'We need two ___ paper for the printer.', array['packs of', 'pack', 'papers']::text[], 'packs of', array[]::text[], 'Paper (бумага) неисчисляемое → считаем пачками: two packs of paper.'),
+  (5, 'multiple_choice', 'She gave me a useful ___ of advice.', array['piece', 'glass', 'cup']::text[], 'piece', array[]::text[], 'Advice неисчисляемое → a piece of advice.'),
+  (6, 'fill_blank', 'I made ___ sandwiches for the team. (some или a)', null::text[], 'some', array[]::text[], 'Sandwiches — множественное число → some.'),
+  (7, 'fill_blank', 'I''d like two ___ of tea, please. (cup)', null::text[], 'cups', array[]::text[], 'Считаем чашки: two cups of tea.'),
+  (8, 'fill_blank', 'Can I get a ___ of chocolate? (плитка)', null::text[], 'bar', array[]::text[], 'Шоколад считаем плитками: a bar of chocolate.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 68
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I have a cat and a dog. ___ dog is very old.', array['A', 'The', 'An']::text[], 'The', array[]::text[], 'Собака уже упоминалась → the.'),
+  (2, 'multiple_choice', 'Can you close ___ door, please?', array['a', 'the', 'an']::text[], 'the', array[]::text[], 'Обоим понятно, какая дверь → the.'),
+  (3, 'multiple_choice', 'We want to hire ___ new tester. Do you know anyone?', array['a', 'the', 'an']::text[], 'a', array[]::text[], 'Какой-то новый тестировщик, ещё неизвестно кто → a.'),
+  (4, 'multiple_choice', 'I found a bug and a typo. I fixed ___ bug, but not the typo.', array['a', 'the', 'an']::text[], 'the', array[]::text[], 'Баг уже упоминался → the bug.'),
+  (5, 'multiple_choice', 'I''m reading ___ interesting article about testing.', array['a', 'the', 'an']::text[], 'an', array[]::text[], 'Статья упоминается впервые, перед гласным звуком → an.'),
+  (6, 'fill_blank', 'Is there ___ bank near here? (a или the)', null::text[], 'a', array[]::text[], 'Любой банк, не какой-то конкретный → a.'),
+  (7, 'fill_blank', 'We have a frontend and a backend. ___ backend is very slow. (a или the)', null::text[], 'the', array[]::text[], 'Backend уже упоминался → the.'),
+  (8, 'fill_blank', 'Can you pass me ___ salt, please? (a или the)', null::text[], 'the', array[]::text[], 'Понятно, какая соль — та, что на столе → the.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 69
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '___ sun is very bright today.', array['A', 'The', '—']::text[], 'The', array[]::text[], 'Единственный в своём роде предмет → the sun.'),
+  (2, 'multiple_choice', 'We live in ___ same building.', array['a', 'the', '—']::text[], 'the', array[]::text[], 'The same — всегда с the.'),
+  (3, 'multiple_choice', 'I usually listen to ___ radio in the car.', array['a', 'the', '—']::text[], 'the', array[]::text[], 'Говорим the radio.'),
+  (4, 'multiple_choice', 'My kids watch too much ___ TV.', array['a', 'the', '—']::text[], '—', array[]::text[], 'Watch TV — без артикля: watch too much TV.'),
+  (5, 'multiple_choice', 'What did you have for ___ breakfast?', array['a', 'the', '—']::text[], '—', array[]::text[], 'Приёмы пищи — без артикля: for breakfast.'),
+  (6, 'multiple_choice', 'We have a retro ___ next Friday.', array['the', 'a', '—']::text[], '—', array[]::text[], 'Next/last + время — без артикля: next Friday.'),
+  (7, 'fill_blank', 'Our office is on ___ fifth floor. (артикль)', null::text[], 'the', array[]::text[], 'С порядковыми числительными — the: the fifth floor.'),
+  (8, 'fill_blank', 'Let''s discuss it at ___ end of the meeting. (артикль)', null::text[], 'the', array[]::text[], 'Устойчиво: at the end of…')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 70
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I go to ___ work by metro.', array['the', 'a', '—']::text[], '—', array[]::text[], 'Go to work — без артикля.'),
+  (2, 'multiple_choice', 'It''s late. I''m going ___.', array['home', 'to home', 'to the home']::text[], 'home', array[]::text[], 'Go home — без to и без артикля.'),
+  (3, 'multiple_choice', 'Let''s go to ___ cinema tonight.', array['the', 'a', '—']::text[], 'the', array[]::text[], 'Go to the cinema — с the.'),
+  (4, 'multiple_choice', 'I was tired, so I went to ___ bed early.', array['the', 'a', '—']::text[], '—', array[]::text[], 'Go to bed — без артикля.'),
+  (5, 'multiple_choice', 'I''m taking a taxi to ___ airport.', array['the', 'a', '—']::text[], 'the', array[]::text[], 'The airport, the station, the bank — с the.'),
+  (6, 'fill_blank', 'What time do you usually get ___ after work? (домой)', null::text[], 'home', array[]::text[], 'Get home — без to: get home.'),
+  (7, 'fill_blank', 'Yesterday I stayed at ___ and worked remotely. (дома)', null::text[], 'home', array[]::text[], 'Stay at home — без артикля.'),
+  (8, 'fill_blank', 'Sorry, I can''t talk now. I''m at ___. (работа)', null::text[], 'work', array[]::text[], 'At work — без артикля.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 71
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I think ___ cats are clever animals.', array['the', 'a', '—']::text[], '—', array[]::text[], 'Говорим о кошках вообще → без артикля.'),
+  (2, 'multiple_choice', 'I''m not very good at ___ maths.', array['the', 'a', '—']::text[], '—', array[]::text[], 'Школьные предметы, языки, виды спорта — без артикля.'),
+  (3, 'multiple_choice', 'Most developers drink a lot of ___ coffee.', array['the', 'a', '—']::text[], '—', array[]::text[], 'Кофе вообще, не конкретный → без артикля.'),
+  (4, 'multiple_choice', 'Can you turn down ___ music? It''s too loud.', array['the', 'a', '—']::text[], 'the', array[]::text[], 'Конкретная музыка, которая играет сейчас → the.'),
+  (5, 'multiple_choice', '___ code you sent yesterday has a bug.', array['The', 'A', '—']::text[], 'The', array[]::text[], 'Конкретный код — тот, что ты прислал → the.'),
+  (6, 'fill_blank', 'I hate long ___. They waste so much time. (meeting)', null::text[], 'meetings', array[]::text[], 'О чём-то вообще: исчисляемое во множественном числе без the.'),
+  (7, 'fill_blank', 'My daughter really likes ___. (dog)', null::text[], 'dogs', array[]::text[], 'Любят собак вообще → dogs, без the.'),
+  (8, 'fill_blank', 'Did you like ___ film we watched yesterday? (артикль)', null::text[], 'the', array[]::text[], 'Конкретный фильм → the.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 72
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I was born in ___ Poland.', array['the', 'a', '—']::text[], '—', array[]::text[], 'Большинство стран — без артикля.'),
+  (2, 'multiple_choice', 'My brother lives in ___ USA.', array['the', 'a', '—']::text[], 'the', array[]::text[], 'Страны со словами States, Kingdom, Republic — с the.'),
+  (3, 'multiple_choice', 'Our servers are in ___ Netherlands.', array['the', 'a', '—']::text[], 'the', array[]::text[], 'Названия во множественном числе — с the: the Netherlands.'),
+  (4, 'multiple_choice', '___ Volga is the longest river in Europe.', array['The', 'A', '—']::text[], 'The', array[]::text[], 'Реки, моря, океаны — с the.'),
+  (5, 'multiple_choice', 'Our new office is on ___ Main Street.', array['the', 'a', '—']::text[], '—', array[]::text[], 'Названия улиц — без артикля.'),
+  (6, 'fill_blank', 'They went hiking in ___ Alps last summer. (артикль)', null::text[], 'the', array[]::text[], 'Горные цепи — с the: the Alps.'),
+  (7, 'fill_blank', 'We crossed ___ Atlantic Ocean by ship. (артикль)', null::text[], 'the', array[]::text[], 'Океаны — с the.'),
+  (8, 'fill_blank', 'The conference is in ___ Czech Republic this year. (артикль)', null::text[], 'the', array[]::text[], 'Republic в названии страны → the.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 73
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '___ laptop here is mine.', array['This', 'These', 'Those']::text[], 'This', array[]::text[], 'Рядом (here) и единственное число → this.'),
+  (2, 'multiple_choice', 'Look at ___ birds over there!', array['this', 'these', 'those']::text[], 'those', array[]::text[], 'Далеко (over there) и множественное число → those.'),
+  (3, 'multiple_choice', 'Are ___ your keys here on the table?', array['this', 'these', 'those']::text[], 'these', array[]::text[], 'Рядом (here) и множественное число → these.'),
+  (4, 'multiple_choice', '''The release went well.'' ''Great, I''m glad to hear ___.''', array['that', 'these', 'those']::text[], 'that', array[]::text[], 'О том, что уже сказано или произошло, — that.'),
+  (5, 'multiple_choice', '___ is my colleague, Anna. Anna, this is Tom.', array['This', 'That', 'These']::text[], 'This', array[]::text[], 'Знакомя людей, говорим This is…'),
+  (6, 'fill_blank', 'Can you look at ___ logs on my screen? (эти, рядом)', null::text[], 'these', array[]::text[], 'Рядом и множественное число → these.'),
+  (7, 'fill_blank', 'Do you remember ___ bug from last sprint? (тот, в прошлом)', null::text[], 'that', array[]::text[], 'То, что было раньше, в единственном числе → that.'),
+  (8, 'fill_blank', 'How much are ___ shoes over there? (те)', null::text[], 'those', array[]::text[], 'Далеко и множественное число → those.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 74
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'This mug is dirty. Can I have a clean ___?', array['one', 'ones', 'it']::text[], 'one', array[]::text[], 'Вместо исчисляемого в единственном числе — one.'),
+  (2, 'multiple_choice', 'I don''t like the red shoes. I prefer the black ___.', array['one', 'ones', 'it']::text[], 'ones', array[]::text[], 'Вместо множественного числа — ones.'),
+  (3, 'multiple_choice', '''Which laptop is yours?'' ''The ___ on the left.''', array['one', 'ones', 'it']::text[], 'one', array[]::text[], 'The one = тот (ноутбук), единственное число.'),
+  (4, 'multiple_choice', 'These cables are too short. We need longer ___.', array['one', 'ones', 'it']::text[], 'ones', array[]::text[], 'Cables — множественное число → ones.'),
+  (5, 'multiple_choice', '''Do you need a pen?'' ''No, thanks. I have ___.''', array['one', 'ones', 'it']::text[], 'one', array[]::text[], 'Любая ручка, не конкретная → one, а не it.'),
+  (6, 'fill_blank', 'Our old server was slow, so we bought a new ___. (вместо server)', null::text[], 'one', array[]::text[], 'Не повторяем server — заменяем на one.'),
+  (7, 'fill_blank', '''Which tickets should I take?'' ''The ___ at the top of the backlog.'' (вместо tickets)', null::text[], 'ones', array[]::text[], 'Tickets — множественное число → the ones.'),
+  (8, 'fill_blank', 'I like this monitor, but I''d prefer a bigger ___. (вместо monitor)', null::text[], 'one', array[]::text[], 'Единственное число → a bigger one.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 75
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I need ___ help with this task.', array['some', 'any', 'a']::text[], 'some', array[]::text[], 'В утвердительном предложении — some.'),
+  (2, 'multiple_choice', 'We don''t have ___ tests for this module.', array['some', 'any', 'a']::text[], 'any', array[]::text[], 'В отрицании — any.'),
+  (3, 'multiple_choice', 'Can I have ___ water, please?', array['some', 'any', 'many']::text[], 'some', array[]::text[], 'В просьбе (Can I have…?) — some.'),
+  (4, 'multiple_choice', 'I''m hungry. I want to eat ___.', array['something', 'anything', 'nothing']::text[], 'something', array[]::text[], 'В утвердительном предложении — something.'),
+  (5, 'multiple_choice', 'I can''t hear ___. Can you speak louder?', array['something', 'anything', 'nothing']::text[], 'anything', array[]::text[], 'После not (can''t) — anything.'),
+  (6, 'fill_blank', 'There aren''t ___ free meeting rooms today. (some или any)', null::text[], 'any', array[]::text[], 'В отрицании — any.'),
+  (7, 'fill_blank', 'I wrote ___ notes during the call. (some или any)', null::text[], 'some', array[]::text[], 'В утвердительном предложении — some.'),
+  (8, 'fill_blank', '___ left a laptop in the meeting room. (somebody или anybody)', null::text[], 'somebody', array['someone']::text[], 'В утвердительном предложении — somebody.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 76
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'There aren''t ___ chairs in the room.', array['no', 'any', 'none']::text[], 'any', array[]::text[], 'После not (aren''t) — any.'),
+  (2, 'multiple_choice', 'There are ___ chairs in the room.', array['no', 'any', 'none']::text[], 'no', array[]::text[], 'No = not any; с no глагол без not.'),
+  (3, 'multiple_choice', '''How many bugs did you find?'' ''___.''', array['None', 'No', 'Any']::text[], 'None', array[]::text[], 'Без существительного, как самостоятельный ответ, — none.'),
+  (4, 'multiple_choice', 'I have ___ time for lunch today.', array['no', 'any', 'none']::text[], 'no', array[]::text[], 'Утвердительный глагол + no = нет совсем.'),
+  (5, 'multiple_choice', 'We don''t have ___ money left in the budget.', array['no', 'any', 'none']::text[], 'any', array[]::text[], 'После don''t — any; два отрицания в одном предложении нельзя.'),
+  (6, 'fill_blank', '''Is there any milk?'' ''No, there''s ___.'' (no или none)', null::text[], 'none', array[]::text[], 'Без существительного в конце — none.'),
+  (7, 'fill_blank', 'The tests found ___ errors. Everything is OK. (no или any)', null::text[], 'no', array[]::text[], 'Глагол без not → no errors.'),
+  (8, 'fill_blank', 'I didn''t get ___ emails from the client today. (no или any)', null::text[], 'any', array[]::text[], 'После didn''t — any, не no.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 77
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I don''t know ___ in this team yet.', array['anybody', 'nobody', 'somebody']::text[], 'anybody', array[]::text[], 'После don''t — anybody; двойное отрицание (don''t … nobody) нельзя.'),
+  (2, 'multiple_choice', '___ called while you were in the meeting.', array['Nobody', 'Anybody', 'Not anybody']::text[], 'Nobody', array[]::text[], 'В начале предложения «никто» — только Nobody.'),
+  (3, 'multiple_choice', 'The logs are empty. There''s ___ in them.', array['nothing', 'anything', 'something']::text[], 'nothing', array[]::text[], 'There''s без not → nothing (= there isn''t anything).'),
+  (4, 'multiple_choice', '''What did you change in the config?'' ''___. I only read it.''', array['Nothing', 'Anything', 'Something']::text[], 'Nothing', array[]::text[], 'Короткий ответ «ничего» — Nothing.'),
+  (5, 'multiple_choice', 'We didn''t find ___ wrong with the code.', array['anything', 'nothing', 'something']::text[], 'anything', array[]::text[], 'После didn''t — anything, а не nothing.'),
+  (6, 'fill_blank', 'There was ___ at the reception desk, so I waited. (никто, слово на no-)', null::text[], 'nobody', array['no-one', 'no one']::text[], 'Was без not → nobody (= there wasn''t anybody).'),
+  (7, 'fill_blank', 'I can''t hear ___. Is your microphone on? (ничего, слово на any-)', null::text[], 'anything', array[]::text[], 'После can''t — anything; can''t hear nothing — ошибка.'),
+  (8, 'fill_blank', 'Nobody ___ the answer. (know, present simple)', null::text[], 'knows', array[]::text[], 'После nobody глагол утвердительный и в единственном числе: knows.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 78
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'There''s ___ at the door. Can you check?', array['somebody', 'anybody', 'nobody']::text[], 'somebody', array[]::text[], 'В утвердительном предложении — somebody.'),
+  (2, 'multiple_choice', 'I looked everywhere, but I couldn''t find my keys ___.', array['anywhere', 'somewhere', 'nowhere']::text[], 'anywhere', array[]::text[], 'После couldn''t — anywhere.'),
+  (3, 'multiple_choice', 'I need ___ to help me with the migration.', array['somebody', 'anybody', 'nobody']::text[], 'somebody', array[]::text[], 'Утверждение, «кто-то» → somebody.'),
+  (4, 'multiple_choice', 'We didn''t go ___ at the weekend. We stayed at home.', array['anywhere', 'somewhere', 'nowhere']::text[], 'anywhere', array[]::text[], 'После didn''t — anywhere; didn''t go nowhere — двойное отрицание.'),
+  (5, 'multiple_choice', 'There''s ___ wrong with the build. It fails every time.', array['something', 'anything', 'nowhere']::text[], 'something', array[]::text[], 'Утверждение, «что-то» → something.'),
+  (6, 'fill_blank', 'I''m hungry. I want ___ to eat. (что-нибудь, слово на some-)', null::text[], 'something', array[]::text[], 'Something to eat — «что-нибудь поесть» в утвердительном предложении.'),
+  (7, 'fill_blank', 'Let''s go ___ quiet to talk about the release. (куда-нибудь, слово на some-)', null::text[], 'somewhere', array[]::text[], 'Somewhere + прилагательное: somewhere quiet.'),
+  (8, 'fill_blank', 'Is there ___ in the office today? The lights are off. (кто-нибудь, слово на any-)', null::text[], 'anybody', array['anyone']::text[], 'В вопросе «кто-нибудь» — anybody/anyone.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 79
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '___ developer on the team has a laptop.', array['Every', 'All', 'All the']::text[], 'Every', array[]::text[], 'Every + существительное в единственном числе.'),
+  (2, 'multiple_choice', '___ the tests passed.', array['All', 'Every', 'Everything']::text[], 'All', array[]::text[], 'All + the + множественное число.'),
+  (3, 'multiple_choice', 'I''ve checked ___. We can start the demo.', array['everything', 'all', 'every']::text[], 'everything', array[]::text[], '«Всё» как отдельное слово — everything, не all.'),
+  (4, 'multiple_choice', 'I was in meetings ___ day yesterday. I didn''t write any code.', array['all', 'every', 'everything']::text[], 'all', array[]::text[], 'All day = весь день; every day = каждый день.'),
+  (5, 'multiple_choice', 'We have a standup ___ morning at ten.', array['every', 'all', 'everything']::text[], 'every', array[]::text[], 'Каждое утро — every morning.'),
+  (6, 'fill_blank', '___ in the office was happy with the new coffee machine. (все люди, слово на every-)', null::text[], 'Everybody', array['everyone']::text[], '«Все» о людях — everybody/everyone.'),
+  (7, 'fill_blank', 'Everybody ___ about the new office. (talk, present continuous)', null::text[], 'is talking', array['''s talking']::text[], 'Everybody — единственное число: is talking.'),
+  (8, 'fill_blank', 'Every ticket ___ an owner. (have, present simple)', null::text[], 'has', array[]::text[], 'Every + единственное число → has.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 80
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', '___ people in our company work from home on Fridays.', array['Most', 'Most of', 'The most']::text[], 'Most', array[]::text[], 'О людях вообще — most people, без of и без the.'),
+  (2, 'multiple_choice', '___ my colleagues speak English.', array['Most of', 'Most', 'The most']::text[], 'Most of', array[]::text[], 'Перед my/the/these — most of.'),
+  (3, 'multiple_choice', '___ the data was lost after the crash.', array['All', 'Every', 'Each']::text[], 'All', array[]::text[], 'All + the + неисчисляемое; every/each с the не сочетаются.'),
+  (4, 'multiple_choice', 'I read the reports. ___ them were useful, but most weren''t.', array['Some of', 'Some', 'Most']::text[], 'Some of', array[]::text[], 'Перед them нужен of: some of them; some them / most them — ошибка.'),
+  (5, 'multiple_choice', 'There are ___ bugs in this release. It''s perfect!', array['no', 'none', 'any']::text[], 'no', array[]::text[], 'No + существительное; none — без существительного.'),
+  (6, 'fill_blank', 'Most ___ my friends don''t work in IT. (предлог)', null::text[], 'of', array[]::text[], 'Most of + my/the/them.'),
+  (7, 'fill_blank', 'You can take ___ seat you like. (любое, слово на a-)', null::text[], 'any', array[]::text[], 'Any = любой, какой угодно.'),
+  (8, 'fill_blank', '___ of us knew the answer, so we asked the team lead. (никто, слово на no-)', null::text[], 'None', array[]::text[], 'None of us = никто из нас.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 81
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I have two monitors. ___ are new — I bought them last week.', array['Both', 'Either', 'Neither']::text[], 'Both', array[]::text[], 'Оба → both + глагол во множественном числе; either/neither — с единственным числом.'),
+  (2, 'multiple_choice', '''Tea or coffee?'' ''I don''t mind. ___ is fine.''', array['Either', 'Both', 'Neither']::text[], 'Either', array[]::text[], 'Either = любой из двух.'),
+  (3, 'multiple_choice', '___ of the two candidates had enough experience, so we didn''t hire anyone.', array['Neither', 'Both', 'Either']::text[], 'Neither', array[]::text[], 'Neither = ни один из двух.'),
+  (4, 'multiple_choice', 'We can meet ___ on Monday or on Tuesday.', array['either', 'both', 'neither']::text[], 'either', array[]::text[], 'Either … or = или … или.'),
+  (5, 'multiple_choice', 'Neither Anna ___ Tom came to the retro.', array['nor', 'or', 'and']::text[], 'nor', array[]::text[], 'Neither … nor = ни … ни.'),
+  (6, 'fill_blank', 'The bug appears ___ in Chrome and in Firefox. (и там, и там; слово на b-)', null::text[], 'both', array[]::text[], 'Both … and = и … и.'),
+  (7, 'fill_blank', 'There are two ways to fix this, but ___ way is fast. (ни один из двух, слово на n-)', null::text[], 'neither', array[]::text[], 'Neither + существительное в единственном числе.'),
+  (8, 'fill_blank', 'I don''t like ___ of these two designs. (ни один из двух, после don''t, слово на e-)', null::text[], 'either', array[]::text[], 'После don''t — either; neither уже отрицательное.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 82
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'How ___ tickets do we have in the backlog?', array['many', 'much', 'a lot']::text[], 'many', array[]::text[], 'Tickets — исчисляемое → how many.'),
+  (2, 'multiple_choice', 'We don''t have ___ time before the release.', array['much', 'many', 'a lot']::text[], 'much', array[]::text[], 'Time — неисчисляемое → much.'),
+  (3, 'multiple_choice', 'How ___ money did we spend on the project?', array['much', 'many', 'lot']::text[], 'much', array[]::text[], 'Money — неисчисляемое → how much.'),
+  (4, 'multiple_choice', 'She drinks ___ coffee.', array['a lot of', 'many', 'a lot']::text[], 'a lot of', array[]::text[], 'В утверждении — a lot of + существительное.'),
+  (5, 'multiple_choice', 'I like this job ___.', array['a lot', 'a lot of', 'many']::text[], 'a lot', array[]::text[], 'Без существительного — просто a lot.'),
+  (6, 'fill_blank', 'Don''t add too ___ features to the first version. (много, с исчисляемыми)', null::text[], 'many', array[]::text[], 'Features — исчисляемое → too many.'),
+  (7, 'fill_blank', 'There isn''t ___ traffic on the website at night. (много, с неисчисляемыми)', null::text[], 'much', array[]::text[], 'Traffic — неисчисляемое, отрицание → much.'),
+  (8, 'fill_blank', 'We had ___ problems with the old server. (много, в утверждении: a … of)', null::text[], 'a lot of', array['lots of']::text[], 'В утвердительном предложении — a lot of.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 83
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I need ___ minutes to finish this task.', array['a few', 'a little', 'few']::text[], 'a few', array[]::text[], 'Minutes — исчисляемое, «несколько» → a few.'),
+  (2, 'multiple_choice', 'Can I have ___ milk in my coffee, please?', array['a little', 'a few', 'few']::text[], 'a little', array[]::text[], 'Milk — неисчисляемое, «немного» → a little.'),
+  (3, 'multiple_choice', 'The talk was boring, so very ___ people stayed until the end.', array['few', 'a few', 'little']::text[], 'few', array[]::text[], 'Very few = очень мало (исчисляемые).'),
+  (4, 'multiple_choice', 'We have very ___ time, so let''s skip the small talk.', array['little', 'few', 'a few']::text[], 'little', array[]::text[], 'Time — неисчисляемое, «мало» → (very) little.'),
+  (5, 'multiple_choice', 'I speak ___ German, enough to order food.', array['a little', 'little', 'a few']::text[], 'a little', array[]::text[], 'A little = немного, но достаточно.'),
+  (6, 'fill_blank', 'Only ___ users reported the bug, so it''s not urgent. (немного, с исчисляемыми, два слова)', null::text[], 'a few', array[]::text[], 'Users — исчисляемое → a few.'),
+  (7, 'fill_blank', 'He''s new here and has ___ friends in the city. He feels lonely. (мало, с исчисляемыми, одно слово)', null::text[], 'few', array[]::text[], 'Few без a = мало, почти нет.'),
+  (8, 'fill_blank', 'There''s ___ coffee left, enough for one cup. (немного, с неисчисляемыми, два слова)', null::text[], 'a little', array[]::text[], 'Coffee — неисчисляемое → a little.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 84
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'She has a ___.', array['fast computer', 'computer fast', 'computer is fast']::text[], 'fast computer', array[]::text[], 'Прилагательное стоит перед существительным.'),
+  (2, 'multiple_choice', 'These are ___ ideas.', array['good', 'goods', 'a good']::text[], 'good', array[]::text[], 'Прилагательное не получает -s во множественном числе.'),
+  (3, 'multiple_choice', 'You look ___. Are you OK?', array['tired', 'tiredly', 'tiring']::text[], 'tired', array[]::text[], 'После look — прилагательное; tired = уставший.'),
+  (4, 'multiple_choice', 'This soup smells ___.', array['good', 'well', 'goodly']::text[], 'good', array[]::text[], 'После smell — прилагательное: smells good.'),
+  (5, 'multiple_choice', 'The new design looks ___.', array['nice', 'nicely', 'niceness']::text[], 'nice', array[]::text[], 'После look — прилагательное, не наречие.'),
+  (6, 'fill_blank', 'The documentation is very ___. (полезный, use + -ful)', null::text[], 'useful', array[]::text[], 'После be — прилагательное: useful.'),
+  (7, 'fill_blank', 'That sounds ___. Let''s try it. (интересный)', null::text[], 'interesting', array[]::text[], 'После sound — прилагательное: sounds interesting.'),
+  (8, 'fill_blank', 'We have two ___ developers in the team. (new)', null::text[], 'new', array[]::text[], 'Прилагательное не меняется во множественном числе.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 85
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Please drive ___. The road is wet.', array['carefully', 'careful', 'care']::text[], 'carefully', array[]::text[], 'Как ехать? — наречие: carefully.'),
+  (2, 'multiple_choice', 'She speaks English very ___.', array['well', 'good', 'goodly']::text[], 'well', array[]::text[], 'Наречие от good — well.'),
+  (3, 'multiple_choice', 'He''s a ___ driver.', array['careful', 'carefully', 'care']::text[], 'careful', array[]::text[], 'Перед существительным — прилагательное.'),
+  (4, 'multiple_choice', 'The server restarted ___ in the middle of the demo.', array['suddenly', 'sudden', 'suddenness']::text[], 'suddenly', array[]::text[], 'К глаголу — наречие: suddenly.'),
+  (5, 'multiple_choice', 'Our team works very ___ before a release.', array['hard', 'hardly', 'hardy']::text[], 'hard', array[]::text[], 'Hard — и прилагательное, и наречие; hardly = «едва».'),
+  (6, 'fill_blank', 'The app loads very ___ now. (quick, наречие)', null::text[], 'quickly', array[]::text[], 'Наречие: quick + -ly.'),
+  (7, 'fill_blank', 'Sorry, I arrived ___ because of the traffic. (late, наречие)', null::text[], 'late', array[]::text[], 'Late не получает -ly; lately = «в последнее время».'),
+  (8, 'fill_blank', 'You can fix it ___. (easy, наречие)', null::text[], 'easily', array[]::text[], 'Согласная + y → -ily: easily.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 86
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'My new laptop is ___ than my old one.', array['faster', 'more fast', 'fastest']::text[], 'faster', array[]::text[], 'Короткое прилагательное → -er.'),
+  (2, 'multiple_choice', 'This solution is ___ than the first one.', array['more expensive', 'expensiver', 'most expensive']::text[], 'more expensive', array[]::text[], 'Длинное прилагательное → more.'),
+  (3, 'multiple_choice', 'The weather is ___ today than yesterday.', array['better', 'gooder', 'more good']::text[], 'better', array[]::text[], 'Good → better (неправильная форма).'),
+  (4, 'multiple_choice', 'This task is ___ than I thought.', array['easier', 'more easy', 'easyer']::text[], 'easier', array[]::text[], 'Согласная + y → -ier: easier.'),
+  (5, 'multiple_choice', 'My headache is ___ today. I''ll stay at home.', array['worse', 'badder', 'more bad']::text[], 'worse', array[]::text[], 'Bad → worse (неправильная форма).'),
+  (6, 'fill_blank', 'The new office is ___ than the old one. (big)', null::text[], 'bigger', array[]::text[], 'Big → bigger: согласная удваивается.'),
+  (7, 'fill_blank', 'This library is ___ than the old one. (reliable)', null::text[], 'more reliable', array[]::text[], 'Длинное прилагательное → more reliable.'),
+  (8, 'fill_blank', 'The station is ___ than I expected. (far)', null::text[], 'farther', array['further']::text[], 'Far → farther/further.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 87
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'She''s older ___ me.', array['than', 'that', 'as']::text[], 'than', array[]::text[], 'После сравнительной степени — than.'),
+  (2, 'multiple_choice', 'He works faster than ___.', array['I do', 'me do', 'I does']::text[], 'I do', array[]::text[], 'Than I do или просто than me.'),
+  (3, 'multiple_choice', 'The new version is ___ faster than the old one.', array['much', 'very', 'more']::text[], 'much', array[]::text[], 'Усиление сравнения — much, не very.'),
+  (4, 'multiple_choice', 'Moscow is ___ than my hometown.', array['much bigger', 'very bigger', 'more bigger']::text[], 'much bigger', array[]::text[], 'Much + сравнительная степень; more bigger — двойное сравнение.'),
+  (5, 'multiple_choice', 'This plan costs ___ than the other one, so let''s take it.', array['less', 'little', 'fewer']::text[], 'less', array[]::text[], 'Less than = меньше, чем (с глаголом и неисчисляемыми).'),
+  (6, 'fill_blank', 'The meeting was ___ longer than we planned. (немного: a …)', null::text[], 'a bit', array['a little']::text[], 'Смягчить сравнение — a bit / a little.'),
+  (7, 'fill_blank', 'Python is ___ than C for beginners. (easy)', null::text[], 'easier', array[]::text[], 'Easy → easier + than.'),
+  (8, 'fill_blank', 'My brother is two years younger ___ me. (слово сравнения)', null::text[], 'than', array[]::text[], 'Younger than me.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 88
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'The new phone isn''t as expensive ___ the old one.', array['as', 'than', 'like']::text[], 'as', array[]::text[], 'Not as … as — вторая часть тоже as.'),
+  (2, 'multiple_choice', 'Today isn''t ___ warm as yesterday.', array['as', 'more', 'much']::text[], 'as', array[]::text[], 'Not as + прилагательное + as.'),
+  (3, 'multiple_choice', 'Your code is the same ___ mine.', array['as', 'like', 'than']::text[], 'as', array[]::text[], 'The same as (не the same like).'),
+  (4, 'multiple_choice', 'I''m not as tall as ___.', array['he is', 'him is', 'his is']::text[], 'he is', array[]::text[], 'После as — he is или просто him.'),
+  (5, 'multiple_choice', 'This task took ___ time as the last one.', array['as much', 'as many', 'so many']::text[], 'as much', array[]::text[], 'Time — неисчисляемое → as much … as.'),
+  (6, 'fill_blank', 'The test server isn''t ___ fast as production. (слово сравнения)', null::text[], 'as', array['so']::text[], 'Not as fast as (в отрицании возможно и so).'),
+  (7, 'fill_blank', 'The second version is ___ complicated than the first one. (менее)', null::text[], 'less', array[]::text[], 'Less + прилагательное + than = менее …, чем.'),
+  (8, 'fill_blank', 'Their office is the ___ size as ours. (одинаковый)', null::text[], 'same', array[]::text[], 'The same + существительное + as.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 89
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'This is the ___ day of the year.', array['longest', 'longer', 'most long']::text[], 'longest', array[]::text[], 'Превосходная степень коротких — the + -est.'),
+  (2, 'multiple_choice', 'She''s the ___ developer in our team.', array['best', 'better', 'goodest']::text[], 'best', array[]::text[], 'Good → the best.'),
+  (3, 'multiple_choice', 'This is the ___ project in the company.', array['most important', 'importantest', 'more important']::text[], 'most important', array[]::text[], 'Длинное прилагательное → the most.'),
+  (4, 'multiple_choice', 'He''s the richest person ___ the world.', array['in', 'of', 'on']::text[], 'in', array[]::text[], 'После превосходной степени место — in: in the world.'),
+  (5, 'multiple_choice', 'That was the ___ meeting I''ve ever had.', array['worst', 'baddest', 'most bad']::text[], 'worst', array[]::text[], 'Bad → the worst; часто с I''ve ever.'),
+  (6, 'fill_blank', 'Today is the ___ day of the month. (hot)', null::text[], 'hottest', array[]::text[], 'Hot → hottest: согласная удваивается.'),
+  (7, 'fill_blank', 'It''s one of the ___ apps I use. (useful)', null::text[], 'most useful', array[]::text[], 'One of the + превосходная степень + мн. ч.'),
+  (8, 'fill_blank', 'This is the ___ task in the sprint. (easy)', null::text[], 'easiest', array[]::text[], 'Согласная + y → -iest.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 90
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'We don''t have ___ time to finish the feature today.', array['enough', 'too', 'very']::text[], 'enough', array[]::text[], 'Enough стоит перед существительным: enough time.'),
+  (2, 'multiple_choice', 'Is the room ___ for the whole team?', array['big enough', 'enough big', 'big too']::text[], 'big enough', array[]::text[], 'Enough ставим после прилагательного: big enough.'),
+  (3, 'multiple_choice', 'He isn''t ___ to drive. He''s only fifteen.', array['old enough', 'enough old', 'old too']::text[], 'old enough', array[]::text[], 'Прилагательное + enough: old enough to drive.'),
+  (4, 'fill_blank', 'There aren''t ___ chairs in the meeting room. (достаточно)', null::text[], 'enough', array[]::text[], 'Enough перед существительным: enough chairs.'),
+  (5, 'multiple_choice', 'This laptop is not fast ___ for video editing.', array['enough', 'too', 'much']::text[], 'enough', array[]::text[], 'Fast enough — enough после прилагательного.'),
+  (6, 'multiple_choice', 'Do we have enough servers ___ the traffic?', array['to handle', 'for handle', 'handle']::text[], 'to handle', array[]::text[], 'После enough + существительное — to + глагол: enough servers to handle.'),
+  (7, 'fill_blank', 'The coffee isn''t ___ to drink. Wait a minute. (cool, достаточно)', null::text[], 'cool enough', array[]::text[], 'Прилагательное + enough: cool enough.'),
+  (8, 'multiple_choice', 'The documentation is clear enough ___ to understand.', array['for beginners', 'to beginners', 'beginners']::text[], 'for beginners', array[]::text[], 'Enough for + кто-то + to + глагол.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 91
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'This bug is ___ hard to fix today.', array['too', 'enough', 'to']::text[], 'too', array[]::text[], 'Too + прилагательное: too hard — «слишком сложно».'),
+  (2, 'multiple_choice', 'You drink ___ coffee.', array['too much', 'too many', 'too']::text[], 'too much', array[]::text[], 'Coffee — неисчисляемое, поэтому too much.'),
+  (3, 'multiple_choice', 'There are ___ meetings this week.', array['too many', 'too much', 'too']::text[], 'too many', array[]::text[], 'Meetings — исчисляемое во множественном числе, поэтому too many.'),
+  (4, 'fill_blank', 'The file is ___ to send by email. (big, слишком)', null::text[], 'too big', array[]::text[], 'Too + прилагательное: too big.'),
+  (5, 'multiple_choice', 'The tea is too hot ___.', array['to drink', 'for drink', 'drinking']::text[], 'to drink', array[]::text[], 'Too + прилагательное + to + глагол: too hot to drink.'),
+  (6, 'multiple_choice', 'This task is ___ for a junior developer.', array['too difficult', 'enough difficult', 'too much difficult']::text[], 'too difficult', array[]::text[], 'Перед прилагательным просто too, без much: too difficult.'),
+  (7, 'multiple_choice', 'It''s ___ cold today — perfect weather for skiing!', array['very', 'too', 'enough']::text[], 'very', array[]::text[], 'Very — просто «очень»; too значило бы, что холод мешает, а здесь погода идеальная.'),
+  (8, 'fill_blank', 'He speaks ___ for me to understand. (fast, слишком)', null::text[], 'too fast', array[]::text[], 'Too + наречие + for me to…: too fast for me to understand.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 92
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'She speaks ___.', array['English very well', 'very well English', 'English well very']::text[], 'English very well', array[]::text[], 'Глагол и дополнение не разделяем: speaks English very well.'),
+  (2, 'multiple_choice', 'He ___ yesterday.', array['fixed the bug quickly', 'fixed quickly the bug', 'quickly the bug fixed']::text[], 'fixed the bug quickly', array[]::text[], 'Наречие не ставим между глаголом и дополнением: fixed the bug quickly.'),
+  (3, 'multiple_choice', 'Did you like the demo? Yes, I liked ___.', array['it very much', 'very much it', 'it much very']::text[], 'it very much', array[]::text[], 'Сначала дополнение, потом very much: I liked it very much.'),
+  (4, 'multiple_choice', 'We are going ___.', array['to Berlin next week', 'next week to Berlin', 'to next week Berlin']::text[], 'to Berlin next week', array[]::text[], 'Сначала место, потом время: to Berlin next week.'),
+  (5, 'multiple_choice', 'Please read ___.', array['the requirements carefully', 'carefully the requirements', 'the carefully requirements']::text[], 'the requirements carefully', array[]::text[], 'Дополнение сразу после глагола: read the requirements carefully.'),
+  (6, 'fill_blank', 'Anna ___ every morning. (drinks / coffee / at her desk)', null::text[], 'drinks coffee at her desk', array[]::text[], 'Глагол + дополнение + место: drinks coffee at her desk.'),
+  (7, 'fill_blank', 'He ___ last night. (left / the office / late)', null::text[], 'left the office late', array[]::text[], 'Глагол + дополнение + наречие: left the office late.'),
+  (8, 'fill_blank', 'I will ___ tomorrow. (send / to the client / the report)', null::text[], 'send the report to the client', array[]::text[], 'Глагол + дополнение + кому: send the report to the client.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 93
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I ___ coffee in the morning.', array['always drink', 'drink always', 'am always drink']::text[], 'always drink', array[]::text[], 'Always ставим перед смысловым глаголом: I always drink.'),
+  (2, 'multiple_choice', 'She ___ late for meetings.', array['is never', 'never is', 'never']::text[], 'is never', array[]::text[], 'С am/is/are наречие частоты идёт после глагола: is never.'),
+  (3, 'multiple_choice', 'We ___ work from home on Mondays.', array['often', 'are often', 'often are']::text[], 'often', array[]::text[], 'Перед смысловым глаголом просто often: We often work.'),
+  (4, 'multiple_choice', 'My sister speaks French. She ___ German.', array['also speaks', 'speaks also', 'is also speaks']::text[], 'also speaks', array[]::text[], 'Also ставим перед смысловым глаголом: She also speaks German.'),
+  (5, 'multiple_choice', 'Anna and Mark ___ live near the office.', array['both', 'are both', 'both are']::text[], 'both', array[]::text[], 'Both перед смысловым глаголом: Anna and Mark both live…'),
+  (6, 'fill_blank', 'He ___ breakfast. (have, never, present simple)', null::text[], 'never has', array[]::text[], 'Never перед смысловым глаголом; he → has: He never has breakfast.'),
+  (7, 'fill_blank', 'I ___ on time for the standup. (be, always, past simple)', null::text[], 'was always', array[]::text[], 'С was наречие частоты идёт после глагола: I was always on time.'),
+  (8, 'fill_blank', 'I ___ used this library before. (have, never)', null::text[], 'have never', array['''ve never']::text[], 'В составной форме never ставим после have: I have never used it.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 94
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I haven''t read the spec ___.', array['yet', 'still', 'already']::text[], 'yet', array[]::text[], 'В отрицании в конце предложения — yet: I haven''t read it yet.'),
+  (2, 'multiple_choice', '''Don''t forget to send the invoice.'' ''I''ve ___ sent it.''', array['already', 'yet', 'still']::text[], 'already', array[]::text[], 'Already — «уже», раньше, чем ожидали: I''ve already sent it.'),
+  (3, 'multiple_choice', 'It''s ten o''clock in the morning and she ___ asleep.', array['is still', 'is yet', 'still']::text[], 'is still', array[]::text[], 'Still после is: она всё ещё спит.'),
+  (4, 'multiple_choice', 'The ticket is ___ open. Nobody has taken it.', array['still', 'yet', 'already']::text[], 'still', array[]::text[], 'Still — ситуация не изменилась, тикет всё ещё открыт.'),
+  (5, 'multiple_choice', 'I''ve been waiting for an hour and I ___ haven''t got an answer.', array['still', 'yet', 'already']::text[], 'still', array[]::text[], 'Still перед отрицанием: I still haven''t got an answer.'),
+  (6, 'fill_blank', 'I ___ don''t understand this error. (still/yet/already)', null::text[], 'still', array[]::text[], 'Still перед don''t — «всё ещё не понимаю».'),
+  (7, 'fill_blank', 'The meeting hasn''t started ___. (still/yet/already)', null::text[], 'yet', array[]::text[], 'В отрицании в конце — yet: hasn''t started yet.'),
+  (8, 'fill_blank', 'We''ve ___ deployed the fix, so you can test it now. (still/yet/already)', null::text[], 'already', array[]::text[], 'Already — «уже», действие произошло: we''ve already deployed.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 95
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Can you give ___ the link?', array['me', 'to me', 'for me']::text[], 'me', array[]::text[], 'Give + кому + что: give me the link.'),
+  (2, 'multiple_choice', 'I bought this book ___.', array['for you', 'you', 'to you']::text[], 'for you', array[]::text[], 'С buy используем for: bought it for you.'),
+  (3, 'multiple_choice', 'Please give ___.', array['it to Anna', 'to Anna it', 'it Anna']::text[], 'it to Anna', array[]::text[], 'Если вещь — it, говорим give it to Anna.'),
+  (4, 'multiple_choice', 'She sent ___ yesterday.', array['me an email', 'to me an email', 'an email me']::text[], 'me an email', array[]::text[], 'Send + кому + что без to: sent me an email.'),
+  (5, 'multiple_choice', 'Show ___, please.', array['it to me', 'to me it', 'it for me']::text[], 'it to me', array[]::text[], 'Если вещь — it, сначала it, потом to + кому: show it to me.'),
+  (6, 'fill_blank', 'Can you lend ___ your charger? (I)', null::text[], 'me', array[]::text[], 'Lend + кому (объектная форма me) + что.'),
+  (7, 'fill_blank', 'I sent the file ___ yesterday. (they)', null::text[], 'to them', array[]::text[], 'Что + to + кому: sent the file to them.'),
+  (8, 'fill_blank', 'Did you give ___ to Mark? (the keys, местоимение)', null::text[], 'them', array[]::text[], 'The keys → them; give them to Mark.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 96
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I was tired, ___ I went to bed early.', array['so', 'because', 'but']::text[], 'so', array[]::text[], 'So — «поэтому», вводит следствие.'),
+  (2, 'multiple_choice', 'I went to bed early ___ I was tired.', array['because', 'so', 'but']::text[], 'because', array[]::text[], 'Because — «потому что», вводит причину.'),
+  (3, 'multiple_choice', 'The code works, ___ it''s very slow.', array['but', 'so', 'or']::text[], 'but', array[]::text[], 'But — «но», противопоставление.'),
+  (4, 'multiple_choice', 'Are you working from home today ___ in the office?', array['or', 'and', 'but']::text[], 'or', array[]::text[], 'Or — «или», выбор из двух вариантов.'),
+  (5, 'multiple_choice', 'The server crashed, ___ we lost some data.', array['so', 'because', 'or']::text[], 'so', array[]::text[], 'So — следствие: сервер упал, поэтому потеряли данные.'),
+  (6, 'fill_blank', 'I couldn''t log in ___ I forgot my password. (потому что)', null::text[], 'because', array['as', 'since']::text[], 'Because вводит причину.'),
+  (7, 'fill_blank', 'It was raining, ___ I took a taxi. (поэтому)', null::text[], 'so', array[]::text[], 'So вводит следствие.'),
+  (8, 'fill_blank', 'I opened my laptop ___ started working. (и)', null::text[], 'and', array[]::text[], 'And соединяет два действия.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 97
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'When I ___ home, I''ll call you.', array['get', 'will get', 'got']::text[], 'get', array[]::text[], 'После when о будущем — present simple: When I get home.'),
+  (2, 'multiple_choice', 'I''ll review your code when I ___ this task.', array['finish', 'will finish', 'finished']::text[], 'finish', array[]::text[], 'После when о будущем will не ставим: when I finish.'),
+  (3, 'multiple_choice', '___ you were at the conference, the server went down.', array['While', 'During', 'Until']::text[], 'While', array[]::text[], 'While + подлежащее + глагол; during — только с существительным.'),
+  (4, 'multiple_choice', 'Wait here ___ I come back.', array['until', 'when', 'while']::text[], 'until', array[]::text[], 'Until — «пока не», «до тех пор, пока».'),
+  (5, 'multiple_choice', 'Turn off the computer before you ___.', array['leave', 'will leave', 'leaving']::text[], 'leave', array[]::text[], 'После before о будущем — present simple: before you leave.'),
+  (6, 'fill_blank', 'When the release ___ ready, we will tell the client. (be)', null::text[], 'is', array[]::text[], 'После when о будущем — present simple: when it is ready.'),
+  (7, 'fill_blank', 'I''ll come to the office after I ___ my daughter to school. (take)', null::text[], 'take', array['have taken', '''ve taken']::text[], 'После after о будущем — present simple: after I take.'),
+  (8, 'fill_blank', 'When I was a student, I ___ in a café. (work, past simple)', null::text[], 'worked', array[]::text[], 'О прошлом после when — обычное прошедшее время.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 98
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'If it ___ tomorrow, we''ll work from home.', array['rains', 'will rain', 'rained']::text[], 'rains', array[]::text[], 'После if о будущем — present simple, без will.'),
+  (2, 'multiple_choice', 'If you ___ the bug again, tell me.', array['see', 'will see', 'saw']::text[], 'see', array[]::text[], 'If + present simple, затем повелительное: If you see…, tell me.'),
+  (3, 'multiple_choice', 'If you don''t hurry, you ___ the train.', array['will miss', 'miss', 'missed']::text[], 'will miss', array[]::text[], 'В главной части — will: you will miss.'),
+  (4, 'multiple_choice', 'I''m going to the office tomorrow. ___ I''m there, I''ll fix your laptop.', array['When', 'If', 'Until']::text[], 'When', array[]::text[], 'Это точно случится, поэтому when, а не if.'),
+  (5, 'multiple_choice', 'Call me ___ you have any questions.', array['if', 'so', 'but']::text[], 'if', array[]::text[], 'If — «если»: call me if you have questions.'),
+  (6, 'fill_blank', 'If the server ___ again, we will restart it. (crash)', null::text[], 'crashes', array[]::text[], 'После if — present simple: the server = it → crashes.'),
+  (7, 'fill_blank', 'If you ___ busy, I''ll call you later. (be)', null::text[], 'are', array['''re']::text[], 'После if — present simple: if you are.'),
+  (8, 'fill_blank', 'If I don''t finish the report today, I ___ it tomorrow. (finish, will)', null::text[], 'will finish', array['''ll finish']::text[], 'В главной части — will + глагол.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 99
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'If I ___ more time, I would learn Japanese.', array['had', 'have', 'would have']::text[], 'had', array[]::text[], 'Воображаемое условие: if + past simple.'),
+  (2, 'multiple_choice', 'If I had a car, I ___ drive to work.', array['would', 'will', 'can']::text[], 'would', array[]::text[], 'В главной части нереального условия — would.'),
+  (3, 'multiple_choice', 'If I ___ you, I would ask the team lead.', array['were', 'am', 'would be']::text[], 'were', array[]::text[], 'Устойчиво: If I were you…'),
+  (4, 'multiple_choice', 'I''d buy a new laptop if it ___ so expensive.', array['weren''t', 'isn''t', 'wouldn''t be']::text[], 'weren''t', array[]::text[], 'После if — прошедшая форма, would после if не ставим.'),
+  (5, 'multiple_choice', 'What ___ you do if you lost your job?', array['would', 'will', 'did']::text[], 'would', array[]::text[], 'Воображаемая ситуация: What would you do if…?'),
+  (6, 'fill_blank', 'If we ___ more testers, we would release faster. (have)', null::text[], 'had', array[]::text[], 'После if в нереальном условии — past simple: had.'),
+  (7, 'fill_blank', 'If she knew the answer, she ___ us. (tell, would)', null::text[], 'would tell', array['''d tell']::text[], 'В главной части — would + глагол.'),
+  (8, 'fill_blank', 'It''s a pity I don''t speak German. If I ___ German, I could work in Berlin. (speak)', null::text[], 'spoke', array['could speak']::text[], 'Нереальное условие: if + past simple, speak → spoke.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 100
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'A developer is a person ___ writes code.', array['who', 'which', 'what']::text[], 'who', array[]::text[], 'Для людей — who.'),
+  (2, 'multiple_choice', 'This is the script ___ deletes old logs.', array['that', 'who', 'what']::text[], 'that', array[]::text[], 'Для вещей — that или which; what здесь нельзя.'),
+  (3, 'multiple_choice', 'The bug ___ crashed the app is fixed now.', array['that', 'who', 'it']::text[], 'that', array[]::text[], 'Для вещей — that/which.'),
+  (4, 'multiple_choice', 'We need a tool ___ can check our code automatically.', array['which', 'who', 'what']::text[], 'which', array[]::text[], 'Для вещей — which или that.'),
+  (5, 'multiple_choice', 'I have a colleague who ___ three languages.', array['speaks', 'he speaks', 'speak']::text[], 'speaks', array[]::text[], 'Who уже подлежащее, he не добавляем: who speaks.'),
+  (6, 'fill_blank', 'Where is the laptop ___ was on my desk? (which/who)', null::text[], 'which', array['that']::text[], 'Laptop — вещь, поэтому which (или that).'),
+  (7, 'fill_blank', 'The engineer ___ fixed the bug got a bonus. (who/which)', null::text[], 'who', array['that']::text[], 'Engineer — человек, поэтому who (или that).'),
+  (8, 'fill_blank', 'An editor is a program ___ helps you write code. (who/which)', null::text[], 'which', array['that']::text[], 'Program — вещь, поэтому which (или that).')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 101
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Is this the bug ___ you told me about?', array['that', 'who', 'what']::text[], 'that', array[]::text[], 'Для вещей — that/which; предлог about остаётся в конце.'),
+  (2, 'multiple_choice', 'The hotel ___ was very cheap.', array['we stayed at', 'we stayed', 'we stayed at it']::text[], 'we stayed at', array[]::text[], 'Stay at — предлог остаётся в конце, it не добавляем.'),
+  (3, 'multiple_choice', 'Did you find the file ___?', array['you were looking for', 'you were looking for it', 'you were looking it for']::text[], 'you were looking for', array[]::text[], 'Look for — предлог в конце, без лишнего it.'),
+  (4, 'multiple_choice', 'The colleague I work with ___ very helpful.', array['is', 'he is', 'are']::text[], 'is', array[]::text[], 'Подлежащее — the colleague, he не повторяем: The colleague … is.'),
+  (5, 'multiple_choice', 'This is the café ___ we had lunch.', array['where', 'which', 'who']::text[], 'where', array[]::text[], 'Для места — where: the café where we had lunch.'),
+  (6, 'fill_blank', 'The man I was talking ___ is our new manager. (предлог после talk)', null::text[], 'to', array['with']::text[], 'Talk to — предлог остаётся в конце придаточного.'),
+  (7, 'fill_blank', 'The app ___ we use for tasks is very slow. (that/who)', null::text[], 'that', array['which']::text[], 'App — вещь, поэтому that (или which); его можно и опустить.'),
+  (8, 'fill_blank', 'The candidate ___ we interviewed on Monday has accepted our offer. (who/which)', null::text[], 'who', array['that', 'whom']::text[], 'Candidate — человек, поэтому who (или that, whom).')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 102
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'The standup is ___ 10 o''clock.', array['at', 'on', 'in']::text[], 'at', array[]::text[], 'С точным временем — at.'),
+  (2, 'multiple_choice', 'We release a new version ___ Mondays.', array['on', 'in', 'at']::text[], 'on', array[]::text[], 'С днями недели — on.'),
+  (3, 'multiple_choice', 'I never work ___ night.', array['at', 'in', 'on']::text[], 'at', array[]::text[], 'Устойчиво: at night.'),
+  (4, 'multiple_choice', 'Let''s meet ___ Friday afternoon.', array['on', 'in', 'at']::text[], 'on', array[]::text[], 'С днём недели, даже с частью дня, — on: on Friday afternoon.'),
+  (5, 'multiple_choice', 'I''ll call you ___.', array['next Monday', 'on next Monday', 'at next Monday']::text[], 'next Monday', array[]::text[], 'Перед next предлог не ставим: next Monday.'),
+  (6, 'fill_blank', 'I was born ___ 1990. (at/on/in)', null::text[], 'in', array[]::text[], 'С годами — in.'),
+  (7, 'fill_blank', 'My birthday is ___ 12 May. (at/on/in)', null::text[], 'on', array[]::text[], 'С датами — on.'),
+  (8, 'fill_blank', 'I usually feel tired ___ the afternoon. (at/on/in)', null::text[], 'in', array[]::text[], 'С частями дня — in: in the afternoon.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 103
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'The office is open ___ 9 am to 6 pm.', array['from', 'since', 'for']::text[], 'from', array[]::text[], 'Интервал «от и до»: from … to.'),
+  (2, 'multiple_choice', 'The server will be down ___ midnight.', array['until', 'since', 'for']::text[], 'until', array[]::text[], 'До какого-то момента в будущем — until.'),
+  (3, 'multiple_choice', 'I''ve worked at this company ___ 2021.', array['for', 'since', 'from']::text[], 'since', array[]::text[], 'С момента в прошлом + present perfect — since.'),
+  (4, 'multiple_choice', 'We''ve been in this meeting ___ two hours.', array['for', 'since', 'until']::text[], 'for', array[]::text[], 'Длительность (два часа) — for.'),
+  (5, 'multiple_choice', 'Our sprint runs from Monday ___ Friday.', array['to', 'since', 'for']::text[], 'to', array[]::text[], 'from … to — от и до.'),
+  (6, 'fill_blank', 'She has lived in Berlin ___ three years. (предлог)', null::text[], 'for', array[]::text[], 'С длительностью — for, не since.'),
+  (7, 'fill_blank', 'This bug has been open ___ last Monday. (предлог)', null::text[], 'since', array[]::text[], 'С момента в прошлом (last Monday) — since.'),
+  (8, 'fill_blank', 'Let''s wait ___ the tests finish. (до тех пор, пока не)', null::text[], 'until', array['till']::text[], 'until — до того момента, когда…')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 104
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I fell asleep ___ the film.', array['during', 'while', 'for']::text[], 'during', array[]::text[], 'Перед существительным — during.'),
+  (2, 'multiple_choice', 'My phone rang ___ I was presenting the demo.', array['while', 'during', 'for']::text[], 'while', array[]::text[], 'Перед предложением (подлежащее + глагол) — while.'),
+  (3, 'multiple_choice', 'Nobody asked any questions ___ the meeting.', array['during', 'while', 'for']::text[], 'during', array[]::text[], 'during + существительное: during the meeting.'),
+  (4, 'multiple_choice', 'Check the logs before ___ the server.', array['restarting', 'restart', 'to restart']::text[], 'restarting', array[]::text[], 'После before глагол с -ing.'),
+  (5, 'multiple_choice', 'After ___ the bug, she moved the ticket to Done.', array['fixing', 'fix', 'to fix']::text[], 'fixing', array[]::text[], 'После after глагол с -ing.'),
+  (6, 'fill_blank', 'Please don''t use your phone ___ the exam. (во время)', null::text[], 'during', array[]::text[], 'Перед существительным (the exam) — during.'),
+  (7, 'fill_blank', 'I usually listen to podcasts ___ I''m driving. (пока, в то время как)', null::text[], 'while', array[]::text[], 'Перед предложением — while.'),
+  (8, 'fill_blank', 'Think twice before ___ to production on a Friday. (deploy)', null::text[], 'deploying', array[]::text[], 'before + -ing: before deploying.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 105
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'The keys are ___ my bag.', array['in', 'at', 'on']::text[], 'in', array[]::text[], 'Внутри чего-то — in.'),
+  (2, 'multiple_choice', 'There''s a sticky note ___ my monitor.', array['on', 'in', 'at']::text[], 'on', array[]::text[], 'На поверхности — on.'),
+  (3, 'multiple_choice', 'Someone is ___ the door. Can you open it?', array['at', 'in', 'on']::text[], 'at', array[]::text[], 'У двери (в точке) — at the door.'),
+  (4, 'multiple_choice', 'Turn left ___ the traffic lights.', array['at', 'in', 'on']::text[], 'at', array[]::text[], 'Точка на маршруте — at the traffic lights.'),
+  (5, 'multiple_choice', 'There''s a big map ___ the wall in our office.', array['on', 'in', 'at']::text[], 'on', array[]::text[], 'На стене (поверхность) — on the wall.'),
+  (6, 'fill_blank', 'The config file is ___ the root folder. (в)', null::text[], 'in', array[]::text[], 'Внутри папки — in the folder.'),
+  (7, 'fill_blank', 'I''ll wait for you ___ the bus stop. (на остановке)', null::text[], 'at', array[]::text[], 'Остановка — точка: at the bus stop.'),
+  (8, 'fill_blank', 'Your laptop is ___ the table in the meeting room. (на поверхности)', null::text[], 'on', array[]::text[], 'На столе — on the table.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 106
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Max isn''t at work today. He''s ill ___ bed.', array['in', 'on', 'at']::text[], 'in', array[]::text[], 'Лежать в постели — in bed.'),
+  (2, 'multiple_choice', 'I left my charger ___ home.', array['at', 'in', 'on']::text[], 'at', array[]::text[], 'Дома — at home.'),
+  (3, 'multiple_choice', 'We met ___ a conference last year.', array['at', 'in', 'on']::text[], 'at', array[]::text[], 'На мероприятии — at a conference.'),
+  (4, 'multiple_choice', 'I usually answer emails ___ the bus.', array['on', 'in', 'at']::text[], 'on', array[]::text[], 'Автобус, поезд, самолёт — on.'),
+  (5, 'multiple_choice', 'Our office is ___ the third floor.', array['on', 'in', 'at']::text[], 'on', array[]::text[], 'Этаж — всегда on.'),
+  (6, 'fill_blank', 'I saw Tom ___ a party last weekend. (предлог)', null::text[], 'at', array[]::text[], 'На вечеринке — at a party.'),
+  (7, 'fill_blank', 'Who is that ___ the photo? (предлог)', null::text[], 'in', array[]::text[], 'На фото — in the photo.'),
+  (8, 'fill_blank', 'I''m staying ___ my sister''s this week. (у кого-то дома)', null::text[], 'at', array[]::text[], 'У кого-то дома — at somebody''s.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 107
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I go ___ the office three days a week.', array['to', 'in', 'at']::text[], 'to', array[]::text[], 'Движение куда-то — go to.'),
+  (2, 'multiple_choice', 'What time did you get ___ work today?', array['to', 'at', 'in']::text[], 'to', array[]::text[], 'Добраться куда-то — get to.'),
+  (3, 'multiple_choice', 'It''s late. Let''s ___.', array['go home', 'go to home', 'go at home']::text[], 'go home', array[]::text[], 'С home предлог не нужен: go home.'),
+  (4, 'multiple_choice', 'We arrived ___ Berlin at midnight.', array['in', 'at', 'to']::text[], 'in', array[]::text[], 'arrive in + город или страна.'),
+  (5, 'multiple_choice', 'The team arrived ___ the hotel late at night.', array['at', 'in', 'to']::text[], 'at', array[]::text[], 'arrive at + здание, место. arrive to — ошибка.'),
+  (6, 'fill_blank', 'Are you going ___ the party tonight? (куда)', null::text[], 'to', array[]::text[], 'Движение — go to.'),
+  (7, 'fill_blank', 'I was ___ the dentist yesterday. (у стоматолога)', null::text[], 'at', array[]::text[], 'Быть у врача — at the dentist.'),
+  (8, 'fill_blank', 'What time did you get ___ last night? (домой)', null::text[], 'home', array[]::text[], 'get home — без предлога.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 108
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Anna is on my left and Max is on my right. I sit ___ them.', array['between', 'behind', 'opposite']::text[], 'between', array[]::text[], 'Между двумя — between.'),
+  (2, 'multiple_choice', 'The bus stop is ___ the bank, on the other side of the street.', array['opposite', 'next to', 'behind']::text[], 'opposite', array[]::text[], 'На другой стороне улицы, лицом к лицу — opposite.'),
+  (3, 'multiple_choice', 'Please don''t stand ___ the screen. We can''t see the slides.', array['in front of', 'behind', 'under']::text[], 'in front of', array[]::text[], 'Перед чем-то — in front of.'),
+  (4, 'multiple_choice', 'The cables are ___ the desk, on the floor.', array['under', 'above', 'on']::text[], 'under', array[]::text[], 'Под чем-то — under.'),
+  (5, 'multiple_choice', 'There''s a lamp ___ the table, hanging from the ceiling.', array['above', 'under', 'on']::text[], 'above', array[]::text[], 'Выше чего-то, не касаясь — above.'),
+  (6, 'fill_blank', 'The car park is ___ the building, so you can''t see it from the street. (сзади, за)', null::text[], 'behind', array[]::text[], 'За, позади — behind.'),
+  (7, 'fill_blank', 'The coffee machine is ___ the fridge. They''re side by side. (рядом с, 2 слова)', null::text[], 'next to', array['beside', 'by']::text[], 'Рядом — next to.'),
+  (8, 'fill_blank', 'The server room is one floor ___ us, in the basement. (ниже)', null::text[], 'below', array[]::text[], 'Ниже по уровню — below.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 109
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'The cat jumped ___ the fence and ran away.', array['over', 'through', 'along']::text[], 'over', array[]::text[], 'Перепрыгнуть через верх — over.'),
+  (2, 'multiple_choice', 'Every morning I walk ___ the park to the office.', array['through', 'over', 'under']::text[], 'through', array[]::text[], 'Сквозь (парк, лес, туннель) — through.'),
+  (3, 'multiple_choice', 'He took his laptop ___ his bag and opened it.', array['out of', 'into', 'through']::text[], 'out of', array[]::text[], 'Изнутри наружу — out of, не from.'),
+  (4, 'multiple_choice', 'I walked ___ the stairs from the ground floor to the fifth floor.', array['up', 'down', 'under']::text[], 'up', array[]::text[], 'Вверх — up.'),
+  (5, 'multiple_choice', 'Drive ___ the hotel and take the next left.', array['past', 'through', 'into']::text[], 'past', array[]::text[], 'Мимо — past.'),
+  (6, 'fill_blank', 'The kids ran ___ the road without looking. (на другую сторону)', null::text[], 'across', array['over']::text[], 'Через, на другую сторону — across.'),
+  (7, 'fill_blank', 'We walked ___ the lake. It took an hour to go all the way. (вокруг)', null::text[], 'around', array['round']::text[], 'Вокруг — around.'),
+  (8, 'fill_blank', 'The train went ___ a long tunnel. (сквозь)', null::text[], 'through', array[]::text[], 'Сквозь туннель — through.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 110
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I''m ___ holiday next week, so ask Max about the release.', array['on', 'in', 'at']::text[], 'on', array[]::text[], 'В отпуске — on holiday.'),
+  (2, 'multiple_choice', 'I came to work ___ bike today.', array['by', 'on', 'with']::text[], 'by', array[]::text[], 'Вид транспорта без артикля — by bike.'),
+  (3, 'multiple_choice', 'We usually go to the office ___ foot.', array['on', 'by', 'with']::text[], 'on', array[]::text[], 'Пешком — on foot (не by foot).'),
+  (4, 'multiple_choice', 'She wrote her first program ___ the age of twelve.', array['at', 'on', 'in']::text[], 'at', array[]::text[], 'В возрасте — at the age of.'),
+  (5, 'multiple_choice', 'Can we talk ___ the deadline?', array['about', 'on', 'with']::text[], 'about', array[]::text[], 'Говорить о чём-то — talk about.'),
+  (6, 'fill_blank', 'He opened the box ___ a knife. (с помощью чего)', null::text[], 'with', array[]::text[], 'С помощью инструмента — with.'),
+  (7, 'fill_blank', 'I can''t talk now, I''m ___ the phone. (говорю по телефону)', null::text[], 'on', array[]::text[], 'По телефону — on the phone.'),
+  (8, 'fill_blank', 'Don''t leave ___ saying goodbye. (без)', null::text[], 'without', array[]::text[], 'Без — without (+ -ing).')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 111
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'I''m not very good ___ public speaking.', array['at', 'in', 'with']::text[], 'at', array[]::text[], 'Хорош в чём-то — good at.'),
+  (2, 'multiple_choice', 'She''s interested ___ machine learning.', array['in', 'on', 'about']::text[], 'in', array[]::text[], 'Интересоваться — interested in.'),
+  (3, 'multiple_choice', 'My son is afraid ___ dogs.', array['of', 'from', 'about']::text[], 'of', array[]::text[], 'Бояться — afraid of, не from.'),
+  (4, 'multiple_choice', 'Who is responsible ___ this service?', array['for', 'of', 'about']::text[], 'for', array[]::text[], 'Отвечать за — responsible for.'),
+  (5, 'multiple_choice', 'The new version is very different ___ the old one.', array['from', 'of', 'with']::text[], 'from', array[]::text[], 'Отличаться от — different from.'),
+  (6, 'fill_blank', 'I''m interested in ___ Python. (learn)', null::text[], 'learning', array[]::text[], 'После предлога глагол с -ing.'),
+  (7, 'fill_blank', 'He''s good at ___ bugs quickly. (find)', null::text[], 'finding', array[]::text[], 'good at + -ing.'),
+  (8, 'fill_blank', 'Instead of ___ a new framework, let''s fix the old code. (write)', null::text[], 'writing', array[]::text[], 'instead of + -ing.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 112
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'Please ___ for a minute.', array['listen to me', 'listen me', 'listen at me']::text[], 'listen to me', array[]::text[], 'Слушать кого-то — listen to.'),
+  (2, 'multiple_choice', 'I''m looking ___ my keys. Have you seen them?', array['for', 'at', 'after']::text[], 'for', array[]::text[], 'Искать — look for.'),
+  (3, 'multiple_choice', 'Look ___ this error message. What does it mean?', array['at', 'for', 'to']::text[], 'at', array[]::text[], 'Смотреть на — look at.'),
+  (4, 'multiple_choice', 'Let''s ___ the new design tomorrow.', array['discuss', 'discuss about', 'discuss on']::text[], 'discuss', array[]::text[], 'discuss — без предлога.'),
+  (5, 'multiple_choice', 'I''ll ___ about the release tomorrow.', array['phone you', 'phone to you', 'phone with you']::text[], 'phone you', array[]::text[], 'phone/call somebody — без предлога.'),
+  (6, 'fill_blank', 'The release date ___ the test results. (depend + предлог, present simple)', null::text[], 'depends on', array['depends upon']::text[], 'Зависеть от — depend on.'),
+  (7, 'fill_blank', 'I''m waiting ___ the build to finish. (ждать чего-то)', null::text[], 'for', array[]::text[], 'Ждать — wait for.'),
+  (8, 'fill_blank', 'Who is going to pay ___ the pizza? (платить за)', null::text[], 'for', array[]::text[], 'Платить за — pay for.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 113
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'The plane took ___ at 7 am.', array['off', 'up', 'out']::text[], 'off', array[]::text[], 'Взлетать — take off.'),
+  (2, 'multiple_choice', 'I usually get ___ at seven.', array['up', 'on', 'off']::text[], 'up', array[]::text[], 'Вставать — get up.'),
+  (3, 'multiple_choice', 'We got ___ the bus near the office.', array['off', 'out', 'away']::text[], 'off', array[]::text[], 'Выйти из автобуса — get off the bus.'),
+  (4, 'multiple_choice', 'Please sit ___. The meeting is starting.', array['down', 'up', 'off']::text[], 'down', array[]::text[], 'Садиться — sit down.'),
+  (5, 'multiple_choice', 'Don''t give ___! You''ve almost finished the migration.', array['up', 'out', 'away']::text[], 'up', array[]::text[], 'Сдаваться — give up.'),
+  (6, 'fill_blank', 'My car broke ___ on the way to the office. (сломалась)', null::text[], 'down', array[]::text[], 'Сломаться (о машине, технике) — break down.'),
+  (7, 'fill_blank', 'The connection is bad. Can you speak ___? I can''t hear you. (громче)', null::text[], 'up', array['louder']::text[], 'Говорить громче — speak up.'),
+  (8, 'fill_blank', 'I''m going ___ for a few minutes. I''ll be back soon. (выйти)', null::text[], 'out', array['outside']::text[], 'Выйти (из дома, офиса) — go out.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 114
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
+insert into grammar_exercises (topic_id, position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+select t.id, v.position, v.exercise_type::exercise_type, v.prompt, v.options, v.correct_answer, v.accepted_answers, v.explanation
+from (values
+  (1, 'multiple_choice', 'It''s cold outside. ___ your jacket.', array['Put on', 'Put in', 'Put up']::text[], 'Put on', array[]::text[], 'Надеть — put on.'),
+  (2, 'multiple_choice', 'It''s dark in here. Can you turn ___ the light?', array['on', 'off', 'down']::text[], 'on', array[]::text[], 'Включить — turn on.'),
+  (3, 'multiple_choice', 'These are my new shoes. I''d like to try ___.', array['them on', 'on them', 'on it']::text[], 'them on', array[]::text[], 'Местоимение — между глаголом и частицей: try them on.'),
+  (4, 'multiple_choice', 'These old notes are useless. Can you throw ___?', array['them away', 'away them', 'away it']::text[], 'them away', array[]::text[], 'Местоимение — перед частицей: throw them away.'),
+  (5, 'multiple_choice', 'Your camera is still on. Can you ___?', array['turn it off', 'turn off it', 'turn off']::text[], 'turn it off', array[]::text[], 'turn it off — местоимение посередине, объект обязателен.'),
+  (6, 'fill_blank', 'Please fill ___ this form and send it back. (заполнить)', null::text[], 'in', array['out']::text[], 'Заполнить форму — fill in.'),
+  (7, 'fill_blank', 'Thanks for the charger. I''ll give it ___ tomorrow. (вернуть)', null::text[], 'back', array[]::text[], 'Вернуть — give back.'),
+  (8, 'fill_blank', 'Here''s the address of the test server. Write it ___. (записать)', null::text[], 'down', array[]::text[], 'Записать — write down.')
+) as v(position, exercise_type, prompt, options, correct_answer, accepted_answers, explanation)
+join grammar_topics t on t.unit = 115
+on conflict (topic_id, position) do update set exercise_type = excluded.exercise_type, prompt = excluded.prompt, options = excluded.options, correct_answer = excluded.correct_answer, accepted_answers = excluded.accepted_answers, explanation = excluded.explanation;
+
 insert into texts (title, body, cefr_level, position, questions) values
   ('My Name Is Alex', 'Hello! My name is Alex. I am a developer. I work in a small team. There are five people in my team. We make software for online shops.
 
@@ -376,93 +1921,3 @@ update texts set word_ids = coalesce((
   select array_agg(w.id) from words w
   where texts.body ~* ('\m' || regexp_replace(w.headword, '([.^$*+?()\[\]{}|\\])', '\\\1', 'g') || '(s|es|ed|d|ing)?\M')
 ), '{}');
-
--- Listening: own TTS dialogues (exact transcripts) + verified external videos.
-insert into listening_items (title, kind, cefr_level, position, lines, transcript, source_url, start_seconds, end_seconds) values
-  ('Good Morning, Team', 'tts', 'A1', 1, '[{"speaker":"Anna","text":"Good morning, everyone. Let''s start the standup."},{"speaker":"Tom","text":"Hi! Yesterday I fixed the login bug."},{"speaker":"Tom","text":"Today I''m writing tests for it."},{"speaker":"Anna","text":"Great. Do you have any problems?"},{"speaker":"Tom","text":"No, everything is fine."},{"speaker":"Anna","text":"Thanks, Tom. Maria, what about you?"},{"speaker":"Maria","text":"I''m working on the new search page. I need help with the API."},{"speaker":"Anna","text":"OK, let''s talk after the meeting."}]'::jsonb, 'Anna: Good morning, everyone. Let''s start the standup.
-Tom: Hi! Yesterday I fixed the login bug.
-Tom: Today I''m writing tests for it.
-Anna: Great. Do you have any problems?
-Tom: No, everything is fine.
-Anna: Thanks, Tom. Maria, what about you?
-Maria: I''m working on the new search page. I need help with the API.
-Anna: OK, let''s talk after the meeting.', null, 0, null),
-  ('A New Colleague', 'tts', 'A1', 2, '[{"speaker":"Sam","text":"Hi, I''m Sam. I''m the new developer."},{"speaker":"Lena","text":"Nice to meet you, Sam. I''m Lena. I''m a tester."},{"speaker":"Sam","text":"Nice to meet you too. Which team are you in?"},{"speaker":"Lena","text":"I''m in the mobile team. We make the Android app."},{"speaker":"Sam","text":"Cool! I work on the backend."},{"speaker":"Lena","text":"Great. Do you want a coffee?"},{"speaker":"Sam","text":"Yes, please. Where is the kitchen?"},{"speaker":"Lena","text":"It''s next to the meeting room. Come with me."}]'::jsonb, 'Sam: Hi, I''m Sam. I''m the new developer.
-Lena: Nice to meet you, Sam. I''m Lena. I''m a tester.
-Sam: Nice to meet you too. Which team are you in?
-Lena: I''m in the mobile team. We make the Android app.
-Sam: Cool! I work on the backend.
-Lena: Great. Do you want a coffee?
-Sam: Yes, please. Where is the kitchen?
-Lena: It''s next to the meeting room. Come with me.', null, 0, null),
-  ('A Slow Laptop', 'tts', 'A1', 3, '[{"speaker":"Kate","text":"Hi, Mike. Can you help me? My laptop is very slow."},{"speaker":"Mike","text":"Sure. What programs are open?"},{"speaker":"Kate","text":"Only the browser and the code editor."},{"speaker":"Mike","text":"How many tabs do you have in the browser?"},{"speaker":"Kate","text":"Hmm, about fifty."},{"speaker":"Mike","text":"That''s the problem! Close some tabs."},{"speaker":"Kate","text":"Oh, you''re right. Now it''s much faster. Thanks!"}]'::jsonb, 'Kate: Hi, Mike. Can you help me? My laptop is very slow.
-Mike: Sure. What programs are open?
-Kate: Only the browser and the code editor.
-Mike: How many tabs do you have in the browser?
-Kate: Hmm, about fifty.
-Mike: That''s the problem! Close some tabs.
-Kate: Oh, you''re right. Now it''s much faster. Thanks!', null, 0, null),
-  ('Working from Home', 'tts', 'A1', 4, '[{"speaker":"Dan","text":"Hi, Emma! Are you in the office today?"},{"speaker":"Emma","text":"No, I''m working from home."},{"speaker":"Dan","text":"Lucky you! Is it quiet at home?"},{"speaker":"Emma","text":"Yes, very quiet. But I miss my colleagues."},{"speaker":"Dan","text":"Do you want to join our call at eleven?"},{"speaker":"Emma","text":"Sure. Send me the link, please."},{"speaker":"Dan","text":"OK, I''m sending it now."}]'::jsonb, 'Dan: Hi, Emma! Are you in the office today?
-Emma: No, I''m working from home.
-Dan: Lucky you! Is it quiet at home?
-Emma: Yes, very quiet. But I miss my colleagues.
-Dan: Do you want to join our call at eleven?
-Emma: Sure. Send me the link, please.
-Dan: OK, I''m sending it now.', null, 0, null),
-  ('Code Review', 'tts', 'A2', 5, '[{"speaker":"Alex","text":"Hi, Nina. Did you look at my pull request?"},{"speaker":"Nina","text":"Yes, I did. The code is good, but I have two comments."},{"speaker":"Alex","text":"Sure. What are they?"},{"speaker":"Nina","text":"First, the function is too long. Can you split it into two?"},{"speaker":"Alex","text":"OK. And the second one?"},{"speaker":"Nina","text":"There are no tests for the new feature."},{"speaker":"Alex","text":"You''re right. I''ll add them today."},{"speaker":"Nina","text":"Great. Then I''ll approve it."}]'::jsonb, 'Alex: Hi, Nina. Did you look at my pull request?
-Nina: Yes, I did. The code is good, but I have two comments.
-Alex: Sure. What are they?
-Nina: First, the function is too long. Can you split it into two?
-Alex: OK. And the second one?
-Nina: There are no tests for the new feature.
-Alex: You''re right. I''ll add them today.
-Nina: Great. Then I''ll approve it.', null, 0, null),
-  ('Planning the Sprint', 'tts', 'A2', 6, '[{"speaker":"Olga","text":"OK, team, let''s plan the next sprint. We have ten tasks in the backlog."},{"speaker":"Ivan","text":"The payment bug is the most important. Users can''t pay by card."},{"speaker":"Olga","text":"I agree. Ivan, can you take it?"},{"speaker":"Ivan","text":"Yes. I think it''ll take two days."},{"speaker":"Sara","text":"I can work on the new profile page."},{"speaker":"Olga","text":"Good. Is the design ready?"},{"speaker":"Sara","text":"Not yet. The designer will send it on Monday."},{"speaker":"Olga","text":"Fine. Let''s start with the bug and the tests."}]'::jsonb, 'Olga: OK, team, let''s plan the next sprint. We have ten tasks in the backlog.
-Ivan: The payment bug is the most important. Users can''t pay by card.
-Olga: I agree. Ivan, can you take it?
-Ivan: Yes. I think it''ll take two days.
-Sara: I can work on the new profile page.
-Olga: Good. Is the design ready?
-Sara: Not yet. The designer will send it on Monday.
-Olga: Fine. Let''s start with the bug and the tests.', null, 0, null),
-  ('A Call with a Client', 'tts', 'A2', 7, '[{"speaker":"Peter","text":"Hello, this is Peter from Green Shop. Our website isn''t working."},{"speaker":"Julia","text":"Hello, Peter. I''m sorry to hear that. What do you see on the screen?"},{"speaker":"Peter","text":"When I click Buy, I see an error message."},{"speaker":"Julia","text":"Can you send me a screenshot, please?"},{"speaker":"Peter","text":"Yes, I''m sending it now."},{"speaker":"Julia","text":"Thank you. I can see the problem. We''ll fix it in an hour."},{"speaker":"Peter","text":"Great. Please call me when it''s ready."},{"speaker":"Julia","text":"Of course. I''ll call you as soon as it works."}]'::jsonb, 'Peter: Hello, this is Peter from Green Shop. Our website isn''t working.
-Julia: Hello, Peter. I''m sorry to hear that. What do you see on the screen?
-Peter: When I click Buy, I see an error message.
-Julia: Can you send me a screenshot, please?
-Peter: Yes, I''m sending it now.
-Julia: Thank you. I can see the problem. We''ll fix it in an hour.
-Peter: Great. Please call me when it''s ready.
-Julia: Of course. I''ll call you as soon as it works.', null, 0, null),
-  ('The Server Is Down', 'tts', 'A2', 8, '[{"speaker":"Max","text":"Is the website down? I can''t open it."},{"speaker":"Olga","text":"Yes. We got an alert five minutes ago."},{"speaker":"Max","text":"What happened?"},{"speaker":"Olga","text":"The database stopped responding. I''m restarting it now."},{"speaker":"Max","text":"Can I help?"},{"speaker":"Olga","text":"Yes, please check the logs and tell me if you see any errors."},{"speaker":"Max","text":"OK. I see a lot of timeout errors."},{"speaker":"Olga","text":"Thanks. The database is running again. Let''s watch it for ten minutes."}]'::jsonb, 'Max: Is the website down? I can''t open it.
-Olga: Yes. We got an alert five minutes ago.
-Max: What happened?
-Olga: The database stopped responding. I''m restarting it now.
-Max: Can I help?
-Olga: Yes, please check the logs and tell me if you see any errors.
-Max: OK. I see a lot of timeout errors.
-Olga: Thanks. The database is running again. Let''s watch it for ten minutes.', null, 0, null),
-  ('Asking for Help', 'tts', 'A2', 9, '[{"speaker":"Chris","text":"Sorry to bother you, Anna. Do you have a minute?"},{"speaker":"Anna","text":"Sure, what''s up?"},{"speaker":"Chris","text":"I don''t understand this error. The tests pass on my laptop, but they fail on the server."},{"speaker":"Anna","text":"Did you check the versions? Maybe the server uses an old version of Node."},{"speaker":"Chris","text":"Hmm, I didn''t check that. How can I see it?"},{"speaker":"Anna","text":"Look at the pipeline log. The version is in the first lines."},{"speaker":"Chris","text":"You''re right! It''s version eighteen, and I use twenty. Thank you!"}]'::jsonb, 'Chris: Sorry to bother you, Anna. Do you have a minute?
-Anna: Sure, what''s up?
-Chris: I don''t understand this error. The tests pass on my laptop, but they fail on the server.
-Anna: Did you check the versions? Maybe the server uses an old version of Node.
-Chris: Hmm, I didn''t check that. How can I see it?
-Anna: Look at the pipeline log. The version is in the first lines.
-Chris: You''re right! It''s version eighteen, and I use twenty. Thank you!', null, 0, null),
-  ('End of the Week', 'tts', 'A2', 10, '[{"speaker":"Paul","text":"The week is almost over. How was it for you?"},{"speaker":"Mia","text":"It was busy. We released the new version on Wednesday."},{"speaker":"Paul","text":"Did everything go well?"},{"speaker":"Mia","text":"Mostly. We found a small bug after the release, but we fixed it quickly."},{"speaker":"Paul","text":"Nice. Any plans for the weekend?"},{"speaker":"Mia","text":"I want to relax and read a book. And you?"},{"speaker":"Paul","text":"I''m going to the mountains with my family."},{"speaker":"Mia","text":"Sounds great. Have a nice weekend!"},{"speaker":"Paul","text":"You too!"}]'::jsonb, 'Paul: The week is almost over. How was it for you?
-Mia: It was busy. We released the new version on Wednesday.
-Paul: Did everything go well?
-Mia: Mostly. We found a small bug after the release, but we fixed it quickly.
-Paul: Nice. Any plans for the weekend?
-Mia: I want to relax and read a book. And you?
-Paul: I''m going to the mountains with my family.
-Mia: Sounds great. Have a nice weekend!
-Paul: You too!', null, 0, null),
-  ('Git Explained in 100 Seconds', 'youtube', 'B2', 100, '[]'::jsonb, null, 'https://www.youtube.com/watch?v=hwP7WQkmECE', 0, null),
-  ('SQL Explained in 100 Seconds', 'youtube', 'B2', 101, '[]'::jsonb, null, 'https://www.youtube.com/watch?v=zsjvFFKOm3c', 0, null),
-  ('Docker in 100 Seconds', 'youtube', 'B2', 102, '[]'::jsonb, null, 'https://www.youtube.com/watch?v=Gjnup-PuquQ', 0, null),
-  ('JavaScript in 100 Seconds', 'youtube', 'B2', 103, '[]'::jsonb, null, 'https://www.youtube.com/watch?v=DHjqpvDnNGE', 0, null),
-  ('TypeScript in 100 Seconds', 'youtube', 'B2', 104, '[]'::jsonb, null, 'https://www.youtube.com/watch?v=zQnBQ4tB3ZA', 0, null),
-  ('Python in 100 Seconds', 'youtube', 'B2', 105, '[]'::jsonb, null, 'https://www.youtube.com/watch?v=x7X9w_GIm1s', 0, null),
-  ('React in 100 Seconds', 'youtube', 'B2', 106, '[]'::jsonb, null, 'https://www.youtube.com/watch?v=Tn6-PIqc4UM', 0, null)
-on conflict (title) do update set kind = excluded.kind, cefr_level = excluded.cefr_level, position = excluded.position,
-  lines = excluded.lines, transcript = excluded.transcript, source_url = excluded.source_url;

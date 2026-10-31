@@ -1,11 +1,23 @@
 // Builds supabase/seed_phase2.sql from the content modules in this folder and
 // validates them first (every gap marked, MC answer among the options, etc.).
 //   node supabase/content/build-seed.mjs
-import { writeFileSync } from "node:fs";
-import { SECTIONS, SUMMARIES } from "./grammar-topics.mjs";
-import { EXERCISES } from "./grammar-exercises.mjs";
+import { readdirSync, writeFileSync } from "node:fs";
+import { SECTIONS, SUMMARIES as BASE_SUMMARIES } from "./grammar-topics.mjs";
+import { EXERCISES as BASE_EXERCISES } from "./grammar-exercises.mjs";
 import { TEXTS } from "./texts.mjs";
-import { DIALOGUES, VIDEOS } from "./listening.mjs";
+
+// Units 13+ live in grammar-part-N.mjs files (each exports SUMMARIES and EXERCISES).
+const SUMMARIES = { ...BASE_SUMMARIES };
+const EXERCISES = { ...BASE_EXERCISES };
+const partFiles = readdirSync(new URL(".", import.meta.url)).filter((f) => /^grammar-part-\d+\.mjs$/.test(f)).sort();
+for (const f of partFiles) {
+  const part = await import(`./${f}`);
+  for (const unit of Object.keys(part.EXERCISES)) {
+    if (EXERCISES[unit]) throw new Error(`unit ${unit} defined twice (${f})`);
+    EXERCISES[unit] = part.EXERCISES[unit];
+  }
+  Object.assign(SUMMARIES, part.SUMMARIES);
+}
 
 const q = (s) => (s == null ? "null" : `'${String(s).replace(/'/g, "''")}'`);
 const arr = (xs) => `array[${xs.map(q).join(", ")}]::text[]`;
@@ -31,14 +43,6 @@ for (const [unit, list] of Object.entries(EXERCISES)) {
 TEXTS.forEach((t, i) => {
   if (!["A1", "A2", "B1"].includes(t.level)) errors.push(`text ${i + 1}: bad level`);
   if (t.questions.length < 1) errors.push(`text ${i + 1}: no questions`);
-});
-DIALOGUES.forEach((d, i) => {
-  if (!["A1", "A2", "B1"].includes(d.level)) errors.push(`dialogue ${i + 1}: bad level`);
-  if (new Set(d.lines.map((l) => l.speaker)).size < 2) errors.push(`dialogue ${i + 1}: needs two speakers`);
-  if (d.lines.some((l) => !l.text.trim())) errors.push(`dialogue ${i + 1}: empty line`);
-});
-VIDEOS.forEach((v) => {
-  if (!/^[\w-]{11}$/.test(v.id)) errors.push(`video "${v.title}": bad YouTube id`);
 });
 if (errors.length) {
   console.error(errors.join("\n"));
@@ -87,22 +91,6 @@ out.push(
   ""
 );
 
-out.push(
-  "-- Listening: own TTS dialogues (exact transcripts) + verified external videos.",
-  "insert into listening_items (title, kind, cefr_level, position, lines, transcript, source_url, start_seconds, end_seconds) values",
-  [
-    ...DIALOGUES.map((d, i) =>
-      `  (${q(d.title)}, 'tts', ${q(d.level)}, ${i + 1}, ${q(JSON.stringify(d.lines))}::jsonb, ${q(d.lines.map((l) => `${l.speaker}: ${l.text}`).join("\n"))}, null, 0, null)`
-    ),
-    ...VIDEOS.map((v, i) =>
-      `  (${q(v.title)}, 'youtube', 'B2', ${100 + i}, '[]'::jsonb, null, ${q(`https://www.youtube.com/watch?v=${v.id}`)}, 0, null)`
-    ),
-  ].join(",\n"),
-  "on conflict (title) do update set kind = excluded.kind, cefr_level = excluded.cefr_level, position = excluded.position,",
-  "  lines = excluded.lines, transcript = excluded.transcript, source_url = excluded.source_url;",
-  ""
-);
-
 writeFileSync(new URL("../seed_phase2.sql", import.meta.url), out.join("\n"));
 const exCount = Object.values(EXERCISES).reduce((n, l) => n + l.length, 0);
-console.log(`ok: ${units.size} topics, ${exCount} exercises, ${TEXTS.length} texts, ${DIALOGUES.length} dialogues, ${VIDEOS.length} videos`);
+console.log(`ok: ${units.size} topics, ${exCount} exercises, ${TEXTS.length} texts`);
