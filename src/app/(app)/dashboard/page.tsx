@@ -29,7 +29,7 @@ export default async function DashboardPage() {
   const max30 = Math.max(1, ...STRANDS.map((s) => data.minutesLast30[s.key]));
 
   return (
-    <div className="flex flex-col gap-6 py-2 sm:gap-8 sm:py-4">
+    <div className="flex flex-col gap-6 py-2 sm:gap-[2rem] sm:py-4">
       <div>
         <p className="text-eyebrow font-medium uppercase text-ash">Прогресс</p>
         <h1 className="mt-2 text-heading font-normal text-pure-white">Дашборд</h1>

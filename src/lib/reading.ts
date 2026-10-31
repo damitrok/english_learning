@@ -1,6 +1,7 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import { getAuthUser } from "@/lib/supabase/user";
 import { recordStep } from "@/lib/day-server";
 import type { CefrLevel } from "@/lib/supabase/types";
 
@@ -34,9 +35,7 @@ export interface ReadingText {
  */
 export async function getTodayText(): Promise<ReadingText | null> {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getAuthUser(supabase);
   if (!user) return null;
 
   const [{ data: texts }, { data: reads }, { data: cards }] = await Promise.all([
@@ -88,9 +87,7 @@ export async function markTextRead(
   correctAnswers: number
 ): Promise<void> {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getAuthUser(supabase);
   if (!user) throw new Error("Not authenticated");
 
   const { error } = await supabase.from("text_reads").insert({

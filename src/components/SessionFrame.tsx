@@ -20,7 +20,7 @@ export function SessionFrame({
   const pct = Math.round(Math.min(1, Math.max(0, progress)) * 100);
   return (
     <div className={`mx-auto flex w-full flex-col ${width}`}>
-      <div className="sticky top-[env(safe-area-inset-top)] z-10 -mx-4 flex items-center gap-2 bg-void-black/90 px-2 backdrop-blur-xl">
+      <div className="sticky top-0 z-10 -mx-4 flex items-center gap-2 bg-void-black/90 px-2 backdrop-blur-xl">
         <Link
           href="/"
           aria-label="Закрыть урок и вернуться к пути"

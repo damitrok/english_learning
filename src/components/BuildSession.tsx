@@ -68,13 +68,13 @@ export function BuildSession({ items }: { items: BuildItem[] }) {
           {index + 1} / {items.length} · нажимай слова по порядку
         </p>
       </div>
-      <div className="rounded-cards border border-border-hairline bg-ink p-5 shadow-key sm:p-8">
+      <div className="rounded-cards border border-border-hairline bg-ink p-5 shadow-key sm:p-[2rem]">
         <p className="text-subheading leading-relaxed text-pure-white">{item.ru}</p>
       </div>
 
       <div
         aria-label="Твой ответ"
-        className={`flex min-h-24 flex-wrap content-start gap-2 rounded-cards border-2 border-dashed p-3 ${
+        className={`flex min-h-[6rem] flex-wrap content-start gap-2 rounded-cards border-2 border-dashed p-3 ${
           correct === null ? "border-border-hairline" : correct ? "border-success-green" : "border-coral-pulse"
         }`}
       >
