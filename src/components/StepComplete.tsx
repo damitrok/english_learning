@@ -4,6 +4,7 @@ import { SessionFrame } from "@/components/SessionFrame";
 
 /** End-of-lesson screen: result message and the way back to the path. */
 export function StepComplete({
+  step,
   message,
   children,
 }: {
@@ -15,8 +16,9 @@ export function StepComplete({
     <SessionFrame
       progress={1}
       width="max-w-md"
+      backHref={step === "vocab" ? "/" : "/path"}
       footer={
-        <Link href="/" className="btn-primary">
+        <Link href={step === "vocab" ? "/" : "/path"} className="btn-primary">
           Продолжить
         </Link>
       }

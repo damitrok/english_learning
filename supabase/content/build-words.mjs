@@ -2,10 +2,10 @@
 // every book word is either in WORDS or already seeded (supabase/seed.sql),
 // no duplicates, required fields present.
 //   node supabase/content/build-words.mjs
-import { readFileSync, writeFileSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { BOOK_UNITS, UNITS } from "./words.mjs";
 
-const q = (s) => `'${String(s).replace(/'/g, "''")}'`;
+const q = (s) => (s == null ? "null" : `'${String(s).replace(/'/g, "''")}'`);
 const seeded = new Set(
   [...readFileSync(new URL("../seed.sql", import.meta.url), "utf8").matchAll(/^\s+\('([^']+)',/gm)].map((m) =>
     m[1].toLowerCase()
@@ -38,6 +38,31 @@ UNITS.forEach((unit, u) => {
   unit.book.forEach((x, i) => add(x, "general", i));
   unit.it.forEach((x, i) => add(x, "it", 50 + i));
 });
+// B1 extension: words-part-N.mjs (each exports WORDS, in learning order; N = frequency band).
+// IPA is optional there (pronunciation comes from text-to-speech). The example must contain the
+// headword (or a regular -s/-es/-ed/-d/-ing form) so the "fill the gap" exercise can hide it.
+const escapeRe = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const partFiles = readdirSync(new URL(".", import.meta.url))
+  .filter((f) => /^words-part-\d+\.mjs$/.test(f))
+  .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+let extIndex = 0;
+for (const f of partFiles) {
+  const { WORDS } = await import(`./${f}`);
+  const band = Number(f.match(/\d+/)[0]);
+  for (const x of WORDS) {
+    const key = x.headword.toLowerCase();
+    if (seen.has(key) || seeded.has(key)) errors.push(`${f}: duplicate headword "${x.headword}"`);
+    seen.add(key);
+    for (const field of ["translation", "cefr", "example", "tag"]) if (!x[field]) errors.push(`${f}: "${x.headword}": missing ${field}`);
+    if (!["general", "it"].includes(x.tag)) errors.push(`${f}: "${x.headword}": bad tag`);
+    if (!["A2", "B1", "B2"].includes(x.cefr)) errors.push(`${f}: "${x.headword}": bad CEFR ${x.cefr}`);
+    if (x.ipa && !/^\/.+\/$/.test(x.ipa)) errors.push(`${f}: "${x.headword}": IPA must be /…/`);
+    if (x.example && !new RegExp(`\\b${escapeRe(x.headword)}(?:s|es|ed|d|ing)?\\b`, "i").test(x.example)) {
+      errors.push(`${f}: "${x.headword}": example does not contain the word: ${x.example}`);
+    }
+    rows.push({ ...x, ipa: x.ipa ?? null, source: `b1-extension:band${band}`, sort: 100000 + extIndex++ });
+  }
+}
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);
@@ -57,5 +82,5 @@ const out = [
   "",
 ];
 writeFileSync(new URL("../seed_words.sql", import.meta.url), out.join("\n"));
-const book = rows.filter((r) => r.tag === "general").length;
-console.log(`ok: ${book} book words (+${600 - book} already seeded), ${rows.length - book} IT terms`);
+const ext = rows.filter((r) => r.source.startsWith("b1-extension")).length;
+console.log(`ok: ${rows.length - ext} words from units + IT terms, ${ext} B1-extension words (${partFiles.length} parts)`);

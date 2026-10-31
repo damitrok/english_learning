@@ -1,13 +1,12 @@
 // The lesson path: an endless, deterministic sequence of lessons. Lesson `i`
 // has the type PATTERN[i % PATTERN.length]; the path position is simply how many
-// lessons the learner has finished in total. Lessons whose material is static
-// (build / translate / context) pick their batch from the cycle number, the
-// others (vocab, grammar, reading, review) choose from the learner's progress.
+// lessons the learner has finished on the path. Lessons whose material is static
+// (build / translate) pick their batch from the cycle number, the others (grammar,
+// reading, review) choose from the learner's progress. Words are not on the path:
+// they live in their own tab (/), see src/lib/words.ts.
 import type { StepName } from "@/lib/dates";
 
 export const PATTERN: readonly StepName[] = [
-  "vocab",
-  "context",
   "grammar",
   "build",
   "reading",
@@ -20,7 +19,6 @@ export const UNIT_SIZE = PATTERN.length;
 
 export const LESSON_LABELS: Record<StepName, string> = {
   vocab: "Слова",
-  context: "Слова в контексте",
   grammar: "Грамматика",
   build: "Собери предложение",
   reading: "Чтение",
@@ -29,8 +27,7 @@ export const LESSON_LABELS: Record<StepName, string> = {
 };
 
 export const LESSON_HINTS: Record<StepName, string> = {
-  vocab: "повтор карточек и новые слова",
-  context: "впиши пропущенное слово в предложении",
+  vocab: "повтор и новые слова",
   grammar: "правило и упражнения",
   build: "собери английское предложение из слов",
   reading: "текст со знакомыми словами",
