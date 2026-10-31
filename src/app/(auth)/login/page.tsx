@@ -46,7 +46,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="w-full max-w-sm rounded-cards border border-border-hairline bg-ink p-8 shadow-key">
+    <div className="w-full max-w-sm rounded-cards border border-border-hairline bg-ink p-6 shadow-key sm:p-8">
       <h1 className="text-heading-sm font-medium text-pure-white">
         English for IT
       </h1>
@@ -71,7 +71,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={verifying || code.length < 6}
-              className="rounded-buttons bg-mist px-3 py-3 text-body font-medium text-iron disabled:opacity-60"
+              className="btn-primary"
             >
               {verifying ? "Проверяем…" : "Войти по коду"}
             </button>
@@ -84,7 +84,7 @@ export default function LoginPage() {
               setStatus("idle");
               setCode("");
             }}
-            className="text-body text-ash underline underline-offset-4"
+            className="min-h-12 text-body text-ash underline underline-offset-4"
           >
             Другой email / отправить ещё раз
           </button>
@@ -97,12 +97,12 @@ export default function LoginPage() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@example.com"
-            className="rounded-inputs bg-white/5 px-3 py-2 text-body text-pure-white placeholder:text-ash focus:outline-none focus:ring-1 focus:ring-coral-pulse"
+            className="min-h-12 rounded-inputs bg-white/5 px-3 py-3 text-body text-pure-white placeholder:text-ash focus:outline-none focus:ring-1 focus:ring-coral-pulse"
           />
           <button
             type="submit"
             disabled={status === "sending"}
-            className="rounded-buttons bg-mist px-3 py-2 text-body font-medium text-iron disabled:opacity-60"
+            className="btn-primary"
           >
             {status === "sending" ? "Отправляем…" : "Получить ссылку для входа"}
           </button>

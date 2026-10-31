@@ -175,142 +175,35 @@ export type Database = {
         }
         Relationships: []
       }
-      listening_items: {
-        Row: {
-          cefr_level: Database["public"]["Enums"]["cefr_level"]
-          created_at: string
-          end_seconds: number | null
-          id: string
-          kind: Database["public"]["Enums"]["listening_kind"]
-          lines: Json
-          position: number
-          source_url: string | null
-          start_seconds: number
-          title: string
-          transcript: string | null
-        }
-        Insert: {
-          cefr_level: Database["public"]["Enums"]["cefr_level"]
-          created_at?: string
-          end_seconds?: number | null
-          id?: string
-          kind?: Database["public"]["Enums"]["listening_kind"]
-          lines?: Json
-          position?: number
-          source_url?: string | null
-          start_seconds?: number
-          title: string
-          transcript?: string | null
-        }
-        Update: {
-          cefr_level?: Database["public"]["Enums"]["cefr_level"]
-          created_at?: string
-          end_seconds?: number | null
-          id?: string
-          kind?: Database["public"]["Enums"]["listening_kind"]
-          lines?: Json
-          position?: number
-          source_url?: string | null
-          start_seconds?: number
-          title?: string
-          transcript?: string | null
-        }
-        Relationships: []
-      }
-      listening_logs: {
-        Row: {
-          accuracy: number | null
-          created_at: string
-          id: string
-          item_id: string
-          seconds_spent: number
-          user_id: string
-        }
-        Insert: {
-          accuracy?: number | null
-          created_at?: string
-          id?: string
-          item_id: string
-          seconds_spent?: number
-          user_id: string
-        }
-        Update: {
-          accuracy?: number | null
-          created_at?: string
-          id?: string
-          item_id?: string
-          seconds_spent?: number
-          user_id?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "listening_logs_item_id_fkey"
-            columns: ["item_id"]
-            isOneToOne: false
-            referencedRelation: "listening_items"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      progress: {
-        Row: {
-          current_streak_days: number
-          last_session_date: string | null
-          longest_streak_days: number
-          total_words_learned: number
-          updated_at: string
-          user_id: string
-        }
-        Insert: {
-          current_streak_days?: number
-          last_session_date?: string | null
-          longest_streak_days?: number
-          total_words_learned?: number
-          updated_at?: string
-          user_id: string
-        }
-        Update: {
-          current_streak_days?: number
-          last_session_date?: string | null
-          longest_streak_days?: number
-          total_words_learned?: number
-          updated_at?: string
-          user_id?: string
-        }
-        Relationships: []
-      }
       sessions: {
         Row: {
-          completed_steps: string[]
+          lessons_completed: number
           created_at: string
-          fluency_minutes: number
+          practice_minutes: number
           grammar_minutes: number
           id: string
-          listening_minutes: number
           reading_minutes: number
           session_date: string
           user_id: string
           vocab_minutes: number
         }
         Insert: {
-          completed_steps?: string[]
+          lessons_completed?: number
           created_at?: string
-          fluency_minutes?: number
+          practice_minutes?: number
           grammar_minutes?: number
           id?: string
-          listening_minutes?: number
           reading_minutes?: number
           session_date?: string
           user_id: string
           vocab_minutes?: number
         }
         Update: {
-          completed_steps?: string[]
+          lessons_completed?: number
           created_at?: string
-          fluency_minutes?: number
+          practice_minutes?: number
           grammar_minutes?: number
           id?: string
-          listening_minutes?: number
           reading_minutes?: number
           session_date?: string
           user_id?: string
@@ -323,31 +216,25 @@ export type Database = {
           correct_answers: number
           created_at: string
           id: string
-          mode: Database["public"]["Enums"]["read_mode"]
           seconds_spent: number
           text_id: string
           user_id: string
-          words_per_minute: number | null
         }
         Insert: {
           correct_answers?: number
           created_at?: string
           id?: string
-          mode?: Database["public"]["Enums"]["read_mode"]
           seconds_spent?: number
           text_id: string
           user_id: string
-          words_per_minute?: number | null
         }
         Update: {
           correct_answers?: number
           created_at?: string
           id?: string
-          mode?: Database["public"]["Enums"]["read_mode"]
           seconds_spent?: number
           text_id?: string
           user_id?: string
-          words_per_minute?: number | null
         }
         Relationships: [
           {
@@ -447,8 +334,6 @@ export type Database = {
     Enums: {
       cefr_level: "A1" | "A2" | "B1" | "B2" | "C1"
       exercise_type: "multiple_choice" | "fill_blank"
-      listening_kind: "tts" | "youtube"
-      read_mode: "reading" | "fluency"
       srs_result: "forgot" | "hard" | "normal" | "easy"
       word_tag: "general" | "academic" | "it"
     }
@@ -580,8 +465,6 @@ export const Constants = {
     Enums: {
       cefr_level: ["A1", "A2", "B1", "B2", "C1"],
       exercise_type: ["multiple_choice", "fill_blank"],
-      listening_kind: ["tts", "youtube"],
-      read_mode: ["reading", "fluency"],
       srs_result: ["forgot", "hard", "normal", "easy"],
       word_tag: ["general", "academic", "it"],
     },
@@ -593,4 +476,3 @@ export type CefrLevel = Database["public"]["Enums"]["cefr_level"]
 export type WordTag = Database["public"]["Enums"]["word_tag"]
 export type SrsResult = Database["public"]["Enums"]["srs_result"]
 export type ExerciseType = Database["public"]["Enums"]["exercise_type"]
-export type ListeningKind = Database["public"]["Enums"]["listening_kind"]

@@ -1,16 +1,22 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import { useState } from "react";
 import {
   submitGrammarAnswer,
   type GrammarAnswerResult,
   type GrammarLesson,
 } from "@/lib/grammar";
-import { markStepDone } from "@/lib/steps";
+import { useStepOnce } from "@/components/useStepOnce";
 import { StepComplete } from "@/components/StepComplete";
+import { SessionFrame } from "@/components/SessionFrame";
 
-export function GrammarSession({ lesson }: { lesson: GrammarLesson | null }) {
+export function GrammarSession({
+  lesson,
+  step = "grammar",
+}: {
+  lesson: GrammarLesson;
+  step?: "grammar" | "review";
+}) {
   const [started, setStarted] = useState(false);
   const [index, setIndex] = useState(0);
   const [typed, setTyped] = useState("");
@@ -19,28 +25,7 @@ export function GrammarSession({ lesson }: { lesson: GrammarLesson | null }) {
   const [correctCount, setCorrectCount] = useState(0);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const startedAt = useRef<number | null>(null);
-  const stepMarked = useRef(false);
-  const lessonDone = !!lesson && index >= lesson.exercises.length;
-
-  useEffect(() => {
-    startedAt.current = performance.now();
-  }, []);
-
-  useEffect(() => {
-    if (!lessonDone || stepMarked.current) return;
-    stepMarked.current = true;
-    const seconds = (performance.now() - (startedAt.current ?? performance.now())) / 1000;
-    markStepDone("grammar", seconds).catch(() => {
-      stepMarked.current = false;
-    });
-  }, [lessonDone]);
-
-  if (!lesson) {
-    return (
-      <EmptyState message="Все темы с упражнениями пройдены. Новые юниты появятся по мере наполнения базы." />
-    );
-  }
+  useStepOnce(step, index >= lesson.exercises.length);
 
   const exercises = lesson.exercises;
   const current = exercises[index];
@@ -72,31 +57,36 @@ export function GrammarSession({ lesson }: { lesson: GrammarLesson | null }) {
   const header = (
     <div>
       <p className="text-eyebrow font-medium uppercase text-ash">
-        Грамматика · Unit {lesson.unit} · {lesson.section}
+        {step === "review" ? "Повтор ошибок" : `Грамматика · Unit ${lesson.unit} · ${lesson.section}`}
       </p>
-      <h1 className="mt-2 text-heading-sm font-normal text-pure-white">{lesson.title}</h1>
-      <p className="mt-1 text-body text-ash">
-        Тем освоено: {lesson.topicsDone} / {lesson.topicsTotal}
-      </p>
+      {step === "grammar" && (
+        <>
+          <h1 className="mt-2 text-heading-sm font-normal text-pure-white">{lesson.title}</h1>
+          <p className="mt-1 text-body text-ash">
+            Тем освоено: {lesson.topicsDone} / {lesson.topicsTotal}
+          </p>
+        </>
+      )}
     </div>
   );
 
   if (!started) {
     return (
-      <div className="mx-auto flex w-full max-w-xl flex-col gap-6 py-8">
+      <SessionFrame
+        progress={0}
+        footer={
+          <button onClick={() => setStarted(true)} className="btn-primary">
+            К упражнениям ({exercises.length})
+          </button>
+        }
+      >
         {header}
         {lesson.summary && (
-          <div className="rounded-cards border border-border-hairline bg-ink p-6 shadow-key">
+          <div className="rounded-cards border border-border-hairline bg-ink p-5 shadow-key sm:p-6">
             <p className="text-body-lg leading-relaxed text-mist">{lesson.summary}</p>
           </div>
         )}
-        <button
-          onClick={() => setStarted(true)}
-          className="self-start rounded-buttons bg-mist px-4 py-2 text-body font-medium text-iron"
-        >
-          К упражнениям ({exercises.length})
-        </button>
-      </div>
+      </SessionFrame>
     );
   }
 
@@ -104,10 +94,12 @@ export function GrammarSession({ lesson }: { lesson: GrammarLesson | null }) {
     const allRight = correctCount === exercises.length;
     return (
       <StepComplete
-        step="grammar"
+        step={step}
         message={
           allRight
-            ? `Отлично — все ${exercises.length} верно! Тема «${lesson.title}» освоена.`
+            ? step === "review"
+              ? `Отлично — все ${exercises.length} верно! Ошибки исправлены.`
+              : `Отлично — все ${exercises.length} верно! Тема «${lesson.title}» освоена.`
             : `Верно ${correctCount} из ${exercises.length}. Ошибки вернутся в следующий раз, пока тема не будет освоена.`
         }
       />
@@ -116,15 +108,39 @@ export function GrammarSession({ lesson }: { lesson: GrammarLesson | null }) {
 
   const [before, after] = current.prompt.split("___");
 
+  const isChoice = current.type === "multiple_choice" && !!current.options;
+  const footer = result ? (
+    <div className="flex flex-col gap-3">
+      <p className={`text-body-lg font-medium ${result.correct ? "text-success-green" : "text-coral-pulse"}`}>
+        {result.correct ? "Верно!" : `Правильно: ${result.correctAnswer}`}
+      </p>
+      <button onClick={next} autoFocus className="btn-primary">
+        Дальше
+      </button>
+    </div>
+  ) : isChoice ? undefined : (
+    <button
+      type="submit"
+      form="grammar-answer"
+      disabled={pending || !typed.trim()}
+      className="btn-primary"
+    >
+      Проверить
+    </button>
+  );
+
   return (
-    <div className="mx-auto flex w-full max-w-xl flex-col gap-6 py-8">
+    <SessionFrame
+      progress={(index + (result ? 1 : 0)) / exercises.length}
+      footer={footer}
+    >
       {header}
       <p className="text-body text-ash">
         {lesson.isRetry && "Работа над ошибками · "}
         {index + 1} / {exercises.length}
       </p>
 
-      <div className="rounded-cards border border-border-hairline bg-ink p-6 shadow-key sm:p-10">
+      <div className="rounded-cards border border-border-hairline bg-ink p-5 shadow-key sm:p-10">
         <p className="text-subheading leading-relaxed text-pure-white">
           {before}
           <span
@@ -136,28 +152,28 @@ export function GrammarSession({ lesson }: { lesson: GrammarLesson | null }) {
                   : "border-coral-pulse text-coral-pulse"
             }`}
           >
-            {given ?? " "}
+            {given ?? " "}
           </span>
           {after}
         </p>
       </div>
 
-      {current.type === "multiple_choice" && current.options ? (
+      {isChoice ? (
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-          {current.options.map((opt) => {
+          {current.options!.map((opt) => {
             const tone = !result
-              ? "border-border-hairline text-pure-white hover:bg-white/5"
+              ? "text-pure-white"
               : opt === result.correctAnswer
                 ? "border-success-green text-success-green"
                 : opt === given
                   ? "border-coral-pulse text-coral-pulse"
-                  : "border-border-hairline text-smoke";
+                  : "text-smoke";
             return (
               <button
                 key={opt}
                 disabled={!!result || pending}
                 onClick={() => answer(opt)}
-                className={`rounded-buttons border px-3 py-2 text-body font-medium ${tone}`}
+                className={`btn-secondary ${tone}`}
               >
                 {opt}
               </button>
@@ -166,11 +182,11 @@ export function GrammarSession({ lesson }: { lesson: GrammarLesson | null }) {
         </div>
       ) : (
         <form
+          id="grammar-answer"
           onSubmit={(e) => {
             e.preventDefault();
             answer(typed);
           }}
-          className="flex gap-3"
         >
           <input
             value={typed}
@@ -180,50 +196,15 @@ export function GrammarSession({ lesson }: { lesson: GrammarLesson | null }) {
             autoCapitalize="none"
             autoCorrect="off"
             spellCheck={false}
+            enterKeyHint="done"
             placeholder="Впиши ответ"
-            className="min-w-0 flex-1 rounded-buttons border border-border-hairline bg-obsidian px-3 py-2 text-body text-pure-white placeholder:text-smoke focus:border-ash focus:outline-none"
+            className="min-h-14 w-full rounded-cards border border-border-hairline bg-obsidian px-4 text-body-lg text-pure-white placeholder:text-smoke focus:border-ash focus:outline-none"
           />
-          <button
-            type="submit"
-            disabled={!!result || pending || !typed.trim()}
-            className="rounded-buttons bg-mist px-4 py-2 text-body font-medium text-iron disabled:opacity-40"
-          >
-            Проверить
-          </button>
         </form>
       )}
 
-      {result && (
-        <div className="flex flex-col gap-3">
-          <p className={`text-body-lg ${result.correct ? "text-success-green" : "text-coral-pulse"}`}>
-            {result.correct ? "Верно!" : `Правильно: ${result.correctAnswer}`}
-          </p>
-          {result.explanation && <p className="text-body text-ash">{result.explanation}</p>}
-          <button
-            onClick={next}
-            autoFocus
-            className="self-start rounded-buttons bg-mist px-4 py-2 text-body font-medium text-iron"
-          >
-            Дальше
-          </button>
-        </div>
-      )}
-
+      {result?.explanation && <p className="text-body text-ash">{result.explanation}</p>}
       {error && <p className="text-body text-coral-pulse">{error}</p>}
-    </div>
-  );
-}
-
-function EmptyState({ message }: { message: string }) {
-  return (
-    <div className="mx-auto flex w-full max-w-md flex-col items-center gap-4 py-16 text-center">
-      <p className="text-body-lg text-pure-white">{message}</p>
-      <Link
-        href="/"
-        className="rounded-buttons bg-mist px-4 py-2 text-body font-medium text-iron"
-      >
-        Вернуться к «Сегодня»
-      </Link>
-    </div>
+    </SessionFrame>
   );
 }

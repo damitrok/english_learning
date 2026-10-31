@@ -1,6 +1,7 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import { normalizeAnswer } from "@/lib/text-normalize";
 import type { ExerciseType } from "@/lib/supabase/types";
 
 export interface GrammarExerciseItem {
@@ -93,16 +94,6 @@ export async function getGrammarLesson(): Promise<GrammarLesson | null> {
     topicsDone,
     topicsTotal: withExercises.length,
   };
-}
-
-/** Lowercase, straighten apostrophes, collapse spaces, drop trailing punctuation. */
-function normalizeAnswer(s: string): string {
-  return s
-    .toLowerCase()
-    .replace(/[‘’ʼ`]/g, "'")
-    .replace(/\s+/g, " ")
-    .trim()
-    .replace(/[.!?,]+$/, "");
 }
 
 /** Checks the answer server-side (answers never reach the client) and logs the attempt. */
