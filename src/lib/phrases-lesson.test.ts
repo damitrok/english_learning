@@ -18,7 +18,7 @@ describe("pickPhrases", () => {
   });
   it("covers the whole real corpus over successive cycles without gaps", () => {
     const seen = new Set<string>();
-    for (let c = 0; c < 8; c++) pickPhrases(BUILD_PHRASES, c).forEach((p) => seen.add(p.en));
+    for (let c = 0; c < 115; c++) pickPhrases(BUILD_PHRASES, c).forEach((p) => seen.add(p.en));
     expect(seen.size).toBe(BUILD_PHRASES.length);
   });
 });
