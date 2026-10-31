@@ -44,8 +44,8 @@
   }
 
   /* Typography */
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Inter Variable", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, Menlo, Monaco, monospace;
 
   --text-eyebrow: 11px;
   --text-eyebrow--line-height: 0.91;
