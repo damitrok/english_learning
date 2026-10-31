@@ -93,13 +93,13 @@ not covered. Run `npm test` before every deploy (and in CI, if added) along with
 ## Database deploys (via git)
 
 New `supabase/migrations/*.sql` files and changed seeds (`seed*.sql`) are applied to Supabase by the
-**Database** GitHub Action when they land on `main` (`scripts/db-apply.sh`; applied names/hashes are
-tracked in `app_migrations` / `app_seeds`). One-time setup:
+**Database** GitHub Action when they land on `main` (`scripts/db-apply.sh`; applied versions are
+tracked in Supabase's own `supabase_migrations.schema_migrations`, seed hashes in `app_seeds`). One-time setup:
 
 1. GitHub → Settings → Secrets and variables → Actions → new secret `SUPABASE_DB_URL` (Supabase →
    Project Settings → Database → Connection string, session pooler, with the DB password).
 2. Nothing else: the first run on `main` sees an existing schema with no tracking and just records
-   migrations 0001–0010 as applied (the `Database` workflow can also be run by hand once it is on
+   the existing migrations as applied (the `Database` workflow can also be run by hand once it is on
    `main`; its `baseline` option does the same explicitly). After that every merge to `main` applies
    what's new.
 
