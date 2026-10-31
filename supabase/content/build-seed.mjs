@@ -4,7 +4,7 @@
 import { readdirSync, writeFileSync } from "node:fs";
 import { SECTIONS, SUMMARIES as BASE_SUMMARIES } from "./grammar-topics.mjs";
 import { EXERCISES as BASE_EXERCISES } from "./grammar-exercises.mjs";
-import { TEXTS } from "./texts.mjs";
+import { TEXTS as BASE_TEXTS } from "./texts.mjs";
 
 // Units 13+ live in grammar-part-N.mjs files (each exports SUMMARIES and EXERCISES).
 const SUMMARIES = { ...BASE_SUMMARIES };
@@ -17,6 +17,12 @@ for (const f of partFiles) {
     EXERCISES[unit] = part.EXERCISES[unit];
   }
   Object.assign(SUMMARIES, part.SUMMARIES);
+}
+
+// Texts 13+ live in texts-part-N.mjs files (each exports TEXTS, in unit order); text N goes with grammar unit N.
+const TEXTS = [...BASE_TEXTS];
+for (const f of readdirSync(new URL(".", import.meta.url)).filter((f) => /^texts-part-\d+\.mjs$/.test(f)).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))) {
+  TEXTS.push(...(await import(`./${f}`)).TEXTS);
 }
 
 const q = (s) => (s == null ? "null" : `'${String(s).replace(/'/g, "''")}'`);
@@ -40,9 +46,12 @@ for (const [unit, list] of Object.entries(EXERCISES)) {
     }
   });
 }
+const titles = new Set();
 TEXTS.forEach((t, i) => {
   if (!["A1", "A2", "B1"].includes(t.level)) errors.push(`text ${i + 1}: bad level`);
   if (t.questions.length < 1) errors.push(`text ${i + 1}: no questions`);
+  if (titles.has(t.title)) errors.push(`text ${i + 1}: duplicate title "${t.title}"`);
+  titles.add(t.title);
 });
 if (errors.length) {
   console.error(errors.join("\n"));
