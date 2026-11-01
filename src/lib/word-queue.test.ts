@@ -41,7 +41,7 @@ describe("buildWordQueue", () => {
     expect(q.slice(0, 2).map((i) => i.wordId)).toEqual(["w3", "w5"]);
     const fresh = q.slice(2);
     expect(fresh).toHaveLength(NEW_PER_SESSION);
-    expect(fresh.every((i) => i.isNew && i.cardId === null)).toBe(true);
+    expect(fresh.every((i) => i.isNew)).toBe(true);
     expect(fresh.map((i) => i.wordId)).toEqual(["w0", "w1", "w2", "w6", "w7", "w8", "w9", "w10"]);
   });
 

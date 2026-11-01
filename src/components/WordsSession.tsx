@@ -98,7 +98,7 @@ export function WordsSession({ items }: { items: WordItem[] }) {
         seconds: (performance.now() - askedAt.current) / 1000,
       });
       setUnsaved((n) => n + 1);
-      submitWordReview(item.wordId, item.cardId, item.srsState, result)
+      submitWordReview(item.wordId, result)
         .catch(() => setFailed((f) => [...f, item.headword]))
         .finally(() => setUnsaved((n) => n - 1));
       if (verdict === "wrong") setMistakes((m) => m + 1);

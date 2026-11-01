@@ -38,6 +38,10 @@ flowchart LR
 | `public/sw.js`, `public/offline.html` | Service worker: cache-first build assets, network-first pages with last-good-copy fallback, offline page. Registered by `components/ServiceWorker.tsx` (production only) |
 | `src/components/AuthForm.tsx` | Sign-in / sign-up / code / reset forms (client, calls `src/lib/auth.ts` actions) |
 | `src/lib/auth.ts`, `auth-validation.ts` | Auth server actions; pure validators and Russian error messages |
+| `src/lib/throttle.ts` | Sign-in rate limits per IP and e-mail (`auth_throttle_hit` RPC) |
+| `src/lib/input-guards.ts` | Validation of values received by Server Actions (uuid, step, seconds, answer length) |
+| `src/lib/security-headers.ts`, `src/proxy.ts`, `next.config.ts` | CSP with a per-request nonce + static security headers |
+| `src/lib/page-cache.ts`, `components/ClearPageCache.tsx` | Drops the service worker's cached pages on sign-out and on `/login` |
 | `src/app/(app)/session/vocab/` | Words session (`WordsSession`): new words are introduced, then every word is *typed* from memory (RU→EN, or the missing word of an example sentence for older cards); mistakes return at the end; only the first attempt is graded for SM-2. Counts as a lesson for the streak, not for the path |
 | `src/app/(app)/session/grammar/` | Lesson «Грамматика»: grammar lesson — rule summary + exercises for the current unit (`GrammarSession`) |
 | `src/app/(app)/session/reading/` | Lesson «Чтение»: today's text with studied words highlighted + true/false check (`ReadingSession`) |
