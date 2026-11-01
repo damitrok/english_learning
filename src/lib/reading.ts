@@ -3,6 +3,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { getAuthUser } from "@/lib/supabase/user";
 import { recordStep } from "@/lib/day-server";
+import { MAX_QUESTIONS, clampCount, clampSeconds, isUuid } from "@/lib/input-guards";
 import type { CefrLevel } from "@/lib/supabase/types";
 
 export interface ReadingQuestion {
@@ -86,6 +87,8 @@ export async function markTextRead(
   secondsSpent: number,
   correctAnswers: number
 ): Promise<void> {
+  if (!isUuid(textId)) throw new Error("Invalid text");
+  const seconds = clampSeconds(secondsSpent);
   const supabase = await createClient();
   const user = await getAuthUser(supabase);
   if (!user) throw new Error("Not authenticated");
@@ -93,9 +96,9 @@ export async function markTextRead(
   const { error } = await supabase.from("text_reads").insert({
     user_id: user.id,
     text_id: textId,
-    seconds_spent: Math.max(0, Math.round(secondsSpent)),
-    correct_answers: correctAnswers,
+    seconds_spent: seconds,
+    correct_answers: clampCount(correctAnswers, MAX_QUESTIONS),
   });
   if (error) throw error;
-  await recordStep("reading", secondsSpent);
+  await recordStep("reading", seconds);
 }

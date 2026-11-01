@@ -4,7 +4,7 @@
 //   screen visited online (today's cards, today's text) opens offline too.
 // - Everything else (RSC fetches, Server Actions) goes straight to the network;
 //   Next's experimental.useOffline retries those when the connection returns.
-const VERSION = "v2";
+const VERSION = "v3";
 const STATIC_CACHE = `static-${VERSION}`;
 const PAGE_CACHE = `pages-${VERSION}`;
 const OFFLINE_URL = "/offline.html";
@@ -60,8 +60,9 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       fetch(request)
         .then((res) => {
-          // Keep only real pages, not auth redirects or errors.
-          if (res.ok && !res.redirected) {
+          // Keep only real pages, not auth redirects, errors or the sign-in page. The cache is
+          // dropped on sign-out and whenever /login opens, so it never outlives its user.
+          if (res.ok && !res.redirected && !url.pathname.startsWith("/login")) {
             const copy = res.clone();
             caches.open(PAGE_CACHE).then((c) => c.put(request, copy));
           }

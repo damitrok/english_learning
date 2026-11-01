@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
+import { STATIC_SECURITY_HEADERS } from "./src/lib/security-headers";
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
   env: {
     // Compared with /api/version at runtime to detect a newer deployment.
     NEXT_PUBLIC_BUILD_ID: process.env.VERCEL_GIT_COMMIT_SHA ?? "dev",
@@ -12,6 +14,8 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+      // The per-request Content-Security-Policy is set in src/proxy.ts.
+      { source: "/:path*", headers: [...STATIC_SECURITY_HEADERS] },
       {
         // Always fetch the newest service worker (see public/sw.js).
         source: "/sw.js",

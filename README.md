@@ -52,6 +52,27 @@ Dashboard settings to check (Authentication):
   when the access token expires; a long expiry means far fewer refreshes, and every lost refresh
   response on a flaky mobile connection is what used to log people out.
 
+## Security
+
+Audited on 2026-11-01 (no way found to read or change another user's data). What holds that up:
+- **RLS** on every table: user tables allow only `auth.uid() = user_id` (read and write); catalog
+  tables are read-only for signed-in users. `anon` has no table privileges at all; users can't write
+  catalogs or `TRUNCATE`. `record_step` is `security invoker` and validates its inputs.
+- **Server Actions never trust the browser**: the user comes from the verified JWT, ids/seconds/answers
+  are validated (`src/lib/input-guards.ts`), and a card's SRS state is read from the database.
+- **Brute-force limits** (`src/lib/throttle.ts`, table `auth_throttle`): sign-in, code checks and code
+  e-mails are counted per client IP and per e-mail, because Supabase Auth only sees the hosting
+  server's IP. Fails open if the counter is unreachable.
+- **Headers**: per-request nonce CSP from `src/proxy.ts` (no inline scripts, no framing, own origin
+  only), plus HSTS, `nosniff`, `X-Frame-Options`, Referrer/Permissions-Policy from `next.config.ts`
+  (`src/lib/security-headers.ts`).
+- **Cookies**: session cookies are `httpOnly`, `Secure` in production, `SameSite=Lax`.
+- **Offline cache**: copies of visited pages are dropped on sign-out and whenever `/login` opens.
+
+Still to do by hand (Dashboard / GitHub): enable **Leaked password protection**, shorten the OTP
+expiry (Authentication → Email), protect `main` and put `db.yml` behind a `production` Environment with
+required review (any push to `main` runs SQL on the production database).
+
 ## Status
 
 The MVP is done. Learning is a Duolingo-style lesson path on the home screen: every node is a

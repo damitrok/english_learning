@@ -9,6 +9,7 @@ import {
   normalizeEmail,
   validatePassword,
 } from "@/lib/auth-validation";
+import { THROTTLED_MESSAGE, allowAttempt } from "@/lib/throttle";
 
 // All sign-in work happens on the server so the session cookies are written by Set-Cookie
 // response headers (long-lived, refreshed only by the proxy) instead of by browser JS —
@@ -18,8 +19,10 @@ import {
 export type ActionResult = { ok: true } | { ok: false; error: string };
 
 const fail = (error: string): ActionResult => ({ ok: false, error });
+// Sign-in endpoints are rate limited per client IP and per email — see src/lib/throttle.ts.
 const BAD_EMAIL = fail("Проверь email — похоже, в нём опечатка.");
 const BAD_CODE = fail("Введи код из письма (6 цифр).");
+const THROTTLED = fail(THROTTLED_MESSAGE);
 
 /** Creates an account and emails a confirmation code. */
 export async function signUp(email: string, password: string): Promise<ActionResult> {
@@ -27,6 +30,7 @@ export async function signUp(email: string, password: string): Promise<ActionRes
   const weak = validatePassword(password);
   if (weak) return fail(weak);
   const supabase = await createClient();
+  if (!(await allowAttempt(supabase, "sendCode", normalizeEmail(email)))) return THROTTLED;
   const { error } = await supabase.auth.signUp({ email: normalizeEmail(email), password });
   // For an address that is already registered Supabase answers as if it succeeded
   // (it doesn't reveal which emails exist); the form says what to do if no code arrives.
@@ -37,6 +41,7 @@ export async function signUp(email: string, password: string): Promise<ActionRes
 export async function resendSignUpCode(email: string): Promise<ActionResult> {
   if (!isValidEmail(email)) return BAD_EMAIL;
   const supabase = await createClient();
+  if (!(await allowAttempt(supabase, "sendCode", normalizeEmail(email)))) return THROTTLED;
   const { error } = await supabase.auth.resend({ type: "signup", email: normalizeEmail(email) });
   return error ? fail(authErrorMessage(error)) : { ok: true };
 }
@@ -46,6 +51,7 @@ export async function confirmSignUp(email: string, code: string): Promise<Action
   if (!isValidEmail(email)) return BAD_EMAIL;
   if (!isValidCode(code)) return BAD_CODE;
   const supabase = await createClient();
+  if (!(await allowAttempt(supabase, "verifyCode", normalizeEmail(email)))) return THROTTLED;
   const { error } = await supabase.auth.verifyOtp({
     email: normalizeEmail(email),
     token: normalizeCode(code),
@@ -58,6 +64,7 @@ export async function signIn(email: string, password: string): Promise<ActionRes
   if (!isValidEmail(email)) return BAD_EMAIL;
   if (!password) return fail("Введи пароль.");
   const supabase = await createClient();
+  if (!(await allowAttempt(supabase, "signIn", normalizeEmail(email)))) return THROTTLED;
   const { error } = await supabase.auth.signInWithPassword({ email: normalizeEmail(email), password });
   return error ? fail(authErrorMessage(error)) : { ok: true };
 }
@@ -66,6 +73,7 @@ export async function signIn(email: string, password: string): Promise<ActionRes
 export async function requestPasswordReset(email: string): Promise<ActionResult> {
   if (!isValidEmail(email)) return BAD_EMAIL;
   const supabase = await createClient();
+  if (!(await allowAttempt(supabase, "sendCode", normalizeEmail(email)))) return THROTTLED;
   const { error } = await supabase.auth.resetPasswordForEmail(normalizeEmail(email));
   return error ? fail(authErrorMessage(error)) : { ok: true };
 }
@@ -75,6 +83,7 @@ export async function confirmRecovery(email: string, code: string): Promise<Acti
   if (!isValidEmail(email)) return BAD_EMAIL;
   if (!isValidCode(code)) return BAD_CODE;
   const supabase = await createClient();
+  if (!(await allowAttempt(supabase, "verifyCode", normalizeEmail(email)))) return THROTTLED;
   const { error } = await supabase.auth.verifyOtp({
     email: normalizeEmail(email),
     token: normalizeCode(code),
