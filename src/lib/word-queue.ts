@@ -1,6 +1,5 @@
 // Pure logic of the words tab: which cards a session contains and how the word stats are summed up.
 import { blankWord } from "@/lib/word-context";
-import type { SrsCardState } from "@/lib/srs";
 
 /** Max due cards in one session; the rest wait for the next one. */
 export const REVIEWS_PER_SESSION = 20;
@@ -35,12 +34,10 @@ export interface CardRow {
 
 export interface WordItem {
   wordId: string;
-  cardId: string | null;
   headword: string;
   translation: string;
   ipa: string | null;
   example: string | null;
-  srsState: SrsCardState;
   /** A brand-new word: shown first (intro), then recalled. */
   isNew: boolean;
   /** recall: Russian → type the English word; context: type the word missing from a sentence. */
@@ -57,17 +54,12 @@ function hash(s: string): number {
 }
 
 function toItem(word: WordRow, card: CardRow | null): WordItem {
-  const state: SrsCardState = card
-    ? { ease_factor: card.ease_factor, interval_days: card.interval_days, repetitions: card.repetitions }
-    : { ease_factor: 2.5, interval_days: 0, repetitions: 0 };
   const base: WordItem = {
     wordId: word.id,
-    cardId: card?.id ?? null,
     headword: word.headword,
     translation: word.translation,
     ipa: word.ipa,
     example: word.example_sentence,
-    srsState: state,
     isNew: !card,
     kind: "recall",
     answers: [word.headword],

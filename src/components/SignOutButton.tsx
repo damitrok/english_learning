@@ -2,20 +2,22 @@
 
 import { useRouter } from "next/navigation";
 import { signOut } from "@/lib/auth";
+import { clearPageCache } from "@/lib/page-cache";
 
 export function SignOutButton({ className = "" }: { className?: string }) {
   const router = useRouter();
 
   async function handleSignOut() {
-    await signOut();
-    // The service worker keeps copies of visited pages for offline use — drop
-    // them so the next person on this device can't open them.
-    if ("caches" in window) {
-      const keys = await caches.keys();
-      await Promise.all(keys.filter((k) => k.startsWith("pages-")).map((k) => caches.delete(k)));
+    // Drop the offline copies of visited pages first and regardless of whether the request
+    // succeeds: the next person on this device must not be able to open them.
+    await clearPageCache();
+    try {
+      await signOut();
+    } finally {
+      await clearPageCache();
+      router.replace("/login");
+      router.refresh();
     }
-    router.replace("/login");
-    router.refresh();
   }
 
   return (
