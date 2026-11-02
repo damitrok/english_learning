@@ -38,6 +38,8 @@ yarn-error.log*
 
 # local MCP tool config (per-machine, ties to a personal Supabase project)
 .mcp.json
+# local Claude Code permissions (allows direct writes to the personal Supabase project)
+.claude/settings.local.json
 
 # typescript
 *.tsbuildinfo

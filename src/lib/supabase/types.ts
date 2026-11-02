@@ -329,6 +329,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      auth_throttle_hit: {
+        Args: { p_key: string; p_limit: number; p_window_seconds: number }
+        Returns: boolean
+      }
       record_step: {
         Args: { p_date: string; p_minutes: number; p_step: string }
         Returns: undefined

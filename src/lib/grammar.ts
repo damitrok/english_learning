@@ -2,6 +2,7 @@
 
 import { createClient } from "@/lib/supabase/server";
 import { getAuthUser } from "@/lib/supabase/user";
+import { cleanAnswer, isUuid } from "@/lib/input-guards";
 import { normalizeAnswer } from "@/lib/text-normalize";
 import type { ExerciseType } from "@/lib/supabase/types";
 
@@ -100,6 +101,8 @@ export async function submitGrammarAnswer(
   exerciseId: string,
   answer: string
 ): Promise<GrammarAnswerResult> {
+  const typed = cleanAnswer(answer);
+  if (!isUuid(exerciseId) || typed === null) throw new Error("Invalid answer");
   const supabase = await createClient();
   const user = await getAuthUser(supabase);
   if (!user) throw new Error("Not authenticated");
@@ -111,7 +114,7 @@ export async function submitGrammarAnswer(
     .single();
   if (readError) throw readError;
 
-  const given = normalizeAnswer(answer);
+  const given = normalizeAnswer(typed);
   const correct = [exercise.correct_answer, ...exercise.accepted_answers].some(
     (a) => normalizeAnswer(a) === given
   );
@@ -119,7 +122,7 @@ export async function submitGrammarAnswer(
   const { error } = await supabase.from("grammar_attempts").insert({
     user_id: user.id,
     exercise_id: exerciseId,
-    answer,
+    answer: typed,
     is_correct: correct,
   });
   if (error) throw error;
