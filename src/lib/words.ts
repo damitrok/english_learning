@@ -4,7 +4,8 @@ import { createClient } from "@/lib/supabase/server";
 import { getAuthUser } from "@/lib/supabase/user";
 import { getTimeZone } from "@/lib/day-server";
 import { localDate } from "@/lib/dates";
-import { reviewCard, type SrsCardState } from "@/lib/srs";
+import { reviewCard } from "@/lib/srs";
+import { isSrsResult, isUuid } from "@/lib/input-guards";
 import { buildWordQueue, summarizeWords, type CardRow, type WordItem, type WordRow, type WordsSummary } from "@/lib/word-queue";
 import type { SrsResult } from "@/lib/supabase/types";
 
@@ -44,21 +45,28 @@ export async function getWordsOverview(): Promise<WordsSummary | null> {
   return summarizeWords({ words: data.words, cards: data.cards, newToday: data.newToday });
 }
 
-export async function submitWordReview(
-  wordId: string,
-  cardId: string | null,
-  srsState: SrsCardState,
-  result: SrsResult
-): Promise<void> {
+/**
+ * Records one graded answer. The card's current SRS state is read here, from the database — it
+ * never comes from the browser, so a forged state can't push a card's interval to infinity.
+ */
+export async function submitWordReview(wordId: string, result: SrsResult): Promise<void> {
+  if (!isUuid(wordId) || !isSrsResult(result)) throw new Error("Invalid review");
   const supabase = await createClient();
   const user = await getAuthUser(supabase);
   if (!user) throw new Error("Not authenticated");
 
-  const next = reviewCard(srsState, result);
+  const { data: card, error: readError } = await supabase
+    .from("cards")
+    .select("ease_factor, interval_days, repetitions")
+    .eq("user_id", user.id)
+    .eq("word_id", wordId)
+    .maybeSingle();
+  if (readError) throw readError;
+
+  const next = reviewCard(card ?? { ease_factor: 2.5, interval_days: 0, repetitions: 0 }, result);
 
   const { error } = await supabase.from("cards").upsert(
     {
-      ...(cardId ? { id: cardId } : {}),
       user_id: user.id,
       word_id: wordId,
       ease_factor: next.ease_factor,
