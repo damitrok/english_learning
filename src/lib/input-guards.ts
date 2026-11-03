@@ -51,3 +51,18 @@ export function cleanFeedback(value: unknown): string | null {
   const text = value.trim();
   return text.length > 0 && text.length <= MAX_FEEDBACK_LENGTH ? text : null;
 }
+
+/** A push service address: https, no longer than the database column allows. */
+export function isPushEndpoint(value: unknown): value is string {
+  if (typeof value !== "string" || value.length === 0 || value.length > 2048) return false;
+  try {
+    return new URL(value).protocol === "https:";
+  } catch {
+    return false;
+  }
+}
+
+/** A push subscription key: URL-safe base64 (padding allowed), short. */
+export function isPushKey(value: unknown): value is string {
+  return typeof value === "string" && value.length > 0 && value.length <= 256 && /^[A-Za-z0-9_-]+={0,2}$/.test(value);
+}

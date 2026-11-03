@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { deleteAccount } from "@/lib/account";
 import { signOut } from "@/lib/auth";
 import { clearPageCache } from "@/lib/page-cache";
+import { disablePush } from "@/lib/push-client";
 import { Modal } from "@/components/Modal";
 
 type Action = "signout" | "delete";
@@ -70,6 +71,8 @@ export function UserMenu() {
     // Drop the offline copies of visited pages first and regardless of whether the request
     // succeeds: the next person on this device must not be able to open them.
     await clearPageCache();
+    // Reminders belong to the person signed in here: the next one must not get them on this device.
+    await disablePush().catch(() => {});
     try {
       if (action === "delete") {
         const result = await deleteAccount();

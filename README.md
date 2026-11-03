@@ -153,3 +153,20 @@ tracked in Supabase's own `supabase_migrations.schema_migrations`, seed hashes i
 The **CI** workflow (lint, typecheck, tests, build) runs on every pull request. Run the same by hand
 with `npm test`. Run `scripts/db-apply.sh` locally with `SUPABASE_DB_URL` set if you need to apply
 changes without a merge.
+
+## Reminders (push)
+
+An evening push («Серия N дней под угрозой…») reaches installed devices whose owner turned reminders on
+(switch in the daily-tasks dialog) and still has tasks left. Android Chrome and iPhone (iOS 16.4+, installed to the
+Home Screen) are supported.
+
+- Device subscriptions live in `push_subscriptions` (closed to the API roles; `save_push_subscription` /
+  `remove_push_subscription` manage a person's own devices). Signing out or deleting the account drops the device.
+- `.github/workflows/reminders.yml` calls `POST /api/cron/reminders` hourly with `CRON_SECRET`. The endpoint reads
+  everybody's progress with the service role, picks devices whose local time is 19:00–21:59 and that were not reminded
+  today, skips people who have been away for over 7 days, and sends via `web-push` (`src/lib/reminders.ts` decides).
+- Setup (once): generate VAPID keys (`npx web-push generate-vapid-keys`), then set in Vercel
+  `NEXT_PUBLIC_VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT` (`mailto:…`), `SUPABASE_SERVICE_ROLE_KEY`,
+  `CRON_SECRET`, and redeploy; in GitHub → Settings → Secrets → Actions set `CRON_SECRET` (same value) and
+  `REMINDERS_URL` (`https://<app>/api/cron/reminders`). The service key is used only by that endpoint.
+

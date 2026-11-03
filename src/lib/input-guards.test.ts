@@ -7,6 +7,8 @@ import {
   clampSeconds,
   cleanAnswer,
   cleanFeedback,
+  isPushEndpoint,
+  isPushKey,
   isSrsResult,
   isStepName,
   isUuid,
@@ -74,5 +76,24 @@ describe("cleanFeedback", () => {
     expect(cleanFeedback(undefined)).toBeNull();
     expect(cleanFeedback("a".repeat(MAX_FEEDBACK_LENGTH))).not.toBeNull();
     expect(cleanFeedback("a".repeat(MAX_FEEDBACK_LENGTH + 1))).toBeNull();
+  });
+});
+
+describe("isPushEndpoint / isPushKey", () => {
+  it("accepts an https endpoint and rejects other values", () => {
+    expect(isPushEndpoint("https://fcm.googleapis.com/fcm/send/abc")).toBe(true);
+    expect(isPushEndpoint("http://example.com/x")).toBe(false);
+    expect(isPushEndpoint("javascript:alert(1)")).toBe(false);
+    expect(isPushEndpoint("not a url")).toBe(false);
+    expect(isPushEndpoint("https://example.com/" + "a".repeat(2048))).toBe(false);
+    expect(isPushEndpoint(undefined)).toBe(false);
+  });
+  it("accepts URL-safe base64 keys only", () => {
+    expect(isPushKey("BNcRdreALRFXTkOOUHK1EtK2wtaz5Ry4YfYCA_0QTpQtUbVlUls0VJXg7A8u-Ts1XbjhazAkj7I99e8QcYP7DkM")).toBe(true);
+    expect(isPushKey("tBHItJI5svbpez7KI4CCXg==")).toBe(true);
+    expect(isPushKey("has space")).toBe(false);
+    expect(isPushKey("")).toBe(false);
+    expect(isPushKey("a".repeat(257))).toBe(false);
+    expect(isPushKey(null)).toBe(false);
   });
 });
