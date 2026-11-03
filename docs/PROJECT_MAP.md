@@ -38,6 +38,10 @@ flowchart LR
 | `public/sw.js`, `public/offline.html` | Service worker: cache-first build assets, network-first pages with last-good-copy fallback, offline page. Registered by `components/ServiceWorker.tsx` (production only) |
 | `src/components/AuthForm.tsx` | Sign-in / sign-up / code / reset forms (client, calls `src/lib/auth.ts` actions) |
 | `src/lib/auth.ts`, `auth-validation.ts` | Auth server actions; pure validators and Russian error messages |
+| `src/app/(app)/listening/`, `src/app/(app)/session/listening/[id]/` | «Слушанье»: list of videos; full-screen game (`ListeningGame`: YouTube player + transcript with gaps, choose or type) |
+| `src/content/listening/` | `links.txt` (links + auto summary), `videos/<id>.json` (transcripts), generated `index.ts` |
+| `scripts/add-listening.mjs`, `scripts/listening-lib.mjs` | `npm run listening`: yt-dlp → transcript JSON, index and summary; pure helpers are tested |
+| `src/lib/listening-game.ts` | Gap selection (one per N seconds, meaningful words), options, line cutting |
 | `src/lib/throttle.ts` | Sign-in rate limits per IP and e-mail (`auth_throttle_hit` RPC) |
 | `src/lib/input-guards.ts` | Validation of values received by Server Actions (uuid, step, seconds, answer length) |
 | `src/lib/security-headers.ts`, `src/proxy.ts`, `next.config.ts` | CSP with a per-request nonce + static security headers |

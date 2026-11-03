@@ -17,6 +17,11 @@ describe("buildCsp", () => {
     expect(csp).toContain("default-src 'self'");
     expect(csp).toContain("connect-src 'self'");
   });
+  it("allows only the YouTube player frame and thumbnails from outside", () => {
+    expect(csp).toContain("frame-src https://www.youtube-nocookie.com https://www.youtube.com;");
+    expect(csp).toContain("img-src 'self' data: blob: https://i.ytimg.com;");
+    expect(csp).not.toMatch(/(script|connect|default)-src[^;]*https:\/\//);
+  });
   it("dev adds unsafe-eval and skips upgrade-insecure-requests", () => {
     const dev = buildCsp("n", true);
     expect(dev).toContain("'unsafe-eval'");

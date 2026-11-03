@@ -52,6 +52,29 @@ Dashboard settings to check (Authentication):
   when the access token expires; a long expiry means far fewer refreshes, and every lost refresh
   response on a flaky mobile connection is what used to log people out.
 
+## Listening («Слушанье»)
+
+A tab with YouTube videos (podcasts, talks) and a fill-in-the-gaps game: the video plays, the
+transcript is shown with some words missing, and after each gap word is spoken the video stops and
+you pick or type it. Videos are added from a list of links, not through the app:
+
+1. Add a YouTube link as a new line in `src/content/listening/links.txt`.
+2. Run `npm run listening` (needs `yt-dlp` on your machine: `brew install yt-dlp`). For every new link
+   it downloads the English captions (people's captions first, otherwise YouTube's automatic ones),
+   saves them as `src/content/listening/videos/<id>.json`, regenerates
+   `src/content/listening/index.ts` and rewrites the numbered summary at the top of `links.txt`.
+   `npm run listening -- --force` downloads everything again.
+3. Commit the changes; the video appears in the tab.
+
+Code: transcript parsing and the summary (`scripts/listening-lib.mjs`, tested), the tool
+(`scripts/add-listening.mjs`), gap selection and options (`src/lib/listening-game.ts`, tested), the
+player and game (`src/components/useYouTubePlayer.ts`, `ListeningGame.tsx`), the list
+(`src/app/(app)/listening`) and the game route (`src/app/(app)/session/listening/[id]`). The CSP allows
+only the YouTube player frame and `i.ytimg.com` thumbnails (`src/lib/security-headers.ts`).
+
+Captions are other people's text: keep the repository private, or leave `videos/*.json` out of git,
+before adding videos you don't have the rights to republish.
+
 ## Security
 
 Audited on 2026-11-01 (no way found to read or change another user's data). What holds that up:
