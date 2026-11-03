@@ -1,5 +1,6 @@
 import { getDashboard, type DashboardData } from "@/lib/overview";
 import { plural } from "@/lib/plural";
+import { StreakWidget } from "@/components/StreakWidget";
 
 const STRANDS: { key: keyof DashboardData["minutesLast7"]; label: string }[] = [
   { key: "vocab", label: "Слова" },
@@ -8,14 +9,9 @@ const STRANDS: { key: keyof DashboardData["minutesLast7"]; label: string }[] = [
   { key: "practice", label: "Практика" },
 ];
 
-// Sequential single hue (electric sky) for "how many lessons that day": empty → full (3+ = streak day).
-const CELL_TONES = [
-  "bg-graphite",
-  "bg-electric-sky/25",
-  "bg-electric-sky/50",
-  "bg-electric-sky/75",
-  "bg-electric-sky",
-];
+// Sequential single hue (electric sky) for "how many daily tasks that day": none → all three (a streak day).
+const CELL_TONES = ["bg-graphite", "bg-electric-sky/35", "bg-electric-sky/65", "bg-electric-sky"];
+const FROZEN_TONE = "bg-info-blue/20 ring-1 ring-inset ring-info-blue";
 
 const WEEKDAYS = ["Пн", "", "Ср", "", "Пт", "", "Вс"];
 
@@ -28,7 +24,8 @@ export default async function DashboardPage() {
   const max30 = Math.max(1, ...STRANDS.map((s) => data.minutesLast30[s.key]));
 
   return (
-    <div className="flex flex-col gap-6 py-2 sm:gap-[2rem] sm:py-4">
+    <div className="flex flex-col gap-6 pb-2 pt-10 sm:gap-[2rem] sm:py-4">
+      <StreakWidget />
       <div>
         <p className="text-eyebrow font-medium uppercase text-ash">Прогресс</p>
         <h1 className="mt-2 text-heading font-normal text-pure-white">Дашборд</h1>
@@ -67,7 +64,7 @@ export default async function DashboardPage() {
 
       <section className="rounded-cards border border-border-hairline bg-ink p-5 shadow-key sm:p-6">
         <h2 className="text-subheading font-medium text-pure-white">Активность за 12 недель</h2>
-        <p className="mt-1 text-body text-ash">Каждая клетка — день, яркость — сколько уроков пройдено. 3 урока — день в серии.</p>
+        <p className="mt-1 text-body text-ash">Каждая клетка — день, яркость — сколько ежедневных заданий выполнено. Три задания — день в серии, голубая клетка — день закрыт заморозкой.</p>
         <div className="mt-4 flex gap-2 overflow-x-auto pb-1">
           <div className="grid grid-rows-7 gap-1 pr-1 text-[12px] leading-none text-smoke">
             {WEEKDAYS.map((d, i) => (
@@ -81,10 +78,10 @@ export default async function DashboardPage() {
               {week.map((day) => (
                 <span
                   key={day.date}
-                  title={day.future ? day.date : `${day.date}: уроков ${day.lessons}`}
-                  aria-label={day.future ? undefined : `${day.date}: уроков ${day.lessons}`}
+                  title={day.future ? day.date : `${day.date}: ${day.frozen ? "заморозка" : `заданий ${day.level}`}`}
+                  aria-label={day.future ? undefined : `${day.date}: ${day.frozen ? "заморозка" : `заданий ${day.level}`}`}
                   className={`h-4 w-4 rounded-[3px] ${
-                    day.future ? "bg-transparent" : CELL_TONES[Math.min(day.lessons, 4)]
+                    day.future ? "bg-transparent" : day.frozen ? FROZEN_TONE : CELL_TONES[day.level]
                   }`}
                 />
               ))}
@@ -96,7 +93,7 @@ export default async function DashboardPage() {
           {CELL_TONES.map((tone) => (
             <span key={tone} className={`h-3 w-3 rounded-[3px] ${tone}`} aria-hidden />
           ))}
-          <span>4+ урока</span>
+          <span>3 задания</span>
         </div>
       </section>
 

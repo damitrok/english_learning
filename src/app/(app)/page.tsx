@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { StreakWidget } from "@/components/StreakWidget";
-import { getPathOverview } from "@/lib/overview";
 import { plural } from "@/lib/plural";
 import { getWordsOverview } from "@/lib/words";
 import { NEW_PER_SESSION, WORD_TARGET } from "@/lib/word-queue";
@@ -12,7 +11,7 @@ const HOW_IT_WORKS = [
 ];
 
 export default async function WordsPage() {
-  const [words, path] = await Promise.all([getWordsOverview(), getPathOverview()]);
+  const words = await getWordsOverview();
   if (!words) return null;
 
   const { due, newRemainingToday, learned, learning, byLevel } = words;
@@ -24,7 +23,7 @@ export default async function WordsPage() {
 
   return (
     <div className="mx-auto flex w-full max-w-md flex-col gap-6 pt-10 sm:pt-4">
-      <StreakWidget streak={path.streak} lessonsToday={path.lessonsToday} dayComplete={path.dayComplete} />
+      <StreakWidget />
 
       <div>
         <p className="text-eyebrow font-medium uppercase text-ash">Словарь</p>

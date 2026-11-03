@@ -15,9 +15,6 @@ export const LESSON_TYPES = [
 ] as const;
 export type StepName = (typeof LESSON_TYPES)[number];
 
-/** A day counts toward the streak once this many lessons are finished (no upper limit). */
-export const LESSONS_PER_DAY = 3;
-
 export function isValidTimeZone(tz: string | undefined): tz is string {
   if (!tz) return false;
   try {
@@ -43,34 +40,4 @@ export function addDays(day: string, delta: number): string {
   const d = new Date(`${day}T00:00:00Z`);
   d.setUTCDate(d.getUTCDate() + delta);
   return d.toISOString().slice(0, 10);
-}
-
-export function isDayComplete(lessonsCompleted: number): boolean {
-  return lessonsCompleted >= LESSONS_PER_DAY;
-}
-
-/**
- * Streaks over completed days. A missed day breaks the streak; today not being
- * done yet doesn't break the current streak (there is still time).
- */
-export function computeStreaks(
-  completedDays: Iterable<string>,
-  today: string
-): { current: number; longest: number } {
-  const done = new Set(completedDays);
-
-  let current = 0;
-  for (let day = done.has(today) ? today : addDays(today, -1); done.has(day); day = addDays(day, -1)) {
-    current++;
-  }
-
-  let longest = 0;
-  let run = 0;
-  let prev: string | null = null;
-  for (const d of [...done].sort()) {
-    run = prev !== null && addDays(prev, 1) === d ? run + 1 : 1;
-    longest = Math.max(longest, run);
-    prev = d;
-  }
-  return { current, longest: Math.max(longest, current) };
 }

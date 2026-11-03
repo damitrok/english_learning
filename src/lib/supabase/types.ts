@@ -199,6 +199,7 @@ export type Database = {
       sessions: {
         Row: {
           lessons_completed: number
+          listening_games: number
           word_sessions: number
           created_at: string
           practice_minutes: number
@@ -211,6 +212,7 @@ export type Database = {
         }
         Insert: {
           lessons_completed?: number
+          listening_games?: number
           word_sessions?: number
           created_at?: string
           practice_minutes?: number
@@ -223,6 +225,7 @@ export type Database = {
         }
         Update: {
           lessons_completed?: number
+          listening_games?: number
           word_sessions?: number
           created_at?: string
           practice_minutes?: number
@@ -356,6 +359,10 @@ export type Database = {
       }
       delete_own_account: {
         Args: Record<PropertyKey, never>
+        Returns: undefined
+      }
+      record_listening: {
+        Args: { p_date: string }
         Returns: undefined
       }
       record_step: {
