@@ -17,6 +17,7 @@ import {
   type LevelId,
 } from "@/lib/listening-game";
 import { checkWordAnswer } from "@/lib/word-check";
+import { recordListeningLevel } from "@/lib/listening-progress";
 import { SessionFrame } from "@/components/SessionFrame";
 import { useYouTubePlayer } from "@/components/useYouTubePlayer";
 
@@ -93,6 +94,14 @@ export function ListeningGame({ video }: { video: ListeningVideo }) {
   useEffect(() => {
     finishRef.current = finish;
   });
+
+  // A finished level counts toward the daily task (a game without gaps does not).
+  useEffect(() => {
+    if (phase !== "done" || gapsRef.current.length === 0) return;
+    recordListeningLevel().catch(() => {
+      // Not saved (offline): the learner can simply play another level.
+    });
+  }, [phase]);
 
   function start() {
     const picked = buildGaps(video.lines, levelInfo.secondsPerGap, hashSeed(`${video.id}:${level}:${round}`));

@@ -2,13 +2,17 @@
 import { createClient } from "@/lib/supabase/server";
 import { getAuthUser } from "@/lib/supabase/user";
 import { getTimeZone } from "@/lib/day-server";
-import { addDays, computeStreaks, isDayComplete, localDate } from "@/lib/dates";
+import { addDays, localDate } from "@/lib/dates";
+import { PATTERN, lessonCycle } from "@/lib/path";
+import { DAILY_TASKS, computeStreakState, pathLessons, isDayComplete, taskStatus, tasksDone, type StreakState, type TaskStatus } from "@/lib/daily";
 
 export interface DayActivity {
   date: string;
   lessons: number;
   /** Words-tab sessions among `lessons`; they count for the streak but not for the path. */
   wordSessions: number;
+  /** Finished listening levels; they count for the daily task but not for the path. */
+  listeningGames: number;
   minutes: { vocab: number; grammar: number; reading: number; practice: number };
 }
 
@@ -22,7 +26,7 @@ async function loadDays() {
   const { data } = await supabase
     .from("sessions")
     .select(
-      "session_date, lessons_completed, word_sessions, vocab_minutes, grammar_minutes, reading_minutes, practice_minutes"
+      "session_date, lessons_completed, word_sessions, listening_games, vocab_minutes, grammar_minutes, reading_minutes, practice_minutes"
     )
     .eq("user_id", user.id)
     .order("session_date");
@@ -31,6 +35,7 @@ async function loadDays() {
     date: s.session_date,
     lessons: s.lessons_completed,
     wordSessions: s.word_sessions,
+    listeningGames: s.listening_games,
     minutes: {
       vocab: s.vocab_minutes,
       grammar: s.grammar_minutes,
@@ -44,32 +49,46 @@ async function loadDays() {
 export interface PathOverview {
   /** Lifetime number of finished path lessons — the learner's position on the path (words sessions excluded). */
   lessonsCompleted: number;
-  lessonsToday: number;
-  streak: number;
-  /** Today already has enough lessons to count toward the streak. */
-  dayComplete: boolean;
 }
 
 export async function getPathOverview(): Promise<PathOverview> {
+  const { days } = await loadDays();
+  return { lessonsCompleted: days.reduce((sum, d) => sum + d.lessons - d.wordSessions, 0) };
+}
+
+export interface DailyOverview extends Pick<StreakState, "current" | "longest" | "freezes"> {
+  tasks: TaskStatus;
+  done: number;
+  /** Path lessons finished today (a chapter is CHAPTER_LESSONS of them). */
+  grammarLessonsToday: number;
+  /** Where the grammar task starts: the next lesson on the path. */
+  grammarHref: string;
+  /** All of today's tasks are done: the day counts toward the streak. */
+  dayComplete: boolean;
+}
+
+export async function getDailyOverview(): Promise<DailyOverview> {
   const { today, days } = await loadDays();
-  const lessonsToday = days.find((d) => d.date === today)?.lessons ?? 0;
-  const streaks = computeStreaks(
-    days.filter((d) => isDayComplete(d.lessons)).map((d) => d.date),
-    today
-  );
+  const state = computeStreakState(days.filter(isDayComplete).map((d) => d.date), today);
+  const tasks = taskStatus(days.find((d) => d.date === today));
+  const next = days.reduce((sum, d) => sum + d.lessons - d.wordSessions, 0);
   return {
-    lessonsCompleted: days.reduce((sum, d) => sum + d.lessons - d.wordSessions, 0),
-    lessonsToday,
-    streak: streaks.current,
-    dayComplete: isDayComplete(lessonsToday),
+    grammarLessonsToday: pathLessons(days.find((d) => d.date === today)),
+    grammarHref: `/session/${PATTERN[next % PATTERN.length]}?n=${lessonCycle(next)}`,
+    current: state.current,
+    longest: state.longest,
+    freezes: state.freezes,
+    tasks,
+    done: tasksDone(tasks),
+    dayComplete: days.some((d) => d.date === today && isDayComplete(d)),
   };
 }
 
 export interface DashboardData {
   streak: { current: number; longest: number };
   daysCompleted: number;
-  /** Last 12 weeks, oldest first, Monday-aligned; `lessons` = lessons finished that day. */
-  calendar: { date: string; lessons: number; future: boolean }[];
+  /** Last 12 weeks, oldest first, Monday-aligned; `level` = daily tasks done (3 = a streak day). */
+  calendar: { date: string; level: number; frozen: boolean; future: boolean }[];
   minutesLast7: DayActivity["minutes"];
   minutesLast30: DayActivity["minutes"];
   words: { total: number; started: number; learned: number; due: number };
@@ -107,13 +126,19 @@ export async function getDashboard(): Promise<DashboardData | null> {
       .eq("user_id", user.id),
   ]);
 
+  const completedDays = days.filter(isDayComplete).map((d) => d.date);
+  const streak = computeStreakState(completedDays, today);
+  const frozenDays = new Set(streak.frozenDays);
+
   // Calendar: 12 weeks ending with the current week (Mon..Sun).
   const byDate = new Map(days.map((d) => [d.date, d]));
   const dow = (new Date(`${today}T00:00:00Z`).getUTCDay() + 6) % 7; // Mon = 0
   const start = addDays(today, -dow - 7 * 11);
   const calendar = Array.from({ length: 84 }, (_, i) => {
     const date = addDays(start, i);
-    return { date, lessons: byDate.get(date)?.lessons ?? 0, future: date > today };
+    const day = byDate.get(date);
+    const level = !day ? 0 : isDayComplete(day) ? DAILY_TASKS.length : Math.min(tasksDone(taskStatus(day)), DAILY_TASKS.length - 1);
+    return { date, level, frozen: frozenDays.has(date), future: date > today };
   });
 
   const sumMinutes = (from: string) => {
@@ -134,8 +159,8 @@ export async function getDashboard(): Promise<DashboardData | null> {
   const recent = (attempts ?? []).slice(-30);
 
   return {
-    streak: computeStreaks(days.filter((d) => isDayComplete(d.lessons)).map((d) => d.date), today),
-    daysCompleted: days.filter((d) => isDayComplete(d.lessons)).length,
+    streak: { current: streak.current, longest: streak.longest },
+    daysCompleted: completedDays.length,
     calendar,
     minutesLast7: sumMinutes(addDays(today, -6)),
     minutesLast30: sumMinutes(addDays(today, -29)),

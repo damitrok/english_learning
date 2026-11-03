@@ -32,13 +32,13 @@ flowchart LR
 | `src/app/(auth)/login/` | Sign-in screen, no nav (route group has its own layout) |
 | `src/app/(app)/` | Everything behind auth, wrapped by `NavBar` in `(app)/layout.tsx` |
 | `src/app/(app)/page.tsx` | «Слова» tab (route `/`, the first tab): today's due/new counts, progress to ~3000 words (B1), how it works, start button |
-| `src/app/(app)/path/page.tsx` | Lesson path (route `/path`): zigzag `LessonPath` + streak widget |
+| `src/app/(app)/path/page.tsx` | «Грамматика» (route `/path`): the lesson path, zigzag `LessonPath` + streak widget |
 | `src/app/(app)/dashboard/page.tsx` | Progress dashboard: streak, words learned, grammar, 12-week activity calendar, minutes per strand (route `/dashboard`) |
 | `src/app/manifest.ts`, `src/app/apple-icon.png`, `public/icon-*.png` | PWA manifest + icons |
 | `public/sw.js`, `public/offline.html` | Service worker: cache-first build assets, network-first pages with last-good-copy fallback, offline page. Registered by `components/ServiceWorker.tsx` (production only) |
 | `src/components/AuthForm.tsx` | Sign-in / sign-up / code / reset forms (client, calls `src/lib/auth.ts` actions) |
 | `src/lib/auth.ts`, `auth-validation.ts` | Auth server actions; pure validators and Russian error messages |
-| `src/app/(app)/listening/`, `src/app/(app)/session/listening/[id]/` | «Слушанье»: list of videos; full-screen game (`ListeningGame`: YouTube player + transcript with gaps, choose or type) |
+| `src/app/(app)/listening/`, `src/app/(app)/session/listening/[id]/` | «Аудирование»: list of videos; full-screen game (`ListeningGame`: YouTube player + transcript with gaps, choose or type) |
 | `src/content/listening/` | `links.txt` (links + auto summary), `videos/<id>.json` (transcripts), generated `index.ts` |
 | `scripts/add-listening.mjs`, `scripts/listening-lib.mjs` | `npm run listening`: yt-dlp → transcript JSON, index and summary; pure helpers are tested |
 | `src/lib/listening-game.ts` | Gap selection (one per N seconds, meaningful words), options, line cutting |
@@ -63,16 +63,20 @@ flowchart LR
 | `src/lib/srs.ts` | Pure SM-2 spaced-repetition function (`reviewCard`) — no I/O, unit-testable |
 | `src/lib/words.ts` (words tab: session queue, overview, review saving), `grammar.ts`, `reading.ts`, `practice.ts` (review lesson) | Server actions per lesson type: pick the next material, record results. Grammar answers are checked server-side |
 | `src/lib/highlight.ts` | Pure splitter that finds studied headwords (+ simple inflections) in a text |
-| `src/lib/dates.ts` | Local-day math + streaks (3+ lessons in a local day = streak day; a missed day breaks it) — pure |
+| `src/lib/dates.ts` | Local-day math (timezone, `addDays`) — pure |
+| `src/lib/daily.ts` | Daily tasks (words lesson, a grammar chapter = 5 path lessons, listening level), streak-day rule (old rule of 3 lessons kept up to `LEGACY_RULE_UNTIL`), streak with freezes (`computeStreakState`: one freeze per 7 days in a row, max 2, a freeze covers a missed day) — pure |
+| `src/lib/listening-progress.ts` | Server action: a finished listening level counts toward the daily task (`record_listening`) |
+| `components/StreakWidget.tsx`, `components/DailyTasks.tsx` | Top-right streak pill on the four tabs; opens the daily-tasks dialog (streak, progress bar, task list, freezes) |
 | `src/lib/path.ts` | Pure lesson-path model: lesson `i` has type `PATTERN[i % 5]` (grammar, build, reading, translate, review — words are not on the path); position = lifetime finished lessons; one section = one pass of 7 |
 | `src/lib/day-server.ts` | Learner's timezone (from the `tz` cookie set by `TimezoneCookie`), today's local date, `recordStep` → `record_step()` RPC |
-| `src/lib/overview.ts` | Read models for the path (lessons total/today, streak) and the dashboard |
+| `src/lib/overview.ts` | Read models: path position, daily tasks + streak, dashboard |
 | `src/lib/*.test.ts` | Vitest unit tests for the pure modules (`dates`, `path`, `srs`, `highlight`, `plural`); config in `vitest.config.ts`; run `npm test` before deploys |
 | `src/lib/speech.ts` | Web Speech TTS wrapper (`speak`) for vocabulary pronunciation |
 | `src/docs/` | The two textbook PDFs (grammar: Murphy, *Essential Grammar in Use*; words: Nation, *4000 Essential English Words 1*) — personal copies, git-ignored (copyrighted, never commit them) |
 | `supabase/content/` | Hand-written content as JS modules (`grammar-topics.mjs`, `grammar-exercises.mjs`, `texts.mjs` + `texts-part-1…8.mjs` (115 reading texts, text N ↔ grammar unit N), `words.mjs` + `words-part-1…8.mjs` (the B1 extension: 8 frequency bands × 275 words, ~3000 words in total; `words-candidates.mjs` is the ordered headword list they were written from)) + `build-seed.mjs` / `build-words.mjs`, which validate them and generate `supabase/seed_phase2.sql` / `seed_words.sql` |
 | `supabase/migrations/0001_init.sql` | Full schema: `words`, `texts`, `grammar_exercises`, `cards`, `sessions` + RLS policies |
 | `supabase/migrations/20261031004150_lessons_streak.sql` | `sessions.lessons_completed`; `record_step` counts every finished lesson (streak day = 3+, path position = total); drops listening tables/enum/column, fluency columns, `completed_steps` and the unused `progress` table; `fluency_minutes` → `practice_minutes` |
+| `supabase/migrations/20261104120000_daily_tasks.sql` | `sessions.listening_games` + `record_listening(date)` for the listening daily task |
 | `supabase/migrations/20260923202717_daily_steps.sql` | Фаза 4: `sessions.completed_steps` + `grammar_minutes`, `record_step(date, step, minutes)` |
 | `supabase/migrations/20260923183643_…`–`…183653_…` | `words.sort_order` (learning order of new words) + `words.source` |
 | `supabase/migrations/20260923180828_…`–`…181706_…` | Фаза 2: `grammar_topics` (one row per textbook unit), exercises linked to topics, `grammar_attempts`, `text_reads`, text questions |

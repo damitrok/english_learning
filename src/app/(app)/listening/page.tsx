@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { LISTENING_VIDEOS } from "@/content/listening";
+import { StreakWidget } from "@/components/StreakWidget";
 
 function duration(seconds: number): string {
   const m = Math.round(seconds / 60);
@@ -8,9 +9,10 @@ function duration(seconds: number): string {
 
 export default function ListeningPage() {
   return (
-    <div className="mx-auto flex w-full max-w-3xl flex-col gap-5 py-4">
+    <div className="mx-auto flex w-full max-w-3xl flex-col gap-5 pb-4 pt-10 sm:pt-4">
+      <StreakWidget />
       <div>
-        <h1 className="text-heading-sm font-medium text-pure-white">Слушанье</h1>
+        <h1 className="text-heading-sm font-medium text-pure-white">Аудирование</h1>
         <p className="text-body text-ash">
           Выберите видео: оно играет, а в тексте пропущены слова. Услышали — впишите или выберите.
         </p>

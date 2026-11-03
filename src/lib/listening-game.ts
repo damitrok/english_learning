@@ -1,4 +1,4 @@
-// Pure logic of the «Слушанье» game: which words of a transcript become gaps, how fast they come,
+// Pure logic of the «Аудирование» game: which words of a transcript become gaps, how fast they come,
 // and which options are offered next to the right word.
 import type { ListeningLine } from "@/content/listening/types";
 

@@ -52,7 +52,7 @@ Dashboard settings to check (Authentication):
   when the access token expires; a long expiry means far fewer refreshes, and every lost refresh
   response on a flaky mobile connection is what used to log people out.
 
-## Listening («Слушанье»)
+## Listening («Аудирование»)
 
 A tab with YouTube videos (podcasts, talks) and a fill-in-the-gaps game: the video plays, the
 transcript is shown with some words missing, and after each gap word is spoken the video stops and
@@ -101,9 +101,9 @@ required review (any push to `main` runs SQL on the production database).
 ## Status
 
 The MVP is done. Learning is a Duolingo-style lesson path on the home screen: every node is a
-lesson (vocabulary SM-2, words in context, grammar, build-a-sentence, reading, RU→EN translation, mistakes review — repeating), finishing 3 lessons in a local day
-counts the day toward the streak, and there is no daily cap. The speaking/listening section was
-removed. Plus a progress dashboard and PWA install + offline support. Install on a phone via "Add to
+lesson (vocabulary SM-2, words in context, grammar, build-a-sentence, reading, RU→EN translation, mistakes review — repeating), a local day counts toward the streak once
+the three daily tasks are done (a words lesson, a grammar chapter (5 path lessons), a listening level; the pill in the top-right corner
+opens them), a streak freeze covers one missed day (one earned per 7 days in a row, at most 2 kept). Plus a progress dashboard and PWA install + offline support. Install on a phone via "Add to
 Home Screen" (Safari) or the install prompt (Chrome).
 Optional Фаза 5 ideas are in the plan doc.
 
