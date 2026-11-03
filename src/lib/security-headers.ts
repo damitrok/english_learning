@@ -22,11 +22,14 @@ export function buildCsp(nonce: string, isDev: boolean): string {
     `script-src 'self' 'nonce-${nonce}' 'strict-dynamic'${isDev ? " 'unsafe-eval'" : ""}`,
     `style-src 'self' 'nonce-${nonce}'`,
     "style-src-attr 'unsafe-inline'",
-    "img-src 'self' data: blob:",
+    // YouTube video thumbnails (listening tab).
+    "img-src 'self' data: blob: https://i.ytimg.com",
     "font-src 'self'",
     "connect-src 'self'",
     "manifest-src 'self'",
     "worker-src 'self'",
+    // The YouTube player of the listening tab (privacy-enhanced domain).
+    "frame-src https://www.youtube-nocookie.com https://www.youtube.com",
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",
