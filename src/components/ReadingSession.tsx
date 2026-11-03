@@ -127,7 +127,7 @@ export function ReadingSession({ text }: { text: ReadingText | null }) {
       {phase === "reading" && (
         <p className="text-body text-ash">
           Читайте ради смысла, не переводите каждое слово. Синим выделены слова из ваших
-          карточек — нажмитете, если забыли перевод.
+          карточек — нажмите, если забыли перевод.
         </p>
       )}
 
