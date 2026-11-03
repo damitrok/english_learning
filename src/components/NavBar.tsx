@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SignOutButton } from "@/components/SignOutButton";
 
 const LINKS = [
   { href: "/", label: "Слова" },
@@ -82,7 +81,6 @@ export function NavBar() {
               </Link>
             ))}
           </nav>
-          <SignOutButton className="rounded-buttons bg-mist px-3 py-2 text-body font-medium text-iron hover:opacity-90 transition-opacity" />
         </div>
       </header>
 

@@ -41,7 +41,7 @@ export function GrammarSession({
       setResult(res);
       if (res.correct) setCorrectCount((n) => n + 1);
     } catch {
-      setError("Не сохранилось — проверь соединение и попробуй ещё раз.");
+      setError("Не сохранилось — проверьте соединение и попробуйте ещё раз.");
     } finally {
       setPending(false);
     }

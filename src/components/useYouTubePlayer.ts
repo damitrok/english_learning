@@ -104,12 +104,12 @@ export function useYouTubePlayer(videoId: string, containerRef: RefObject<HTMLDi
               setError(
                 e.data === 101 || e.data === 150 || e.data === 153
                   ? "Автор запретил показ этого видео вне YouTube."
-                  : "Видео не загрузилось. Проверь интернет и попробуй ещё раз.",
+                  : "Видео не загрузилось. Проверьте интернет и попробуйте ещё раз.",
               ),
           },
         });
       })
-      .catch(() => !cancelled && setError("Не удалось загрузить плеер YouTube. Проверь интернет."));
+      .catch(() => !cancelled && setError("Не удалось загрузить плеер YouTube. Проверьте интернет."));
 
     return () => {
       cancelled = true;

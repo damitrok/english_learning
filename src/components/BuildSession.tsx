@@ -63,9 +63,9 @@ export function BuildSession({ items }: { items: BuildItem[] }) {
       }
     >
       <div>
-        <p className="text-eyebrow font-medium uppercase text-ash">Собери предложение</p>
+        <p className="text-eyebrow font-medium uppercase text-ash">Соберите предложение</p>
         <p className="mt-2 text-body text-ash">
-          {index + 1} / {items.length} · нажимай слова по порядку
+          {index + 1} / {items.length} · нажимайте слова по порядку
         </p>
       </div>
       <div className="rounded-cards border border-border-hairline bg-ink p-5 shadow-key sm:p-[2rem]">
@@ -73,7 +73,7 @@ export function BuildSession({ items }: { items: BuildItem[] }) {
       </div>
 
       <div
-        aria-label="Твой ответ"
+        aria-label="Ваш ответ"
         className={`flex min-h-[6rem] flex-wrap content-start gap-2 rounded-cards border-2 border-dashed p-3 ${
           correct === null ? "border-border-hairline" : correct ? "border-success-green" : "border-coral-pulse"
         }`}

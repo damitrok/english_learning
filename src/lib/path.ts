@@ -20,7 +20,7 @@ export const UNIT_SIZE = PATTERN.length;
 export const LESSON_LABELS: Record<StepName, string> = {
   vocab: "Слова",
   grammar: "Грамматика",
-  build: "Собери предложение",
+  build: "Соберите предложение",
   reading: "Чтение",
   translate: "Перевод",
   review: "Повтор ошибок",
@@ -29,10 +29,10 @@ export const LESSON_LABELS: Record<StepName, string> = {
 export const LESSON_HINTS: Record<StepName, string> = {
   vocab: "повтор и новые слова",
   grammar: "правило и упражнения",
-  build: "собери английское предложение из слов",
+  build: "соберите английское предложение из слов",
   reading: "текст со знакомыми словами",
-  translate: "переведи фразу с русского на английский",
-  review: "задания, в которых ты ошибался",
+  translate: "переведите фразу с русского на английский",
+  review: "задания, в которых вы ошибались",
 };
 
 /** Which pass through PATTERN a lesson belongs to — picks the batch of static material. */
