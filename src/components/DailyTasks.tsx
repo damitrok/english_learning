@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Modal } from "@/components/Modal";
+import { PushToggle } from "@/components/PushToggle";
 import { CHAPTER_LESSONS, DAILY_TASKS, FREEZE_EVERY, MAX_FREEZES, type TaskId, type TaskStatus } from "@/lib/daily";
 import type { DailyOverview } from "@/lib/overview";
 import { plural } from "@/lib/plural";
@@ -160,6 +161,8 @@ export function DailyTasks({ current, freezes, tasks, done, grammarHref, grammar
             </p>
           </div>
         </div>
+
+        <PushToggle />
 
         <button type="button" onClick={() => setOpen(false)} className="btn-secondary mt-4 w-full">
           Закрыть

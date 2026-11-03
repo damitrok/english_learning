@@ -66,6 +66,9 @@ flowchart LR
 | `src/lib/dates.ts` | Local-day math (timezone, `addDays`) — pure |
 | `src/lib/daily.ts` | Daily tasks (words lesson, a grammar chapter = 5 path lessons, listening level), streak-day rule (old rule of 3 lessons kept up to `LEGACY_RULE_UNTIL`), streak with freezes (`computeStreakState`: one freeze per 7 days in a row, max 2, a freeze covers a missed day) — pure |
 | `src/lib/listening-progress.ts` | Server action: a finished listening level counts toward the daily task (`record_listening`) |
+| `src/lib/reminders.ts` | Pure reminder planner: evening window 19:00–21:59 local, one per local day, skips done days and people away > 7 days, message text from streak and tasks left |
+| `src/lib/push.ts`, `src/lib/push-client.ts`, `components/PushToggle.tsx` | Server actions to save/remove a device; browser side (permission, subscribe, unsubscribe on sign-out); the switch in the daily-tasks dialog |
+| `src/app/api/cron/reminders/route.ts`, `src/lib/supabase/admin.ts`, `.github/workflows/reminders.yml` | Hourly job: bearer-secret endpoint that sends the pushes with `web-push` using the service-role client |
 | `components/StreakWidget.tsx`, `components/DailyTasks.tsx` | Top-right streak pill on the four tabs; opens the daily-tasks dialog (streak, progress bar, task list, freezes) |
 | `src/lib/path.ts` | Pure lesson-path model: lesson `i` has type `PATTERN[i % 5]` (grammar, build, reading, translate, review — words are not on the path); position = lifetime finished lessons; one section = one pass of 7 |
 | `src/lib/day-server.ts` | Learner's timezone (from the `tz` cookie set by `TimezoneCookie`), today's local date, `recordStep` → `record_step()` RPC |
@@ -77,6 +80,7 @@ flowchart LR
 | `supabase/migrations/0001_init.sql` | Full schema: `words`, `texts`, `grammar_exercises`, `cards`, `sessions` + RLS policies |
 | `supabase/migrations/20261031004150_lessons_streak.sql` | `sessions.lessons_completed`; `record_step` counts every finished lesson (streak day = 3+, path position = total); drops listening tables/enum/column, fluency columns, `completed_steps` and the unused `progress` table; `fluency_minutes` → `practice_minutes` |
 | `supabase/migrations/20261104120000_daily_tasks.sql` | `sessions.listening_games` + `record_listening(date)` for the listening daily task |
+| `supabase/migrations/20261105120000_push_reminders.sql` | `push_subscriptions` + `save_push_subscription` / `remove_push_subscription` |
 | `supabase/migrations/20260923202717_daily_steps.sql` | Фаза 4: `sessions.completed_steps` + `grammar_minutes`, `record_step(date, step, minutes)` |
 | `supabase/migrations/20260923183643_…`–`…183653_…` | `words.sort_order` (learning order of new words) + `words.source` |
 | `supabase/migrations/20260923180828_…`–`…181706_…` | Фаза 2: `grammar_topics` (one row per textbook unit), exercises linked to topics, `grammar_attempts`, `text_reads`, text questions |

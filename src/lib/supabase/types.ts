@@ -196,6 +196,36 @@ export type Database = {
         }
         Relationships: []
       }
+      push_subscriptions: {
+        Row: {
+          auth: string
+          created_at: string
+          endpoint: string
+          last_sent_on: string | null
+          p256dh: string
+          time_zone: string
+          user_id: string
+        }
+        Insert: {
+          auth: string
+          created_at?: string
+          endpoint: string
+          last_sent_on?: string | null
+          p256dh: string
+          time_zone?: string
+          user_id: string
+        }
+        Update: {
+          auth?: string
+          created_at?: string
+          endpoint?: string
+          last_sent_on?: string | null
+          p256dh?: string
+          time_zone?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       sessions: {
         Row: {
           lessons_completed: number
@@ -359,6 +389,14 @@ export type Database = {
       }
       delete_own_account: {
         Args: Record<PropertyKey, never>
+        Returns: undefined
+      }
+      remove_push_subscription: {
+        Args: { p_endpoint: string }
+        Returns: undefined
+      }
+      save_push_subscription: {
+        Args: { p_auth: string; p_endpoint: string; p_p256dh: string; p_time_zone: string }
         Returns: undefined
       }
       record_listening: {

@@ -4,7 +4,8 @@
 //   screen visited online (today's cards, today's text) opens offline too.
 // - Everything else (RSC fetches, Server Actions) goes straight to the network;
 //   Next's experimental.useOffline retries those when the connection returns.
-const VERSION = "v3";
+// - Push: the evening reminder is shown as a notification; a tap opens the app.
+const VERSION = "v4";
 const STATIC_CACHE = `static-${VERSION}`;
 const PAGE_CACHE = `pages-${VERSION}`;
 const OFFLINE_URL = "/offline.html";
@@ -75,4 +76,34 @@ self.addEventListener("fetch", (event) => {
         )
     );
   }
+});
+
+self.addEventListener("push", (event) => {
+  let data = {};
+  try {
+    data = event.data ? event.data.json() : {};
+  } catch {
+    data = {};
+  }
+  event.waitUntil(
+    self.registration.showNotification(data.title || "English for IT", {
+      body: data.body || "",
+      icon: "/icon-192.png",
+      badge: "/icon-192.png",
+      tag: "daily-reminder",
+      data: { path: typeof data.url === "string" && data.url.startsWith("/") ? data.url : "/" },
+    })
+  );
+});
+
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  const target = new URL(event.notification.data?.path || "/", self.location.origin).href;
+  event.waitUntil(
+    self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((windows) => {
+      const open = windows[0];
+      if (!open) return self.clients.openWindow(target);
+      return open.focus().then(() => ("navigate" in open ? open.navigate(target) : undefined));
+    })
+  );
 });
