@@ -66,6 +66,27 @@ export type Database = {
           },
         ]
       }
+      feedback: {
+        Row: {
+          created_at: string
+          id: string
+          message: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          message: string
+          user_id?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          message?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       grammar_attempts: {
         Row: {
           answer: string
@@ -332,6 +353,10 @@ export type Database = {
       auth_throttle_hit: {
         Args: { p_key: string; p_limit: number; p_window_seconds: number }
         Returns: boolean
+      }
+      delete_own_account: {
+        Args: Record<PropertyKey, never>
+        Returns: undefined
       }
       record_step: {
         Args: { p_date: string; p_minutes: number; p_step: string }

@@ -17,7 +17,7 @@ export const RULES = {
   sendCode: { ip: { limit: 10, windowSeconds: 15 * MINUTES }, email: { limit: 5, windowSeconds: 15 * MINUTES } },
 } as const;
 
-export const THROTTLED_MESSAGE = "Слишком много попыток. Подожди несколько минут и попробуй снова.";
+export const THROTTLED_MESSAGE = "Слишком много попыток. Подождите несколько минут и попробуйте снова.";
 
 /** Opaque, fixed-length key: raw emails and IPs are never stored. */
 export function throttleKey(kind: "ip" | "email", action: string, value: string): string {

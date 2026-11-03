@@ -1,6 +1,5 @@
 import { getDashboard, type DashboardData } from "@/lib/overview";
 import { plural } from "@/lib/plural";
-import { SignOutButton } from "@/components/SignOutButton";
 
 const STRANDS: { key: keyof DashboardData["minutesLast7"]; label: string }[] = [
   { key: "vocab", label: "Слова" },
@@ -125,8 +124,6 @@ export default async function DashboardPage() {
           </div>
         </section>
       </div>
-
-      <SignOutButton className="btn-secondary w-full text-ash sm:hidden" />
     </div>
   );
 }

@@ -56,7 +56,7 @@ export function WordsSession({ items }: { items: WordItem[] }) {
   }, [phase, index]);
 
   if (items.length === 0) {
-    return <SessionEmpty backHref="/" message="Слов на сейчас нет — загляни позже." />;
+    return <SessionEmpty backHref="/" message="Слов на сейчас нет — загляните позже." />;
   }
 
   const saveStatus =
@@ -152,7 +152,7 @@ export function WordsSession({ items }: { items: WordItem[] }) {
           <p className="mt-2 text-subheading font-medium text-pure-white">{item.translation}</p>
           {item.example && <p className="text-body text-ash">{item.example}</p>}
         </div>
-        <p className="text-body text-smoke">Запомни слово — сейчас нужно будет вспомнить и написать его.</p>
+        <p className="text-body text-smoke">Запомните слово — сейчас нужно будет вспомнить и написать его.</p>
       </SessionFrame>
     );
   }
@@ -196,7 +196,7 @@ export function WordsSession({ items }: { items: WordItem[] }) {
     >
       <div>
         <p className="text-eyebrow font-medium uppercase text-ash">
-          {item.kind === "context" ? "Слово в предложении" : "Вспомни слово"}
+          {item.kind === "context" ? "Слово в предложении" : "Вспомните слово"}
         </p>
         <div className="mt-2">{counter}</div>
       </div>
@@ -266,7 +266,7 @@ export function WordsSession({ items }: { items: WordItem[] }) {
       ) : (
         <div className="flex flex-col gap-3">
           {typed.trim() && feedback?.verdict !== "correct" && (
-            <p className="text-body text-ash">Ты написал: {typed.trim()}</p>
+            <p className="text-body text-ash">Вы написали: {typed.trim()}</p>
           )}
           <div className="flex items-center gap-3">
             <button onClick={() => speak(item.headword)} className="btn-secondary">

@@ -46,6 +46,9 @@ flowchart LR
 | `src/lib/input-guards.ts` | Validation of values received by Server Actions (uuid, step, seconds, answer length) |
 | `src/lib/security-headers.ts`, `src/proxy.ts`, `next.config.ts` | CSP with a per-request nonce + static security headers |
 | `src/lib/page-cache.ts`, `components/ClearPageCache.tsx` | Drops the service worker's cached pages on sign-out and on `/login` |
+| `src/lib/account.ts` | Server actions: `sendFeedback` (insert into `feedback`), `deleteAccount` (rpc `delete_own_account`, then ends the session) |
+| `components/UserMenu.tsx`, `components/FeedbackButton.tsx`, `components/Modal.tsx` | Bottom-right round buttons (profile under «?»): profile unfolds sign out / delete account, each with a confirm dialog; «?» opens the feedback form, shared `<dialog>` wrapper |
+| `components/PrivacyPolicy.tsx` | Privacy notice text, opened from the sign-up form |
 | `src/app/(app)/session/vocab/` | Words session (`WordsSession`): new words are introduced, then every word is *typed* from memory (RU→EN, or the missing word of an example sentence for older cards); mistakes return at the end; only the first attempt is graded for SM-2. Counts as a lesson for the streak, not for the path |
 | `src/app/(app)/session/grammar/` | Lesson «Грамматика»: grammar lesson — rule summary + exercises for the current unit (`GrammarSession`) |
 | `src/app/(app)/session/reading/` | Lesson «Чтение»: today's text with studied words highlighted + true/false check (`ReadingSession`) |

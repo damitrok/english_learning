@@ -91,6 +91,8 @@ Audited on 2026-11-01 (no way found to read or change another user's data). What
   (`src/lib/security-headers.ts`).
 - **Cookies**: session cookies are `httpOnly`, `Secure` in production, `SameSite=Lax`.
 - **Offline cache**: copies of visited pages are dropped on sign-out and whenever `/login` opens.
+- **Account deletion**: the profile button deletes the account through the `delete_own_account()` SQL function (SECURITY DEFINER, callable by signed-in users for themselves only); `on delete cascade` removes all of the person's rows, so the app needs no service-role key.
+- **Feedback**: the «?» button inserts into `feedback` (insert-only for users, 5 per hour per user, read it in the Supabase dashboard).
 
 Still to do by hand (Dashboard / GitHub): enable **Leaked password protection**, shorten the OTP
 expiry (Authentication → Email), protect `main` and put `db.yml` behind a `production` Environment with

@@ -12,6 +12,8 @@ import {
   signUp,
   type ActionResult,
 } from "@/lib/auth";
+import { Modal } from "@/components/Modal";
+import { PrivacyPolicy } from "@/components/PrivacyPolicy";
 import { isValidCode, isValidEmail, normalizeCode, validatePassword } from "@/lib/auth-validation";
 
 type Mode = "signin" | "signup" | "confirm-signup" | "forgot" | "confirm-recovery" | "new-password";
@@ -67,6 +69,7 @@ export function AuthForm() {
   const [pending, setPending] = useState(false);
   const [resendAt, setResendAt] = useState(0);
   const [now, setNow] = useState(() => Date.now());
+  const [policyOpen, setPolicyOpen] = useState(false);
 
   useEffect(() => {
     if (resendAt <= now) return;
@@ -97,7 +100,7 @@ export function AuthForm() {
       if (result.ok) onOk();
       else setError(result.error);
     } catch {
-      setError("Нет связи с сервером. Проверь интернет и попробуй ещё раз.");
+      setError("Нет связи с сервером. Проверьте интернет и попробуйте ещё раз.");
     } finally {
       setPending(false);
     }
@@ -152,7 +155,7 @@ export function AuthForm() {
     signup: "Регистрация",
     "confirm-signup": "Подтверди email",
     forgot: "Задать пароль",
-    "confirm-recovery": "Введи код",
+    "confirm-recovery": "Введите код",
     "new-password": "Новый пароль",
   };
   const showTabs = mode === "signin" || mode === "signup";
@@ -219,17 +222,17 @@ export function AuthForm() {
 
         {mode === "forgot" && (
           <p className="text-body text-ash">
-            Введи email — пришлём код, по нему ты зададишь новый пароль. Так же задают первый пароль, если раньше
-            входил по ссылке.
+            Введите email — пришлём код, по нему вы зададите новый пароль. Так же задают первый пароль, если раньше
+            входили по ссылке.
           </p>
         )}
         {(mode === "confirm-signup" || mode === "confirm-recovery") && (
           <p className="text-body text-ash">
-            Мы отправили код на <span className="text-pure-white">{email}</span>. Введи его здесь.
+            Мы отправили код на <span className="text-pure-white">{email}</span>. Введите его здесь.
           </p>
         )}
         {mode === "new-password" && (
-          <p className="text-body text-ash">Email подтверждён. Придумай пароль для входа.</p>
+          <p className="text-body text-ash">Email подтверждён. Придумайте пароль для входа.</p>
         )}
 
         {needsPassword && (
@@ -253,7 +256,7 @@ export function AuthForm() {
         )}
 
         <button type="submit" disabled={!canSubmit} className="btn-primary mt-1">
-          {pending ? "Подожди…" : submitLabel[mode]}
+          {pending ? "Подождите…" : submitLabel[mode]}
         </button>
 
         {error && (
@@ -267,13 +270,22 @@ export function AuthForm() {
       <div className="mt-3 flex flex-col items-stretch gap-1">
         {mode === "signin" && (
           <button type="button" onClick={() => go("forgot")} className="min-h-12 text-body text-ash underline underline-offset-4">
-            Забыл пароль или входил по ссылке — задать пароль
+            Забыли пароль или входили по ссылке — задать пароль
           </button>
         )}
         {mode === "signup" && (
-          <p className="text-[13px] text-smoke">
-            Пришлём код на email. Если письма нет — возможно, аккаунт уже существует: войди или задай пароль заново.
-          </p>
+          <>
+            <p className="text-[13px] text-smoke">
+              Пришлём код на email. Если письма нет — возможно, аккаунт уже существует: войдите или задайте пароль заново.
+            </p>
+            <p className="text-[13px] text-smoke">
+              Регистрируясь, вы соглашаетесь с{" "}
+              <button type="button" onClick={() => setPolicyOpen(true)} className="text-ash underline underline-offset-4">
+                политикой приватности
+              </button>
+              .
+            </p>
+          </>
         )}
         {needsCode && (
           <button
@@ -291,6 +303,13 @@ export function AuthForm() {
           </button>
         )}
       </div>
+
+      <Modal open={policyOpen} onClose={() => setPolicyOpen(false)} title="Политика приватности">
+        <PrivacyPolicy />
+        <button type="button" onClick={() => setPolicyOpen(false)} className="btn-secondary mt-5 w-full">
+          Понятно
+        </button>
+      </Modal>
     </div>
   );
 }

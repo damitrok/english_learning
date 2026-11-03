@@ -12,14 +12,14 @@ export default function ListeningPage() {
       <div>
         <h1 className="text-heading-sm font-medium text-pure-white">Слушанье</h1>
         <p className="text-body text-ash">
-          Выбери видео: оно играет, а в тексте пропущены слова. Услышал — впиши или выбери.
+          Выберите видео: оно играет, а в тексте пропущены слова. Услышали — впишите или выберите.
         </p>
       </div>
 
       {LISTENING_VIDEOS.length === 0 ? (
         <div className="rounded-cards border border-border-hairline bg-obsidian p-5 text-body text-ash">
-          Видео пока нет. Добавь ссылку на YouTube в <code className="text-pure-white">src/content/listening/links.txt</code> и
-          запусти <code className="text-pure-white">npm run listening</code>.
+          Видео пока нет. Добавьте ссылку на YouTube в <code className="text-pure-white">src/content/listening/links.txt</code> и
+          запустите <code className="text-pure-white">npm run listening</code>.
         </div>
       ) : (
         <ul className="grid gap-3 sm:grid-cols-2">

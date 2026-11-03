@@ -1,10 +1,12 @@
 import { describe, expect, it } from "vitest";
 import {
   MAX_ANSWER_LENGTH,
+  MAX_FEEDBACK_LENGTH,
   MAX_SECONDS,
   clampCount,
   clampSeconds,
   cleanAnswer,
+  cleanFeedback,
   isSrsResult,
   isStepName,
   isUuid,
@@ -59,5 +61,18 @@ describe("cleanAnswer", () => {
     expect(cleanAnswer("x".repeat(MAX_ANSWER_LENGTH))).not.toBeNull();
     expect(cleanAnswer("x".repeat(MAX_ANSWER_LENGTH + 1))).toBeNull();
     expect(cleanAnswer({ a: 1 })).toBeNull();
+  });
+});
+
+describe("cleanFeedback", () => {
+  it("trims the text and keeps it", () => {
+    expect(cleanFeedback("  Отличное приложение!\n")).toBe("Отличное приложение!");
+  });
+  it("rejects empty, blank, non-string and too long messages", () => {
+    expect(cleanFeedback("")).toBeNull();
+    expect(cleanFeedback("   \n ")).toBeNull();
+    expect(cleanFeedback(undefined)).toBeNull();
+    expect(cleanFeedback("a".repeat(MAX_FEEDBACK_LENGTH))).not.toBeNull();
+    expect(cleanFeedback("a".repeat(MAX_FEEDBACK_LENGTH + 1))).toBeNull();
   });
 });

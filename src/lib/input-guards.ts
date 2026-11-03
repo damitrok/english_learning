@@ -41,3 +41,13 @@ export function clampCount(value: unknown, max: number): number {
 export function cleanAnswer(value: unknown): string | null {
   return typeof value === "string" && value.length <= MAX_ANSWER_LENGTH ? value : null;
 }
+
+/** Longest feedback message we store. */
+export const MAX_FEEDBACK_LENGTH = 2000;
+
+/** The feedback text without surrounding blanks, or null when it is not a string, empty or too long. */
+export function cleanFeedback(value: unknown): string | null {
+  if (typeof value !== "string") return null;
+  const text = value.trim();
+  return text.length > 0 && text.length <= MAX_FEEDBACK_LENGTH ? text : null;
+}

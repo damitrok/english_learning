@@ -20,8 +20,8 @@ export type ActionResult = { ok: true } | { ok: false; error: string };
 
 const fail = (error: string): ActionResult => ({ ok: false, error });
 // Sign-in endpoints are rate limited per client IP and per email — see src/lib/throttle.ts.
-const BAD_EMAIL = fail("Проверь email — похоже, в нём опечатка.");
-const BAD_CODE = fail("Введи код из письма (6 цифр).");
+const BAD_EMAIL = fail("Проверьте email — похоже, в нём опечатка.");
+const BAD_CODE = fail("Введите код из письма (6 цифр).");
 const THROTTLED = fail(THROTTLED_MESSAGE);
 
 /** Creates an account and emails a confirmation code. */
@@ -62,7 +62,7 @@ export async function confirmSignUp(email: string, code: string): Promise<Action
 
 export async function signIn(email: string, password: string): Promise<ActionResult> {
   if (!isValidEmail(email)) return BAD_EMAIL;
-  if (!password) return fail("Введи пароль.");
+  if (!password) return fail("Введите пароль.");
   const supabase = await createClient();
   if (!(await allowAttempt(supabase, "signIn", normalizeEmail(email)))) return THROTTLED;
   const { error } = await supabase.auth.signInWithPassword({ email: normalizeEmail(email), password });

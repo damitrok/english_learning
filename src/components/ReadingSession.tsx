@@ -35,7 +35,7 @@ export function ReadingSession({ text }: { text: ReadingText | null }) {
   );
 
   if (!text) {
-    return <SessionEmpty message="Текстов пока нет — добавь их в базу (supabase/content/texts.mjs)." />;
+    return <SessionEmpty message="Текстов пока нет — добавьте их в базу (supabase/content/texts.mjs)." />;
   }
 
   const allAnswered = answers.every((a) => a !== null);
@@ -50,7 +50,7 @@ export function ReadingSession({ text }: { text: ReadingText | null }) {
       await markTextRead(text.id, seconds, correctCount);
       setPhase("done");
     } catch {
-      setSaveError("Не сохранилось — проверь соединение и попробуй ещё раз.");
+      setSaveError("Не сохранилось — проверьте соединение и попробуйте ещё раз.");
     } finally {
       setSaving(false);
     }
@@ -126,8 +126,8 @@ export function ReadingSession({ text }: { text: ReadingText | null }) {
 
       {phase === "reading" && (
         <p className="text-body text-ash">
-          Читай ради смысла, не переводи каждое слово. Синим выделены слова из твоих
-          карточек — нажми, если забыл перевод.
+          Читайте ради смысла, не переводите каждое слово. Синим выделены слова из ваших
+          карточек — нажмите, если забыли перевод.
         </p>
       )}
 

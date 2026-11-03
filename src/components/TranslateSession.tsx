@@ -58,7 +58,7 @@ export function TranslateSession({ items }: { items: Phrase[] }) {
       <div>
         <p className="text-eyebrow font-medium uppercase text-ash">Перевод</p>
         <p className="mt-2 text-body text-ash">
-          {index + 1} / {items.length} · переведи на английский
+          {index + 1} / {items.length} · переведите на английский
         </p>
       </div>
       <div className="rounded-cards border border-border-hairline bg-ink p-5 shadow-key sm:p-[2rem]">
@@ -87,7 +87,7 @@ export function TranslateSession({ items }: { items: Phrase[] }) {
               check();
             }
           }}
-          placeholder="Напиши по-английски"
+          placeholder="Напишите по-английски"
           className={`w-full resize-none rounded-cards border bg-obsidian p-4 text-body-lg text-pure-white placeholder:text-smoke focus:outline-none ${
             correct === null
               ? "border-border-hairline focus:border-ash"
